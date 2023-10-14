@@ -9,7 +9,7 @@
     };
   };
 
-  outputs = { nixpkgs, ... }:
+  outputs = { nixpkgs, ... }@attrs:
     let
       system = "x86_64-linux";
     in
@@ -17,6 +17,7 @@
       nixosConfigurations = {
         nixos-xps = nixpkgs.lib.nixosSystem {
           inherit system;
+          specialArgs = attrs;
           modules = [
             ./nixos/configuration.nix
           ];

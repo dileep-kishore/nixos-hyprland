@@ -6,11 +6,12 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader.
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -35,10 +36,12 @@
   networking.nameservers = [ "208.67.222.123" "208.67.220.123" ];
   # TODO: Check README for flake configuration
   # TODO: Also fetchGitHub so that you don't have to download everytime your rebuild
-  networking.extraHosts = let
-    hostsPath = https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts;
-    hostsFile = builtins.fetchurl hostsPath;
-  in builtins.readFile "${hostsFile}";
+  networking.extraHosts =
+    let
+      hostsPath = https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts;
+      hostsFile = builtins.fetchurl hostsPath;
+    in
+    builtins.readFile "${hostsFile}";
 
   # Set your time zone.
   # time.timeZone = "America/New_York";
@@ -67,7 +70,7 @@
   };
 
   # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
   services.xserver.xkbOptions = "ctrl:nocaps";
   console.useXkbConfig = true;
 
@@ -159,8 +162,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -175,7 +178,7 @@
   fonts.fonts = with pkgs; [
     noto-fonts
     noto-fonts-emoji
-    (nerdfonts.override { fonts = ["FiraCode" "CascadiaCode" ]; })
+    (nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" ]; })
   ];
 
   # List services that you want to enable:
@@ -186,10 +189,10 @@
 
   services = {
     syncthing = {
-        enable = true;
-        user = "dileep";
-        dataDir = "/home/dileep/Documents";    # Default folder for new synced folders
-        configDir = "/home/dileep/.config/syncthing";   # Folder for Syncthing's settings and keys
+      enable = true;
+      user = "dileep";
+      dataDir = "/home/dileep/Documents"; # Default folder for new synced folders
+      configDir = "/home/dileep/.config/syncthing"; # Folder for Syncthing's settings and keys
     };
   };
 
@@ -206,15 +209,15 @@
 
     # Use the NVidia open source kernel module (not to be confused with the
     # independent third-party "nouveau" open source driver).
-    # Support is limited to the Turing and later architectures. Full list of 
-    # supported GPUs is at: 
-    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
+    # Support is limited to the Turing and later architectures. Full list of
+    # supported GPUs is at:
+    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
     # Only available from driver 515.43.04+
     # Do not disable this unless your GPU is unsupported or if you have a good reason to.
     open = true;
 
     # Enable the Nvidia settings menu,
-	# accessible via `nvidia-settings`.
+    # accessible via `nvidia-settings`.
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
@@ -226,7 +229,7 @@
       nvidiaBusId = "PCI:1:00:0";
     };
   };
-  
+
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
   services.gnome.gnome-keyring.enable = true;
@@ -242,7 +245,7 @@
     # If you want to use JACK applications, uncomment this
     jack.enable = true;
   };
-  
+
   services.dbus.enable = true;
   xdg.portal = {
     enable = true;
