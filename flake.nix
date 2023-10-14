@@ -9,21 +9,19 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, ... }:
     let
       system = "x86_64-linux";
     in
     {
-      nixosConfigurations =
-        {
-          nixos-xps = nixpkgs.lib.nixosSystem
-            {
-              inherit system;
-              modules = [
-                ./nixos/configuration.nix
-              ];
-            };
+      nixosConfigurations = {
+        nixos-xps = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./nixos/configuration.nix
+          ];
         };
+      };
 
       # home-manager.users.hyprland = {
       #   imports = [
