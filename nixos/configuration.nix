@@ -101,29 +101,29 @@
       kitty
       neofetch
       pavucontrol
-      unstable.mako
-      unstable.libnotify
+      mako
+      libnotify
       pipewire
       nodejs_20
-      unstable.wofi
-      unstable.grim
-      unstable.slurp
-      unstable.wl-clipboard
-      unstable.wezterm
-      unstable.neovim
-      unstable.hyprland
-      unstable.waybar
-      unstable.hyprpaper
-      unstable.nixpkgs-fmt
-      unstable.vscode-fhs
-      unstable.morgen
-      unstable.slack
-      unstable.zoom-us
-      unstable.vivaldi
-      unstable.logseq
-      unstable.obsidian
-      unstable.signal-desktop
-      unstable.pkgs.python311Packages.toggl-cli
+      wofi
+      grim
+      slurp
+      wl-clipboard
+      wezterm
+      neovim
+      hyprland
+      waybar
+      hyprpaper
+      nixpkgs-fmt
+      vscode-fhs
+      morgen
+      slack
+      zoom-us
+      vivaldi
+      logseq
+      obsidian
+      signal-desktop
+      python311Packages.toggl-cli
     ];
   };
 
@@ -136,11 +136,11 @@
     };
 
     # Create an alias for the unstable channel
-    packageOverrides = pkgs: {
-      unstable = import <unstable> {
-        config = config.nixpkgs.config;
-      };
-    };
+    # packageOverrides = pkgs: {
+    #   unstable = import <unstable> {
+    #     config = config.nixpkgs.config;
+    #   };
+    # };
   };
 
   # hyprland
