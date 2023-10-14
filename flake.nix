@@ -1,27 +1,35 @@
 {
   description = "NixOS hyprland setup";
 
-  # TODO: Git init (set up main)
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs }: {
-
-    nixosConfigurations.hyprland = nixpkgs.lib.nixosSystem {
+  outputs = { nixpkgs, home-manager, ... }:
+    let
       system = "x86_64-linux";
-      modules = [
-        ./configuration.nix
-      ];
-    };
+    in
+    {
+      nixosConfigurations =
+        {
+          nixos-xps = nixpkgs.lib.nixosSystem
+            {
+              inherit system;
+              modules = [
+                ./nixos/configuration.nix
+              ];
+            };
+        };
 
-    home-manager.users.hyprland = {
-      imports = [
-        ./home.nix
-      ];
-    };
+      # home-manager.users.hyprland = {
+      #   imports = [
+      #     ./home.nix
+      #   ];
+      # };
 
-  };
+    };
 }
