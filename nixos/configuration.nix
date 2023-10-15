@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports =
@@ -39,7 +39,10 @@
   networking.extraHosts =
     let
       hostsPath = https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts;
-      hostsFile = builtins.fetchurl hostsPath;
+      hostsFile = builtins.fetchurl {
+        url = hostsPath;
+        sha256 = "sha256:00ssmfgwrxl9h15hfy70zv5yq3356zxqywndnfb9ad762w5m0d5p";
+      };
     in
     builtins.readFile "${hostsFile}";
 
@@ -123,6 +126,7 @@
       logseq
       obsidian
       signal-desktop
+      python312
       python311Packages.toggl-cli
     ];
   };
