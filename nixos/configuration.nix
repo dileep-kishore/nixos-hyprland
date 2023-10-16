@@ -111,6 +111,8 @@
       wofi
       grim
       slurp
+      psmisc
+      libsForQt5.okular
       wl-clipboard
       wezterm
       neovim
