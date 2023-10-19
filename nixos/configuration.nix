@@ -8,7 +8,7 @@
   imports =
     [
       # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      ./hardware/nixos-xps.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -152,7 +152,7 @@
   # hyprland
   programs.hyprland.enable = true;
   programs.hyprland.xwayland.enable = true;
-  programs.hyprland.nvidiaPatches = true;
+  programs.hyprland.enableNvidiaPatches = true;
 
   # 1password
   programs._1password.enable = true;
@@ -181,7 +181,7 @@
   };
 
   fonts.fontDir.enable = true;
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-emoji
     (nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" ]; })
