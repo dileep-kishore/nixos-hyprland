@@ -19,7 +19,7 @@
           inherit system;
           specialArgs = attrs;
           modules = [
-            ./nixos/configuration.nix
+            ./nixos/nixos-xps/configuration.nix
           ];
         };
       };
