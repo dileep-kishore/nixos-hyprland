@@ -22,6 +22,14 @@
             ./nixos/nixos-xps/configuration.nix
           ];
         };
+
+        tsuki = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = attrs;
+          modules = [
+            ./nixos/tsuki/configuration.nix
+          ];
+        };
       };
 
       # home-manager.users.hyprland = {
