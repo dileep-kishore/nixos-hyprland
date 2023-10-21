@@ -4,6 +4,7 @@
   imports = [
     ./apps/zsh.nix
     ./apps/gammastep.nix
+    ./apps/wezterm.nix
   ];
 
   home.username = "dileep";
