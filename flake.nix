@@ -9,7 +9,7 @@
     };
   };
 
-  outputs = { nixpkgs, ... }@attrs:
+  outputs = { nixpkgs, home-manager, ... }@attrs:
     let
       system = "x86_64-linux";
     in
@@ -28,15 +28,15 @@
           specialArgs = attrs;
           modules = [
             ./nixos/tsuki/configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                users.dileep = ./home-manager/home.nix;
+              };
+            }
           ];
         };
       };
-
-      # home-manager.users.hyprland = {
-      #   imports = [
-      #     ./home.nix
-      #   ];
-      # };
-
     };
 }

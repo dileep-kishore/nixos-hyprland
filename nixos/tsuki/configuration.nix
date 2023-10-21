@@ -23,9 +23,9 @@
   boot.loader.grub.configurationLimit = 15;
   boot.loader.systemd-boot.configurationLimit = 15;
   boot.supportedFilesystems = [ "ntfs" ];
-  
+
   # amd gpu support for kernel
-  boot.initrd.kernelModules = ["amdgpu"];
+  boot.initrd.kernelModules = [ "amdgpu" ];
 
   networking.hostName = "tsuki"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -74,8 +74,8 @@
     driSupport = true;
     driSupport32Bit = true;
     extraPackages = with pkgs; [
-        rocm-opencl-icd
-        rocm-opencl-runtime
+      rocm-opencl-icd
+      rocm-opencl-runtime
     ];
   };
 
@@ -124,6 +124,7 @@
       wezterm
       neovim
       hyprland
+      xdg-desktop-portal-hyprland
       xdg-desktop-portal-gtk
       waybar
       hyprpaper
