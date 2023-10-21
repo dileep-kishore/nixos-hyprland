@@ -7,6 +7,9 @@
     initExtra = ''
       bindkey '^ ' autosuggest-accept
     '';
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
     # antidote.enable = true;
   };
 
