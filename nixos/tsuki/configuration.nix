@@ -50,8 +50,8 @@
     builtins.readFile "${hostsFile}";
 
   # Set your time zone.
-  # time.timeZone = "America/New_York";
-  services.automatic-timezoned.enable = true;
+  time.timeZone = "America/New_York";
+  # services.automatic-timezoned.enable = true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -98,47 +98,6 @@
     description = "Dileep Kishore";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      vim
-      git
-      gparted
-      udisks
-      lshw
-      wget
-      libxcrypt-legacy
-      gnome.nautilus
-      gnome.gedit
-      gnome.seahorse
-      kitty
-      neofetch
-      pavucontrol
-      mako
-      libnotify
-      pipewire
-      nodejs_20
-      wofi
-      grim
-      slurp
-      psmisc
-      libsForQt5.okular
-      wl-clipboard
-      wezterm
-      neovim
-      hyprland
-      xdg-desktop-portal-hyprland
-      xdg-desktop-portal-gtk
-      waybar
-      hyprpaper
-      nixpkgs-fmt
-      vscode-fhs
-      morgen
-      slack
-      zoom-us
-      vivaldi
-      logseq
-      obsidian
-      signal-desktop
-      python312
-      python311Packages.toggl-cli
     ];
   };
 
