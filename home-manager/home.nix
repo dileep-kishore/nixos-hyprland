@@ -9,6 +9,8 @@
   home.homeDirectory = "/home/dileep";
   home.stateVersion = "23.05";
 
+  programs.home-manager.enable = true;
+
   home.packages = with pkgs; [
     git
     gnome.gedit
