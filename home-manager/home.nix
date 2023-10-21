@@ -42,9 +42,11 @@
     morgen
     neofetch
     neovim
+    networkmanagerapplet
     nixpkgs-fmt
     nodejs_20
     obsidian
+    openvpn
     pavucontrol
     pipewire
     psmisc
@@ -54,6 +56,7 @@
     slack
     slurp
     udisks
+    unzip
     vim
     vivaldi
     vscode-fhs

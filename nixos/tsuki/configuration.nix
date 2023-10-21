@@ -164,6 +164,11 @@
   services.openssh.enable = true;
   services.printing.enable = true;
 
+  # vpn
+  services.openvpn.servers = {
+    homeVPN = { config = '' config /home/dileep/.nordvpn/us9565.nordvpn.com.udp.ovpn ''; };
+  };
+
   services = {
     syncthing = {
       enable = true;

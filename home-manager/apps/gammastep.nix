@@ -1,9 +1,9 @@
 {
   services.gammastep = {
     enable = true;
-    # latitude = 0.0;
-    # longitude = 0.0;
-    provider = "geoclue2";
+    latitude = 36.012009;
+    longitude = -84.265533;
+    provider = "manual";
     tray = true;
   };
 }
