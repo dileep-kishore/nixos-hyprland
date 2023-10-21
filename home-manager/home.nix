@@ -2,10 +2,11 @@
 {
 
   imports = [
-    ./apps/zsh.nix
     ./apps/gammastep.nix
-    ./apps/wezterm.nix
     ./apps/kitty.nix
+    ./apps/starship.nix
+    ./apps/wezterm.nix
+    ./apps/zsh.nix
   ];
 
   home.username = "dileep";
@@ -36,6 +37,7 @@
     logseq
     lshw
     mako
+    morgen
     neofetch
     neovim
     nixpkgs-fmt

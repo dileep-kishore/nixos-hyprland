@@ -98,6 +98,10 @@
     packages = with pkgs; [
     ];
   };
+  # Default shell
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+  environment.shells = with pkgs; [ zsh ];
 
   # Allow unfree packages
   nixpkgs.config = {
@@ -150,6 +154,7 @@
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-emoji
+    font-awesome
     (nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" ]; })
   ];
 

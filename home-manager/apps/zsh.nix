@@ -5,7 +5,7 @@
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
     initExtra = ''
-      bindkey '^f' autosuggest-accept
+      bindkey '^ ' autosuggest-accept
     '';
   };
 
