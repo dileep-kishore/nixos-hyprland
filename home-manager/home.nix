@@ -5,6 +5,7 @@
     ./apps/zsh.nix
     ./apps/gammastep.nix
     ./apps/wezterm.nix
+    ./apps/kitty.nix
   ];
 
   home.username = "dileep";
@@ -29,7 +30,6 @@
     htop
     hyprland
     hyprpaper
-    kitty
     libnotify
     libsForQt5.okular
     libxcrypt-legacy
@@ -54,7 +54,6 @@
     vivaldi
     vscode-fhs
     waybar
-    wezterm
     wget
     wl-clipboard
     wofi
