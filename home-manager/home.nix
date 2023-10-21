@@ -22,6 +22,7 @@
   };
 
   home.packages = with pkgs; [
+    bat
     git
     gnome.gedit
     gnome.nautilus
