@@ -7,6 +7,7 @@
     ./apps/starship.nix
     ./apps/wezterm.nix
     ./apps/zsh.nix
+    ./apps/cli.nix
   ];
 
   home.username = "dileep";
