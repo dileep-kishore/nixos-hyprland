@@ -9,13 +9,18 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }@attrs:
+  outputs = { self, nixpkgs, home-manager, ... }@attrs:
     let
       system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      lib = nixpkgs.lib;
     in
     {
       nixosConfigurations = {
-        nixos-xps = nixpkgs.lib.nixosSystem {
+        nixos-xps = lib.nixosSystem {
           inherit system;
           specialArgs = attrs;
           modules = [
@@ -23,7 +28,7 @@
           ];
         };
 
-        tsuki = nixpkgs.lib.nixosSystem {
+        tsuki = lib.nixosSystem {
           inherit system;
           specialArgs = attrs;
           modules = [
