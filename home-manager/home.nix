@@ -10,6 +10,7 @@
     ./apps/cli.nix
     ./apps/git.nix
     ./apps/hyprland.nix
+    ./apps/waybar.nix
     # ./apps/espanso.nix
   ];
 
