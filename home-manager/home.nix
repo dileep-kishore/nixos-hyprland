@@ -36,6 +36,7 @@
     gparted
     grim
     htop
+    hyprland
     hyprpaper
     libnotify
     libreoffice-fresh

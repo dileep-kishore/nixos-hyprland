@@ -119,6 +119,11 @@
     # };
   };
 
+  # hyprland
+  programs.hyprland.enable = true;
+  programs.hyprland.xwayland.enable = true;
+  programs.hyprland.enableNvidiaPatches = false;
+
   # 1password
   programs._1password.enable = true;
   programs._1password-gui = {
