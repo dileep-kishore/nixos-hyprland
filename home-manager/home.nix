@@ -8,6 +8,7 @@
     ./apps/wezterm.nix
     ./apps/zsh.nix
     ./apps/cli.nix
+    ./apps/espanso.nix
   ];
 
   home.username = "dileep";
