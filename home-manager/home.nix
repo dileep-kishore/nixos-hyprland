@@ -34,6 +34,7 @@
     hyprland
     hyprpaper
     libnotify
+    libreoffice-fresh
     libsForQt5.okular
     libxcrypt-legacy
     logseq
@@ -44,6 +45,7 @@
     neovim
     networkmanagerapplet
     nixpkgs-fmt
+    nnn
     nodejs_20
     obsidian
     openvpn
@@ -55,6 +57,7 @@
     signal-desktop
     slack
     slurp
+    todoist
     udisks
     unzip
     vim
