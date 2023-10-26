@@ -25,6 +25,7 @@
   };
 
   home.packages = with pkgs; [
+    bashInteractive
     bat
     git
     gnome.gedit
