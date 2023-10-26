@@ -9,6 +9,7 @@
     ./apps/zsh.nix
     ./apps/cli.nix
     ./apps/git.nix
+    ./apps/hyprland.nix
     # ./apps/espanso.nix
   ];
 
@@ -34,7 +35,6 @@
     gparted
     grim
     htop
-    hyprland
     hyprpaper
     libnotify
     libreoffice-fresh

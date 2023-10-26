@@ -2,7 +2,7 @@
   programs.git = {
     enable = true;
     includes = [
-      { path = "~/nixos-hyprland/config/gitconfig"; }
+      { path = "~/nixos-hyprland/home-manager/apps/config/gitconfig"; }
     ];
     delta = {
       enable = true;
