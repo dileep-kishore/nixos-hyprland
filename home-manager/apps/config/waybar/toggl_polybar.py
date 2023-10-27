@@ -11,7 +11,7 @@ output = process.stdout.decode("utf-8")
 try:
     result = [s.strip() for s in output.split("\n")]
     title, *rest = result
-    title = title.split("-")[0].strip()
+    title = title.split("#")[0].strip()
     data = {r.split(":", 1)[0]: r.split(":", 1)[-1].strip() for r in rest}
     if len(title) > 20:
         short_title = f"{title[:20]}..."
