@@ -58,6 +58,9 @@
   programs.pyenv = {
     enable = true;
   };
+
   home.file.".zprofile".source = ./config/.zprofile;
   home.file.".profile".source = ./config/.profile;
+  home.file.".condarc".source = ./config/.condarc;
+
 }
