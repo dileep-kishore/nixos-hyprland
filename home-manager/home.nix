@@ -63,6 +63,7 @@
     signal-desktop
     slack
     slurp
+    tmux
     todoist
     udisks
     unzip
