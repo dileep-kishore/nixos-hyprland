@@ -5,6 +5,7 @@
     ./apps/gammastep.nix
     ./apps/kitty.nix
     ./apps/starship.nix
+    # ./apps/oh-my-posh.nix
     ./apps/wezterm.nix
     ./apps/zsh.nix
     ./apps/cli.nix

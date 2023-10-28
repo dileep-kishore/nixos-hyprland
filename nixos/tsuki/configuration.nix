@@ -110,6 +110,10 @@
       proprietaryCodecs = true;
       enableWideVine = true;
     };
+    permittedInsecurePackages = [
+      "electron-24.8.6"
+      "electron-22.3.27"
+    ];
 
     # Create an alias for the unstable channel
     # packageOverrides = pkgs: {
