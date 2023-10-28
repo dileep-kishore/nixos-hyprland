@@ -49,6 +49,7 @@
     lshw
     mako
     morgen
+    ncdu
     neofetch
     neovim
     networkmanagerapplet

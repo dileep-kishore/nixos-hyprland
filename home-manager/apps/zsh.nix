@@ -1,4 +1,34 @@
 {
+  home.shellAliases = {
+    # rm alias
+    rm = "rm -i";
+    # clear
+    clear = "clear -x";
+    cls = "clear";
+    # tmux
+    tnew = "tmux new -s";
+    ta = "tmux attach -t";
+    tdetach = "tmux detach";
+    tkill = "tmux kill-session -t";
+    tlist = "tmux ls";
+    # grep
+    grep = "grep --color=auto";
+    # python
+    vimipython = "ipython --TerminalInteractiveShell.editing_mode=vi";
+    # conda
+    exportforge = "export PATH=$HOME/miniforge3/bin:$PATH";
+    # nnn
+    nnn = "nnn -de";
+    # network
+    myip = "curl http://ipecho.net/plain; echo";
+    # ncdu
+    df = "df -ahiT --total";
+    du = "ncdu --color dark -rr -x --exclude .git --exclude node_modules";
+    # memory
+    free = "free -mt";
+    ps = "ps auxf";
+    psgrep = "ps aux | grep -v grep | grep -i -e VSZ -e";
+  };
   programs.zsh = {
     enable = true;
     enableCompletion = true;
