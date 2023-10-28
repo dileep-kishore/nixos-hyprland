@@ -6,12 +6,13 @@
     enableZshIntegration = true;
     enableTransience = true;
     settings = {
+      format = "[┏](bold cyan)$status$all";
       add_newline = true;
       character = {
         format = "$symbol";
-        success_symbol = "[━](bold cyan)[ ](bold cyan)";
-        error_symbol = "[━](bold red)[ ](bold red)";
-        vicmd_symbol = "[━](bold green)[ ](bold green)";
+        success_symbol = "[┗━](bold cyan)[ ](bold cyan)";
+        error_symbol = "[┗━](bold red)[ ](bold red)";
+        vicmd_symbol = "[┗━](bold green)[ ](bold green)";
       };
       sudo = {
         format = "[as ](italic)[$symbol]($style)";
