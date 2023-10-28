@@ -41,12 +41,16 @@
         "ohmyzsh/ohmyzsh path:plugins/extract"
         "ohmyzsh/ohmyzsh path:plugins/git"
         "ohmyzsh/ohmyzsh path:plugins/git-extras"
-        "ohmyzsh/ohmyzsh path:plugins/gitignore"
         "ohmyzsh/ohmyzsh path:plugins/magic-enter"
         "ohmyzsh/ohmyzsh path:plugins/npm"
         "ohmyzsh/ohmyzsh path:plugins/pyenv"
         "ohmyzsh/ohmyzsh path:plugins/python"
         "ohmyzsh/ohmyzsh path:plugins/tmux"
+        "djui/alias-tips"
+        "dim-an/cod"
+        "wfxr/forgit"
+        "MichaelAquilina/zsh-autoswitch-virtualenv"
+        "trapd00r/LS_COLORS"
       ];
     };
   };

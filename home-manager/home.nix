@@ -30,7 +30,9 @@
   home.packages = with pkgs; [
     bashInteractive
     bat
+    fd
     git
+    git-extras
     gnome.gedit
     gnome.nautilus
     gnome.seahorse
