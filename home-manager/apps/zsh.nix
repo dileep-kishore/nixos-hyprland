@@ -67,7 +67,6 @@
         "ohmyzsh/ohmyzsh path:plugins/aliases"
         "ohmyzsh/ohmyzsh path:plugins/copypath"
         "ohmyzsh/ohmyzsh path:plugins/colored-man-pages"
-        "ohmyzsh/ohmyzsh path:plugins/command-not-found"
         "ohmyzsh/ohmyzsh path:plugins/extract"
         "ohmyzsh/ohmyzsh path:plugins/git"
         "ohmyzsh/ohmyzsh path:plugins/git-extras"
