@@ -80,5 +80,6 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     zoom-us
+    zotero
   ];
 }
