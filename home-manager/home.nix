@@ -2,18 +2,19 @@
 {
 
   imports = [
-    ./apps/gammastep.nix
-    ./apps/kitty.nix
-    ./apps/starship.nix
+    # ./apps/espanso.nix
     # ./apps/oh-my-posh.nix
-    ./apps/wezterm.nix
-    ./apps/zsh.nix
     ./apps/cli.nix
+    ./apps/gammastep.nix
     ./apps/git.nix
     ./apps/hyprland.nix
+    ./apps/kitty.nix
+    ./apps/starship.nix
+    ./apps/tmux.nix
     ./apps/waybar.nix
-    # ./apps/espanso.nix
+    ./apps/wezterm.nix
     ./apps/xdg.nix
+    ./apps/zsh.nix
   ];
 
   home.username = "dileep";
@@ -67,7 +68,6 @@
     signal-desktop
     slack
     slurp
-    tmux
     todoist
     udisks
     unzip

@@ -64,7 +64,6 @@
     enable = true;
   };
 
-  home.file.".tmux.conf".source = ./config/.tmux.conf;
   home.file.".zprofile".source = ./config/.zprofile;
   home.file.".profile".source = ./config/.profile;
   home.file.".condarc".source = ./config/.condarc;
