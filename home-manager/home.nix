@@ -35,6 +35,7 @@
     fd
     git
     git-extras
+    gnome.eog
     gnome.gedit
     gnome.nautilus
     gnome.seahorse
