@@ -7,8 +7,10 @@
     ./apps/cli.nix
     ./apps/gammastep.nix
     ./apps/git.nix
+    ./apps/gtk.nix
     ./apps/hyprland.nix
     ./apps/kitty.nix
+    ./apps/qt5.nix
     ./apps/starship.nix
     ./apps/tmux.nix
     ./apps/waybar.nix
@@ -37,7 +39,6 @@
     git-extras
     gnome.eog
     gnome.gedit
-    gnome.nautilus
     gnome.seahorse
     gparted
     grim
@@ -81,6 +82,7 @@
     wofi
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+    xfce.thunar
     zoom-us
     zotero
   ];
