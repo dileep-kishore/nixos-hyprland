@@ -13,6 +13,7 @@
     ./apps/hyprland.nix
     ./apps/waybar.nix
     # ./apps/espanso.nix
+    ./apps/xdg.nix
   ];
 
   home.username = "dileep";
