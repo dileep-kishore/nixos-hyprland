@@ -15,6 +15,7 @@
     ./apps/tmux.nix
     ./apps/waybar.nix
     ./apps/wezterm.nix
+    ./apps/wofi.nix
     ./apps/xdg.nix
     ./apps/zsh.nix
   ];
