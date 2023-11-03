@@ -76,6 +76,9 @@
       rocmPackages.clr.icd
     ];
   };
+  # tablet
+  hardware.opentabletdriver.enable = true;
+  hardware.opentabletdriver.daemon.enable = true;
 
   # Load amd driver for Xorg and Wayland
   services.xserver.videoDrivers = [ "amdgpu" ];
@@ -84,11 +87,14 @@
 
   # Configure keymap in X11
   services.xserver = {
+    wacom.enable = true;
     enable = true;
     layout = "us";
     xkbVariant = "";
     displayManager.gdm.enable = true;
   };
+
+  # Wacom
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dileep = {
