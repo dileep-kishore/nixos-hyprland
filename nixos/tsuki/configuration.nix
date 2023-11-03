@@ -96,12 +96,14 @@
     description = "Dileep Kishore";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      swaylock-effects
     ];
   };
   # Default shell
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];
+  security.pam.services.swaylock = {};
 
   # Allow unfree packages
   nixpkgs.config = {
