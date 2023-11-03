@@ -96,6 +96,7 @@
     description = "Dileep Kishore";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      swayidle
       swaylock-effects
     ];
   };
