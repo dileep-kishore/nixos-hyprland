@@ -36,6 +36,7 @@
     bashInteractive
     bat
     fd
+    libgccjit
     git
     git-extras
     gnome.eog
