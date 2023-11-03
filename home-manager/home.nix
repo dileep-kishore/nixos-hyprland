@@ -36,7 +36,6 @@
     bashInteractive
     bat
     fd
-    libgccjit
     git
     git-extras
     gnome.eog
@@ -47,6 +46,7 @@
     htop
     hyprland
     hyprpaper
+    libgccjit
     libnotify
     libreoffice-fresh
     libsForQt5.okular
@@ -64,6 +64,7 @@
     nodejs_20
     obsidian
     openvpn
+    pandoc
     pavucontrol
     pipewire
     psmisc
@@ -72,6 +73,7 @@
     signal-desktop
     slack
     slurp
+    texlive.combined.scheme-full
     todoist
     udisks
     unzip
