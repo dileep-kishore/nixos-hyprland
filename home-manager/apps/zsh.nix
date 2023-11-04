@@ -11,6 +11,8 @@
     tdetach = "tmux detach";
     tkill = "tmux kill-session -t";
     tlist = "tmux ls";
+    # bat
+    bat = "bat --theme='Catppuccin-mocha'";
     # grep
     grep = "grep --color=auto";
     # python
@@ -55,6 +57,7 @@
       BROWSER = "vivaldi";
       NNN_PLUG = "b:bookmarks;c:fzcd;d:diffs;f:finder;i:imgview;m:mimelist;n:nuke;o:fzopen;p:preview-tui;r:renamer;u:getplugs;z:autojump";
       NNN_ARCHIVE = "\\.(7z|bz2|gz|tar|tgz|zip)$";
+      BAT_THEME = "Catppuccin-mocha";
     };
     # profileExtra = { };
     # shellAliases = { };
