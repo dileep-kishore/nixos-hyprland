@@ -19,6 +19,8 @@ window.HDMI-A-1 #window {
   background: transparent;
   color: @text;
   margin: 5px 0px;
+  transition-property: background-color;
+  transition-duration: 1s;
 }
 
 #workspaces {
@@ -38,7 +40,7 @@ window.HDMI-A-1 #window {
 #workspaces button.active {
   color: @sky;
   border-radius: 1rem;
-  padding: 0.4rem;
+  box-shadow: inset 0 -3px @sky;
 }
 
 #workspaces button:hover {
