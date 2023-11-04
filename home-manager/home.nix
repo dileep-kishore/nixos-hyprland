@@ -35,6 +35,7 @@
   home.packages = with pkgs; [
     bashInteractive
     bat
+    coreutils-full
     fd
     git
     git-extras
@@ -74,6 +75,7 @@
     slack
     slurp
     texlive.combined.scheme-full
+    tldr
     todoist
     udisks
     unzip
