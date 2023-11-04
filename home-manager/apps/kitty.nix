@@ -2,7 +2,7 @@
   programs.kitty = {
     enable = true;
     font = {
-      name = "CaskaydiaCove NF";
+      name = "DankMono Nerd Font";
     };
     shellIntegration.enableBashIntegration = true;
     shellIntegration.enableZshIntegration = true;
