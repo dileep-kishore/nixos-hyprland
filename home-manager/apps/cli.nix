@@ -70,6 +70,8 @@
   home.file.".zprofile".source = ./config/.zprofile;
   home.file.".profile".source = ./config/.profile;
   home.file.".condarc".source = ./config/.condarc;
+  # stylua
+  home.file.".config/stylua.toml".source = ./config/stylua.toml;
   # bat
   home.file.".config/bat" = {
     recursive = true;
