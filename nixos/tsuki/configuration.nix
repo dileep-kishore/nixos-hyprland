@@ -110,7 +110,7 @@
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];
-  security.pam.services.swaylock = {};
+  security.pam.services.swaylock = { };
 
   # Allow unfree packages
   nixpkgs.config = {
@@ -165,12 +165,6 @@
   };
 
   fonts.fontDir.enable = true;
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-emoji
-    font-awesome
-    (nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" ]; })
-  ];
 
   # List services that you want to enable:
 

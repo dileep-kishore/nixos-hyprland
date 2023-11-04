@@ -34,11 +34,15 @@
     defaultCacheTtl = 3600;
   };
 
+  fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" "FantasqueSansMono" ]; })
     bashInteractive
     bat
     coreutils-full
     fd
+    font-awesome
     git
     git-extras
     gnome.eog
@@ -65,6 +69,8 @@
     nixpkgs-fmt
     nnn
     nodejs_20
+    noto-fonts
+    noto-fonts-emoji
     obsidian
     openvpn
     pandoc
