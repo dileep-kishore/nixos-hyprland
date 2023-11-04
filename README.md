@@ -3,6 +3,8 @@
         nixos-hyprland
     </a>
     <br/>
+    <br/>
+    <br/>
     <sup>
         <a href="https://nixos.org"><img src="https://avatars.githubusercontent.com/u/487568?s=200&v=4"></a>
     </sup>
