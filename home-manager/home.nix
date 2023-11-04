@@ -18,6 +18,7 @@
     ./apps/wezterm.nix
     ./apps/wofi.nix
     ./apps/xdg.nix
+    ./apps/zathura.nix
     ./apps/zsh.nix
   ];
 
