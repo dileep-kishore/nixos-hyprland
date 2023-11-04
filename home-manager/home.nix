@@ -11,6 +11,7 @@
     ./apps/hyprland.nix
     ./apps/kitty.nix
     ./apps/qt5.nix
+    ./apps/rofi.nix
     ./apps/starship.nix
     ./apps/tmux.nix
     ./apps/waybar.nix
