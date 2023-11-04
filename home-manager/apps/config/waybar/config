@@ -5,9 +5,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "custom/toggl", "battery", "battery#bat2", "clock", "tray"],
+    "modules-left": ["hyprland/window", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["pulseaudio", "idle_inhibitor", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "custom/toggl", "battery", "battery#bat2", "clock", "tray"],
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -24,10 +24,13 @@
             "7": " ",
             "8": " ",
             "9": "󰒓 ",
-            "urgent": "",
-            "focused": "",
-            "default": ""
+            "urgent": " ",
+            "focused": " ",
+            "default": " "
         }
+    },
+    "hyprland/window": {
+        "max-length": 50
     },
     "keyboard-state": {
         "numlock": true,
@@ -87,8 +90,9 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+        "format": "{:%H:%M %Y-%m-%d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%a, %d. %b}"
     },
     "cpu": {
         "format": "{usage}% ",

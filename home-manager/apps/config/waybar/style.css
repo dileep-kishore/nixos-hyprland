@@ -1,28 +1,38 @@
 @import "mocha.css";
 
 * {
-  font-family: FantasqueSansMono Nerd Font;
+  font-family: FantasqueSansM Nerd Font;
   font-size: 17px;
   min-height: 0;
+}
+
+window.HDMI-A-1 * {
+  font-size: 12px;
+}
+
+window.HDMI-A-1 #window {
+  font-size: 0px;
+  padding: 0;
 }
 
 #waybar {
   background: transparent;
   color: @text;
-  margin: 5px 5px;
+  margin: 5px 0px;
 }
 
 #workspaces {
   border-radius: 1rem;
-  margin: 5px;
-  background-color: @surface0;
+  margin: 5px 0px;
   margin-left: 1rem;
+  background-color: @surface0;
+  /* padding: 0.5rem 1rem; */
 }
 
 #workspaces button {
   color: @lavender;
   border-radius: 1rem;
-  padding: 0.4rem;
+  /* padding: 0.4rem; */
 }
 
 #workspaces button.active {
@@ -35,17 +45,45 @@
   border-radius: 1rem;
 }
 
-#custom-music,
+#window {
+  border-radius: 1rem;
+  margin: 5px 0px;
+  background-color: @surface0;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+#network,
+#idle_inhibitor,
+#cpu,
+#memory,
 #tray,
 #backlight,
 #clock,
 #battery,
 #pulseaudio,
-#custom-lock,
-#custom-power {
+#custom-toggl {
   background-color: @surface0;
   padding: 0.5rem 1rem;
   margin: 5px 0;
+}
+
+#network {
+  color: @blue;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#cpu {
+  color: @green;
+}
+
+#memory {
+  color: @yellow;
+}
+
+#custom-toggl {
+  color: @mauve;
 }
 
 #clock {
