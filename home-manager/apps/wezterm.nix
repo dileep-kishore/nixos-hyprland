@@ -9,7 +9,7 @@
 
       return {
           force_reverse_video_cursor = true,
-          font = wezterm.font "DankMono Nerd Font",
+          font = wezterm.font("Recursive Mono Casual Static", {weight="Medium", stretch="Normal", style="Normal"}),
           color_scheme = "Catppuccin Mocha",
           enable_tab_bar = false,
       }

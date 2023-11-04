@@ -73,6 +73,7 @@
     psmisc
     python311Packages.toggl-cli
     python312
+    recursive
     signal-desktop
     slack
     slurp

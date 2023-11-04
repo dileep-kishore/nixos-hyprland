@@ -2,7 +2,7 @@
   programs.kitty = {
     enable = true;
     font = {
-      name = "DankMono Nerd Font";
+      name = "Recursive Mono Casual";
     };
     shellIntegration.enableBashIntegration = true;
     shellIntegration.enableZshIntegration = true;
