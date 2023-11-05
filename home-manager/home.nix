@@ -93,6 +93,7 @@
     vscode-fhs
     waybar
     wget
+    wlogout
     wl-clipboard
     wofi
     xdg-desktop-portal-gtk

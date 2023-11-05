@@ -1,57 +1,85 @@
 @import "mocha.css";
 
 * {
-  font-family: FantasqueSansM Nerd Font;
-  font-size: 17px;
+  font-family: "Rec Mono Semicasual", "CaskaydiaCove NF";
+  font-size: 16px;
   min-height: 0;
 }
 
 window.HDMI-A-1 * {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 window.HDMI-A-1 #window {
   font-size: 0px;
   padding: 0;
+  border: 0;
+}
+
+window.HDMI-A-1 #network,
+window.HDMI-A-1 #idle_inhibitor,
+window.HDMI-A-1 #cpu,
+window.HDMI-A-1 #memory,
+window.HDMI-A-1 #backlight,
+window.HDMI-A-1 #clock,
+window.HDMI-A-1 #battery,
+window.HDMI-A-1 #pulseaudio,
+window.HDMI-A-1 #custom-toggl {
+  font-size: 0px;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
 }
 
 #waybar {
   background: transparent;
   color: @text;
-  margin: 5px 0px;
+  margin: 5px -2px;
   transition-property: background-color;
   transition-duration: 1s;
+  padding: 0rem 0rem;
 }
 
 #workspaces {
+  font-size: 20px;
   border-radius: 1rem;
-  margin: 5px 0px;
+  margin: 2px 0px;
   margin-left: 1rem;
   background-color: @surface0;
-  /* padding: 0.5rem 1rem; */
+  padding: 0rem 0.5rem;
+  border: 4px solid @red;
 }
 
 #workspaces button {
   color: @lavender;
   border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
   /* padding: 0.4rem; */
 }
 
 #workspaces button.active {
-  color: @sky;
+  color: @base;
+  background-color: @red;
   border-radius: 1rem;
-  box-shadow: inset 0 -3px @sky;
+  transition: all 0.3s ease-in-out;
+  padding: 0.1rem 2rem;
+  /* box-shadow: inset 0 -3px @sky; */
 }
 
 #workspaces button:hover {
   color: @sapphire;
   border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  padding: 0.1rem 2rem;
 }
 
+#taskbar,
 #window {
   border-radius: 1rem;
   margin: 5px 0px;
   background-color: @surface0;
+  border: 4px solid @red;
   margin-left: 1rem;
   padding: 0.5rem 1rem;
 }
@@ -67,8 +95,11 @@ window.HDMI-A-1 #window {
 #pulseaudio,
 #custom-toggl {
   background-color: @surface0;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.7rem;
   margin: 5px 0;
+  /* border-top: 4px solid @red;
+  border-bottom: 4px solid @red; */
+  border: 4px solid @red;
 }
 
 #network {
@@ -93,6 +124,7 @@ window.HDMI-A-1 #window {
   color: @blue;
   border-radius: 0px 1rem 1rem 0px;
   margin-right: 1rem;
+  border-right: 4px solid @red;
 }
 
 #battery {
@@ -119,6 +151,7 @@ window.HDMI-A-1 #window {
   color: @maroon;
   border-radius: 1rem 0px 0px 1rem;
   margin-left: 1rem;
+  border-left: 4px solid @red;
 }
 
 #custom-music {
@@ -140,4 +173,6 @@ window.HDMI-A-1 #window {
 #tray {
   margin-right: 1rem;
   border-radius: 1rem;
+  border-right: 4px solid @red;
+  border-left: 4px solid @red;
 }
