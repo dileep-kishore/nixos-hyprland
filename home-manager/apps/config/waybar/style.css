@@ -2,12 +2,12 @@
 
 * {
   font-family: "Rec Mono Semicasual", "CaskaydiaCove NF";
-  font-size: 16px;
+  font-size: 14px;
   min-height: 0;
 }
 
 window.HDMI-A-1 * {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 window.HDMI-A-1 #window {
@@ -42,9 +42,8 @@ window.HDMI-A-1 #custom-toggl {
 }
 
 #workspaces {
-  font-size: 20px;
   border-radius: 1rem;
-  margin: 2px 0px;
+  margin: 5px 0px;
   margin-left: 1rem;
   background-color: @surface0;
   padding: 0rem 0.5rem;
