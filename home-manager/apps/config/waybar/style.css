@@ -62,15 +62,14 @@ window.HDMI-A-1 #custom-toggl {
   background-color: @red;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
-  padding: 0.1rem 2rem;
-  /* box-shadow: inset 0 -3px @sky; */
+  padding: 0.1rem 3rem;
 }
 
 #workspaces button:hover {
   color: @sapphire;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
-  padding: 0.1rem 2rem;
+  padding: 0.1rem 3rem;
 }
 
 #taskbar,
