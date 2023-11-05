@@ -5,9 +5,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["wlr/taskbar", "hyprland/window", "custom/media"],
+    "modules-left": ["wlr/taskbar", "hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["pulseaudio", "idle_inhibitor", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "custom/toggl", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "custom/toggl", "battery", "battery#bat2", "clock", "tray"],
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -33,7 +33,8 @@
         "all-outputs": false
     },
     "hyprland/window": {
-        "max-length": 50
+        "max-length": 50,
+        "separate-outputs": true
     },
     "keyboard-state": {
         "numlock": true,
