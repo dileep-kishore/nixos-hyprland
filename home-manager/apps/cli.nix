@@ -1,4 +1,6 @@
 {
+  programs.bash.enable = true;
+
   programs.atuin = {
     enable = true;
     settings = {
@@ -38,6 +40,8 @@
 
   programs.direnv = {
     enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
     nix-direnv.enable = true;
   };
 
@@ -63,8 +67,6 @@
     enable = true;
   };
 
-  home.file.".zprofile".source = ./config/.zprofile;
-  home.file.".profile".source = ./config/.profile;
   home.file.".condarc".source = ./config/.condarc;
   # stylua
   home.file.".config/stylua.toml".source = ./config/stylua.toml;
