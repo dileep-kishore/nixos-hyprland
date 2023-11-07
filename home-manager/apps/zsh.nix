@@ -84,6 +84,8 @@
         "wfxr/forgit"
         "MichaelAquilina/zsh-autoswitch-virtualenv"
         "trapd00r/LS_COLORS"
+        "chisui/zsh-nix-shell"
+        "nix-community/nix-zsh-completions"
       ];
     };
   };
