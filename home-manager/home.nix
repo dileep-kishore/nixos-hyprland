@@ -75,6 +75,7 @@
     openvpn
     pandoc
     pavucontrol
+    pdfarranger
     pipewire
     psmisc
     python311Packages.toggl-cli
