@@ -94,13 +94,20 @@
     displayManager.gdm.enable = true;
   };
 
+  # Docker
+  virtualisation.docker.enable = true;
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+
   # Wacom
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.dileep = {
     isNormalUser = true;
     description = "Dileep Kishore";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       swayidle
       swaylock-effects
