@@ -40,6 +40,7 @@
     (nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" "FantasqueSansMono" ]; })
     bashInteractive
     bat
+    btop
     coreutils-full
     fd
     font-awesome

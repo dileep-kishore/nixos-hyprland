@@ -78,5 +78,10 @@
     recursive = true;
     source = ./config/bat;
   };
+  # btop
+  home.file.".config/btop" = {
+    recursive = true;
+    source = ./config/btop;
+  };
 
 }
