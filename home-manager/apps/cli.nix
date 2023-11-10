@@ -67,7 +67,10 @@
     enable = true;
   };
 
+  # conda
   home.file.".condarc".source = ./config/.condarc;
+  # npm
+  home.file.".npmrc".source = ./config/.npmrc;
   # stylua
   home.file.".config/stylua.toml".source = ./config/stylua.toml;
   # bat
