@@ -103,7 +103,7 @@
     xfce.thunar
     zoom-us
     zotero
-    xf86_input_wacom
+    libinput
     wacomtablet
     libwacom
   ];
