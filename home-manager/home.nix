@@ -47,7 +47,7 @@
     git
     git-extras
     gnome.eog
-    gnome.gedit
+    pkgs.gedit
     gnome.seahorse
     gparted
     grim
@@ -106,5 +106,6 @@
     libinput
     wacomtablet
     libwacom
+    firefox
   ];
 }

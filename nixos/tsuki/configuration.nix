@@ -37,15 +37,17 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.nameservers = [ "208.67.222.123" "208.67.220.123" ];
-  networking.extraHosts =
-    let
-      hostsPath = https://raw.githubusercontent.com/StevenBlack/hosts/1a8e75f1cb6cd3b26ff028df83121f3d7b67b04c/alternates/porn/hosts;
-      hostsFile = builtins.fetchurl {
-        url = hostsPath;
-        sha256 = "sha256:15vvv67piwmvgibjih8ifgs0q8z0pwsad5adyppijinq4fihwf4n";
-      };
-    in
-    builtins.readFile "${hostsFile}";
+  # networking.extraHosts =
+  #  let
+  #    hostsPath = https://raw.githubusercontent.com/StevenBlack/hosts/1a8e75f1cb6cd3b26ff028df83121f3d7b67b04c/alternates/porn/hosts;
+  #    hostsFile = builtins.fetchurl {
+  #      url = hostsPath;
+  #      sha256 = "sha256:15vvv67piwmvgibjih8ifgs0q8z0pwsad5adyppijinq4fihwf4n";
+  #    };
+  #  in
+  #  builtins.readFile "${hostsFile}";
+  networking.extraHosts = ''
+  '';
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -82,15 +84,15 @@
 
   # Load amd driver for Xorg and Wayland
   services.xserver.videoDrivers = [ "amdgpu" ];
-  services.xserver.xkbOptions = "ctrl:nocaps";
   console.useXkbConfig = true;
 
   # Configure keymap in X11
   services.xserver = {
     wacom.enable = true;
     enable = true;
-    layout = "us";
-    xkbVariant = "";
+    xkb.options = "ctrl:nocaps";
+    xkb.layout = "us";
+    xkb.variant = "";
     displayManager.gdm.enable = true;
   };
 
@@ -129,6 +131,7 @@
     permittedInsecurePackages = [
       "electron-24.8.6"
       "electron-22.3.27"
+      "electron-25.9.0"
       "zotero-6.0.27"
     ];
 
@@ -143,7 +146,6 @@
   # hyprland
   programs.hyprland.enable = true;
   programs.hyprland.xwayland.enable = true;
-  programs.hyprland.enableNvidiaPatches = false;
 
   # 1password
   programs._1password.enable = true;
