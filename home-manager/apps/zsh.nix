@@ -20,8 +20,6 @@
     vimipython = "ipython --TerminalInteractiveShell.editing_mode=vi";
     # conda
     exportforge = "export PATH=$HOME/miniforge3/bin:$PATH";
-    # nnn
-    nnn = "nnn -de";
     # network
     myip = "curl http://ipecho.net/plain; echo";
     # ncdu
@@ -56,8 +54,6 @@
       USE_EDITOR = "$EDITOR";
       VISUAL = "$EDITOR";
       BROWSER = "vivaldi";
-      NNN_PLUG = "b:bookmarks;c:fzcd;d:diffs;f:finder;i:imgview;m:mimelist;n:nuke;o:fzopen;p:preview-tui;r:renamer;u:getplugs;z:autojump";
-      NNN_ARCHIVE = "\\.(7z|bz2|gz|tar|tgz|zip)$";
       BAT_THEME = "Catppuccin-mocha";
     };
     # profileExtra = { };

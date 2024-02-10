@@ -18,6 +18,7 @@
     ./apps/wezterm.nix
     ./apps/wofi.nix
     ./apps/xdg.nix
+    ./apps/yazi.nix
     ./apps/zathura.nix
     ./apps/zsh.nix
   ];
@@ -42,6 +43,7 @@
     bat
     btop
     coreutils-full
+    entr
     fd
     font-awesome
     git
@@ -68,7 +70,6 @@
     neovim
     networkmanagerapplet
     nixpkgs-fmt
-    nnn
     nodejs_20
     noto-fonts
     noto-fonts-emoji
