@@ -271,8 +271,6 @@
       cmd_duration = {
         format = "[](fg:yellow)[ $duration]($style)[](fg:yellow)";
         min_time = 5000;
-        show_notifications = true;
-        min_time_to_notify = 150000;
         style = "bold bg:yellow fg:crust";
       };
       jobs = {
