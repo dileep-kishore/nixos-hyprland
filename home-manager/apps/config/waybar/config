@@ -25,20 +25,20 @@
     "disable-scroll": true,
     "all-outputs": false,
     "warp-on-scroll": false,
-    "format": "<span font='18'>{icon}</span>",
+    "format": "{icon}",
     "format-icons": {
-      "1": "❶",
-      "2": "❷",
-      "3": "❸",
-      "4": "❹",
-      "5": "❺",
-      "6": "❻",
-      "7": "❼",
-      "8": "❽",
-      "9": "❾",
-      "urgent": "🅤",
-      "focused": "🅕",
-      "default": "⓿"
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "urgent": "",
+      "focused": "",
+      "default": "󰧞"
     }
   },
   "wlr/taskbar": {
