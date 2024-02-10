@@ -13,36 +13,43 @@
 
       plugins = with pkgs.tmuxPlugins; [
         # NOTE: catppuccin must be before resurrect and continuum
-        {
-          plugin = catppuccin;
-          extraConfig = ''
-            set -g @catppuccin_flavour 'mocha'
-            set -g @catppuccin_window_status_enable "yes"
-            set -g @catppuccin_window_status_icon_enable "yes"
-            set -g @catppuccin_window_tabs_enabled on
+        (catppuccin.overrideAttrs
+          (_: {
+            src = pkgs.fetchFromGitHub {
+              owner = "catppuccin";
+              repo = "tmux";
+              rev = "a0119d25283ba2b18287447c1f86720a255fb65";
+              sha256 = "sha256-SGJjDrTrNNxnurYV1o1KbHRIHFyfmbXDX/t4KN8VCao=";
+            };
+            extraConfig = ''
+              set -g @catppuccin_flavour 'mocha'
+              set -g @catppuccin_window_status_enable "yes"
+              set -g @catppuccin_window_status_icon_enable "yes"
+              set -g @catppuccin_window_tabs_enabled on
 
-            set -g @catppuccin_window_default_fill "none"
-            set -g @catppuccin_window_default_text "#W"
+              set -g @catppuccin_window_default_fill "none"
+              set -g @catppuccin_window_default_text "#W"
 
-            set -g @catppuccin_window_current_fill "all"
-            set -g @catppuccin_window_current_text "#W"
+              set -g @catppuccin_window_current_fill "all"
+              set -g @catppuccin_window_current_text "#W"
 
-            set -g @catppuccin_window_left_separator ""
-            set -g @catppuccin_window_right_separator " "
-            set -g @catppuccin_window_middle_separator " | "
-            set -g @catppuccin_window_number_position "right"
+              set -g @catppuccin_window_left_separator ""
+              set -g @catppuccin_window_right_separator " "
+              set -g @catppuccin_window_middle_separator " | "
+              set -g @catppuccin_window_number_position "right"
 
-            set -g @catppuccin_status_modules "directory session user host date_time"
-            set -g @catppuccin_status_left_separator  ""
-            set -g @catppuccin_status_right_separator " "
-            set -g @catppuccin_status_right_separator_inverse "yes"
-            set -g @catppuccin_status_fill "all"
-            set -g @catppuccin_status_connect_separator "no"
+              set -g @catppuccin_status_modules_left "session"
+              set -g @catppuccin_status_modules_right "directory user host date_time"
+              set -g @catppuccin_status_left_separator  ""
+              set -g @catppuccin_status_right_separator " "
+              set -g @catppuccin_status_right_separator_inverse "yes"
+              set -g @catppuccin_status_fill "all"
+              set -g @catppuccin_status_connect_separator "no"
 
-            set -g @catppuccin_directory_text "#(echo #{pane_current_path} | sed 's|^$HOME|~|')"
-            set -g @catppuccin_date_time_text "#[italics]%e %b %Y"
-          '';
-        }
+              set -g @catppuccin_directory_text "#(echo #{pane_current_path} | sed 's|^$HOME|~|')"
+              set -g @catppuccin_date_time_text "#[italics]%e %b %Y"
+            '';
+          }))
         sensible
         yank
         vim-tmux-navigator
