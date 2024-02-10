@@ -117,6 +117,8 @@
       };
       nix_shell = {
         format = "[via](italic) [$symbol$state( \($name\))]($style) ";
+        impure_msg = "[I](bold red)";
+        pure_msg = "[P](bold green)";
         symbol = " ";
       };
       nodejs = {
