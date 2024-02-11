@@ -6,6 +6,10 @@
     # clear
     clear = "clear -x";
     cls = "clear";
+    # vim alias
+    v = "nvim";
+    # yazi alias
+    y = "yazi";
     # tmux
     tnew = "tmux new -s";
     ta = "tmux attach -t";
