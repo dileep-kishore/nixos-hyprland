@@ -96,6 +96,12 @@
         # set title
         set-option -g set-titles on
         set-option -g set-titles-string '#S: #W - TMUX'
+
+	# binding to resize panes
+	bind -n M-Up resize-pane -U 5
+	bind -n M-Down resize-pane -D 5
+	bind -n M-Left resize-pane -L 5
+	bind -n M-Right resize-pane -R 5
       '';
     };
 }
