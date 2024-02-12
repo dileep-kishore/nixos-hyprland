@@ -11,7 +11,17 @@
       ./hardware-configuration.nix
     ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Package mangement
+  nix = {
+    settings.experimental-features = [ "nix-command" "flakes" ];
+    settings.auto-optimise-store = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 14d";
+    };
+  };
 
   # Bootloader.
   boot.kernelPackages = pkgs.linuxPackages_latest;
