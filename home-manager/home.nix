@@ -52,6 +52,7 @@
     pkgs.gedit
     gnome.seahorse
     gparted
+    go
     grim
     htop
     hyprland
