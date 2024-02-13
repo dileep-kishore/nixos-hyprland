@@ -81,7 +81,7 @@
         bind r source-file ~/.config/tmux/tmux.conf
 
         # status bar on top
-        set -g status-position bottom
+        set -g status-position top
 
         # Shift arrow to switch windows
         bind -n S-Left previous-window
