@@ -87,6 +87,7 @@
     signal-desktop
     slack
     slurp
+    sops
     texlive.combined.scheme-full
     tldr
     todoist
