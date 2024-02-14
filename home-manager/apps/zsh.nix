@@ -59,6 +59,7 @@
       VISUAL = "$EDITOR";
       BROWSER = "vivaldi";
       BAT_THEME = "Catppuccin-mocha";
+      OPENAI_API_KEY = "$(cat $HOME/.openai_api_key)";
     };
     # profileExtra = { };
     # shellAliases = { };

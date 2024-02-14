@@ -2,13 +2,14 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, sops-nix, ... }:
 
 {
   imports =
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      sops-nix.nixosModules.sops
     ];
 
 
@@ -182,6 +183,28 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  # Sops secrets
+  sops.defaultSopsFile = ../../secrets/secrets.yaml;
+  sops.defaultSopsFormat = "yaml";
+  sops.age.keyFile = "/home/dileep/.config/sops/age/keys.txt";
+  sops.secrets.OPENAI_API_KEY = {
+    owner = config.users.users.dileep.name;
+  };
+
+  systemd.services."openaisecret" = {
+    description = "OpenAI API Key";
+    after = [ "network.target" ];
+    wantedBy = [ "multi-user.target" ];
+    script = ''
+      echo $(cat ${config.sops.secrets.OPENAI_API_KEY.path}) > /home/dileep/.openai_api_key
+    '';
+    serviceConfig = {
+      User = "dileep";
+      WorkingDirectory = "/home/dileep";
+    };
+  };
+  systemd.services.openaisecret.enable = true;
 
   fonts.fontDir.enable = true;
 
