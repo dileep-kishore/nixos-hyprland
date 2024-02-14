@@ -25,7 +25,7 @@
     "disable-scroll": true,
     "all-outputs": false,
     "warp-on-scroll": false,
-    "format": "{icon}",
+    "format": "<span><b>{icon}</b></span>",
     "format-icons": {
       "1": "一",
       "2": "二",

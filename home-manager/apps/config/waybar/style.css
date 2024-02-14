@@ -81,6 +81,34 @@ window.HDMI-A-1 #custom-toggl {
   padding: 0.1rem 1rem;
 }
 
+#taskbar button {
+  color: @base;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  /* padding: 0.1rem 1rem; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#taskbar button.active {
+  color: @base;
+  background-color: @red;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  /* padding: 0.1rem 2rem; */
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#taskbar button:hover {
+  color: @sapphire;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+  /* padding: 0.1rem 2rem; */
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 #network,
 #idle_inhibitor,
 #cpu,
