@@ -7,8 +7,8 @@
       package = pkgs.papirus-icon-theme;
     };
     cursorTheme = {
-      name = "Catppuccin-Mocha-Lavender-Cursors";
-      package = pkgs.catppuccin-cursors.mochaLavender;
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors;
     };
     theme = {
       name = "Catppuccin-Mocha-Standard-Mauve-Dark";
