@@ -19,13 +19,11 @@
     };
   };
 
-  programs.lsd = {
+  programs.eza = {
     enable = true;
     enableAliases = true;
-  };
-
-  programs.dircolors = {
-    enable = true;
+    git = true;
+    icons = true;
   };
 
   programs.fzf = {
