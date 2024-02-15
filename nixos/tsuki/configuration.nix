@@ -197,7 +197,8 @@
     after = [ "network.target" ];
     wantedBy = [ "multi-user.target" ];
     script = ''
-      echo $(cat ${config.sops.secrets.OPENAI_API_KEY.path}) > /home/dileep/.openai_api_key
+      mkdir -p /home/dileep/.secrets
+      echo $(cat ${config.sops.secrets.OPENAI_API_KEY.path}) > /home/dileep/.secrets/openai_api_key.txt
     '';
     serviceConfig = {
       User = "dileep";

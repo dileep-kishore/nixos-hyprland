@@ -51,6 +51,7 @@
     };
     initExtra = ''
       bindkey '^ ' autosuggest-accept
+      export OPENAI_API_KEY="$(cat ~/.secrets/openai_api_key.txt)"
     '';
     sessionVariables = {
       EDITOR = "nvim";
@@ -59,7 +60,6 @@
       VISUAL = "$EDITOR";
       BROWSER = "vivaldi";
       BAT_THEME = "Catppuccin-mocha";
-      OPENAI_API_KEY = "$(cat $HOME/.openai_api_key)";
     };
     # profileExtra = { };
     # shellAliases = { };
