@@ -2,12 +2,12 @@
 
 * {
   font-family: "Rec Mono Semicasual", "CaskaydiaCove NF";
-  font-size: 14px;
+  font-size: 15px;
   min-height: 0;
 }
 
 window.HDMI-A-1 * {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 window.HDMI-A-1 #window {
