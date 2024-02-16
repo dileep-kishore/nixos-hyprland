@@ -3,7 +3,7 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
-    font = "CaskaydiaCove NF";
+    font = "Rec Mono Semicasual";
     location = "center";
     terminal = "wezterm";
     plugins = [
