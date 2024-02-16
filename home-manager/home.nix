@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, inputs, ... }: {
 
   imports = [
     # ./apps/espanso.nix
@@ -70,7 +70,7 @@
     morgen
     ncdu
     neofetch
-    neovim
+    inputs.neovim.packages.${system}.default
     networkmanagerapplet
     nixpkgs-fmt
     nodejs_20
