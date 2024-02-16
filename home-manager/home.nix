@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
   imports = [
     # ./apps/espanso.nix
@@ -38,7 +37,9 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" "FantasqueSansMono" ]; })
+    (nerdfonts.override {
+      fonts = [ "FiraCode" "CascadiaCode" "FantasqueSansMono" ];
+    })
     bashInteractive
     bat
     btop
@@ -57,6 +58,7 @@
     htop
     hyprland
     hyprpaper
+    jq
     libgccjit
     libnotify
     libreoffice-fresh
