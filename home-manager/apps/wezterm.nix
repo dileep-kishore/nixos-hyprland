@@ -11,6 +11,7 @@
           force_reverse_video_cursor = true,
           font = wezterm.font "Rec Mono Semicasual",
           color_scheme = "Catppuccin Mocha",
+          font_size = 13.0,
           enable_tab_bar = false,
       }
     '';
