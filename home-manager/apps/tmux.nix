@@ -82,7 +82,10 @@
       set-option -g allow-passthrough
 
       # status bar on top
-      set -g status-position bottom
+      set -g status-position top
+      set -Fg 'status-format[0]' '#{status-format[0]}'
+      set -g 'status-format[1]' ' '
+      set -g status 2
 
       # Shift arrow to switch windows
       bind -n S-Left previous-window
