@@ -51,6 +51,7 @@
     git-extras
     gnome.eog
     pkgs.gedit
+    gnome.nautilus
     gnome.seahorse
     gparted
     go
@@ -105,7 +106,6 @@
     wofi
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
-    xfce.thunar
     zoom-us
     zotero
     libinput
