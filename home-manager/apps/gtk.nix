@@ -1,5 +1,4 @@
-{ config, lib, pkgs, ... }:
-{
+{ config, lib, pkgs, ... }: {
   gtk = {
     enable = true;
     iconTheme = {
@@ -15,7 +14,7 @@
       package = pkgs.catppuccin-gtk.override {
         accents = [ "mauve" ];
         size = "standard";
-        tweaks = [ "rimless" "black" ];
+        tweaks = [ "normal" ];
         variant = "mocha";
       };
     };

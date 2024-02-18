@@ -87,6 +87,9 @@
       set -g 'status-format[1]' ' '
       set -g status 2
 
+      # Set border colors
+      set -g pane-border-lines heavy
+
       # Shift arrow to switch windows
       bind -n S-Left previous-window
       bind -n S-Right next-window
