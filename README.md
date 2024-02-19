@@ -1,10 +1,13 @@
+<!-- markdownlint-disable -->
 <h1 align="center">
     <a name="top" title="nixos-hyprland">
         nixos-hyprland
     </a>
+</h1>
     <br/>
     <br/>
     <br/>
+<h1 align="center">
     <sup>
         <a href="https://nixos.org"><img src="https://avatars.githubusercontent.com/u/487568?s=200&v=4"></a>
     </sup>
@@ -19,30 +22,43 @@
 <div align="center">
     Dotfiles for my <a href="https://hyprland.org">Hyprland</a> setup on my <a href="https://nixos.org">NixOS</a> system.
     <p><strong>Be sure to <a href="#" title="star">⭐️</a> or <a href="#" title="fork">🔱</a> this repo if you find it useful! 😃</strong></p>
+    <br/>
+    <img src="https://forthebadge.com/images/badges/works-on-my-machine.svg">
 </div>
-
-> **Note:** This is a work in progress. I'm new to nix and am still working on this setup.
+<!-- markdownlint-restore -->
 
 ## Setup
 
-- `NixOS`
-- `Hyprland`
-- `Waybar`
-- `Zsh` with `antidote`
+- OS: [NixOS](https://nixos.org)
+- Window manager: [Hyprland](https://hyprland.org)
+- Status bar: [Waybar](https://github.com/Alexays/Waybar)
+- Terminal: [WezTerm](https://wezfurlong.org/wezterm/index.html)
+- Shell: `Zsh` with plugins managed through [antidote](https://github.com/mattmc3/antidote)
 - Current theme: [Catppuccin](https://github.com/catppuccin/catppuccin)
 - Font: [Recursive](https://www.recursive.design)
+- Editor: [Neovim](https://neovim.io). Configuration can be found [here](https://github.com/dileep-kishore/neovim)
 
-## Screenshots
+## Gallery
 
-|                        | Image                     |
-| ---------------------- | ------------------------- |
-| Desktop                | ![](assets/desktop.png)   |
-| Terminal + Tmux        | ![](assets/terminals.png) |
-| VSCode                 | ![](assets/vscode.png) |
-| Neovim                 | Coming soon.    |
+|             Desktop              |
+| :------------------------------: |
+| ![desktop](./assets/desktop.png) |
+
+|           Terminal + Tmux            |
+| :----------------------------------: |
+| ![terminals](assets/./terminals.png) |
+
+|             Neovim             |
+| :----------------------------: |
+| ![neovim](./assets/neovim.png) |
+
+|            VSCode            |
+| :--------------------------: |
+| ![vscode](assets/vscode.png) |
 
 ## Installation
 
 ```sh
 sudo nixos-rebuild switch --flake '.#tsuki'
 ```
+
