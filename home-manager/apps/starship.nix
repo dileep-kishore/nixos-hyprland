@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   programs.starship = {
     enable = true;
     enableBashIntegration = true;
@@ -78,7 +82,6 @@
         "$time"
         "$line_break"
         "$character"
-
       ];
 
       # LEFT prompt
@@ -131,7 +134,7 @@
         truncation_length = 25;
       };
       git_commit = {
-        format = "[](fg:green)[\\($hash$tag\\)]($style)";
+        format = "[\\($hash$tag\\)]($style)";
         tag_disabled = false;
         tag_symbol = " ";
         only_detached = true;
@@ -192,7 +195,6 @@
         symbol = " ";
         style = "bold bg:green fg:crust";
       };
-
 
       lua = {
         format = "[](fg:sky)[$symbol$version]($style)[](fg:sky)";
@@ -285,7 +287,6 @@
         time_format = "%R";
         style = "bold bg:blue fg:crust";
       };
-
 
       add_newline = true;
       character = {
