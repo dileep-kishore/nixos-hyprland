@@ -1,5 +1,9 @@
-{ config, pkgs, inputs, ... }: {
-
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     # ./apps/espanso.nix
     # ./apps/oh-my-posh.nix
@@ -38,7 +42,7 @@
 
   home.packages = with pkgs; [
     (nerdfonts.override {
-      fonts = [ "FiraCode" "CascadiaCode" "FantasqueSansMono" ];
+      fonts = ["FiraCode" "CascadiaCode" "FantasqueSansMono"];
     })
     bashInteractive
     bat
@@ -46,24 +50,27 @@
     coreutils-full
     entr
     fd
+    firefox
     font-awesome
     git
     git-extras
     gnome.eog
-    pkgs.gedit
     gnome.nautilus
     gnome.seahorse
-    gparted
     go
+    gparted
     grim
     htop
     hyprland
     hyprpaper
+    inputs.neovim.packages.${system}.default
     jq
     libgccjit
+    libinput
     libnotify
     libreoffice-fresh
     libsForQt5.okular
+    libwacom
     libxcrypt-legacy
     logseq
     lshw
@@ -71,7 +78,6 @@
     morgen
     ncdu
     neofetch
-    inputs.neovim.packages.${system}.default
     networkmanagerapplet
     nixpkgs-fmt
     nodejs_20
@@ -83,6 +89,7 @@
     pavucontrol
     pdfarranger
     pipewire
+    pkgs.gedit
     psmisc
     python311Packages.toggl-cli
     python312
@@ -99,18 +106,16 @@
     vim
     vivaldi
     vscode-fhs
+    wacomtablet
     waybar
     wget
-    wlogout
     wl-clipboard
+    wlogout
     wofi
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+    zip
     zoom-us
     zotero
-    libinput
-    wacomtablet
-    libwacom
-    firefox
   ];
 }
