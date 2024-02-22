@@ -141,6 +141,7 @@
         style = "bold bg:green fg:crust";
       };
       git_state = {
+        format = "[$state( $progress_current/$progress_total)]($style)";
         style = "bold bg:green fg:crust";
       };
       git_status = {
