@@ -29,25 +29,32 @@
           set -g @catppuccin_window_status_icon_enable "yes"
           set -g @catppuccin_window_tabs_enabled on
 
-          set -g @catppuccin_window_default_fill "none"
+          set -g @catppuccin_window_default_fill "number"
           set -g @catppuccin_window_default_text "#W"
 
-          set -g @catppuccin_window_current_fill "all"
+          set -g @catppuccin_window_current_fill "number"
+          set -g @catppuccin_window_current_background "#11111b"
           set -g @catppuccin_window_current_text "#W"
 
-          set -g @catppuccin_window_left_separator ""
-          set -g @catppuccin_window_right_separator ""
-          set -g @catppuccin_window_middle_separator " | "
-          set -g @catppuccin_window_number_position "right"
-          set -g @catppuccin_window_right_separator_inverse "no"
+          set -g @catppuccin_window_left_separator "█"
+          set -g @catppuccin_window_right_separator "█ "
+          set -g @catppuccin_window_middle_separator "█ "
+          set -g @catppuccin_window_number_position "left"
 
           set -g @catppuccin_status_modules_left "session"
           set -g @catppuccin_status_modules_right "directory user host date_time"
-          set -g @catppuccin_status_left_separator  ""
-          set -g @catppuccin_status_right_separator ""
-          set -g @catppuccin_status_right_separator_inverse "no"
-          set -g @catppuccin_status_fill "all"
+          set -g @catppuccin_status_left_separator  "█"
+          set -g @catppuccin_status_right_separator "█ "
+          set -g @catppuccin_status_fill "icon"
           set -g @catppuccin_status_connect_separator "no"
+
+          set -g @catppuccin_icon_window_last "󰖰 "
+          set -g @catppuccin_icon_window_current "󰖯 "
+          set -g @catppuccin_icon_window_zoom "󰁌 "
+          set -g @catppuccin_icon_window_mark "󰃀 "
+          set -g @catppuccin_icon_window_silent "󰂛 "
+          set -g @catppuccin_icon_window_activity "󰖲 "
+          set -g @catppuccin_icon_window_bell "󰂞 "
 
           set -g @catppuccin_directory_text "#(echo #{pane_current_path} | sed 's|^$HOME|~|')"
           set -g @catppuccin_date_time_text "#[italics]%e %b %Y"
