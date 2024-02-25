@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   programs.tmux = {
     enable = true;
     clock24 = true;
@@ -30,16 +35,17 @@
           set -g @catppuccin_window_current_fill "all"
           set -g @catppuccin_window_current_text "#W"
 
-          set -g @catppuccin_window_left_separator ""
-          set -g @catppuccin_window_right_separator " "
+          set -g @catppuccin_window_left_separator ""
+          set -g @catppuccin_window_right_separator ""
           set -g @catppuccin_window_middle_separator " | "
           set -g @catppuccin_window_number_position "right"
+          set -g @catppuccin_window_right_separator_inverse "no"
 
           set -g @catppuccin_status_modules_left "session"
           set -g @catppuccin_status_modules_right "directory user host date_time"
-          set -g @catppuccin_status_left_separator  ""
-          set -g @catppuccin_status_right_separator " "
-          set -g @catppuccin_status_right_separator_inverse "yes"
+          set -g @catppuccin_status_left_separator  ""
+          set -g @catppuccin_status_right_separator ""
+          set -g @catppuccin_status_right_separator_inverse "no"
           set -g @catppuccin_status_fill "all"
           set -g @catppuccin_status_connect_separator "no"
 
@@ -83,9 +89,6 @@
 
       # status bar on top
       set -g status-position top
-      set -Fg 'status-format[0]' '#{status-format[0]}'
-      set -g 'status-format[1]' ' '
-      set -g status 2
 
       # Set border colors
       set -g pane-border-lines heavy

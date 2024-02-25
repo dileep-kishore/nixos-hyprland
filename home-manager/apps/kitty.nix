@@ -3,7 +3,7 @@
     enable = true;
     font = {
       name = "Rec Mono Semicasual";
-      size = 12.0;
+      size = 13.0;
     };
     shellIntegration.enableBashIntegration = true;
     shellIntegration.enableZshIntegration = true;
