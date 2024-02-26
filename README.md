@@ -34,7 +34,7 @@
 - Status bar: [Waybar](https://github.com/Alexays/Waybar)
 - Terminal: [WezTerm](https://wezfurlong.org/wezterm/index.html)
 - Shell: `Zsh` with plugins managed through [antidote](https://github.com/mattmc3/antidote)
-- Current theme: [Catppuccin](https://github.com/catppuccin/catppuccin)
+- Current theme: [Rosé Pine](https://rosepinetheme.com)
 - Font: [Recursive](https://www.recursive.design)
 - Editor: [Neovim](https://neovim.io). Configuration can be found [here](https://github.com/dileep-kishore/neovim)
 
@@ -61,4 +61,3 @@
 ```sh
 sudo nixos-rebuild switch --flake '.#tsuki'
 ```
-

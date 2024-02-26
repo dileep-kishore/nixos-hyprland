@@ -101,6 +101,10 @@
       set -g status-right-length 150
       set-option -g status-style fg=$thm_text,bg=$thm_base
 
+      #+--- Pane borders ---+
+      set -g pane-border-style fg=$thm_hl_low
+      set -g pane-active-border-style fg=$thm_iris
+
       #+--- Bars LEFT ---+
       # Session name
       session_name="#[fg=$thm_iris,bg=$thm_base]#[fg=$thm_base,bg=$thm_iris,bold,italics]  #S #[bg=$thm_base,fg=$thm_iris]";
