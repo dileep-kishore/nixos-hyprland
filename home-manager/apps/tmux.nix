@@ -104,7 +104,7 @@
       #+--- Bars LEFT ---+
       # Session name
       session_name="#[fg=$thm_iris,bg=$thm_base]#[fg=$thm_base,bg=$thm_iris,bold,italics]  #S #[bg=$thm_base,fg=$thm_iris]";
-      dir_section="#[bg=$thm_pine,fg=$thm_base]#[fg=$thm_base,bg=$thm_pine,bold]  #(echo #{pane_current_path} | sed 's|^$HOME|~|') #[bg=$thm_base,fg=$thm_pine]";
+      dir_section="#[bg=$thm_pine,fg=$thm_base]#[fg=$thm_base,bg=$thm_pine,bold]  #(~/.config/tmux/scripts/find_git_root.py #{pane_current_path}) #[bg=$thm_base,fg=$thm_pine]";
 
       set -g status-left "$session_name $dir_section"
 
@@ -126,7 +126,7 @@
 
       #+--- Bars RIGHT ---+
       host_name="#[fg=$thm_rose,bg=$thm_base]#[fg=$thm_base,bg=$thm_rose,bold,italics]  #H #[bg=$thm_base,fg=$thm_rose]";
-      uptime="#[fg=$thm_foam,bg=$thm_base]#[fg=$thm_base,bg=$thm_foam,bold]  #(~/.config/tmux/scripts/uptime_fmt.sh) #[fg=$thm_base,bg=$thm_foam]";
+      uptime="#[fg=$thm_foam,bg=$thm_base]#[fg=$thm_base,bg=$thm_foam,bold] 󰜷 #(~/.config/tmux/scripts/uptime_fmt.sh) #[fg=$thm_base,bg=$thm_foam]";
       date_section="#[fg=$thm_gold,bg=$thm_base]#[fg=$thm_base,bg=$thm_gold,bold]  #(date +'%a, %d %b %Y') #[fg=$thm_base,bg=$thm_gold]";
 
       set -g status-right "$date_section#[bg=$thm_base,fg=$thm_base] $uptime#[bg=$thm_base,fg=$thm_base] $host_name"
