@@ -37,7 +37,7 @@ textbox-prompt-colon {
     expand: 			            false;
     str: 			                "";
     border-radius:                  100%;
-    background-color:               @SEL;
+    background-color:               @BG;
     text-color:                     @FG;
     padding:                        8px 12px 8px 12px;
     font:			                "CaskaydiaCove NF 13";
@@ -135,7 +135,7 @@ element alternate.active {
 
 element selected {
     background-color:               @BGA;
-    text-color:                     @SEL;
+    text-color:                     @FGA;
     border:                  	    0px 0px 0px 0px;
     border-radius:                  10px;
     border-color:                   @BDR;
