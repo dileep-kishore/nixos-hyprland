@@ -166,6 +166,9 @@
       };
       git_status = {
         format = "([\\[$all_status$ahead_behind\\]]($style))[](fg:rose)";
+        ahead = "↑";
+        behind = "↓";
+        diverged = "↕";
         style = "bold bg:rose fg:base";
       };
       hg_branch = {
