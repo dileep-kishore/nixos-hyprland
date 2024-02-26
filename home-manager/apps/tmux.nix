@@ -15,51 +15,6 @@
     tmuxp.enable = true;
 
     plugins = with pkgs.tmuxPlugins; [
-      # NOTE: catppuccin must be before resurrect and continuum
-      (catppuccin.overrideAttrs (_: {
-        src = pkgs.fetchFromGitHub {
-          owner = "catppuccin";
-          repo = "tmux";
-          rev = "a0119d25283ba2b18287447c1f86720a255fb65";
-          sha256 = "sha256-SGJjDrTrNNxnurYV1o1KbHRIHFyfmbXDX/t4KN8VCao=";
-        };
-        extraConfig = ''
-          set -g @catppuccin_flavour 'mocha'
-          set -g @catppuccin_window_status_enable "yes"
-          set -g @catppuccin_window_status_icon_enable "yes"
-          set -g @catppuccin_window_tabs_enabled on
-
-          set -g @catppuccin_window_default_fill "number"
-          set -g @catppuccin_window_default_text "#W"
-
-          set -g @catppuccin_window_current_fill "number"
-          set -g @catppuccin_window_current_background "#11111b"
-          set -g @catppuccin_window_current_text "#W"
-
-          set -g @catppuccin_window_left_separator "█"
-          set -g @catppuccin_window_right_separator "█ "
-          set -g @catppuccin_window_middle_separator "█ "
-          set -g @catppuccin_window_number_position "left"
-
-          set -g @catppuccin_status_modules_left "session"
-          set -g @catppuccin_status_modules_right "directory user host date_time"
-          set -g @catppuccin_status_left_separator  "█"
-          set -g @catppuccin_status_right_separator "█ "
-          set -g @catppuccin_status_fill "icon"
-          set -g @catppuccin_status_connect_separator "no"
-
-          set -g @catppuccin_icon_window_last "󰖰 "
-          set -g @catppuccin_icon_window_current "󰖯 "
-          set -g @catppuccin_icon_window_zoom "󰁌 "
-          set -g @catppuccin_icon_window_mark "󰃀 "
-          set -g @catppuccin_icon_window_silent "󰂛 "
-          set -g @catppuccin_icon_window_activity "󰖲 "
-          set -g @catppuccin_icon_window_bell "󰂞 "
-
-          set -g @catppuccin_directory_text "#(echo #{pane_current_path} | sed 's|^$HOME|~|')"
-          set -g @catppuccin_date_time_text "#[italics]%e %b %Y"
-        '';
-      }))
       sensible
       yank
       vim-tmux-navigator
@@ -119,6 +74,62 @@
       bind -n M-Down resize-pane -D 5
       bind -n M-Left resize-pane -L 5
       bind -n M-Right resize-pane -R 5
+
+      # theme and statusbar
+      thm_base="#191724";
+      thm_surface="#1f1d2e";
+      thm_overlay="#26233a";
+      thm_muted="#6e6a86";
+      thm_subtle="#908caa";
+      thm_text="#e0def4";
+      thm_love="#eb6f92";
+      thm_gold="#f6c177";
+      thm_rose="#ebbcba";
+      thm_pine="#31748f";
+      thm_pine2="#3e8fb0";
+      thm_foam="#9ccfd8";
+      thm_foam2="#56949f";
+      thm_iris="#c4a7e7";
+      thm_hl_low="#21202e";
+      thm_hl_med="#403d52";
+      thm_hl_high="#524f67";
+
+      set-option -g status-justify centre
+      set-option -g status-keys vi
+      set-option -g status-position top
+      set -g status-left-length 150
+      set -g status-right-length 150
+      set-option -g status-style fg=$thm_text,bg=$thm_base
+
+      #+--- Bars LEFT ---+
+      # Session name
+      session_name="#[fg=$thm_iris,bg=$thm_base]#[fg=$thm_base,bg=$thm_iris,bold,italics]  #S #[bg=$thm_base,fg=$thm_iris]";
+      dir_section="#[bg=$thm_pine,fg=$thm_base]#[fg=$thm_base,bg=$thm_pine,bold]  #(echo #{pane_current_path} | sed 's|^$HOME|~|') #[bg=$thm_base,fg=$thm_pine]";
+
+      set -g status-left "$session_name $dir_section"
+
+      #+--- Windows ---+
+      # Status
+      custom_icon_window_last="󰖰 ";
+      custom_icon_window_current="󰖯 ";
+      custom_icon_window_zoom="󰁌 ";
+      custom_icon_window_mark="󰃀 ";
+      custom_icon_window_silent="󰂛 ";
+      custom_icon_window_activity="󰖲 ";
+      custom_icon_window_bell="󰂞 ";
+      show_window_status="#{?window_activity_flag,$custom_icon_window_activity,}#{?window_bell_flag,$custom_icon_window_bell,}#{?window_silence_flag,$custom_icon_window_silent,}#{?window_active,$custom_icon_window_current,}#{?window_last_flag,$custom_icon_window_last,}#{?window_marked_flag,$custom_icon_window_mark,}#{?window_zoomed_flag,$custom_icon_window_zoom,}";
+      # Focus
+      set -g window-status-current-format "#[fg=$thm_foam,bg=$thm_base]#[bg=$thm_foam,fg=$thm_base]#I #[fg=$thm_base,bg=$thm_foam2,bold,italics] #W $show_window_status #[bg=$thm_base,fg=$thm_foam2]"
+      # Unfocused
+      set -g window-status-format "#[fg=$thm_hl_high,bg=$thm_base]#[bg=$thm_hl_high,fg=$thm_text]#I #[fg=$thm_text,bg=$thm_hl_low] #W $show_window_status #[bg=$thm_base,fg=$thm_hl_low]"
+      set -g window-status-separator " "
+
+      #+--- Bars RIGHT ---+
+      host_name="#[fg=$thm_rose,bg=$thm_base]#[fg=$thm_base,bg=$thm_rose,bold,italics]  #H #[bg=$thm_base,fg=$thm_rose]";
+      uptime="#[fg=$thm_foam,bg=$thm_base]#[fg=$thm_base,bg=$thm_foam,bold]  #(~/.config/tmux/scripts/uptime_fmt.sh) #[fg=$thm_base,bg=$thm_foam]";
+      date_section="#[fg=$thm_gold,bg=$thm_base]#[fg=$thm_base,bg=$thm_gold,bold]  #(date +'%a, %d %b %Y') #[fg=$thm_base,bg=$thm_gold]";
+
+      set -g status-right "$date_section#[bg=$thm_base,fg=$thm_base] $uptime#[bg=$thm_base,fg=$thm_base] $host_name"
     '';
   };
 }

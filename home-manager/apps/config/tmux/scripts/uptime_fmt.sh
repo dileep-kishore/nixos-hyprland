@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-uptime | grep -oP '\d+ days \d+' | sed 's/ \([0-9]\+\)$/ \1 hours/'
+uptime | awk '{print $3"D", substr($5, 1, index($5, ":")-1)"H"}'

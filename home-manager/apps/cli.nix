@@ -63,11 +63,17 @@
     enable = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
-    options = [ "--cmd" "cd" ];
+    options = ["--cmd" "cd"];
   };
 
   programs.gh = {
     enable = true;
+  };
+
+  # tmux
+  home.file.".config/tmux" = {
+    recursive = true;
+    source = ./config/tmux;
   };
 
   # conda
@@ -86,5 +92,4 @@
     recursive = true;
     source = ./config/btop;
   };
-
 }
