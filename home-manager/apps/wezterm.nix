@@ -10,7 +10,7 @@
       return {
           force_reverse_video_cursor = true,
           font = wezterm.font "Rec Mono Semicasual",
-          color_scheme = "Catppuccin Mocha",
+          color_scheme = "rose-pine",
           font_size = 13.0,
           enable_tab_bar = false,
       }
