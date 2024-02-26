@@ -40,11 +40,31 @@
           crust = "#181926";
           black = "#181926";
         };
+        rose_pine = {
+          _nc = "#16141f";
+          base = "#191724";
+          surface = "#1f1d2e";
+          overlay = "#26233a";
+          muted = "#6e6a86";
+          subtle = "#908caa";
+          text = "#e0def4";
+          love = "#eb6f92";
+          gold = "#f6c177";
+          gold2 = "#ea9d34";
+          rose = "#ebbcba";
+          rose2 = "#ea9a97";
+          pine = "#31748f";
+          pine2 = "#3e8fb0";
+          foam = "#9ccfd8";
+          foam2 = "#56949f";
+          iris = "#c4a7e7";
+          iris2 = "#907aa9";
+        };
       };
-      palette = "catppuccin_mocha";
+      palette = "rose_pine";
       format = lib.concatStrings [
-        "[┏](bold blue)[  ](bold bg:blue fg:crust)"
-        "[](fg:blue bg:black)"
+        "[┏](bold foam)[  ](bold bg:foam fg:base)"
+        "[](fg:foam bg:base)"
         "$status"
         "$shlvl"
         "$sudo"
@@ -86,41 +106,41 @@
 
       # LEFT prompt
       status = {
-        style = "bg:red fg:crust";
-        format = "[](fg:red)[$symbol$status]($style)[](fg:red)";
+        style = "bg:love fg:base";
+        format = "[](fg:love)[$symbol$status]($style)[](fg:love)";
         disabled = false;
         symbol = " ";
         not_executable_symbol = " ";
       };
       shlvl = {
         disabled = false;
-        format = "[](fg:yellow)[$symbol$shlvl]($style)[](fg:yellow)";
-        style = "bg:yellow fg:crust";
+        format = "[](fg:gold)[$symbol$shlvl]($style)[](fg:gold)";
+        style = "bg:gold fg:base";
         symbol = " ";
         threshold = 3;
       };
       sudo = {
-        format = "[](fg:red)[$symbol]($style)[](fg:red)";
-        style = "bg:red fg:crust";
+        format = "[](fg:love)[$symbol]($style)[](fg:love)";
+        style = "bg:love fg:base";
         symbol = " ";
         disabled = false;
       };
       username = {
-        style_user = "bg:cyan fg:crust";
-        style_root = "bg:cyan fg:crust";
-        format = "[](fg:cyan)[$user]($style)[](fg:cyan)";
+        style_user = "bg:foam fg:base";
+        style_root = "bg:foam fg:base";
+        format = "[](fg:foam)[$user]($style)[](fg:foam)";
         disabled = false;
         show_always = false;
       };
       hostname = {
-        format = "[  ](bg:cyan fg:crust)[$hostname]($style)[](fg:cyan)";
-        style = "bg:cyan fg:crust";
+        format = "[](bg:foam fg:base)[$hostname]($style)[](fg:foam)";
+        style = "bg:foam fg:base";
         ssh_symbol = " ";
       };
       directory = {
-        format = "[](fg:mauve)[$path]($style)[$read_only]($read_only_style)[](fg:mauve)";
-        style = "bold bg:mauve fg:crust";
-        read_only_style = "bold bg:mauve fg:red";
+        format = "[](fg:pine)[$path]($style)[$read_only]($read_only_style)[](fg:pine)";
+        style = "bold bg:pine fg:base";
+        read_only_style = "bold bg:pine fg:love";
         read_only = "  ";
         home_symbol = " ";
         truncation_symbol = "/";
@@ -128,8 +148,8 @@
       };
 
       git_branch = {
-        format = "[](fg:green)[$symbol$branch]($style)";
-        style = "bold bg:green fg:crust";
+        format = "[](fg:rose)[$symbol$branch]($style)";
+        style = "bold bg:rose fg:base";
         symbol = " ";
         truncation_length = 25;
       };
@@ -138,26 +158,26 @@
         tag_disabled = false;
         tag_symbol = " ";
         only_detached = true;
-        style = "bold bg:green fg:crust";
+        style = "bold bg:rose fg:base";
       };
       git_state = {
         format = "[$state( $progress_current/$progress_total)]($style)";
-        style = "bold bg:green fg:crust";
+        style = "bold bg:rose fg:base";
       };
       git_status = {
-        format = "([\\[$all_status$ahead_behind\\]]($style))[](fg:green)";
-        style = "bold bg:green fg:crust";
+        format = "([\\[$all_status$ahead_behind\\]]($style))[](fg:rose)";
+        style = "bold bg:rose fg:base";
       };
       hg_branch = {
-        format = "[](fg:green)[$symbol$branch]($style)[](fg:green)";
-        style = "bold bg:green fg:crust";
+        format = "[](fg:rose)[$symbol$branch]($style)[](fg:rose)";
+        style = "bold bg:rose fg:base";
         symbol = " ";
       };
 
       package = {
-        format = "[](fg:peach)[$symbol$version]($style)[](fg:peach)";
+        format = "[](fg:iris)[$symbol$version]($style)[](fg:iris)";
         symbol = " ";
-        style = "bold bg:peach fg:crust";
+        style = "bold bg:iris fg:base";
         display_private = true;
       };
 
@@ -168,133 +188,133 @@
 
       # RIGHT prompt
       container = {
-        format = "[](fg:blue)[$symbol $name]($style)[](fg:blue)";
+        format = "[](fg:foam)[$symbol $name]($style)[](fg:foam)";
         symbol = "󰡨";
-        style = "bold bg:blue fg:crust";
+        style = "bold bg:foam fg:base";
       };
       docker_context = {
-        format = "[](fg:blue)[$symbol$context]($style)[](fg:blue)";
+        format = "[](fg:foam)[$symbol$context]($style)[](fg:foam)";
         symbol = " ";
-        style = "bold bg:blue fg:crust";
+        style = "bold bg:foam fg:base";
       };
 
       nix_shell = {
-        format = "[](fg:blue)[$symbol$state(\($name\))]($style)[](fg:blue)";
-        impure_msg = "[ ](bold fg:#8A3324  bg:blue)";
-        pure_msg = "[ ](bold fg:crust bg:blue)";
-        style = "bold bg:blue fg:crust";
+        format = "[](fg:foam)[$symbol$state(\($name\))]($style)[](fg:foam)";
+        impure_msg = "[ ](bold fg:#8A3324  bg:foam)";
+        pure_msg = "[ ](bold fg:base bg:foam)";
+        style = "bold bg:foam fg:base";
         symbol = "";
       };
 
       python = {
-        format = "[](fg:yellow)[$symbol$pyenv_prefix($version )(\($virtualenv\))]($style)[](fg:yellow)";
+        format = "[](fg:gold)[$symbol$pyenv_prefix($version )(\($virtualenv\))]($style)[](fg:gold)";
         symbol = " ";
-        style = "bold bg:yellow fg:crust";
+        style = "bold bg:gold fg:base";
       };
       conda = {
-        format = "[](fg:green)[$symbol$environment]($style)[](fg:green)";
+        format = "[](fg:gold)[$symbol$environment]($style)[](fg:gold)";
         symbol = " ";
-        style = "bold bg:green fg:crust";
+        style = "bold bg:gold fg:base";
       };
 
       lua = {
-        format = "[](fg:sky)[$symbol$version]($style)[](fg:sky)";
+        format = "[](fg:pine2)[$symbol$version]($style)[](fg:pine2)";
         symbol = " ";
-        style = "bold bg:sky fg:crust";
+        style = "bold bg:pine2 fg:base";
       };
       nodejs = {
-        format = "[](fg:green)[$symbol($version )]($style)[](fg:green)";
+        format = "[](fg:foam2)[$symbol($version )]($style)[](fg:foam2)";
         symbol = "󰎙 ";
-        style = "bold bg:green fg:crust";
+        style = "bold bg:foam2 fg:base";
       };
       rlang = {
-        format = "[](fg:sapphire)[$symbol($version)]($style)[](fg:sapphire)";
+        format = "[](fg:pine2)[$symbol($version)]($style)[](fg:pine2)";
         symbol = "󰟔 ";
-        style = "bold bg:sapphire fg:crust";
+        style = "bold bg:pine2 fg:base";
       };
       julia = {
-        format = "[](fg:maroon)[$symbol($version)]($style)[](fg:maroon)";
+        format = "[](fg:iris)[$symbol($version)]($style)[](fg:iris)";
         symbol = " ";
-        style = "bold bg:maroon fg:crust";
+        style = "bold bg:iris fg:base";
       };
       golang = {
         symbol = " ";
-        format = "[](fg:cyan)[$symbol($version)]($style)[](fg:cyan)";
-        style = "bold bg:cyan fg:crust";
+        format = "[](fg:foam)[$symbol($version)]($style)[](fg:foam)";
+        style = "bold bg:foam fg:base";
       };
       rust = {
         symbol = " ";
-        format = "[](fg:peach)[$symbol($version)]($style)[](fg:peach)";
-        style = "bold bg:peach fg:crust";
+        format = "[](fg:rose2)[$symbol($version)]($style)[](fg:rose2)";
+        style = "bold bg:rose2 fg:base";
       };
       haskell = {
         symbol = " ";
-        format = "[](fg:mauve)[$symbol($version)]($style)[](fg:mauve)";
-        style = "bold bg:mauve fg:crust";
+        format = "[](fg:iris)[$symbol($version)]($style)[](fg:iris)";
+        style = "bold bg:iris fg:base";
       };
       java = {
         symbol = " ";
-        format = "[](fg:peach)[$symbol($version)]($style)[](fg:peach)";
-        style = "bold bg:peach fg:crust";
+        format = "[](fg:rose2)[$symbol($version)]($style)[](fg:rose2)";
+        style = "bold bg:rose2 fg:base";
       };
       dart = {
         symbol = " ";
-        format = "[](fg:teal)[$symbol($version)]($style)[](fg:teal)";
-        style = "bold bg:teal fg:crust";
+        format = "[](fg:pine2)[$symbol($version)]($style)[](fg:pine2)";
+        style = "bold bg:pine2 fg:base";
       };
       ruby = {
         symbol = " ";
-        format = "[](fg:red)[$symbol($version)]($style)[](fg:red)";
-        style = "bold bg:red fg:crust";
+        format = "[](fg:love)[$symbol($version)]($style)[](fg:love)";
+        style = "bold bg:love fg:base";
       };
       scala = {
         symbol = " ";
-        format = "[](fg:red)[$symbol($version)]($style)[](fg:red)";
-        style = "bold bg:red fg:crust";
+        format = "[](fg:love)[$symbol($version)]($style)[](fg:love)";
+        style = "bold bg:love fg:base";
       };
       typst = {
         symbol = "t ";
-        format = "[](fg:blue)[$symbol($version)]($style)[](fg:blue)";
-        style = "bold bg:blue fg:crust";
+        format = "[](fg:pine)[$symbol($version)]($style)[](fg:pine)";
+        style = "bold bg:pine fg:base";
       };
 
       c = {
-        format = "[](fg:blue)[$symbol($version(-$name))]($style)[](fg:blue)";
+        format = "[](fg:pine)[$symbol($version(-$name))]($style)[](fg:pine)";
         symbol = " ";
-        style = "bold bg:blue fg:crust";
+        style = "bold bg:pine fg:base";
       };
 
       memory_usage = {
         threshold = 80;
-        format = "[](fg:red)[$symbol$ram]($style)[](fg:red)";
+        format = "[](fg:love)[$symbol$ram]($style)[](fg:love)";
         disabled = false;
         symbol = "󰍛 ";
-        style = "bold bg:red fg:crust";
+        style = "bold bg:love fg:base";
       };
       cmd_duration = {
-        format = "[](fg:yellow)[ $duration]($style)[](fg:yellow)";
+        format = "[](fg:iris)[ $duration]($style)[](fg:iris)";
         min_time = 5000;
-        style = "bold bg:yellow fg:crust";
+        style = "bold bg:iris fg:base";
       };
       jobs = {
-        format = "[](fg:yellow)[$symbol$number]($style)[](fg:yellow)";
+        format = "[](fg:iris)[$symbol$number]($style)[](fg:iris)";
         number_threshold = 2;
         symbol = " ";
-        style = "bold bg:yellow fg:crust";
+        style = "bold bg:iris fg:base";
       };
       time = {
-        format = "[](fg:blue)[ $time ]($style)";
+        format = "[](fg:foam)[ $time ]($style)";
         disabled = false;
         time_format = "%R";
-        style = "bold bg:blue fg:crust";
+        style = "bold bg:foam fg:base";
       };
 
       add_newline = true;
       character = {
         format = "$symbol";
-        success_symbol = "[┗━](bold blue)[ ](bold blue)";
-        error_symbol = "[┗━](bold red)[ ](bold red)";
-        vicmd_symbol = "[┗━](bold green)[ ](bold green)";
+        success_symbol = "[┗━](bold foam)[ ](bold foam)";
+        error_symbol = "[┗━](bold love)[ ](bold love)";
+        vicmd_symbol = "[┗━](bold foam2)[ ](bold foam2)";
       };
     };
   };
