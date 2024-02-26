@@ -1,21 +1,22 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, lib, pkgs, sops-nix, ... }:
-
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      sops-nix.nixosModules.sops
-    ];
-
+  config,
+  lib,
+  pkgs,
+  sops-nix,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    sops-nix.nixosModules.sops
+  ];
 
   # Package mangement
   nix = {
-    settings.experimental-features = [ "nix-command" "flakes" ];
+    settings.experimental-features = ["nix-command" "flakes"];
     settings.auto-optimise-store = true;
     gc = {
       automatic = true;
@@ -33,10 +34,10 @@
   boot.loader.grub.useOSProber = true;
   boot.loader.grub.configurationLimit = 15;
   boot.loader.systemd-boot.configurationLimit = 15;
-  boot.supportedFilesystems = [ "ntfs" ];
+  boot.supportedFilesystems = ["ntfs"];
 
   # amd gpu support for kernel
-  boot.initrd.kernelModules = [ "amdgpu" ];
+  boot.initrd.kernelModules = ["amdgpu"];
 
   networking.hostName = "tsuki"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -47,7 +48,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.nameservers = [ "208.67.222.123" "208.67.220.123" ];
+  networking.nameservers = ["208.67.222.123" "208.67.220.123"];
   # networking.extraHosts =
   #  let
   #    hostsPath = https://raw.githubusercontent.com/StevenBlack/hosts/1a8e75f1cb6cd3b26ff028df83121f3d7b67b04c/alternates/porn/hosts;
@@ -79,6 +80,13 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  # Enable nix-ld
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Add any missing dynamic libraries for unpackaged programs
+    # here, NOT in environment.systemPackages
+  ];
+
   # Enable OpenGL
   hardware.opengl = {
     enable = true;
@@ -94,7 +102,7 @@
   hardware.opentabletdriver.daemon.enable = true;
 
   # Load amd driver for Xorg and Wayland
-  services.xserver.videoDrivers = [ "amdgpu" ];
+  services.xserver.videoDrivers = ["amdgpu"];
   console.useXkbConfig = true;
 
   # Configure keymap in X11
@@ -120,7 +128,7 @@
   users.users.dileep = {
     isNormalUser = true;
     description = "Dileep Kishore";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = ["networkmanager" "wheel" "docker"];
     packages = with pkgs; [
       swayidle
       swaylock-effects
@@ -129,8 +137,8 @@
   # Default shell
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
-  environment.shells = with pkgs; [ zsh ];
-  security.pam.services.swaylock = { };
+  environment.shells = with pkgs; [zsh];
+  security.pam.services.swaylock = {};
 
   # Allow unfree packages
   nixpkgs.config = {
@@ -164,7 +172,7 @@
     enable = true;
     # Certain features, including CLI integration and system authentication support,
     # require enabling PolKit integration on some desktop environments (e.g. Plasma).
-    polkitPolicyOwners = [ "dileep" ];
+    polkitPolicyOwners = ["dileep"];
   };
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -194,8 +202,8 @@
 
   systemd.services."openaisecret" = {
     description = "OpenAI API Key";
-    after = [ "network.target" ];
-    wantedBy = [ "multi-user.target" ];
+    after = ["network.target"];
+    wantedBy = ["multi-user.target"];
     script = ''
       mkdir -p /home/dileep/.secrets
       echo $(cat ${config.sops.secrets.OPENAI_API_KEY.path}) > /home/dileep/.secrets/openai_api_key.txt
@@ -217,7 +225,7 @@
 
   # vpn
   services.openvpn.servers = {
-    homeVPN = { config = '' config /home/dileep/.nordvpn/us9565.nordvpn.com.udp.ovpn ''; };
+    homeVPN = {config = ''config /home/dileep/.nordvpn/us9565.nordvpn.com.udp.ovpn '';};
   };
 
   services = {
@@ -266,5 +274,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
-
 }
