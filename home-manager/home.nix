@@ -64,6 +64,7 @@
     hyprland
     hyprpaper
     inputs.neovim.packages.${system}.default
+    jc
     jq
     libgccjit
     libinput
