@@ -28,7 +28,9 @@ def truncate_path(path, levels=5):
     # Split the path into parts
     parts = path.replace(home_dir, "~").split(os.sep)
     # Truncate to the desired number of levels
-    truncated = os.sep.join(parts[-levels:])
+    truncated = str(os.sep.join(parts[-levels:]))
+    if levels < len(parts):
+        truncated = "../" + truncated
     return truncated
 
 
