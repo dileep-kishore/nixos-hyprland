@@ -22,8 +22,6 @@
 <div align="center">
     Dotfiles for my <a href="https://hyprland.org">Hyprland</a> setup on my <a href="https://nixos.org">NixOS</a> system.
     <p><strong>Be sure to <a href="#" title="star">⭐️</a> or <a href="#" title="fork">🔱</a> this repo if you find it useful! 😃</strong></p>
-    <br/>
-    <img src="https://forthebadge.com/images/badges/works-on-my-machine.svg">
 </div>
 <!-- markdownlint-restore -->
 
