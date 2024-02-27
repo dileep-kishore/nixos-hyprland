@@ -94,7 +94,7 @@
       thm_hl_med="#403d52";
       thm_hl_high="#524f67";
 
-      set-option -g status-justify centre
+      set-option -g status-justify absolute-centre
       set-option -g status-keys vi
       set-option -g status-position top
       set -g status-left-length 150
@@ -107,10 +107,11 @@
 
       #+--- Bars LEFT ---+
       # Session name
-      session_name="#[fg=$thm_iris,bg=$thm_base]#[fg=$thm_base,bg=$thm_iris,bold,italics]  #S #[bg=$thm_base,fg=$thm_iris]";
+      session_name="#[fg=$thm_base,bg=$thm_iris,bold,italics]  #S #[bg=$thm_base,fg=$thm_iris]";
       dir_section="#[bg=$thm_pine,fg=$thm_base]#[fg=$thm_base,bg=$thm_pine,bold]  #(~/.config/tmux/scripts/find_git_root.py #{pane_current_path}) #[bg=$thm_base,fg=$thm_pine]";
+      git_status="#(~/.config/tmux/scripts/git_status.sh #{pane_current_path})"
 
-      set -g status-left "$session_name $dir_section"
+      set -g status-left "$session_name $dir_section $git_status"
 
       #+--- Windows ---+
       # Status
@@ -129,9 +130,9 @@
       set -g window-status-separator " "
 
       #+--- Bars RIGHT ---+
-      host_name="#[fg=$thm_rose,bg=$thm_base]#[fg=$thm_base,bg=$thm_rose,bold,italics]  #H #[bg=$thm_base,fg=$thm_rose]";
+      host_name="#[fg=$thm_iris,bg=$thm_base]#[fg=$thm_base,bg=$thm_iris,bold,italics]  #H ";
       uptime="#[fg=$thm_foam,bg=$thm_base]#[fg=$thm_base,bg=$thm_foam,bold]  #(~/.config/tmux/scripts/uptime_fmt.sh) #[fg=$thm_base,bg=$thm_foam]";
-      date_section="#[fg=$thm_gold,bg=$thm_base]#[fg=$thm_base,bg=$thm_gold,bold]  #(date +'%a, %d %b %Y') #[fg=$thm_base,bg=$thm_gold]";
+      date_section="#[fg=$thm_gold,bg=$thm_base]#[fg=$thm_base,bg=$thm_gold,bold]  #(date +'%a, %d %b, %Y') #[fg=$thm_base,bg=$thm_gold]";
 
       set -g status-right "$date_section#[bg=$thm_base,fg=$thm_base] $uptime#[bg=$thm_base,fg=$thm_base] $host_name"
     '';
