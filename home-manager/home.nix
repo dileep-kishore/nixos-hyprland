@@ -104,6 +104,7 @@
     tldr
     todoist
     udisks
+    ulauncher
     unzip
     vim
     vivaldi
