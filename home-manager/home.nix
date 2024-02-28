@@ -15,6 +15,7 @@
     ./apps/kitty.nix
     ./apps/qt5.nix
     ./apps/rofi.nix
+    ./apps/ulauncher.nix
     ./apps/starship.nix
     ./apps/tmux.nix
     ./apps/waybar.nix
@@ -104,7 +105,6 @@
     tldr
     todoist
     udisks
-    ulauncher
     unzip
     vim
     vivaldi
