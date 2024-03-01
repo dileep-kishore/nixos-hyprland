@@ -162,11 +162,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1709228466,
-        "narHash": "sha256-GnO/rPGg85I1ZmQ1vwLREzI9p5joSbFD6vJKe+8fwlg=",
+        "lastModified": 1709273585,
+        "narHash": "sha256-TQqEyQzfk8YnsgbAhFxC+wiZXRZuQj8jzrz3W/uu2dw=",
         "owner": "dileep-kishore",
         "repo": "neovim",
-        "rev": "6d571fffbfeca88459094982d4bef9b919fc5370",
+        "rev": "40e9fa8b813e81388db73998cb826ae3115de5fd",
         "type": "github"
       },
       "original": {
