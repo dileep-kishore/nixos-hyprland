@@ -4,6 +4,9 @@
   pkgs,
   ...
 }: {
+  home.packages = with pkgs; [
+    tmux-sessionizer
+  ];
   programs.tmux = {
     enable = true;
     clock24 = true;
@@ -74,6 +77,10 @@
       bind -n M-Down resize-pane -D 5
       bind -n M-Left resize-pane -L 5
       bind -n M-Right resize-pane -R 5
+
+      # tms
+      bind o display-popup -E "tms switch"
+      bind e command-prompt -p "Rename active session to: " "run-shell 'tms rename %1'"
 
       # theme and statusbar
       thm_base="#191724";
