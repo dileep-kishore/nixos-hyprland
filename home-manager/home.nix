@@ -47,6 +47,7 @@
     })
     bashInteractive
     bat
+    brave
     btop
     coreutils-full
     entr
@@ -107,9 +108,11 @@
     udisks
     unzip
     vim
+    # TODO: Remove vivaldi
     vivaldi
     vscode-fhs
     wacomtablet
+    warp-terminal
     waybar
     wget
     wl-clipboard
