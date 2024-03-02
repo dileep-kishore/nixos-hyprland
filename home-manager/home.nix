@@ -112,7 +112,6 @@
     vivaldi
     vscode-fhs
     wacomtablet
-    warp-terminal
     waybar
     wget
     wl-clipboard
