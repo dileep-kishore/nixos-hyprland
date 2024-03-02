@@ -108,8 +108,6 @@
     udisks
     unzip
     vim
-    # TODO: Remove vivaldi
-    vivaldi
     vscode-fhs
     wacomtablet
     waybar
