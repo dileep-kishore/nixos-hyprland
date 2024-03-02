@@ -59,3 +59,9 @@
 ```sh
 sudo nixos-rebuild switch --flake '.#tsuki'
 ```
+
+### Manual setup
+
+- Zotero
+  - Install the [zotero-dracula](https://github.com/dracula/zotero) if you see a white statusbar
+  - Install the [zotero-better-bibtex](https://github.com/retorquere/zotero-better-bibtex) plugin
