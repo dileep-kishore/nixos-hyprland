@@ -37,4 +37,7 @@
   };
 
   home.sessionVariables.GTK_THEME = "Catppuccin-Mocha-Standard-Mauve-Dark";
+  home.pointerCursor.gtk.enable = true;
+  home.pointerCursor.package = pkgs.bibata-cursors;
+  home.pointerCursor.name = "Bibata-Modern-Ice";
 }
