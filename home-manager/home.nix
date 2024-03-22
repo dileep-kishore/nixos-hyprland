@@ -68,6 +68,7 @@
     inputs.neovim.packages.${system}.default
     jc
     jq
+    lazydocker
     libgccjit
     libinput
     libnotify
@@ -78,6 +79,7 @@
     logseq
     lshw
     mako
+    mods
     morgen
     ncdu
     neofetch

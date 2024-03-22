@@ -94,4 +94,9 @@
     recursive = true;
     source = ./config/btop;
   };
+  # mods
+  home.file.".config/mods" = {
+    recursive = true;
+    source = ./config/mods;
+  };
 }
