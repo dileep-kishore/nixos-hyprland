@@ -96,7 +96,6 @@
     pipewire
     pkgs.gedit
     psmisc
-    python311Packages.toggl-cli
     python312
     quarto
     recursive
