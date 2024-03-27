@@ -203,11 +203,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1711520562,
-        "narHash": "sha256-sRJW9eRvh5M43WLoGFPEDo7m0n6XVvoo0+hfKO2L3Lw=",
+        "lastModified": 1711523232,
+        "narHash": "sha256-2GZDJklD/I5zCus5nKE17bCu+jwXT1MZAcHmucDQ6ZM=",
         "owner": "dileep-kishore",
         "repo": "neovim",
-        "rev": "1c7639c187296e27d65d46f5e5caa59d96be5f76",
+        "rev": "246bebd4a26b76e8571183e18343a8315fbbd6d9",
         "type": "github"
       },
       "original": {
