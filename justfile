@@ -8,7 +8,7 @@ alias uc := update_commit
 
 # Build nixos
 build_switch:
-    nixos-rebuild switch --flake .#$(host)
+    nixos-rebuild switch --flake .#{{host}}
 
 # Show neovim flake output
 show:
