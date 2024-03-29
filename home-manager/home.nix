@@ -68,6 +68,7 @@
     inputs.neovim.packages.${system}.default
     jc
     jq
+    just
     lazydocker
     libgccjit
     libinput
