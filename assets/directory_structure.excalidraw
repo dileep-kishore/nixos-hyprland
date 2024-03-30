@@ -1,0 +1,47 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "id": "RY1--ZLI85OxbbSjbS3zC",
+      "type": "text",
+      "x": 403.28125,
+      "y": 209.36328125,
+      "width": 345.1395263671875,
+      "height": 425,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 388354517,
+      "version": 271,
+      "versionNonce": 1097752629,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1711826305109,
+      "link": null,
+      "locked": false,
+      "text": "- homes\n    - x86_64-darwin\n        - g8k (mac)\n    - x86_64-linux\n        - dileep (tsuki & nixos-xps)\n        - g8k (ubuntu)\n- lib\n- modules\n- packages\n- systems\n    - x86_64-darwin\n        - Mac124929 (not sure)\n    - x86_64-linux\n        - tsuki\n        - nixos-xps\n        - lap135849 (not sure)\n",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "- homes\n    - x86_64-darwin\n        - g8k (mac)\n    - x86_64-linux\n        - dileep (tsuki & nixos-xps)\n        - g8k (ubuntu)\n- lib\n- modules\n- packages\n- systems\n    - x86_64-darwin\n        - Mac124929 (not sure)\n    - x86_64-linux\n        - tsuki\n        - nixos-xps\n        - lap135849 (not sure)\n",
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
