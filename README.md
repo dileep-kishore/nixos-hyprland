@@ -65,3 +65,5 @@ sudo nixos-rebuild switch --flake '.#tsuki'
 - Zotero
   - Install the [zotero-dracula](https://github.com/dracula/zotero) if you see a white statusbar
   - Install the [zotero-better-bibtex](https://github.com/retorquere/zotero-better-bibtex) plugin
+- Obsidian
+  - [Literata font](https://fonts.google.com/specimen/Literata) from google fonts
