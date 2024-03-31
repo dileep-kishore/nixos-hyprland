@@ -68,6 +68,8 @@
 
     formatter = forEachSystem (pkgs: pkgs.alejandra);
 
+    devShells = forEachSystem (pkgs: import ./shell.nix {inherit pkgs;});
+
     # NOTE: home-manager is also imported as a module within nixosConfigurations
     nixosConfigurations = {
       # Main desktop
