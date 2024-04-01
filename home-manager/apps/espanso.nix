@@ -1,10 +1,14 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   services.espanso = {
     enable = true;
     package = pkgs.espanso-wayland;
     configs = {
-      default = { };
+      default = {};
     };
     matches = {
       base = {
@@ -24,7 +28,7 @@
           {
             name = "mydate";
             type = "date";
-            params = { format = "%Y-%m-%d"; };
+            params = {format = "%Y-%m-%d";};
           }
         ];
       };

@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }: {
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   home.file.".config/hypr" = {
     recursive = true;
     source = ./config/hypr;

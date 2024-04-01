@@ -1,17 +1,18 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, lib, pkgs, ... }:
-
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Bootloader.
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -22,7 +23,7 @@
   boot.loader.grub.useOSProber = true;
   boot.loader.grub.configurationLimit = 15;
   boot.loader.systemd-boot.configurationLimit = 15;
-  boot.supportedFilesystems = [ "ntfs" ];
+  boot.supportedFilesystems = ["ntfs"];
 
   networking.hostName = "nixos-xps"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -33,17 +34,16 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.nameservers = [ "208.67.222.123" "208.67.220.123" ];
+  networking.nameservers = ["208.67.222.123" "208.67.220.123"];
   # TODO: Check README for flake configuration
   # TODO: Also fetchGitHub so that you don't have to download everytime your rebuild
-  networking.extraHosts =
-    let
-      hostsPath = https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts;
-      hostsFile = builtins.fetchurl {
-        url = hostsPath;
-        sha256 = "sha256:00ssmfgwrxl9h15hfy70zv5yq3356zxqywndnfb9ad762w5m0d5p";
-      };
-    in
+  networking.extraHosts = let
+    hostsPath = https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts;
+    hostsFile = builtins.fetchurl {
+      url = hostsPath;
+      sha256 = "sha256:00ssmfgwrxl9h15hfy70zv5yq3356zxqywndnfb9ad762w5m0d5p";
+    };
+  in
     builtins.readFile "${hostsFile}";
 
   # Set your time zone.
@@ -73,7 +73,7 @@
   };
 
   # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = ["nvidia"];
   services.xserver.xkbOptions = "ctrl:nocaps";
   console.useXkbConfig = true;
 
@@ -89,7 +89,7 @@
   users.users.dileep = {
     isNormalUser = true;
     description = "Dileep Kishore";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       vim
       git
@@ -160,7 +160,7 @@
     enable = true;
     # Certain features, including CLI integration and system authentication support,
     # require enabling PolKit integration on some desktop environments (e.g. Plasma).
-    polkitPolicyOwners = [ "dileep" ];
+    polkitPolicyOwners = ["dileep"];
   };
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -184,7 +184,7 @@
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-emoji
-    (nerdfonts.override { fonts = [ "FiraCode" "CascadiaCode" ]; })
+    (nerdfonts.override {fonts = ["FiraCode" "CascadiaCode"];})
   ];
 
   # List services that you want to enable:
@@ -203,7 +203,6 @@
   };
 
   hardware.nvidia = {
-
     # Modesetting is required.
     modesetting.enable = true;
 
@@ -273,5 +272,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
-
 }
