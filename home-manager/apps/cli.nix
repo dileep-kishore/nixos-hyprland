@@ -29,6 +29,7 @@
     enable = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
+    defaultCommand = "fd";
     defaultOptions = [
       "--height 40%"
       "--reverse"
@@ -39,6 +40,9 @@
       "--color=spinner:#f6c177,info:#9ccfd8,separator:#403d52"
       "--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
     ];
+    tmux = {
+      enableShellIntegration = true;
+    };
   };
 
   programs.direnv = {
