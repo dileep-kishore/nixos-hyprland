@@ -8,5 +8,10 @@
     shellIntegration.enableBashIntegration = true;
     shellIntegration.enableZshIntegration = true;
     theme = "Rosé Pine";
+    settings = {
+      bold_font = "Rec Mono Semicasual Bold";
+      italic_font = "Rec Mono Semicasual Italic";
+      bold_italic_font = "Rec Mono Semicasual Bold Italic";
+    };
   };
 }

@@ -12,8 +12,6 @@ window.HDMI-A-1 * {
 
 window.HDMI-A-1 #window {
   font-size: 0px;
-  padding: 0;
-  border: 0;
 }
 
 window.HDMI-A-1 #network,

@@ -9,7 +9,7 @@
     package = pkgs.rofi-wayland;
     font = "Rec Mono Semicasual";
     location = "center";
-    terminal = "wezterm";
+    terminal = "kitty";
     plugins = [
       pkgs.rofi-calc
     ];

@@ -123,8 +123,8 @@
       vscode-fhs
       morgen
       slack
+      brave
       zoom-us
-      vivaldi
       logseq
       obsidian
       signal-desktop
@@ -136,10 +136,6 @@
   # Allow unfree packages
   nixpkgs.config = {
     allowUnfree = true;
-    vivaldi = {
-      proprietaryCodecs = true;
-      enableWideVine = true;
-    };
 
     # Create an alias for the unstable channel
     # packageOverrides = pkgs: {

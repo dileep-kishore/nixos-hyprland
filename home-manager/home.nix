@@ -52,7 +52,6 @@
     coreutils-full
     entr
     fd
-    firefox
     font-awesome
     git
     git-extras
