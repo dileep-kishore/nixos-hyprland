@@ -1,12 +1,19 @@
 {
-  "layer": "top", // Waybar at top layer
+  "layer": "top",
+  // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
   // "height": 25, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
-  "spacing": 4, // Gaps between modules (4px)
+  "spacing": 4,
+  // Gaps between modules (4px)
   // Choose the order of the modules
-  "modules-left": ["wlr/taskbar", "hyprland/window"],
-  "modules-center": ["hyprland/workspaces"],
+  "modules-left": [
+    "wlr/taskbar",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
   "modules-right": [
     "pulseaudio",
     "network",
@@ -63,7 +70,10 @@
   "hyprland/scratchpad": {
     "format": "{icon} {count}",
     "show-empty": false,
-    "format-icons": ["", ""],
+    "format-icons": [
+      "",
+      ""
+    ],
     "tooltip": true,
     "tooltip-format": "{app}: {title}"
   },
@@ -123,12 +133,26 @@
     "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C {icon}",
     "format": "{temperatureC}°C {icon}",
-    "format-icons": ["", "", ""]
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
   },
   "backlight": {
     // "device": "acpi_video1",
     "format": "{percent}% {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   "battery": {
     "states": {
@@ -142,7 +166,13 @@
     "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   "battery#bat2": {
     "bat": "BAT2"
@@ -171,7 +201,11 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
+      "default": [
+        "",
+        "",
+        ""
+      ]
     },
     "on-click": "pavucontrol"
   },
