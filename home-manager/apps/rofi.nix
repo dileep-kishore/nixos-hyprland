@@ -1,11 +1,15 @@
-{ config, lib, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
     font = "Rec Mono Semicasual";
     location = "center";
-    terminal = "wezterm";
+    terminal = "kitty";
     plugins = [
       pkgs.rofi-calc
     ];
