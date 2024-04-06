@@ -140,10 +140,6 @@
   # Allow unfree packages
   nixpkgs.config = {
     allowUnfree = true;
-    vivaldi = {
-      proprietaryCodecs = true;
-      enableWideVine = true;
-    };
     permittedInsecurePackages = [
       "electron-24.8.6"
       "electron-22.3.27"
