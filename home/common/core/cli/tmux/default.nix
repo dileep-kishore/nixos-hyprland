@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     tmux-sessionizer
   ];
@@ -143,5 +138,20 @@
 
       set -g status-right "$date_section#[bg=$thm_base,fg=$thm_base] $uptime#[bg=$thm_base,fg=$thm_base] $host_name"
     '';
+  };
+
+  # aliases
+  home.shellAliases = {
+    tnew = "tmux new -s";
+    ta = "tmux attach -t";
+    tdetach = "tmux detach";
+    tkill = "tmux kill-session -t";
+    tlist = "tmux ls";
+  };
+
+  # copy over scripts
+  home.file.".config/tmux/scripts" = {
+    recursive = true;
+    source = ./scripts;
   };
 }
