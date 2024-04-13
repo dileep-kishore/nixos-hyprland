@@ -1,3 +1,4 @@
+# https://github.com/sxyazi/yazi
 {
   # NOTE: Default keybinding are here: https://github.com/sxyazi/yazi/blob/main/yazi-config/preset/keymap.toml
   programs.yazi = {
@@ -53,7 +54,7 @@
         tab_width = 1;
         border_symbol = "│";
         border_style = {fg = "#7f849c";};
-        syntect_theme = "~/.config/yazi/Catppuccin-mocha.tmTheme";
+        syntect_theme = "~/.config/yazi/themes/Catppuccin-mocha.tmTheme";
       };
 
       status = {
@@ -192,5 +193,16 @@
         ];
       };
     };
+  };
+
+  # copy themes
+  home.file.".config/yazi/themes" = {
+    recursive = true;
+    source = ./themes;
+  };
+
+  # aliases
+  home.shellAliases = {
+    y = "yazi";
   };
 }
