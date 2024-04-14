@@ -5,8 +5,8 @@
   "elements": [
     {
       "type": "text",
-      "version": 867,
-      "versionNonce": 282334059,
+      "version": 957,
+      "versionNonce": 442296331,
       "index": "a0",
       "isDeleted": false,
       "id": "-80-EWzCpq-HUglj_H8G-",
@@ -17,32 +17,32 @@
       "opacity": 100,
       "angle": 0,
       "x": 423.66015625,
-      "y": 269.98046875,
+      "y": 268.703125,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
-      "width": 362.4195556640625,
-      "height": 825,
+      "width": 349.11956787109375,
+      "height": 725,
       "seed": 64234881,
       "groupIds": [],
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713113803671,
+      "updated": 1713131173495,
       "link": null,
       "locked": false,
       "fontSize": 20,
       "fontFamily": 1,
-      "text": "- home/ (home-manager modules)\n    - common/\n        - core/\n        - optional/\n    - <host1.nix>\n    - <host2.nix>\n- hosts/\n    - common/\n        - core/\n        - optional/\n    - users/ (which users to create)\n        - <username1>/\n            - default.nix\n            - secrets.yml?\n            - ssh_key.pub?\n    - <hostname1>/\n        - default.nix\n        - hardware-configuration.nix\n    - <hostname2>/...\n- modules/ (reusable modules)\n    - home-manager/default.nix\n    - nixos/default.nix\n- overlays/\n    - default.nix\n    - <overlay1.nix>\n- pkgs/\n    - default.nix\n    - <package1>/\n        - default.nix\n- scripts/\nflake.nix\nshell.nix\nREADME.MD",
+      "text": "- home/ (home-manager modules)\n    - common/\n        - core/\n        - optional/\n    - <host1.nix>\n    - <host2.nix>\n- hosts/\n    - common/\n        - core/\n        - optional/\n        - users/\n    - <hostname1>/\n        - default.nix\n        - hardware-configuration.nix\n    - <hostname2>/...\n- modules/ (reusable modules)\n    - home-manager/default.nix\n    - nixos/default.nix\n- overlays/\n    - default.nix\n    - <overlay1.nix>\n- pkgs/\n    - default.nix\n    - <package1>/\n        - default.nix\n- scripts/\nflake.nix\nshell.nix\nREADME.MD",
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "- home/ (home-manager modules)\n    - common/\n        - core/\n        - optional/\n    - <host1.nix>\n    - <host2.nix>\n- hosts/\n    - common/\n        - core/\n        - optional/\n    - users/ (which users to create)\n        - <username1>/\n            - default.nix\n            - secrets.yml?\n            - ssh_key.pub?\n    - <hostname1>/\n        - default.nix\n        - hardware-configuration.nix\n    - <hostname2>/...\n- modules/ (reusable modules)\n    - home-manager/default.nix\n    - nixos/default.nix\n- overlays/\n    - default.nix\n    - <overlay1.nix>\n- pkgs/\n    - default.nix\n    - <package1>/\n        - default.nix\n- scripts/\nflake.nix\nshell.nix\nREADME.MD",
+      "originalText": "- home/ (home-manager modules)\n    - common/\n        - core/\n        - optional/\n    - <host1.nix>\n    - <host2.nix>\n- hosts/\n    - common/\n        - core/\n        - optional/\n        - users/\n    - <hostname1>/\n        - default.nix\n        - hardware-configuration.nix\n    - <hostname2>/...\n- modules/ (reusable modules)\n    - home-manager/default.nix\n    - nixos/default.nix\n- overlays/\n    - default.nix\n    - <overlay1.nix>\n- pkgs/\n    - default.nix\n    - <package1>/\n        - default.nix\n- scripts/\nflake.nix\nshell.nix\nREADME.MD",
       "lineHeight": 1.25
     },
     {
       "type": "text",
-      "version": 490,
-      "versionNonce": 725836811,
+      "version": 492,
+      "versionNonce": 1951248933,
       "index": "a1",
       "isDeleted": false,
       "id": "yysLS-jD4RnrBFVwAZoTW",
@@ -65,7 +65,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713113793286,
+      "updated": 1713131173495,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -79,8 +79,8 @@
     },
     {
       "type": "text",
-      "version": 274,
-      "versionNonce": 672986661,
+      "version": 276,
+      "versionNonce": 104443563,
       "index": "a2",
       "isDeleted": false,
       "id": "XMFLNIIVexCsyOkYY1h0P",
@@ -103,7 +103,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713113793286,
+      "updated": 1713131173495,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -117,8 +117,8 @@
     },
     {
       "type": "line",
-      "version": 309,
-      "versionNonce": 753969835,
+      "version": 430,
+      "versionNonce": 1451107717,
       "index": "a3",
       "isDeleted": false,
       "id": "lj1q_axE7HFT0hRyH85p2",
@@ -132,8 +132,8 @@
       "y": 267.53515625,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
-      "width": 2.7421875,
-      "height": 819.6015625,
+      "width": 1.03125,
+      "height": 623.76171875,
       "seed": 121738401,
       "groupIds": [],
       "frameId": null,
@@ -141,7 +141,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1713113793286,
+      "updated": 1713131173495,
       "link": null,
       "locked": false,
       "startBinding": null,
@@ -155,15 +155,15 @@
           0
         ],
         [
-          2.7421875,
-          819.6015625
+          1.03125,
+          623.76171875
         ]
       ]
     },
     {
       "type": "line",
-      "version": 81,
-      "versionNonce": 1472522629,
+      "version": 149,
+      "versionNonce": 1946460491,
       "index": "a4",
       "isDeleted": false,
       "id": "EZV-sBZOh_uoDUSWoC9oT",
@@ -177,8 +177,8 @@
       "y": 293.75390625,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
-      "width": 0.3828125,
-      "height": 196.6875,
+      "width": 1.90234375,
+      "height": 122.48828125,
       "seed": 321945519,
       "groupIds": [],
       "frameId": null,
@@ -186,7 +186,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1713113793286,
+      "updated": 1713131173495,
       "link": null,
       "locked": false,
       "startBinding": null,
@@ -200,15 +200,15 @@
           0
         ],
         [
-          0.3828125,
-          196.6875
+          -1.90234375,
+          122.48828125
         ]
       ]
     },
     {
       "type": "line",
-      "version": 177,
-      "versionNonce": 578559307,
+      "version": 446,
+      "versionNonce": 889793765,
       "index": "a5",
       "isDeleted": false,
       "id": "HFmHCFXZT7OvZQPpzBGKw",
@@ -218,12 +218,12 @@
       "roughness": 1,
       "opacity": 50,
       "angle": 0,
-      "x": 466.48828125,
-      "y": 521.65234375,
+      "x": 467.92578125,
+      "y": 449.1171875,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
-      "width": 0.75390625,
-      "height": 296.14453125,
+      "width": 0.16015625,
+      "height": 165.875,
       "seed": 1320204545,
       "groupIds": [],
       "frameId": null,
@@ -231,7 +231,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1713113793286,
+      "updated": 1713131173495,
       "link": null,
       "locked": false,
       "startBinding": null,
@@ -245,15 +245,15 @@
           0
         ],
         [
-          0.75390625,
-          296.14453125
+          -0.16015625,
+          165.875
         ]
       ]
     },
     {
       "type": "text",
-      "version": 30,
-      "versionNonce": 1758949605,
+      "version": 32,
+      "versionNonce": 1561870315,
       "index": "a6",
       "isDeleted": false,
       "id": "yzIzmL3qO9EplxrK1ve1R",
@@ -274,7 +274,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1713113793286,
+      "updated": 1713131173495,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -288,8 +288,8 @@
     },
     {
       "type": "text",
-      "version": 330,
-      "versionNonce": 1339499621,
+      "version": 496,
+      "versionNonce": 1698863237,
       "index": "a7",
       "isDeleted": false,
       "id": "Jm9kYD377z-zZHWWPgckI",
@@ -299,8 +299,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 835.30859375,
-      "y": 743.921875,
+      "x": 823.85546875,
+      "y": 643.7109375,
       "strokeColor": "#f08c00",
       "backgroundColor": "transparent",
       "width": 168.2198028564453,
@@ -315,7 +315,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1713113839290,
+      "updated": 1713131176358,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -329,8 +329,8 @@
     },
     {
       "type": "arrow",
-      "version": 207,
-      "versionNonce": 1553944517,
+      "version": 540,
+      "versionNonce": 760274475,
       "index": "a8",
       "isDeleted": false,
       "id": "UJbdFN-LaFGt-cOd-mtMW",
@@ -340,8 +340,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": 734.10546875,
-      "y": 755.55078125,
+      "x": 722.65234375,
+      "y": 655.33984375,
       "strokeColor": "#f08c00",
       "backgroundColor": "transparent",
       "width": 99.50390625,
@@ -353,7 +353,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1713113839290,
+      "updated": 1713131176700,
       "link": null,
       "locked": false,
       "startBinding": null,
