@@ -2,10 +2,11 @@ api.imap("jk", "<Esc>");
 
 api.cmap("<Ctrl-n>", "<Tab>");
 api.cmap("<Ctrl-p>", "<Shift-Tab>");
-api.map("K", "E");
-api.map("J", "R");
+api.map("J", "E");
+api.map("K", "R");
 api.map("H", "S");
 api.map("L", "D");
+api.map("F", "C");
 
 settings.tabsThreshold = 0;
 settings.scrollStepSize = 140;
