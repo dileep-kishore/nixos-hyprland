@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
@@ -17,6 +12,6 @@
   };
   home.file.".config/rofi" = {
     recursive = true;
-    source = ./config/rofi;
+    source = ./custom;
   };
 }
