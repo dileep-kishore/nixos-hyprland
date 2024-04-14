@@ -13,12 +13,6 @@
 
   programs.home-manager.enable = true;
 
-  services.gpg-agent = {
-    enable = true;
-    enableSshSupport = true;
-    defaultCacheTtl = 3600;
-  };
-
   home.packages = with pkgs; [
   ];
 }

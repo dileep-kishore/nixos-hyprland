@@ -12,6 +12,7 @@
     ./fzf.nix
     ./gh.nix
     ./git.nix
+    ./gpg.nix
     ./lazygit.nix
     ./mods
     ./ripgrep.nix
