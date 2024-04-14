@@ -21,20 +21,24 @@ in {
   home-manager.users.dileep = import ../../../../home/${config.networking.hostName}.nix;
 
   # Sops secrets
-  sops.defaultSopsFile = ../../secrets/secrets.yaml;
-  sops.defaultSopsFormat = "yaml";
-  sops.age.keyFile = "/home/dileep/.config/sops/age/keys.txt";
-  sops.secrets.OPENAI_API_KEY = {
-    owner = config.users.users.dileep.name;
+  sops = {
+    defaultSopsFile = ../../secrets/secrets.yaml;
+    defaultSopsFormat = "yaml";
+    age.keyFile = "/home/dileep/.config/sops/age/keys.txt";
+    secrets.OPENAI_API_KEY = {
+      owner = config.users.users.dileep.name;
+    };
   };
 
   # 1password
-  programs._1password.enable = true;
-  programs._1password-gui = {
-    enable = true;
-    # Certain features, including CLI integration and system authentication support,
-    # require enabling PolKit integration on some desktop environments (e.g. Plasma).
-    polkitPolicyOwners = ["dileep"];
+  programs = {
+    _1password.enable = true;
+    _1password-gui = {
+      enable = true;
+      # Certain features, including CLI integration and system authentication support,
+      # require enabling PolKit integration on some desktop environments (e.g. Plasma).
+      polkitPolicyOwners = ["dileep"];
+    };
   };
 
   # OpenAI API Key
