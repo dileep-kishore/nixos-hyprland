@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./kitty.nix
+    ./syncthing.nix
     ./wezterm.nix
     ./zathura.nix
   ];
