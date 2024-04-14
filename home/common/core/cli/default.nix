@@ -25,26 +25,30 @@
   home.packages = with pkgs; [
     inputs.neovim.packages.${system}.default
     coreutils-full
-    libgcc
     entr
-    gnumake
     fd
     git-extras
+    gnumake
     htop
     jc
     jq
     just
     lazydocker
+    libgcc
     libnotify
     libxcrypt
     ncdu
     neofetch
+    nix-tree
     openvpn
+    p7zip
+    pciutils
     tldr
     todoist
+    unrar
     unzip
     vim
-    zip
     wget
+    zip
   ];
 }
