@@ -29,4 +29,15 @@
     ps = "ps auxf";
     psgrep = "ps aux | grep -v grep | grep -i -e VSZ -e";
   };
+  home.sessionPath = [
+    "$HOME/.local/bin"
+  ];
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    SHELL = "zsh";
+    TERM = "xterm-256color";
+    USE_EDITOR = "$EDITOR";
+    VISUAL = "$EDITOR";
+    BROWSER = "brave";
+  };
 }
