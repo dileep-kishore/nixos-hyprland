@@ -20,13 +20,6 @@
       export OPENAI_API_KEY="$(cat ~/.secrets/openai_api_key.txt)"
       export DIRENV_LOG_FORMAT=""
     '';
-    sessionVariables = {
-      EDITOR = "nvim";
-      TERM = "xterm-256color";
-      USE_EDITOR = "$EDITOR";
-      VISUAL = "$EDITOR";
-      BROWSER = "brave";
-    };
     # profileExtra = { };
     # shellAliases = { };
     # shellGlobalAliases = { };
