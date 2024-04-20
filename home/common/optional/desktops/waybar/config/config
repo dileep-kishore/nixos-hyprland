@@ -19,7 +19,7 @@
     "network",
     "cpu",
     "memory",
-    "temperature",
+    //"temperature",
     "backlight",
     "custom/toggl",
     "battery",
