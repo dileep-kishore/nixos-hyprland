@@ -33,7 +33,6 @@
     jq
     just
     lazydocker
-    libgcc
     libnotify
     libxcrypt
     ncdu

@@ -1,10 +1,15 @@
 {pkgs, ...}: {
+  imports = [
+    ./wezterm.nix
+  ];
   home.packages = with pkgs; [
+    libgcc
     brave
     gnome.eog
     gnome.nautilus
     gnome.seahorse
     gparted
+    kdePackages.wacomtablet
     libreoffice-fresh
     libsForQt5.okular
     libwacom
@@ -16,7 +21,7 @@
     psmisc
     signal-desktop
     udisks
-    kdePackages.wacomtablet
+    vscode-fhs
     zotero_7
   ];
 }
