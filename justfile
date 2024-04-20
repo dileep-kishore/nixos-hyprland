@@ -2,13 +2,19 @@ default:
     @just --list --unsorted
 
 host := `uname -n`
+user := `whoami`
 alias bs := build_switch
+alias hs := home_switch
 alias u := update
 alias uc := update_commit
 
 # Build nixos
 build_switch:
     nixos-rebuild switch --flake .#{{host}}
+
+# Build home-manager
+home_switch:
+    home-manager switch --flake .#{{user}}@{{host}}
 
 # Show neovim flake output
 show:
