@@ -1,13 +1,13 @@
 {
   pkgs,
   config,
-  sops-nix,
+  inputs,
   ...
 }: let
   ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in {
   imports = [
-    sops-nix.nixosModules.sops
+    inputs.sops-nix.nixosModules.sops
   ];
   users.users.dileep = {
     isNormalUser = true;
@@ -22,7 +22,7 @@ in {
 
   # Sops secrets
   sops = {
-    defaultSopsFile = ../../secrets/secrets.yaml;
+    defaultSopsFile = ./secrets/secrets.yaml;
     defaultSopsFormat = "yaml";
     age.keyFile = "/home/dileep/.config/sops/age/keys.txt";
     secrets.OPENAI_API_KEY = {
