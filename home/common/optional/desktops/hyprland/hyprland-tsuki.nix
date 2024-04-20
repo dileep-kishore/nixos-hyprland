@@ -11,7 +11,7 @@
   };
   # Include monitors_x.conf depending on the hostname in nix
   home.file.".config/hypr/monitors.conf" = {
-    source = ./monitors_${config.networking.hostName}.conf;
+    source = ./monitors-tsuki.conf;
   };
 
   home.packages = with pkgs; [
