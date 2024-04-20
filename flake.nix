@@ -120,12 +120,12 @@
     homeConfigurations = {
       # Work
       "g8k@Mac124929" = lib.homeManagerConfiguration {
-        modules = [./hosts/g8k/Mac124929.nix];
+        modules = [./home/Mac124929.nix];
         pkgs = pkgsFor.x86_64-darwin;
         extraSpecialArgs = {inherit inputs outputs;};
       };
       "g8k@lap135849" = lib.homeManagerConfiguration {
-        modules = [./hosts/g8k/lap135849.nix];
+        modules = [./home/lap135849.nix];
         pkgs = pkgsFor.x86_64-linux;
         extraSpecialArgs = {inherit inputs outputs;};
       };
