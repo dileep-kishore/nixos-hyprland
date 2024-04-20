@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     python312
     go
-    julia
+    julia-bin
     nodejs_20
     quarto
     rustc
