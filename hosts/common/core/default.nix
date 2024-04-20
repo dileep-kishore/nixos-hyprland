@@ -1,5 +1,10 @@
-{outputs, ...}: {
+{
+  inputs,
+  outputs,
+  ...
+}: {
   imports = [
+    inputs.home-manager.nixosModules.home-manager
     ./docker.nix
     ./fonts.nix
     ./gnupg.nix

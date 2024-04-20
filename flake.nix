@@ -49,7 +49,7 @@
     nixpkgs,
     home-manager,
     nix-darwin,
-    sops-nix,
+    #sops-nix,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -67,6 +67,12 @@
     nixosModules = import ./modules/nixos;
     homeManagerModules = import ./modules/home-manager;
 
+    # Custom modifications/overrides to upstream packages.
+    overlays = import ./overlays {inherit inputs outputs;};
+
+    # Custom packages to be shared or upstreamed.
+    packages = forEachSystem (pkgs: import ./pkgs {inherit pkgs;});
+
     formatter = forEachSystem (pkgs: pkgs.alejandra);
 
     devShells = forEachSystem (pkgs: import ./shell.nix {inherit pkgs;});
@@ -75,38 +81,44 @@
     nixosConfigurations = {
       # Main desktop
       tsuki = lib.nixosSystem {
-        modules = [./hosts/tsuki];
         specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./hosts/tsuki
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.extraSpecialArgs = {inherit inputs outputs;};
+          }
+        ];
       };
 
       # Home Laptop
       nixos-xps = lib.nixosSystem {
-        modules = [./hosts/nixos-xps];
         specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./hosts/nixos-xps
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.extraSpecialArgs = {inherit inputs outputs;};
+          }
+        ];
       };
     };
 
     darwinConfigurations = {
       # Work Laptop
       Mac124929 = lib.darwinSystem {
-        modules = [./hosts/Mac124929];
         specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./hosts/Mac124929
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.extraSpecialArgs = {inherit inputs outputs;};
+          }
+        ];
       };
     };
 
     homeConfigurations = {
-      # Personal
-      "dileep@tsuki" = lib.homeManagerConfiguration {
-        modules = [./hosts/dileep/tsuki.nix];
-        pkgs = pkgsFor.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-      };
-      "dileep@nixos-xps" = lib.homeManagerConfiguration {
-        modules = [./hosts/dileep/nixos-xps.nix];
-        pkgs = pkgsFor.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-      };
-
       # Work
       "g8k@Mac124929" = lib.homeManagerConfiguration {
         modules = [./hosts/g8k/Mac124929.nix];
