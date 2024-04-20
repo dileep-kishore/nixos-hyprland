@@ -13,6 +13,9 @@
   home.file.".config/hypr/monitors.conf" = {
     source = ./monitors-nixos-xps.conf;
   };
+  home.file.".config/hypr/hyprpaper.conf" = {
+    source = ./hyprpaper-nixos-xps.conf;
+  };
 
   home.packages = with pkgs; [
     grim

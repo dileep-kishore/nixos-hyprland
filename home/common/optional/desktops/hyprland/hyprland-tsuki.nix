@@ -13,6 +13,9 @@
   home.file.".config/hypr/monitors.conf" = {
     source = ./monitors-tsuki.conf;
   };
+  home.file.".config/hypr/hyprpaper.conf" = {
+    source = ./hyprpaper-tsuki.conf;
+  };
 
   home.packages = with pkgs; [
     grim
