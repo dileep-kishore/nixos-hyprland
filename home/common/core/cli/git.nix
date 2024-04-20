@@ -6,7 +6,7 @@
     extraConfig = {
       core.editor = "nvim";
       init.defaultBranch = "main";
-      user.signing.key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPSWvSDBzAR7ol5A8Tqp9F3mOvsNSZX8IsK36VS81jpA";
+      user.signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPSWvSDBzAR7ol5A8Tqp9F3mOvsNSZX8IsK36VS81jpA";
       gpg = {
         format = "ssh";
         "ssh" = {
