@@ -5,7 +5,7 @@
     julia
     nodejs_20
     quarto
-    rust
+    rustc
     lua
   ];
 
