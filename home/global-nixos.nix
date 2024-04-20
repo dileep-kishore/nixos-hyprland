@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./common/core
-    ./common/optional/apps/gpg.nix
     ./common/optional/apps/linux-only.nix
     ./common/optional/apps/ulauncher.nix
     ./common/optional/apps/rofi

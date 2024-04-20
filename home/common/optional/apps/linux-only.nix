@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./wezterm.nix
+    ./gpg.nix
   ];
   home.packages = with pkgs; [
     libgcc
