@@ -15,6 +15,7 @@
     ./lazygit.nix
     ./mods
     ./ripgrep.nix
+    ./scripts.nix
     ./starship.nix
     ./tmux
     ./yazi
