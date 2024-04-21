@@ -21,6 +21,7 @@
       sessionist
       open
       tmux-fzf
+      tmux-thumbs
       {
         plugin = resurrect;
         extraConfig = ''
@@ -47,8 +48,8 @@
       # allow passthrough
       set-option -g allow-passthrough
 
-      # status bar on top
-      set -g status-position top
+      # status bar on bottom
+      set -g status-position bottom
 
       # Set border colors
       set -g pane-border-lines heavy
@@ -98,7 +99,6 @@
 
       set-option -g status-justify absolute-centre
       set-option -g status-keys vi
-      set-option -g status-position top
       set -g status-left-length 150
       set -g status-right-length 150
       set-option -g status-style fg=$thm_text,bg=$thm_base
