@@ -7,6 +7,7 @@
 
   home.packages = with pkgs; [
     age
+    gitkraken
     pandoc
     slack
     texliveFull
