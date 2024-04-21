@@ -26,7 +26,7 @@
 <div align="center">
     Dotfiles for my <a href="https://hyprland.org">Hyprland</a> setup on my <a href="https://nixos.org">NixOS</a> system.
     <br/>
-    Includes my <a href="https://github.com/nix-community/home-manager" >Home Manager</a> configuration for linux and darwin.
+    Includes my <a href="https://github.com/nix-community/home-manager" >Home Manager</a> configuration for linux and macos.
     <p><strong>Be sure to <a href="#" title="star">⭐️</a> or <a href="#" title="fork">🔱</a> this repo if you find it useful! 😃</strong></p>
 </div>
 <!-- markdownlint-restore -->
@@ -36,7 +36,7 @@
 - OS: [NixOS](https://nixos.org)
 - Window manager: [Hyprland](https://hyprland.org)
 - Status bar: [Waybar](https://github.com/Alexays/Waybar)
-- Terminal: [WezTerm](https://wezfurlong.org/wezterm/index.html)
+- Terminal: [Kitty](https://github.com/kovidgoyal/kitty)
 - Shell: `Zsh` with plugins managed through [antidote](https://github.com/mattmc3/antidote)
 - Current theme: [Rosé Pine](https://rosepinetheme.com)
 - Font: [Recursive](https://www.recursive.design)
@@ -56,22 +56,45 @@
 | :----------------------------: |
 | ![neovim](./assets/neovim.png) |
 
-|            VSCode            |
-| :--------------------------: |
-| ![vscode](assets/vscode.png) |
+|             VSCode             |
+| :----------------------------: |
+| ![vscode](./assets/vscode.png) |
+
+## Organization of the modules
+
+![directory-structure](./assets/directory_structure.png)
 
 ## Installation
 
+### Requirements
+
+- NixOS 23.11 or Home-manager
+- Patience
+- Knowledge
+- Disk space
+
+### NixOS installation
+
+Use `sudo just bs` or:
+
 ```sh
-sudo nixos-rebuild switch --flake '.#tsuki'
+sudo nixos-rebuild switch --flake '.#<host>'
+```
+
+### Home-manager installation
+
+Use `just hs` or:
+
+```sh
+home-manager switch --flake '.#<user>@<host>'
 ```
 
 ### Manual setup
 
-- Zotero
+- [Zotero](https://www.zotero.org/)
   - Install the [zotero-dracula](https://github.com/dracula/zotero) if you see a white statusbar
   - Install the [zotero-better-bibtex](https://github.com/retorquere/zotero-better-bibtex) plugin
-- Ulauncher extensions
+- [Ulauncher](https://github.com/Ulauncher/Ulauncher) extensions
   - Emoji
   - ChatGPT
   - Todoist
@@ -79,3 +102,9 @@ sudo nixos-rebuild switch --flake '.#tsuki'
   - Calculate Anything
   - Better file browser
   - GitHub
+
+## Acknowledgements
+
+- [EmergentMind's nix config](https://github.com/EmergentMind/nix-config): Structure, reference and some documentation
+- [Misterio77's nix config](https://github.com/Misterio77/nix-config): Structure and reference
+- [VimJoyer](https://github.com/vimjoyer): Whose YouTube videos aided me in beginning with Nix and persevering through challenges
