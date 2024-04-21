@@ -8,6 +8,10 @@
     noto-fonts
     noto-fonts-emoji
     recursive
-    # TODO: Add other fonts - github monospace, etc.
+    sn-pro
+    ia-writer-quattro
+    ia-writer-duospace
+    libre-baskerville
+    monaspace
   ];
 }
