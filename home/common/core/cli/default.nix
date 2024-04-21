@@ -12,6 +12,7 @@
     ./fzf.nix
     ./gh.nix
     ./git.nix
+    ./git-cliff.nix
     ./jujutsu.nix
     ./lazygit.nix
     ./mods
