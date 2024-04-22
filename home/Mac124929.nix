@@ -6,6 +6,7 @@
   imports =
     [
       ./common/core
+      ./common/optional/apps/kitty.nix
       # NOTE: espanso disabled because it's not working on wayland
       # ./common/optional/misc/espanso.nix
     ]
