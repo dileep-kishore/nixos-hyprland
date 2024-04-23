@@ -26,7 +26,6 @@
 
   home.packages = with pkgs; [
     inputs.neovim.packages.${system}.default
-    # _1password
     coreutils-full
     entr
     fd
