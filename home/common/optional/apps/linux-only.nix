@@ -3,8 +3,6 @@
     ./gpg.nix
   ];
   home.packages = with pkgs; [
-    _1password
-    _1password-gui
     libgcc
     brave
     gnome.eog
