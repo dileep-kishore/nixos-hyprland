@@ -34,7 +34,6 @@
   ];
   home.sessionVariables = {
     EDITOR = "nvim";
-    SHELL = "zsh";
     TERM = "xterm-256color";
     USE_EDITOR = "$EDITOR";
     VISUAL = "$EDITOR";
