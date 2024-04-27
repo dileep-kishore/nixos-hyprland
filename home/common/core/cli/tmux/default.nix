@@ -10,7 +10,7 @@
     mouse = true;
     prefix = "C-a";
     terminal = "tmux-256color";
-    tmuxp.enable = true;
+    tmuxp.enable = false;
 
     plugins = with pkgs.tmuxPlugins; [
       sensible
