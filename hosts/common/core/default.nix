@@ -22,7 +22,10 @@
     config = {
       allowUnfree = true;
       permittedInsecurePackages = [
-        "electron"
+        "electron-27.3.11"
+        "electron-25.9.0"
+        "electron-24.8.6"
+        "electron-22.3.27"
         "zotero-6.0.27"
       ];
     };
