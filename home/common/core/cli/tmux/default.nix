@@ -49,7 +49,7 @@
       set-option -g allow-passthrough
 
       # status bar on bottom
-      set -g status-position top
+      set -g status-position bottom
 
       # Set border colors
       set -g pane-border-lines heavy
