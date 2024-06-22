@@ -40,9 +40,9 @@
   networking.hostName = "tsuki"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
     extraPackages = with pkgs; [
       rocmPackages.clr
       rocmPackages.clr.icd
