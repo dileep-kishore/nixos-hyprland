@@ -1,4 +1,4 @@
-@import "rose-pine.css";
+@import "mocha.css";
 
 * {
   font-family: "Rec Mono Semicasual", "CaskaydiaCove NF";
@@ -45,25 +45,25 @@ window.HDMI-A-1 #custom-toggl {
   margin-left: 1rem;
   background-color: @base;
   padding: 0.1rem 0.5rem;
-  border: 2px solid @pine;
+  border: 2px solid @mauve;
 }
 
 #workspaces button {
-  color: @iris;
+  color: @peach;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
   color: @base;
-  background-color: @pine;
+  background-color: @mauve;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
   padding: 0.1rem 3rem;
 }
 
 #workspaces button:hover {
-  color: @foam;
+  color: @blue;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
   padding: 0.1rem 3rem;
@@ -74,13 +74,13 @@ window.HDMI-A-1 #custom-toggl {
   border-radius: 1rem;
   margin: 3px 0px;
   background-color: @base;
-  border: 2px solid @pine;
+  border: 2px solid @mauve;
   margin-left: 1rem;
   padding: 0.1rem 1rem;
 }
 
 #taskbar button:hover {
-  color: @foam;
+  color: @blue;
   border-radius: 1rem;
   transition: all 0.3s ease-in-out;
   /* padding: 0.1rem 2rem; */
@@ -101,9 +101,9 @@ window.HDMI-A-1 #custom-toggl {
   background-color: @base;
   padding: 0.1rem 0.7rem;
   margin: 3px 0;
-  /* border-top: 4px solid @pine;
-  border-bottom: 4px solid @pine; */
-  border: 2px solid @pine;
+  /* border-top: 4px solid @mauve;
+  border-bottom: 4px solid @mauve; */
+  border: 2px solid @mauve;
 }
 
 #network {
@@ -113,38 +113,38 @@ window.HDMI-A-1 #custom-toggl {
 }
 
 #cpu {
-  color: @rose;
+  color: @pink;
 }
 
 #memory {
-  color: @gold;
+  color: @yellow;
 }
 
 #custom-toggl {
-  color: @iris;
+  color: @peach;
 }
 
 #clock {
-  color: @rose;
+  color: @pink;
   border-radius: 0px 1rem 1rem 0px;
   margin-right: 1rem;
-  border-right: 4px solid @pine;
+  border-right: 4px solid @mauve;
 }
 
 #battery {
-  color: @rose;
+  color: @pink;
 }
 
 #battery.charging {
-  color: @rose;
+  color: @pink;
 }
 
 #battery.warning:not(.charging) {
-  color: @pine;
+  color: @mauve;
 }
 
 #backlight {
-  color: @gold;
+  color: @yellow;
 }
 
 #backlight,
@@ -153,31 +153,31 @@ window.HDMI-A-1 #custom-toggl {
 }
 
 #pulseaudio {
-  color: @love;
+  color: @red;
   border-radius: 1rem 0px 0px 1rem;
   margin-left: 1rem;
-  border-left: 4px solid @pine;
+  border-left: 4px solid @mauve;
 }
 
 #custom-music {
-  color: @iris;
+  color: @peach;
   border-radius: 1rem;
 }
 
 #custom-lock {
   border-radius: 1rem 0px 0px 1rem;
-  color: @foam;
+  color: @blue;
 }
 
 #custom-power {
   margin-right: 1rem;
   border-radius: 0px 1rem 1rem 0px;
-  color: @pine;
+  color: @mauve;
 }
 
 #tray {
   margin-right: 1rem;
   border-radius: 1rem;
-  border-right: 4px solid @pine;
-  border-left: 4px solid @pine;
+  border-right: 4px solid @mauve;
+  border-left: 4px solid @mauve;
 }

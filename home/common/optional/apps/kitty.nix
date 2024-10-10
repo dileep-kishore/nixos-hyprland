@@ -7,7 +7,7 @@
     };
     shellIntegration.enableBashIntegration = true;
     shellIntegration.enableZshIntegration = true;
-    themeFile = "rose-pine";
+    themeFile = "Catppuccin-Mocha";
     settings = {
       bold_font = "Rec Mono Semicasual Bold";
       italic_font = "Rec Mono Semicasual Italic";

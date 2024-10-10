@@ -49,7 +49,7 @@
       set-option -g allow-passthrough
 
       # status bar on bottom
-      set -g status-position top
+      set -g status-position bottom
 
       # Set border colors
       set -g pane-border-lines heavy
@@ -79,23 +79,32 @@
       bind e command-prompt -p "Rename active session to: " "run-shell 'tms rename %1'"
 
       # theme and statusbar
-      thm_base="#191724";
-      thm_surface="#1f1d2e";
-      thm_overlay="#26233a";
-      thm_muted="#6e6a86";
-      thm_subtle="#908caa";
-      thm_text="#e0def4";
-      thm_love="#eb6f92";
-      thm_gold="#f6c177";
-      thm_rose="#ebbcba";
-      thm_pine="#31748f";
-      thm_pine2="#3e8fb0";
-      thm_foam="#9ccfd8";
-      thm_foam2="#56949f";
-      thm_iris="#c4a7e7";
-      thm_hl_low="#21202e";
-      thm_hl_med="#403d52";
-      thm_hl_high="#524f67";
+      thm_base="#1e1e2e";
+      thm_text="#cdd6f4";
+      thm_rosewater="#f5e0dc";
+      thm_flamingo="#f2cdcd";
+      thm_pink="#f5c2e7";
+      thm_mauve="#cba6f7";
+      thm_red="#f38ba8";
+      thm_maroon="#eba0ac";
+      thm_peach="#fab387";
+      thm_yellow="#f9e2af";
+      thm_green="#a6e3a1";
+      thm_teal="#94e2d5";
+      thm_sky="#89dceb";
+      thm_sapphire="#74c7ec";
+      thm_blue="#89b4fa";
+      thm_lavender="#b4befe";
+      thm_subtext_1="#a6adc8";
+      thm_subtext_0="#bac2de";
+      thm_overlay_2="#9399b2";
+      thm_overlay_1="#7f849c";
+      thm_overlay_0="#6c7086";
+      thm_surface_2="#585b70";
+      thm_surface_1="#45475a";
+      thm_surface_0="#313244";
+      thm_mantle="#181825";
+      thm_crust="#11111b";
 
       set-option -g status-justify absolute-centre
       set-option -g status-keys vi
@@ -104,13 +113,13 @@
       set-option -g status-style fg=$thm_text,bg=$thm_base
 
       #+--- Pane borders ---+
-      set -g pane-border-style fg=$thm_hl_low
-      set -g pane-active-border-style fg=$thm_iris
+      set -g pane-border-style fg=$thm_surface_2
+      set -g pane-active-border-style fg=$thm_mauve
 
       #+--- Bars LEFT ---+
       # Session name
-      session_name="#[fg=$thm_base,bg=$thm_iris,bold,italics]  #S #[bg=$thm_base,fg=$thm_iris]";
-      dir_section="#[bg=$thm_pine,fg=$thm_base]#[fg=$thm_base,bg=$thm_pine,bold]  #(~/.config/tmux/scripts/find_git_root.py #{pane_current_path}) #[bg=$thm_base,fg=$thm_pine]";
+      session_name="#[fg=$thm_base,bg=$thm_mauve,bold,italics]  #S #[bg=$thm_base,fg=$thm_mauve]";
+      dir_section="#[bg=$thm_blue,fg=$thm_base]#[fg=$thm_base,bg=$thm_blue,bold]  #(~/.config/tmux/scripts/find_git_root.py #{pane_current_path}) #[bg=$thm_base,fg=$thm_blue]";
       git_status="#(~/.config/tmux/scripts/git_status.sh #{pane_current_path})"
 
       set -g status-left "$session_name $dir_section $git_status"
@@ -126,15 +135,15 @@
       custom_icon_window_bell="󰂞 ";
       show_window_status="#{?window_activity_flag,$custom_icon_window_activity,}#{?window_bell_flag,$custom_icon_window_bell,}#{?window_silence_flag,$custom_icon_window_silent,}#{?window_active,$custom_icon_window_current,}#{?window_last_flag,$custom_icon_window_last,}#{?window_marked_flag,$custom_icon_window_mark,}#{?window_zoomed_flag,$custom_icon_window_zoom,}";
       # Focus
-      set -g window-status-current-format "#[fg=$thm_foam,bg=$thm_base]#[bg=$thm_foam,fg=$thm_base]#I #[fg=$thm_base,bg=$thm_foam2,bold,italics] #W $show_window_status #[bg=$thm_base,fg=$thm_foam2]"
+      set -g window-status-current-format "#[fg=$thm_sky,bg=$thm_base]#[bg=$thm_sky,fg=$thm_base]#I #[fg=$thm_base,bg=$thm_teal,bold,italics] #W $show_window_status #[bg=$thm_base,fg=$thm_teal]"
       # Unfocused
-      set -g window-status-format "#[fg=$thm_hl_high,bg=$thm_base]#[bg=$thm_hl_high,fg=$thm_text]#I #[fg=$thm_text,bg=$thm_hl_low] #W $show_window_status #[bg=$thm_base,fg=$thm_hl_low]"
+      set -g window-status-format "#[fg=$thm_overlay_2,bg=$thm_base]#[bg=$thm_overlay_2,fg=$thm_text]#I #[fg=$thm_text,bg=$thm_surface_2] #W $show_window_status #[bg=$thm_base,fg=$thm_surface_2]"
       set -g window-status-separator " "
 
       #+--- Bars RIGHT ---+
-      host_name="#[fg=$thm_iris,bg=$thm_base]#[fg=$thm_base,bg=$thm_iris,bold,italics]  #H ";
-      uptime="#[fg=$thm_foam,bg=$thm_base]#[fg=$thm_base,bg=$thm_foam,italics]  #(~/.config/tmux/scripts/uptime_fmt.sh) #[fg=$thm_base,bg=$thm_foam]";
-      date_section="#[fg=$thm_gold,bg=$thm_base]#[fg=$thm_base,bg=$thm_gold,bold]  #(date +'%a, %d %b, %Y') #[fg=$thm_base,bg=$thm_gold]";
+      host_name="#[fg=$thm_mauve,bg=$thm_base]#[fg=$thm_base,bg=$thm_mauve,bold,italics]  #H ";
+      uptime="#[fg=$thm_sky,bg=$thm_base]#[fg=$thm_base,bg=$thm_sky,italics]  #(~/.config/tmux/scripts/uptime_fmt.sh) #[fg=$thm_base,bg=$thm_sky]";
+      date_section="#[fg=$thm_yellow,bg=$thm_base]#[fg=$thm_base,bg=$thm_yellow,bold]  #(date +'%a, %d %b, %Y') #[fg=$thm_base,bg=$thm_yellow]";
 
       set -g status-right "$date_section#[bg=$thm_base,fg=$thm_base] $uptime#[bg=$thm_base,fg=$thm_base] $host_name"
     '';

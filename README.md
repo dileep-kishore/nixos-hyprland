@@ -38,7 +38,7 @@
 - Status bar: [Waybar](https://github.com/Alexays/Waybar)
 - Terminal: [Kitty](https://github.com/kovidgoyal/kitty)
 - Shell: `Zsh` with plugins managed through [antidote](https://github.com/mattmc3/antidote)
-- Current theme: [Rosé Pine](https://rosepinetheme.com)
+- Current theme: [Catppuccin](https://catppuccin.com/)
 - Font: [Recursive](https://www.recursive.design)
 - Editor: [Neovim](https://neovim.io). Configuration can be found [here](https://github.com/dileep-kishore/neovim)
 

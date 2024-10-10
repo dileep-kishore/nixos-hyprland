@@ -1,31 +1,40 @@
 #!/usr/bin/env bash
 
-thm_base="#191724"
-thm_surface="#1f1d2e"
-thm_overlay="#26233a"
-thm_muted="#6e6a86"
-thm_subtle="#908caa"
-thm_text="#e0def4"
-thm_love="#eb6f92"
-thm_gold="#f6c177"
-thm_rose="#ebbcba"
-thm_pine="#31748f"
-thm_pine2="#3e8fb0"
-thm_foam="#9ccfd8"
-thm_foam2="#56949f"
-thm_iris="#c4a7e7"
-thm_hl_low="#21202e"
-thm_hl_med="#403d52"
-thm_hl_high="#524f67"
+thm_base="#1e1e2e"
+thm_text="#cdd6f4"
+thm_peachwater="#f5e0dc"
+thm_flamingo="#f2cdcd"
+thm_pink="#f5c2e7"
+thm_mauve="#cba6f7"
+thm_red="#f38ba8"
+thm_maroon="#eba0ac"
+thm_peach="#fab387"
+thm_yellow="#f9e2af"
+thm_green="#a6e3a1"
+thm_teal="#94e2d5"
+thm_sky="#89dceb"
+thm_sapphire="#74c7ec"
+thm_blue="#89b4fa"
+thm_lavender="#b4befe"
+thm_subtext_1="#a6adc8"
+thm_subtext_0="#bac2de"
+thm_overlay_2="#9399b2"
+thm_overlay_1="#7f849c"
+thm_overlay_0="#6c7086"
+thm_surface_2="#585b70"
+thm_surface_1="#45475a"
+thm_surface_0="#313244"
+thm_mantle="#181825"
+thm_crust="#11111b"
 
 cd "$1" || exit
 BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
 STATUS=$(git status --porcelain 2>/dev/null | grep -c -E "^(M| M)")
 if test "$BRANCH" != ""; then
 	if test "$STATUS" = "0"; then
-		echo "#[bg=$thm_rose,fg=$thm_base]#[fg=$thm_base,bg=$thm_rose,italics]  $BRANCH #[bg=$thm_base,fg=$thm_rose]"
+		echo "#[bg=$thm_peach,fg=$thm_base]#[fg=$thm_base,bg=$thm_peach,italics]  $BRANCH #[bg=$thm_base,fg=$thm_peach]"
 	else
-		echo "#[bg=$thm_love,fg=$thm_base]#[fg=$thm_base,bg=$thm_love,italics]  $BRANCH #[bg=$thm_base,fg=$thm_love]"
+		echo "#[bg=$thm_red,fg=$thm_base]#[fg=$thm_base,bg=$thm_red,italics]  $BRANCH #[bg=$thm_base,fg=$thm_red]"
 	fi
 else
 	echo ""
