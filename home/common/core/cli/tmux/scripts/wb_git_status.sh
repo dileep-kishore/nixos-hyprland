@@ -43,6 +43,8 @@ REVIEW_STATUS=""
 ISSUE_STATUS=""
 BUG_STATUS=""
 
+RESET="#[fg=${thm_text},bg=${thm_base},nobold,noitalics,nounderscore,nodim]"
+
 if [[ -z $BRANCH ]]; then
 	exit 0
 fi
@@ -86,7 +88,9 @@ if [[ $BUG_COUNT -gt 0 ]]; then
 	BUG_STATUS="#[fg=${thm_maroon},bg=${thm_base},bold] ${RESET}${BUG_COUNT} "
 fi
 
-WB_STATUS="$RESET$PROVIDER_ICON $RESET$PR_STATUS$REVIEW_STATUS$ISSUE_STATUS$BUG_STATUS"
+SEPARATOR="$RESET#[bg=${thm_base},fg=${thm_text},bold]▒"
+
+WB_STATUS="$SEPARATOR $RESET$PROVIDER_ICON $RESET$PR_STATUS$REVIEW_STATUS$ISSUE_STATUS$BUG_STATUS"
 
 echo "$WB_STATUS"
 

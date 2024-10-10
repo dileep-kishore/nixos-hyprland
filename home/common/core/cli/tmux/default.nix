@@ -117,11 +117,12 @@
       set -g pane-active-border-style fg=$thm_mauve
 
       #+--- Bars LEFT ---+
+      RESET="#[fg=$thm_text,bg=$thm_base,nobold,noitalics,nounderscore,nodim]"
       # Session name
-      session_name="#[fg=$thm_base,bg=$thm_mauve,bold,italics]  #S#[bg=$thm_base,fg=$thm_mauve]";
-      dir_section="#[fg=$thm_base,bg=$thm_blue]#[fg=$thm_base,bg=$thm_blue,bold]  #(~/.config/tmux/scripts/find_git_root.py #{pane_current_path})#[bg=$thm_base,fg=$thm_blue]";
+      session_name="#[fg=$thm_mauve,bg=$thm_base,italics] #S #[bg=$thm_mauve,fg=$thm_base,bold]   ";
+      dir_section=" #[fg=$thm_blue,bg=$thm_base]#(~/.config/tmux/scripts/find_git_root.py #{pane_current_path}) #[bg=$thm_blue,fg=$thm_base,bold]   ";
 
-      set -g status-left "$session_name $dir_section"
+      set -g status-left "$session_name$RESET$dir_section$RESET"
 
       #+--- Windows ---+
       # Status
@@ -134,20 +135,20 @@
       custom_icon_window_bell="󰂞 ";
       show_window_status="#{?window_activity_flag,$custom_icon_window_activity,}#{?window_bell_flag,$custom_icon_window_bell,}#{?window_silence_flag,$custom_icon_window_silent,}#{?window_active,$custom_icon_window_current,}#{?window_last_flag,$custom_icon_window_last,}#{?window_marked_flag,$custom_icon_window_mark,}#{?window_zoomed_flag,$custom_icon_window_zoom,}";
       # Focus
-      set -g window-status-current-format "#[bg=$thm_base,fg=$thm_mauve]#I:#[fg=$thm_mauve,bg=$thm_base,bold,italics] #W $show_window_status"
+      set -g window-status-current-format "#[bg=$thm_base,fg=$thm_mauve]#I:#[fg=$thm_mauve,bg=$thm_base,italics] #W $show_window_status"
       # Unfocused
       set -g window-status-format "#[bg=$thm_base,fg=$thm_overlay_2]#I:#[fg=$thm_overlay_2,bg=$thm_base] #W $show_window_status"
       set -g window-status-separator " "
 
       #+--- Bars RIGHT ---+
       host_name="#[fg=$thm_mauve,bg=$thm_base]#[fg=$thm_base,bg=$thm_mauve,bold,italics]  #H ";
-      date_section="#[fg=$thm_yellow,bg=$thm_base]  #(date +'%a, %d %b')";
-      uptime="#[fg=$thm_green,bg=$thm_base] #(~/.config/tmux/scripts/uptime_fmt.sh)";
+      date_section="#[bg=$thm_yellow,fg=$thm_base,bold]   #[fg=$thm_yellow,bg=$thm_base] #(date +'%a, %d %b')";
+      uptime="#[bg=$thm_green,fg=$thm_base,bold]   #[fg=$thm_green,bg=$thm_base] #(~/.config/tmux/scripts/uptime_fmt.sh)";
 
       git_status="#(~/.config/tmux/scripts/git_status.sh #{pane_current_path})"
       wb_git_status="#(~/.config/tmux/scripts/wb_git_status.sh #{pane_current_path})"
 
-      set -g status-right "$uptime $date_section $git_status $wb_git_status"
+      set -g status-right "$RESET$uptime $RESET$date_section $git_status$wb_git_status"
     '';
   };
 
