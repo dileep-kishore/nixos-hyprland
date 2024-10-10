@@ -9,7 +9,7 @@
     textColor = "#e0def4";
     progressColor = "over #f6c177";
     borderSize = 2;
-    font = "Rec Mono Semicasual";
+    font = "Maple Mono";
     icons = true;
     extraConfig = builtins.readFile ./config;
   };

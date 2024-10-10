@@ -10,7 +10,7 @@ configuration {
 @import "colors.rasi"
 
 * {
-    font: "Rec Mono Semicasual 13";
+    font: "Maple Mono 13";
 }
 
 window {
