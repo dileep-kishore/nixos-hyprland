@@ -26,6 +26,7 @@
 
   home.packages = with pkgs; [
     inputs.neovim.packages.${system}.default
+    bc
     coreutils-full
     entr
     fd
