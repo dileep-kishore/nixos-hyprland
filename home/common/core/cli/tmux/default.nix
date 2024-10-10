@@ -119,8 +119,8 @@
       #+--- Bars LEFT ---+
       RESET="#[fg=$thm_text,bg=$thm_base,nobold,noitalics,nounderscore,nodim]"
       # Session name
-      session_name="#[fg=$thm_mauve,bg=$thm_base,italics] #S #[fg=$thm_mauve,bg=$thm_base,bold]   ▒";
-      dir_section=" #[fg=$thm_blue,bg=$thm_base]#(~/.config/tmux/scripts/find_git_root.py #{pane_current_path}) #[fg=$thm_blue,bg=$thm_base,bold]   ▒";
+      session_name="#[fg=$thm_mauve,bg=$thm_base,italics] #S #[fg=$thm_mauve,bg=$thm_base,bold]  ▒";
+      dir_section=" #[fg=$thm_blue,bg=$thm_base]#(~/.config/tmux/scripts/find_git_root.py #{pane_current_path}) #[fg=$thm_blue,bg=$thm_base,bold]  ▒";
 
       set -g status-left "$session_name$RESET$dir_section$RESET"
 
