@@ -28,6 +28,9 @@ in {
     secrets.OPENAI_API_KEY = {
       owner = config.users.users.dileep.name;
     };
+    secrets.ANTHROPIC_API_KEY = {
+      owner = config.users.users.dileep.name;
+    };
   };
 
   # 1password
@@ -49,6 +52,7 @@ in {
     script = ''
       mkdir -p /home/dileep/.secrets
       echo $(cat ${config.sops.secrets.OPENAI_API_KEY.path}) > /home/dileep/.secrets/openai_api_key.txt
+      echo $(cat ${config.sops.secrets.ANTHROPIC_API_KEY.path}) > /home/dileep/.secrets/anthropic_api_key.txt
     '';
     serviceConfig = {
       User = "dileep";

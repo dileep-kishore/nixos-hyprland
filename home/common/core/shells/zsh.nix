@@ -18,6 +18,7 @@
     initExtra = ''
       bindkey '^ ' autosuggest-accept
       export OPENAI_API_KEY="$(cat ~/.secrets/openai_api_key.txt)"
+      export ANTHROPIC_API_KEY="$(cat ~/.secrets/anthropic_api_key.txt)"
       export DIRENV_LOG_FORMAT=""
     '';
     # profileExtra = { };
