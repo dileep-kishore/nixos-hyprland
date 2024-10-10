@@ -7,9 +7,9 @@
     _1password-gui
     libgcc
     brave
-    gnome.eog
-    gnome.nautilus
-    gnome.seahorse
+    eog
+    nautilus
+    seahorse
     gparted
     kdePackages.wacomtablet
     libreoffice-fresh
