@@ -6,11 +6,11 @@
       package = pkgs.papirus-icon-theme;
     };
     cursorTheme = {
-      name = "Bibata-Modern-Ice";
+      name = "Bibata-Modern-Amber";
       package = pkgs.bibata-cursors;
     };
     theme = {
-      name = "orchis-theme";
+      name = "Orchis-Purple-Dark";
       package = pkgs.orchis-theme;
     };
     gtk3.extraConfig = {
@@ -26,8 +26,8 @@
     };
   };
 
-  home.sessionVariables.GTK_THEME = "orchis-theme";
+  home.sessionVariables.GTK_THEME = "Orchis-Purple-Dark";
   home.pointerCursor.gtk.enable = true;
   home.pointerCursor.package = pkgs.bibata-cursors;
-  home.pointerCursor.name = "Bibata-Modern-Ice";
+  home.pointerCursor.name = "Bibata-Modern-Amber";
 }
