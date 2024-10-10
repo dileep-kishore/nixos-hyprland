@@ -118,11 +118,10 @@
 
       #+--- Bars LEFT ---+
       # Session name
-      session_name="#[fg=$thm_base,bg=$thm_mauve,bold,italics]  #S #[bg=$thm_base,fg=$thm_mauve]";
-      dir_section="#[bg=$thm_blue,fg=$thm_base]#[fg=$thm_base,bg=$thm_blue,bold]  #(~/.config/tmux/scripts/find_git_root.py #{pane_current_path}) #[bg=$thm_base,fg=$thm_blue]";
-      git_status="#(~/.config/tmux/scripts/git_status.sh #{pane_current_path})"
+      session_name="#[fg=$thm_base,bg=$thm_mauve,bold,italics]  #S#[bg=$thm_base,fg=$thm_mauve]";
+      dir_section="#[fg=$thm_base,bg=$thm_blue]#[fg=$thm_base,bg=$thm_blue,bold]  #(~/.config/tmux/scripts/find_git_root.py #{pane_current_path})#[bg=$thm_base,fg=$thm_blue]";
 
-      set -g status-left "$session_name $dir_section $git_status"
+      set -g status-left "$session_name $dir_section"
 
       #+--- Windows ---+
       # Status
@@ -135,17 +134,20 @@
       custom_icon_window_bell="󰂞 ";
       show_window_status="#{?window_activity_flag,$custom_icon_window_activity,}#{?window_bell_flag,$custom_icon_window_bell,}#{?window_silence_flag,$custom_icon_window_silent,}#{?window_active,$custom_icon_window_current,}#{?window_last_flag,$custom_icon_window_last,}#{?window_marked_flag,$custom_icon_window_mark,}#{?window_zoomed_flag,$custom_icon_window_zoom,}";
       # Focus
-      set -g window-status-current-format "#[fg=$thm_sky,bg=$thm_base]#[bg=$thm_sky,fg=$thm_base]#I #[fg=$thm_base,bg=$thm_teal,bold,italics] #W $show_window_status #[bg=$thm_base,fg=$thm_teal]"
+      set -g window-status-current-format "#[bg=$thm_base,fg=$thm_mauve]#I:#[fg=$thm_mauve,bg=$thm_base,bold,italics] #W $show_window_status"
       # Unfocused
-      set -g window-status-format "#[fg=$thm_overlay_2,bg=$thm_base]#[bg=$thm_overlay_2,fg=$thm_text]#I #[fg=$thm_text,bg=$thm_surface_2] #W $show_window_status #[bg=$thm_base,fg=$thm_surface_2]"
+      set -g window-status-format "#[bg=$thm_base,fg=$thm_overlay_2]#I:#[fg=$thm_overlay_2,bg=$thm_base] #W $show_window_status"
       set -g window-status-separator " "
 
       #+--- Bars RIGHT ---+
       host_name="#[fg=$thm_mauve,bg=$thm_base]#[fg=$thm_base,bg=$thm_mauve,bold,italics]  #H ";
-      uptime="#[fg=$thm_sky,bg=$thm_base]#[fg=$thm_base,bg=$thm_sky,italics]  #(~/.config/tmux/scripts/uptime_fmt.sh) #[fg=$thm_base,bg=$thm_sky]";
-      date_section="#[fg=$thm_yellow,bg=$thm_base]#[fg=$thm_base,bg=$thm_yellow,bold]  #(date +'%a, %d %b, %Y') #[fg=$thm_base,bg=$thm_yellow]";
+      date_section="#[fg=$thm_yellow,bg=$thm_base]  #(date +'%a, %d %b')";
+      uptime="#[fg=$thm_green,bg=$thm_base] #(~/.config/tmux/scripts/uptime_fmt.sh)";
 
-      set -g status-right "$date_section#[bg=$thm_base,fg=$thm_base] $uptime#[bg=$thm_base,fg=$thm_base] $host_name"
+      git_status="#(~/.config/tmux/scripts/git_status.sh #{pane_current_path})"
+      wb_git_status="#(~/.config/tmux/scripts/wb_git_status.sh #{pane_current_path})"
+
+      set -g status-right "$uptime $date_section $git_status $wb_git_status"
     '';
   };
 

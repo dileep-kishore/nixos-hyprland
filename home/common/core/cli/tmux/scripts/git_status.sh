@@ -80,7 +80,7 @@ if [[ $DELETIONS_COUNT -gt 0 ]]; then
 fi
 
 if [[ $UNTRACKED_COUNT -gt 0 ]]; then
-	STATUS_UNTRACKED="${RESET}#[fg=${thm_crust},bg=${thm_base},bold] ${UNTRACKED_COUNT} "
+	STATUS_UNTRACKED="${RESET}#[fg=${thm_surface2},bg=${thm_base},bold] ${UNTRACKED_COUNT} "
 fi
 
 # Determine repository sync status
