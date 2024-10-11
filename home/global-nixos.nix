@@ -6,8 +6,8 @@
   imports = [
     ./common/core
     ./common/optional/apps/linux-only.nix
-    ./common/optional/apps/wezterm.nix
-    ./common/optional/apps/kitty.nix
+    ./common/optional/apps/wezterm
+    ./common/optional/apps/kitty
     ./common/optional/apps/ulauncher.nix
     ./common/optional/app/slack.nix
     ./common/optional/apps/rofi
