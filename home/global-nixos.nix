@@ -9,6 +9,7 @@
     ./common/optional/apps/wezterm.nix
     ./common/optional/apps/kitty.nix
     ./common/optional/apps/ulauncher.nix
+    ./common/optional/app/slack.nix
     ./common/optional/apps/rofi
     ./common/optional/apps/wofi
     ./common/optional/desktops/waybar

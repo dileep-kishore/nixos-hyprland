@@ -8,7 +8,6 @@
     age
     gitkraken
     pandoc
-    slack
     texliveFull
     sops
     zoom-us
