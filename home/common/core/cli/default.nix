@@ -7,6 +7,7 @@
     ./atuin.nix
     ./bat
     ./btop
+    ./delta
     ./direnv.nix
     ./eza.nix
     ./fzf.nix
