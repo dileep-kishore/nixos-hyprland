@@ -45,8 +45,9 @@ in {
   };
 
   # OpenAI API Key
-  systemd.services."openaisecret" = {
-    description = "OpenAI API Key";
+  systemd.services.aisecret = {
+    enable = true;
+    description = "API Key";
     after = ["network.target"];
     wantedBy = ["multi-user.target"];
     script = ''
@@ -59,7 +60,15 @@ in {
       WorkingDirectory = "/home/dileep";
     };
   };
-  systemd.services.openaisecret.enable = true;
+  systemd.services.flatpak-repo = {
+    enable = true;
+    description = "Flathub repo for flatpak";
+    wantedBy = ["multi-user.target"];
+    path = [pkgs.flatpak];
+    script = ''
+      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    '';
+  };
 
   # vpn
   # TODO: Figure out how to make nordvpn connection more dynamic
