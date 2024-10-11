@@ -20,6 +20,7 @@
       export OPENAI_API_KEY="$(cat ~/.secrets/openai_api_key.txt)"
       export ANTHROPIC_API_KEY="$(cat ~/.secrets/anthropic_api_key.txt)"
       export DIRENV_LOG_FORMAT=""
+      export ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
     '';
     # profileExtra = { };
     # shellAliases = { };
@@ -40,6 +41,7 @@
         "ohmyzsh/ohmyzsh path:plugins/pyenv"
         "ohmyzsh/ohmyzsh path:plugins/python"
         "ohmyzsh/ohmyzsh path:plugins/tmux"
+        "jeffreytse/zsh-vi-mode"
         "djui/alias-tips"
         "dim-an/cod"
         "wfxr/forgit"
