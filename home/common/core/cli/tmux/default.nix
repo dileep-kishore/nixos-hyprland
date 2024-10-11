@@ -20,7 +20,6 @@
       pain-control
       sessionist
       open
-      tmux-fzf
       tmux-thumbs
       {
         plugin = resurrect;
