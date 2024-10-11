@@ -6,7 +6,7 @@
       package = pkgs.papirus-icon-theme;
     };
     cursorTheme = {
-      name = "Bibata-Modern-Amber";
+      name = "Bibata-Original-Ice";
       package = pkgs.bibata-cursors;
     };
     theme = {
@@ -29,5 +29,5 @@
   home.sessionVariables.GTK_THEME = "Orchis-Purple-Dark";
   home.pointerCursor.gtk.enable = true;
   home.pointerCursor.package = pkgs.bibata-cursors;
-  home.pointerCursor.name = "Bibata-Modern-Amber";
+  home.pointerCursor.name = "Bibata-Original-Ice";
 }
