@@ -2,7 +2,7 @@
   programs.git.delta = {
     enable = true;
     options = {
-      features = "line-numbers decorations Catppuccin-mocha";
+      features = "line-numbers decorations catppuccin-mocha";
     };
   };
   # copy themes

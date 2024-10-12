@@ -6,7 +6,7 @@
     config = {
       # Show line numbers, Git modifications and file header (but no grid)
       style = "numbers,changes,header";
-      theme = "Catppuccin-mocha";
+      theme = "Catppuccin Mocha";
     };
     extraPackages = builtins.attrValues {
       inherit
