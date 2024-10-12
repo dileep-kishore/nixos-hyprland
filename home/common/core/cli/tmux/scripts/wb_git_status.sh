@@ -53,7 +53,7 @@ if [[ $PROVIDER == "github.com" ]]; then
 	if ! command -v gh &>/dev/null; then
 		exit 1
 	fi
-	PROVIDER_ICON="$RESET#[fg=${thm_text}] "
+	PROVIDER_ICON="$RESET#[fg=${thm_text}] "
 	PR_COUNT=$(gh pr list --json number --jq 'length' | bc)
 	REVIEW_COUNT=$(gh pr status --json reviewRequests --jq '.needsReview | length' | bc)
 	RES=$(gh issue list --json "assignees,labels" --assignee @me)
@@ -64,7 +64,7 @@ elif [[ $PROVIDER == "gitlab.com" ]]; then
 	if ! command -v glab &>/dev/null; then
 		exit 1
 	fi
-	PROVIDER_ICON="$RESET#[fg=#fc6d26] "
+	PROVIDER_ICON="$RESET#[fg=#fc6d26] "
 	PR_COUNT=$(glab mr list | grep -cE "^\!")
 	REVIEW_COUNT=$(glab mr list --reviewer=@me | grep -cE "^\!")
 	ISSUE_COUNT=$(glab issue list | grep -cE "^\#")
@@ -92,7 +92,7 @@ SEP="󰇝"
 # SEP="▒"
 SEPARATOR="$RESET#[bg=${thm_base},fg=${thm_text},bold]$SEP"
 
-WB_STATUS="$SEPARATOR $RESET$PROVIDER_ICON $RESET$PR_STATUS$REVIEW_STATUS$ISSUE_STATUS$BUG_STATUS"
+WB_STATUS="$RESET$PROVIDER_ICON $RESET$PR_STATUS$REVIEW_STATUS$ISSUE_STATUS$BUG_STATUS"
 
 echo "$WB_STATUS"
 

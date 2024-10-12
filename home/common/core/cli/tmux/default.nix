@@ -144,8 +144,8 @@
 
       #+--- Bars RIGHT ---+
       host_name="#[fg=$thm_mauve,bg=$thm_base]#[fg=$thm_base,bg=$thm_mauve,bold,italics]  #H ";
-      date_section="#[fg=$thm_yellow,bg=$thm_base,bold]$SEP  #[fg=$thm_yellow,bg=$thm_base]#(date +'%a, %d %b')";
-      uptime="#[fg=$thm_green,bg=$thm_base,bold]$SEP   #[fg=$thm_green,bg=$thm_base]#(~/.config/tmux/scripts/uptime_fmt.sh)";
+      date_section="#[fg=$thm_yellow,bg=$thm_base,bold]$SEP  $RESET#[fg=$thm_yellow,bg=$thm_base]#(date +'%a, %d %b')";
+      uptime="#[fg=$thm_green,bg=$thm_base,bold]$SEP  $RESET#[fg=$thm_green,bg=$thm_base]#(~/.config/tmux/scripts/uptime_fmt.sh)";
 
       git_status="#(~/.config/tmux/scripts/git_status.sh #{pane_current_path})"
       wb_git_status="#(~/.config/tmux/scripts/wb_git_status.sh #{pane_current_path})"

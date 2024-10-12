@@ -27,18 +27,7 @@ thm_surface_0="#313244"
 thm_mantle="#181825"
 thm_crust="#11111b"
 
-# cd "$1" || exit
-# BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
-# STATUS=$(git status --porcelain 2>/dev/null | grep -c -E "^(M| M)")
-# if test "$BRANCH" != ""; then
-# 	if test "$STATUS" = "0"; then
-# 		echo "#[bg=$thm_peach,fg=$thm_base]#[fg=$thm_base,bg=$thm_peach,italics]  $BRANCH #[bg=$thm_base,fg=$thm_peach]"
-# 	else
-# 		echo "#[bg=$thm_red,fg=$thm_base]#[fg=$thm_base,bg=$thm_red,italics]  $BRANCH #[bg=$thm_base,fg=$thm_red]"
-# 	fi
-# else
-# 	echo ""
-# fi
+cd "$1" || exit
 
 RESET="#[fg=${thm_text},bg=${thm_base},nobold,noitalics,nounderscore,nodim]"
 BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
@@ -110,13 +99,13 @@ SEP="󰇝"
 # SEP="▒"
 case "$SYNC_MODE" in
 1)
-	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_red},bold]$SEP 󱓎"
+	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_peach},bold]$SEP 󱓎"
 	;;
 2)
-	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_red},bold]$SEP 󰛃"
+	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_teal},bold]$SEP 󰛃"
 	;;
 3)
-	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_maroon},bold]$SEP 󰛀"
+	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_red},bold]$SEP 󰛀"
 	;;
 *)
 	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_green},bold]$SEP "
@@ -124,5 +113,5 @@ case "$SYNC_MODE" in
 esac
 
 if [[ -n $BRANCH ]]; then
-	echo "$REMOTE_STATUS $RESET$BRANCH $STATUS_CHANGED$STATUS_INSERTIONS$STATUS_DELETIONS$STATUS_UNTRACKED"
+	echo "$REMOTE_STATUS $BRANCH $RESET$STATUS_CHANGED$STATUS_INSERTIONS$STATUS_DELETIONS$STATUS_UNTRACKED"
 fi
