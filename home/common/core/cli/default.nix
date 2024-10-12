@@ -41,7 +41,7 @@
     libnotify
     libxcrypt
     ncdu
-    neofetch
+    fastfetch
     nix-tree
     openvpn
     p7zip
