@@ -89,8 +89,9 @@ if [[ $BUG_COUNT -gt 0 ]]; then
 fi
 
 SEP="󰇝"
+RSEP=""
 # SEP="▒"
-SEPARATOR="$RESET#[bg=${thm_base},fg=${thm_text},bold]$SEP"
+SEPARATOR="$RESET#[bg=${thm_base},fg=${thm_text},bold]$RSEP"
 
 WB_STATUS="$RESET$PROVIDER_ICON $RESET$PR_STATUS$REVIEW_STATUS$ISSUE_STATUS$BUG_STATUS"
 
