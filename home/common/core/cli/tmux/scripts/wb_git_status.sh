@@ -89,7 +89,7 @@ if [[ $BUG_COUNT -gt 0 ]]; then
 fi
 
 SEP="󰇝"
-RSEP=""
+RSEP=""
 # SEP="▒"
 SEPARATOR="$RESET#[bg=${thm_base},fg=${thm_text},bold]$RSEP"
 

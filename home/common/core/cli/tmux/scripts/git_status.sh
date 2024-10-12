@@ -96,7 +96,7 @@ fi
 
 # Set the status indicator based on the sync mode
 SEP="󰇝"
-RSEP=""
+RSEP="▒"
 # SEP="▒"
 case "$SYNC_MODE" in
 1)
@@ -114,5 +114,5 @@ case "$SYNC_MODE" in
 esac
 
 if [[ -n $BRANCH ]]; then
-	echo "$REMOTE_STATUS $BRANCH $RESET$STATUS_CHANGED$STATUS_INSERTIONS$STATUS_DELETIONS$STATUS_UNTRACKED"
+	echo "$REMOTE_STATUS $BRANCH $RESET$STATUS_INSERTIONS$STATUS_CHANGED$STATUS_DELETIONS$STATUS_UNTRACKED"
 fi
