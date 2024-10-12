@@ -115,11 +115,14 @@
       set -g pane-border-style fg=$thm_surface_2
       set -g pane-active-border-style fg=$thm_mauve
 
+      SEP="󰇝"
+      # SEP="▒"
+
       #+--- Bars LEFT ---+
       RESET="#[fg=$thm_text,bg=$thm_base,nobold,noitalics,nounderscore,nodim]"
       # Session name
-      session_name="#[fg=$thm_mauve,bg=$thm_base,italics] #S #[fg=$thm_mauve,bg=$thm_base,bold]  ▒";
-      dir_section=" #[fg=$thm_blue,bg=$thm_base]#(~/.config/tmux/scripts/find_git_root.py #{pane_current_path}) #[fg=$thm_blue,bg=$thm_base,bold]  ▒";
+      session_name="#[fg=$thm_mauve,bg=$thm_base,italics] #S #[fg=$thm_mauve,bg=$thm_base,bold] $SEP";
+      dir_section=" #[fg=$thm_blue,bg=$thm_base]#(~/.config/tmux/scripts/find_git_root.py #{pane_current_path}) #[fg=$thm_blue,bg=$thm_base,bold] $SEP";
 
       set -g status-left "$session_name$RESET$dir_section$RESET"
 
@@ -141,8 +144,8 @@
 
       #+--- Bars RIGHT ---+
       host_name="#[fg=$thm_mauve,bg=$thm_base]#[fg=$thm_base,bg=$thm_mauve,bold,italics]  #H ";
-      date_section="#[fg=$thm_yellow,bg=$thm_base,bold]▒  #[fg=$thm_yellow,bg=$thm_base]#(date +'%a, %d %b')";
-      uptime="#[fg=$thm_green,bg=$thm_base,bold]▒   #[fg=$thm_green,bg=$thm_base]#(~/.config/tmux/scripts/uptime_fmt.sh)";
+      date_section="#[fg=$thm_yellow,bg=$thm_base,bold]$SEP  #[fg=$thm_yellow,bg=$thm_base]#(date +'%a, %d %b')";
+      uptime="#[fg=$thm_green,bg=$thm_base,bold]$SEP   #[fg=$thm_green,bg=$thm_base]#(~/.config/tmux/scripts/uptime_fmt.sh)";
 
       git_status="#(~/.config/tmux/scripts/git_status.sh #{pane_current_path})"
       wb_git_status="#(~/.config/tmux/scripts/wb_git_status.sh #{pane_current_path})"

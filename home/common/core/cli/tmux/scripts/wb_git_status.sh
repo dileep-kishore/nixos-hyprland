@@ -88,7 +88,9 @@ if [[ $BUG_COUNT -gt 0 ]]; then
 	BUG_STATUS="#[fg=${thm_maroon},bg=${thm_base},bold] ${RESET}${BUG_COUNT} "
 fi
 
-SEPARATOR="$RESET#[bg=${thm_base},fg=${thm_text},bold]▒"
+SEP="󰇝"
+# SEP="▒"
+SEPARATOR="$RESET#[bg=${thm_base},fg=${thm_text},bold]$SEP"
 
 WB_STATUS="$SEPARATOR $RESET$PROVIDER_ICON $RESET$PR_STATUS$REVIEW_STATUS$ISSUE_STATUS$BUG_STATUS"
 
