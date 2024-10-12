@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./syncthing.nix
-    ./zathura.nix
+    ./zathura
   ];
 
   home.packages = with pkgs; [
