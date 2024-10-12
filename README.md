@@ -39,7 +39,7 @@
 - Terminal: [Wezterm](https://wezfurlong.org/wezterm/)
 - Shell: `Zsh` with plugins managed through [antidote](https://github.com/mattmc3/antidote)
 - Current theme: [Catppuccin](https://catppuccin.com/)
-- Font: [Recursive](https://www.recursive.design)
+- Font: [Maple Mono](https://github.com/subframe7536/maple-font)
 - Editor: [Neovim](https://neovim.io). Configuration can be found [here](https://github.com/dileep-kishore/neovim)
 
 ## Gallery
