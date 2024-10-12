@@ -7,7 +7,7 @@
     [
       ./common/core
       ./common/optional/apps/linux-only.nix
-      ./common/optional/apps/ulauncher.nix
+      ./common/optional/apps/ulauncher
       ./common/optional/desktops/gtk.nix
       ./common/optional/desktops/qt5.nix
       ./common/optional/desktops/xdg.nix

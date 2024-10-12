@@ -1,0 +1,10 @@
+@import url("/nix/store/iq3g07g5168jgvx5sa8gmakv1ra4qg2k-ulauncher-5.15.7/share/ulauncher/themes/light/theme-gtk-3.20.css");
+
+@import url("theme.css");
+.input {
+    caret-color: #f38ba8;
+}
+/* workaround for a bug in GTK+ < 3.20 */
+.selected.item-box {
+    border: none;
+}

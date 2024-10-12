@@ -15,4 +15,8 @@
         ];
     }))
   ];
+  home.file.".config/ulauncher/user-themes" = {
+    recursive = true;
+    source = ./user-themes;
+  };
 }
