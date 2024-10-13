@@ -19,7 +19,7 @@
     ./mods
     ./ripgrep.nix
     ./scripts.nix
-    ./starship.nix
+    ./oh-my-posh
     ./tmux
     ./yazi
     ./zoxide.nix
