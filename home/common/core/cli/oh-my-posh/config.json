@@ -61,11 +61,27 @@
           "template": "  {{ .Code }}"
         },
         {
+          "type": "text",
+          "style": "accordion",
+          "powerline_symbol": "",
+          "foreground": "p:crust",
+          "background": "p:yellow",
+          "background_templates": ["{{ if gt .SHLVL 2 }}p:yellow{{end}}"],
+          "template": "{{if gt .SHLVL 2}}  {{ .SHLVL }}{{end}}"
+        },
+        {
           "type": "root",
           "style": "plain",
           "foreground": "p:red",
           "background": "transparent",
           "template": " 󰿆 "
+        },
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "p:surface2",
+          "background": "transparent",
+          "template": "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }}{{ end }}"
         },
         {
           "type": "executiontime",
@@ -78,6 +94,12 @@
             "threshold": 5000
           },
           "template": " <p:text><i>took</i></> 󰚭 {{ .FormattedMs }}"
+        },
+        {
+          "type": "nix-shell",
+          "style": "plain",
+          "foreground": "p:blue",
+          "template": " <p:text><i>in</i></>  nix-{{ .Type }}"
         },
         {
           "type": "node",
@@ -126,6 +148,12 @@
           "style": "plain",
           "foreground": "p:peach",
           "template": " <p:text><i>via</i></> 󱘗 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        },
+        {
+          "type": "project",
+          "style": "plain",
+          "foreground": "p:teal",
+          "template": " <p:text><i>is</i></> {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }} {{.Version}}{{ end }}{{ end }}"
         }
       ]
     },
