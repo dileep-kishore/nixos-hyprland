@@ -99,9 +99,12 @@
         modules = [
           ./hosts/nixos-xps
           home-manager.nixosModules.home-manager
-          {
-            home-manager.extraSpecialArgs = {inherit inputs outputs;};
-          }
+          ({config, ...}: {
+            home-manager.extraSpecialArgs = {
+              inherit inputs outputs;
+              inherit (config.networking) hostName;
+            };
+          })
         ];
       };
     };
