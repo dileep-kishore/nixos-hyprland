@@ -58,7 +58,7 @@
           "foreground": "p:crust",
           "background": "p:blue",
           "background_templates": ["{{ if ne .Code 0 }}p:red{{end}}"],
-          "template": "  {{ .Code }}"
+          "template": " {{ .Code }}"
         },
         {
           "type": "text",
@@ -177,7 +177,7 @@
           "properties": {
             "style": "agnoster_full"
           },
-          "template": "{{ $segment := .Segments.Git }}{{ $icon := \" \" }}{{ if $segment.Dir }}{{ $dirL := splitList \"/\" $segment.Dir }} {{ $icon }} /{{ if $segment.IsWorkTree}}<b>{{ last $dirL }}</b>{{ else }}<b>{{ $segment.RepoName }}</b>{{ end }}{{if ne $segment.RepoName .Path}}{{ trimPrefix $segment.Dir .PWD }}{{ end }}{{ else }}  {{ path .Path .Location }}{{ end }}{{ if not .Writable }} \uf023{{ end }} "
+          "template": "{{ $segment := .Segments.Git }}{{ $icon := \" \" }}{{ if $segment.Dir }}{{ $dirL := splitList \"/\" $segment.Dir }} {{ $icon }} /{{ if $segment.IsWorkTree}}<b>{{ last $dirL }}</b>{{ else }}<b>{{ $segment.RepoName }}</b>{{ end }}{{if ne $segment.RepoName .Path}}{{ trimPrefix $segment.Dir .PWD }}{{ end }}{{ else }}  {{ path .Path .Location }}{{ end }}{{ if not .Writable }} \uf023{{ end }} "
         },
         {
           "type": "git",
