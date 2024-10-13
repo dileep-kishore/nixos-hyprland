@@ -61,6 +61,13 @@
           "template": "  {{ .Code }}"
         },
         {
+          "type": "root",
+          "style": "plain",
+          "foreground": "p:red",
+          "background": "transparent",
+          "template": " 󰿆 "
+        },
+        {
           "type": "executiontime",
           "style": "plain",
           "foreground": "p:yellow",
@@ -70,7 +77,55 @@
             "always_enabled": false,
             "threshold": 5000
           },
-          "template": " 󰚭 {{ .FormattedMs }}"
+          "template": " <p:text><i>took</i></> 󰚭 {{ .FormattedMs }}"
+        },
+        {
+          "type": "node",
+          "style": "plain",
+          "foreground": "p:green",
+          "template": " <p:text><i>via</i></> 󰎙 {{ .Full }}"
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "p:yellow",
+          "template": " <p:text><i>via</i></>  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }} {{ if .Venv }}[{{ .Venv }}]{{ end }}{{ end }}"
+        },
+        {
+          "type": "julia",
+          "style": "plain",
+          "foreground": "p:mauve",
+          "template": " <p:text><i>via</i></>  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        },
+        {
+          "type": "go",
+          "style": "plain",
+          "foreground": "p:sky",
+          "template": " <p:text><i>via</i></>  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        },
+        {
+          "type": "lua",
+          "style": "plain",
+          "foreground": "p:blue",
+          "template": " <p:text><i>via</i></>  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        },
+        {
+          "type": "haskell",
+          "style": "plain",
+          "foreground": "p:mauve",
+          "template": " <p:text><i>via</i></>  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        },
+        {
+          "type": "r",
+          "style": "plain",
+          "foreground": "p:blue",
+          "template": " <p:text><i>via</i></>  {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        },
+        {
+          "type": "rust",
+          "style": "plain",
+          "foreground": "p:peach",
+          "template": " <p:text><i>via</i></> 󱘗 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
         }
       ]
     },
@@ -143,5 +198,6 @@
     "template": "{{ .PWD }}<p:mauve> ➜ </>",
     "newline": true
   },
+  "final_space": true,
   "version": 2
 }
