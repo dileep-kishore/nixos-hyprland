@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./common/core
+    ./common/optional/desktops/hyprland/hyprland.nix
     ./common/optional/apps/linux-only.nix
     ./common/optional/apps/wezterm
     ./common/optional/apps/kitty

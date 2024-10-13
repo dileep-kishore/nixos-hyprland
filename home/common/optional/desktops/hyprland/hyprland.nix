@@ -1,20 +1,31 @@
 # https://github.com/hyprwm/Hyprland
 # TODO: Use HM to set up the hyprland config
 {
-  config,
   pkgs,
+  hostName,
   ...
 }: {
   home.file.".config/hypr" = {
     recursive = true;
     source = ./hypr;
   };
-  # Include monitors_x.conf depending on the hostname in nix
+  # Include monitors.conf depending on the hostname
   home.file.".config/hypr/monitors.conf" = {
-    source = ./monitors-tsuki.conf;
+    source =
+      if hostName == "nixos-xps"
+      then ./monitors-nixos-xps.conf
+      else if hostName == "tsuki"
+      then ./monitors-tsuki.conf
+      else throw "Unsupported hostname for monitor configuration";
   };
+  # Include hyprpaper.conf depending on the hostname
   home.file.".config/hypr/hyprpaper.conf" = {
-    source = ./hyprpaper-tsuki.conf;
+    source =
+      if hostName == "nixos-xps"
+      then ./hyprpaper-nixos-xps.conf
+      else if hostName == "tsuki"
+      then ./hyprpaper-tsuki.conf
+      else throw "Unsupported hostname for monitor configuration";
   };
 
   home.packages = with pkgs; [
