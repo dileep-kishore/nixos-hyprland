@@ -39,14 +39,16 @@
           "style": "plain",
           "background": "transparent",
           "foreground": "p:mauve",
+          "foreground_templates": ["{{ if ne .Code 0 }}p:red{{end}}"],
           "template": "┏"
         },
         {
           "type": "text",
           "style": "powerline",
           "powerline_symbol": "",
-          "background": "p:mauve",
           "foreground": "p:crust",
+          "background": "p:mauve",
+          "background_templates": ["{{ if ne .Code 0 }}p:red{{end}}"],
           "template": "  "
         }
       ]
@@ -61,6 +63,7 @@
           "style": "plain",
           "background": "transparent",
           "foreground": "p:mauve",
+          "foreground_templates": ["{{ if ne .Code 0 }}p:red{{end}}"],
           "template": "┣"
         },
         {
@@ -87,13 +90,13 @@
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true,
-            "branch_icon": "󱓎 ",
+            "branch_icon": " ",
             "branch_identical_icon": "󰾞 ",
             "branch_ahead_icon": "󰜹 ",
             "branch_behind_icon": "󰜰 ",
             "github_icon": " "
           },
-          "template": "<p:text><i>on</i></> {{ .UpstreamIcon }}{{if .IsWorkTree}} {{end}}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} 󰤌 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} 󰄵 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} "
+          "template": "<p:text><i>on</i></> {{ .UpstreamIcon }}{{if .IsWorkTree}} {{end}}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} 󰤌 [{{ .Working.String }}]{{ end }}{{ if .Staging.Changed }} 󰄵 [{{ .Staging.String }}]{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} "
         }
       ]
     },
@@ -107,6 +110,7 @@
           "style": "plain",
           "background": "transparent",
           "foreground": "p:mauve",
+          "foreground_templates": ["{{ if ne .Code 0 }}p:red{{end}}"],
           "template": "┗ "
         }
       ]
