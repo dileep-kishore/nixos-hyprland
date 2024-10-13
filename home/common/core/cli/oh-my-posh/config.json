@@ -195,7 +195,7 @@
             "fetch_status": true,
             "fetch_upstream_icon": true,
             "branch_icon": " ",
-            "branch_identical_icon": "󰾞 ",
+            "branch_identical_icon": " ",
             "branch_ahead_icon": "󰜹 ",
             "branch_behind_icon": "󰜰 ",
             "github_icon": " "
