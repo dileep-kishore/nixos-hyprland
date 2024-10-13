@@ -50,6 +50,27 @@
           "background": "p:mauve",
           "background_templates": ["{{ if ne .Code 0 }}p:red{{end}}"],
           "template": "  "
+        },
+        {
+          "type": "status",
+          "style": "accordion",
+          "powerline_symbol": "",
+          "foreground": "p:crust",
+          "background": "p:blue",
+          "background_templates": ["{{ if ne .Code 0 }}p:red{{end}}"],
+          "template": "  {{ .Code }}"
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "p:yellow",
+          "foreground_templates": ["{{ if gt .Code 0 }}p:red{{ end }}"],
+          "properties": {
+            "style": "round",
+            "always_enabled": false,
+            "threshold": 5000
+          },
+          "template": " 󰚭 {{ .FormattedMs }}"
         }
       ]
     },
