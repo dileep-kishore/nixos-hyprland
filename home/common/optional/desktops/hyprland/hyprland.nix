@@ -32,6 +32,7 @@
     grim
     hyprland
     hyprpaper
+    hdrop
     libinput
     networkmanagerapplet
     pavucontrol
