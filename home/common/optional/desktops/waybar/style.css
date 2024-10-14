@@ -1,0 +1,210 @@
+/* Catppuccin Mocha color scheme */
+@define-color rosewater #f5e0dc;
+@define-color flamingo #f2cdcd;
+@define-color pink #f5c2e7;
+@define-color mauve #cba6f7;
+@define-color red #f38ba8;
+@define-color maroon #eba0ac;
+@define-color peach #fab387;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color teal #94e2d5;
+@define-color sky #89dceb;
+@define-color sapphire #74c7ec;
+@define-color blue #89b4fa;
+@define-color lavender #b4befe;
+@define-color text #cdd6f4;
+@define-color subtext1 #bac2de;
+@define-color subtext0 #a6adc8;
+@define-color overlay2 #9399b2;
+@define-color overlay1 #7f849c;
+@define-color overlay0 #6c7086;
+@define-color surface2 #585b70;
+@define-color surface1 #45475a;
+@define-color surface0 #313244;
+@define-color base #1e1e2e;
+@define-color mantle #181825;
+@define-color crust #11111b;
+
+* {
+  font-family: "Maple Mono", "CaskaydiaCove NF";
+  font-size: 14px;
+  min-height: 0;
+}
+
+window.HDMI-A-1 * {
+  font-size: 13px;
+}
+
+window.HDMI-A-1 #window {
+  font-size: 0px;
+}
+
+window.HDMI-A-1 #network,
+window.HDMI-A-1 #idle_inhibitor,
+window.HDMI-A-1 #cpu,
+window.HDMI-A-1 #memory,
+window.HDMI-A-1 #backlight,
+window.HDMI-A-1 #clock,
+window.HDMI-A-1 #battery,
+window.HDMI-A-1 #pulseaudio,
+window.HDMI-A-1 #custom-toggl {
+  font-size: 0px;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+#waybar {
+  background: @base;
+  color: @text;
+}
+
+#custom-spacer {
+  background: @blue;
+  color: @crust;
+  border-radius: 10px;
+  margin: 5px 5px;
+  padding: 0.1rem 0.7rem;
+}
+
+#workspaces {
+  font-weight: bold;
+  background: @surface0;
+  color: @overlay0;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 10px;
+  transition: 0.2s ease;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 1px;
+  margin: 5px 5px;
+}
+
+#workspaces button {
+  color: @text;
+  transition: all 0.3s ease-in-out;
+  background: @surface0;
+  box-shadow: none;
+  text-shadow: none;
+  /* padding-left: 4px; */
+  /* padding-right: 4px; */
+  padding: 5px 5px;
+  /* animation: ws_normal 20s ease-in-out 1; */
+}
+
+#workspaces button.active {
+  color: @mauve;
+  background: @mauve;
+  transition: all 0.3s ease-in-out;
+  padding: 0.2rem 2rem;
+  /* transition: all 0.4s cubic-bezier(0.55, 0.68, 0.48, 1.682); */
+}
+
+#workspaces button:hover {
+  padding: 0.2rem 2rem;
+  animation: ws_hover 20s ease-in-out 1;
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar,
+#window {
+  background-color: @base;
+  border-radius: 9px;
+  padding: 0.1rem 1rem;
+}
+
+#window {
+  background: @surface0;
+  margin: 5px 5px;
+}
+
+#taskbar button:hover {
+  color: @blue;
+  transition: all 0.3s ease-in-out;
+  /* padding: 0.1rem 2rem; */
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#network,
+#idle_inhibitor,
+#cpu,
+#memory,
+#backlight,
+#battery,
+#pulseaudio {
+  background: @surface0;
+  padding: 0.1rem 0.7rem;
+  border-radius: 9px;
+  margin: 5px 5px;
+}
+
+#network {
+  color: @text;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-radius: 9px;
+}
+
+#cpu {
+  color: @pink;
+}
+
+#memory {
+  color: @yellow;
+}
+
+#custom-toggl {
+  color: @peach;
+}
+
+#clock {
+  color: @blue;
+  border-radius: 9px;
+  background: @surface0;
+  margin: 5px 5px;
+  padding: 0.1rem 0.7rem;
+}
+
+#battery {
+  color: @pink;
+}
+
+#battery.charging {
+  color: @pink;
+}
+
+#battery.warning:not(.charging) {
+  color: @mauve;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#backlight,
+#battery {
+}
+
+#pulseaudio {
+  color: @red;
+}
+
+#custom-music {
+  color: @peach;
+}
+
+#custom-lock {
+  color: @blue;
+}
+
+#custom-power {
+  color: @mauve;
+}
+
+#tray {
+  padding: 0.1rem 0.7rem;
+}
