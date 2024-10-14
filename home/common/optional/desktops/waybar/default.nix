@@ -69,7 +69,7 @@
 
         # Module configuration: Center
         clock = {
-          format = "<b>{:%a %b[%m] %e, %I:%M %p}</b>";
+          format = "<b> {:%a %b[%m] %e,  %I:%M %p}</b>";
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           format-alt = "{:%H:%M %Y-%m-%d}";
         };
