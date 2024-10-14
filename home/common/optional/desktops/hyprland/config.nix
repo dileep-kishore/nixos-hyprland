@@ -19,6 +19,17 @@
       ",highres,auto,1"
     ]
     else throw "Unsupported hostname for monitor configuration";
+
+  workspaceRules =
+    if hostName == "tsuki"
+    then [
+      "4, monitor:HDMI-A-1"
+      "5, monitor:HDMI-A-1"
+      "9, monitor:HDMI-A-1"
+    ]
+    else if hostName == "nixos-xps"
+    then []
+    else throw "Unsupported hostname for workspace rules";
 in {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -124,7 +135,14 @@ in {
         "float,class:^(kitty-float)$"
         "move 10% 59%,class:^(kitty-float)$"
         "size 80% 40%,class:^(kitty-float)$"
+        # Set new window workspaces
+        "workspace 3,class:^(.*code.*)$"
+        "workspace 4,class:^(Morgen)$"
+        "workspace 5,class:^(Slack)$"
+        "workspace 9,class:^(Zotero)$"
       ];
+      # Set workspace rules
+      workspace = workspaceRules;
       # Keybindings
       "$mainMod" = "SUPER";
       "$subMod" = "SUPER_SHIFT";
