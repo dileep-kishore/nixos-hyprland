@@ -28,16 +28,12 @@
 
 * {
   font-family: "Maple Mono", "CaskaydiaCove NF";
-  font-size: 14px;
+  font-size: 15px;
   min-height: 0;
 }
 
 window.HDMI-A-1 * {
-  font-size: 13px;
-}
-
-window.HDMI-A-1 #window {
-  font-size: 0px;
+  font-size: 12px;
 }
 
 window.HDMI-A-1 #network,
@@ -46,8 +42,7 @@ window.HDMI-A-1 #cpu,
 window.HDMI-A-1 #memory,
 window.HDMI-A-1 #backlight,
 window.HDMI-A-1 #battery,
-window.HDMI-A-1 #pulseaudio,
-window.HDMI-A-1 #custom-toggl {
+window.HDMI-A-1 #pulseaudio {
   font-size: 0px;
   padding: 0;
   border: 0;
@@ -58,20 +53,22 @@ window.HDMI-A-1 #custom-toggl {
 #waybar {
   background: @base;
   color: @text;
+  border-radius: 5px;
 }
 
 #custom-spacer {
   background: @blue;
   color: @crust;
-  border-radius: 10px;
-  margin: 5px 5px;
+  border-radius: 5px;
+  margin: 2px 2px;
   padding: 0.1rem 0.7rem;
 }
 
+/* TODO: Fix the padding issue in inactive bars  */
 #workspaces {
   font-weight: bold;
   background: @surface0;
-  color: @overlay0;
+  color: @text;
   box-shadow: none;
   text-shadow: none;
   border-radius: 10px;
@@ -83,14 +80,12 @@ window.HDMI-A-1 #custom-toggl {
 }
 
 #workspaces button {
-  color: @text;
+  color: @blue;
   transition: all 0.3s ease-in-out;
   background: @surface0;
   box-shadow: none;
   text-shadow: none;
-  /* padding-left: 4px; */
-  /* padding-right: 4px; */
-  padding: 5px 5px;
+  padding: 0.2rem 10px;
   /* animation: ws_normal 20s ease-in-out 1; */
 }
 
@@ -104,21 +99,22 @@ window.HDMI-A-1 #custom-toggl {
 
 #workspaces button:hover {
   padding: 0.2rem 2rem;
+  background: @lavender;
   animation: ws_hover 20s ease-in-out 1;
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar,
 #window {
-  background-color: @base;
-  border-radius: 9px;
-  padding: 0.1rem 1rem;
-}
-
-#window {
-  background: @surface0;
+  background-color: @surface0;
+  border-radius: 5px;
+  padding: 0rem 1rem;
   margin: 5px 5px;
 }
+
+/* #window { */
+/*   background: @surface0; */
+/* } */
 
 #taskbar button:hover {
   color: @blue;
@@ -137,7 +133,7 @@ window.HDMI-A-1 #custom-toggl {
 #pulseaudio {
   background: @surface0;
   padding: 0.1rem 0.7rem;
-  border-radius: 9px;
+  border-radius: 5px;
   margin: 5px 5px;
 }
 
@@ -145,7 +141,7 @@ window.HDMI-A-1 #custom-toggl {
   color: @text;
   margin-left: 0px;
   margin-right: 0px;
-  border-radius: 9px;
+  border-radius: 5px;
 }
 
 #cpu {
@@ -156,13 +152,9 @@ window.HDMI-A-1 #custom-toggl {
   color: @yellow;
 }
 
-#custom-toggl {
-  color: @peach;
-}
-
 #clock {
-  color: @blue;
-  border-radius: 9px;
+  color: @mauve;
+  border-radius: 5px;
   background: @surface0;
   margin: 5px 5px;
   padding: 0.1rem 0.7rem;
@@ -186,22 +178,11 @@ window.HDMI-A-1 #custom-toggl {
 
 #backlight,
 #battery {
+  color: @pink;
 }
 
 #pulseaudio {
   color: @red;
-}
-
-#custom-music {
-  color: @peach;
-}
-
-#custom-lock {
-  color: @blue;
-}
-
-#custom-power {
-  color: @mauve;
 }
 
 #tray {

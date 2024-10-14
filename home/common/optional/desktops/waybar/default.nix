@@ -9,16 +9,15 @@
         layer = "top";
         position = "top";
         mod = "dock";
-        margin-left = 0;
-        margin-right = 0;
-        margin-top = 0;
+        margin-left = 9;
+        margin-right = 9;
+        margin-top = 4;
         margin-bottom = 0;
         reload_style_on_change = true;
         spacing = 4;
         modules-left = [
           "custom/spacer"
           "hyprland/workspaces"
-          "wlr/taskbar"
           "hyprland/window"
         ];
         modules-center = [
@@ -27,8 +26,8 @@
         modules-right = [
           "pulseaudio"
           "network"
-          "cpu"
           "memory"
+          "cpu"
           "backlight"
           "battery"
           "battery#bat2"
@@ -54,22 +53,22 @@
         "wlr/taskbar" = {
           all-outputs = false;
           format = "{icon}";
-          icon-size = 18;
+          icon-size = 13;
           tooltip = true;
           tooltip-format = "{title}";
           active-first = false;
         };
         "hyprland/window" = {
           max-length = 50;
-          format = "{title}";
+          format = "<i>{title}</i>";
           separate-outputs = true;
-          icon = false;
-          icon-size = 18;
+          icon = true;
+          icon-size = 13;
         };
 
         # Module configuration: Center
         clock = {
-          format = "<b> {:%a %b[%m] %e,  %I:%M %p}</b>";
+          format = "<b> {:%a %b[%m] %e ▒  %I:%M %p}</b>";
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           format-alt = "{:%H:%M %Y-%m-%d}";
         };
@@ -102,10 +101,10 @@
           format-alt = "{ifname}: {ipaddr}/{cidr}";
         };
         cpu = {
-          format = "{usage}% ";
+          format = "{usage}%  ";
           tooltip = false;
         };
-        memory = {format = "{}% ";};
+        memory = {format = "{}%  ";};
         backlight = {
           format = "{percent}% {icon}";
           format-icons = ["" "" "" "" "" "" "" "" ""];
