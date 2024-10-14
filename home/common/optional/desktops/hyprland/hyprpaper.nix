@@ -2,9 +2,9 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = ["~/Pictures/wallpapers/comfy-home.png"];
+      preload = ["~/Pictures/wallpapers/red_night.png"];
       wallpaper = [
-        ",~/Pictures/wallpapers/comfy-home.png"
+        ",~/Pictures/wallpapers/red_night.png"
       ];
     };
   };
