@@ -45,7 +45,6 @@ window.HDMI-A-1 #idle_inhibitor,
 window.HDMI-A-1 #cpu,
 window.HDMI-A-1 #memory,
 window.HDMI-A-1 #backlight,
-window.HDMI-A-1 #clock,
 window.HDMI-A-1 #battery,
 window.HDMI-A-1 #pulseaudio,
 window.HDMI-A-1 #custom-toggl {
