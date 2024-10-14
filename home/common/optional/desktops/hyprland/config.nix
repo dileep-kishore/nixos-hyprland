@@ -44,6 +44,9 @@ in {
       ];
       input = {
         kb_layout = "us";
+        kb_variant = "";
+        kb_model = "";
+        kb_rules = "";
         kb_options = "ctrl:nocaps";
         follow_mouse = 1;
         touchpad = {
