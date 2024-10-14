@@ -64,7 +64,6 @@ window.HDMI-A-1 #pulseaudio {
   padding: 0.1rem 0.7rem;
 }
 
-/* TODO: Fix the padding issue in inactive bars  */
 #workspaces {
   font-weight: bold;
   background: @surface0;
@@ -80,7 +79,7 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #workspaces button {
-  color: @blue;
+  color: @overlay2;
   transition: all 0.3s ease-in-out;
   background: @surface0;
   box-shadow: none;
@@ -99,7 +98,8 @@ window.HDMI-A-1 #pulseaudio {
 
 #workspaces button:hover {
   padding: 0.2rem 2rem;
-  background: @lavender;
+  color: @overlay2;
+  background: @overlay2;
   animation: ws_hover 20s ease-in-out 1;
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
@@ -110,18 +110,6 @@ window.HDMI-A-1 #pulseaudio {
   border-radius: 5px;
   padding: 0rem 1rem;
   margin: 5px 5px;
-}
-
-/* #window { */
-/*   background: @surface0; */
-/* } */
-
-#taskbar button:hover {
-  color: @blue;
-  transition: all 0.3s ease-in-out;
-  /* padding: 0.1rem 2rem; */
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 #network,
@@ -182,7 +170,7 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #pulseaudio {
-  color: @red;
+  color: @green;
 }
 
 #tray {

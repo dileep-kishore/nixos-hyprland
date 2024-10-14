@@ -44,7 +44,7 @@
           active-only = false;
           format = "<span><b>{icon}</b></span>";
           format-icons = {
-            default = " ";
+            default = " ";
             active = " ";
             empty = " ";
             urgent = " ";
