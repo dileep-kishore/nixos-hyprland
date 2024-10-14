@@ -5,6 +5,9 @@
   hostName,
   ...
 }: {
+  imports = [
+    ./config.nix
+  ];
   home.file.".config/hypr" = {
     recursive = true;
     source = ./hypr;

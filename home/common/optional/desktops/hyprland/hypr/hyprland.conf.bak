@@ -1,11 +1,4 @@
-# This is an example Hyprland config file.
-#
-# Refer to the wiki for more information.
-
-#
-# Please note not all available settings / options are set here.
-# For a full list, see the wiki
-#
+# TODO: Remove this afterwards
 
 # Import catpuccin theme
 source=~/.config/hypr/mocha.conf
