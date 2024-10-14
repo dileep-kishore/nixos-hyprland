@@ -1,4 +1,25 @@
 {
+  hostName,
+  pkgs,
+  ...
+}: let
+  monitorConfig =
+    if hostName == "tsuki"
+    then [
+      # top monitor
+      "DP-1,highres,1080x0,1"
+      # bottom monitor
+      "DP-2,highres,1080x1440,1"
+      # left monitor
+      "HDMI-A-1,highres,0x0,1,transform,1"
+    ]
+    else if hostName == "nixos-xps"
+    then [
+      # laptop monitor
+      ",highres,auto,1"
+    ]
+    else throw "Unsupported hostname for monitor configuration";
+in {
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
@@ -7,8 +28,8 @@
     settings = {
       source = [
         "~/.config/hypr/mocha.conf" # Theme
-        "~/.config/hypr/monitors.conf"
       ];
+      monitor = monitorConfig;
       exec-once = [
         # TODO: Might need to remove if we start these services from home-manager
         "waybar & hyprpaper"

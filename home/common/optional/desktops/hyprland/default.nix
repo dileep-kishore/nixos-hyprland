@@ -12,15 +12,6 @@
     recursive = true;
     source = ./hypr;
   };
-  # Include monitors.conf depending on the hostname
-  home.file.".config/hypr/monitors.conf" = {
-    source =
-      if hostName == "nixos-xps"
-      then ./monitors-nixos-xps.conf
-      else if hostName == "tsuki"
-      then ./monitors-tsuki.conf
-      else throw "Unsupported hostname for monitor configuration";
-  };
   # Include hyprpaper.conf depending on the hostname
   home.file.".config/hypr/hyprpaper.conf" = {
     source =
