@@ -1,13 +1,10 @@
 # https://github.com/hyprwm/Hyprland
-# TODO: Use HM to set up the hyprland config
-{
-  pkgs,
-  hostName,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./config.nix
     ./hyprpaper.nix
+    ./hypridle.nix
+    ./hyprlock.nix
   ];
   home.file.".config/hypr" = {
     recursive = true;
@@ -18,6 +15,7 @@
     grim
     hyprland
     hyprpaper
+    hypridle
     hdrop
     libinput
     networkmanagerapplet

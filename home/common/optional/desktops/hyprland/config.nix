@@ -31,11 +31,10 @@ in {
       ];
       monitor = monitorConfig;
       exec-once = [
-        # TODO: Might need to remove if we start these services from home-manager
         "waybar"
         "hyprpaper"
+        "hypridle"
         "hyprctl setcursor Bibata-Original-Ice 24"
-        # TODO: Include hypridle and hyprlock
         "1password"
       ];
       env = [
@@ -137,7 +136,6 @@ in {
           "$subMod, Q, killactive,"
           "$subMod, E, exit,"
           "$subMod, M, exec, pkill waybar && waybar"
-          # TODO: Keybind for hyprlock
           "$mainMod, E, exec, nautilus"
           "$mainMod, R, exec, ulauncher"
           "$tetMod, D, pseudo," # dwindle
@@ -196,5 +194,4 @@ in {
     # plugins = [];
     # extraConfig = "";
   };
-  # TODO: programs.hyprlock, services.hypridle, programs.waybar?
 }
