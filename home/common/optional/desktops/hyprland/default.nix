@@ -7,19 +7,11 @@
 }: {
   imports = [
     ./config.nix
+    ./hyprpaper.nix
   ];
   home.file.".config/hypr" = {
     recursive = true;
     source = ./hypr;
-  };
-  # Include hyprpaper.conf depending on the hostname
-  home.file.".config/hypr/hyprpaper.conf" = {
-    source =
-      if hostName == "nixos-xps"
-      then ./hyprpaper-nixos-xps.conf
-      else if hostName == "tsuki"
-      then ./hyprpaper-tsuki.conf
-      else throw "Unsupported hostname for monitor configuration";
   };
 
   home.packages = with pkgs; [

@@ -32,7 +32,8 @@ in {
       monitor = monitorConfig;
       exec-once = [
         # TODO: Might need to remove if we start these services from home-manager
-        "waybar & hyprpaper"
+        "waybar"
+        "hyprpaper"
         "hyprctl setcursor Bibata-Original-Ice 24"
         # TODO: Include hypridle and hyprlock
         "1password"
@@ -192,5 +193,5 @@ in {
     # plugins = [];
     # extraConfig = "";
   };
-  # TODO: programs.hyprlock, services.hypridle, services.hyprpaper, progra
+  # TODO: programs.hyprlock, services.hypridle, programs.waybar?
 }
