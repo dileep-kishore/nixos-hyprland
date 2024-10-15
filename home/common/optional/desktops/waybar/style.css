@@ -51,7 +51,7 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #waybar {
-  background: @base;
+  background: rgba(30, 30, 46, 0.9);
   color: @text;
   border-radius: 5px;
 }
