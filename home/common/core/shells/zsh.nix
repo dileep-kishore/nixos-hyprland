@@ -3,7 +3,7 @@
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
+    syntaxHighlighting.enable = false;
     autocd = true;
     history.extended = true;
     # NOTE: You can use these as `cd ~dots` or `cd ~docs` etc.
@@ -18,7 +18,12 @@
     initExtra = ''
       bindkey '^ ' autosuggest-accept
       export OPENAI_API_KEY="$(cat ~/.secrets/openai_api_key.txt)"
+      export ANTHROPIC_API_KEY="$(cat ~/.secrets/anthropic_api_key.txt)"
       export DIRENV_LOG_FORMAT=""
+      export ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+      fast-theme XDG:catppuccin-mocha -q
+      # Atuin
+      zvm_after_init_commands+=(eval "$(atuin init zsh)")
     '';
     # profileExtra = { };
     # shellAliases = { };
@@ -26,6 +31,7 @@
     antidote = {
       enable = true;
       plugins = [
+        "zdharma-continuum/fast-syntax-highlighting"
         "ohmyzsh/ohmyzsh path:lib/git.zsh"
         "ohmyzsh/ohmyzsh path:lib/clipboard.zsh"
         "ohmyzsh/ohmyzsh path:plugins/aliases"
@@ -39,6 +45,7 @@
         "ohmyzsh/ohmyzsh path:plugins/pyenv"
         "ohmyzsh/ohmyzsh path:plugins/python"
         "ohmyzsh/ohmyzsh path:plugins/tmux"
+        "jeffreytse/zsh-vi-mode"
         "djui/alias-tips"
         "dim-an/cod"
         "wfxr/forgit"
@@ -48,4 +55,5 @@
       ];
     };
   };
+  home.file.".config/fsh/catppuccin-mocha.ini".source = ./catppuccin-mocha.ini;
 }

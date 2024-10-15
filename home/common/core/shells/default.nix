@@ -31,6 +31,7 @@
   };
   home.sessionPath = [
     "$HOME/.local/bin"
+    "/var/lib/flatpak/exports/bin"
   ];
   home.sessionVariables = {
     EDITOR = "nvim";

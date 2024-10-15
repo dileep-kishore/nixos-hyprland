@@ -7,6 +7,7 @@
     ./atuin.nix
     ./bat
     ./btop
+    ./delta
     ./direnv.nix
     ./eza.nix
     ./fzf.nix
@@ -18,7 +19,7 @@
     ./mods
     ./ripgrep.nix
     ./scripts.nix
-    ./starship.nix
+    ./oh-my-posh
     ./tmux
     ./yazi
     ./zoxide.nix
@@ -26,6 +27,7 @@
 
   home.packages = with pkgs; [
     inputs.neovim.packages.${system}.default
+    bc
     coreutils-full
     entr
     fd
@@ -39,7 +41,7 @@
     libnotify
     libxcrypt
     ncdu
-    neofetch
+    fastfetch
     nix-tree
     openvpn
     p7zip

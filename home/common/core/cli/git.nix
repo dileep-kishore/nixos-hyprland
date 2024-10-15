@@ -18,12 +18,6 @@
       branch.sort = "committerdate";
       push.autoSetupRemote = true;
     };
-    delta = {
-      enable = true;
-      options = {
-        features = "line-numbers decorations";
-      };
-    };
     lfs.enable = true;
     ignores = [
       ".direnv/"

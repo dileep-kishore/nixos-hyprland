@@ -1,14 +1,13 @@
 {pkgs, ...}: {
   imports = [
     ./syncthing.nix
-    ./zathura.nix
+    ./zathura
   ];
 
   home.packages = with pkgs; [
     age
     gitkraken
     pandoc
-    slack
     texliveFull
     sops
     zoom-us

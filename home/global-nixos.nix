@@ -5,10 +5,12 @@
 }: {
   imports = [
     ./common/core
+    ./common/optional/desktops/hyprland
     ./common/optional/apps/linux-only.nix
-    ./common/optional/apps/wezterm.nix
-    ./common/optional/apps/kitty.nix
-    ./common/optional/apps/ulauncher.nix
+    ./common/optional/apps/wezterm
+    ./common/optional/apps/kitty
+    ./common/optional/apps/ulauncher
+    ./common/optional/apps/slack.nix
     ./common/optional/apps/rofi
     ./common/optional/apps/wofi
     ./common/optional/desktops/waybar
