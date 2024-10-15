@@ -1,7 +1,7 @@
 <!-- markdownlint-disable -->
 <h1 align="center">
     <a name="top" title="nixos-hyprland">
-        nixos-hyprland
+        nixos-hyprland v2
     </a>
 </h1>
 <div align="center">
@@ -36,8 +36,8 @@
 - OS: [NixOS](https://nixos.org)
 - Window manager: [Hyprland](https://hyprland.org)
 - Status bar: [Waybar](https://github.com/Alexays/Waybar)
-- Terminal: [Wezterm](https://wezfurlong.org/wezterm/)
-- Shell: `Zsh` with plugins managed through [antidote](https://github.com/mattmc3/antidote)
+- Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/)
+- Shell: `Zsh` with plugins managed through [antidote](https://github.com/mattmc3/antidote) with [oh-my-posh](https://ohmyposh.dev/) prompt
 - Current theme: [Catppuccin](https://catppuccin.com/)
 - Font: [Maple Mono](https://github.com/subframe7536/maple-font)
 - Editor: [Neovim](https://neovim.io). Configuration can be found [here](https://github.com/dileep-kishore/neovim)
@@ -48,9 +48,9 @@
 | :------------------------------: |
 | ![desktop](./assets/desktop.png) |
 
-|           Terminal + Tmux            |
-| :----------------------------------: |
-| ![terminals](assets/./terminals.png) |
+|              Terminal + Tmux              |
+| :---------------------------------------: |
+| ![terminals_tmux](./assets/terminals.png) |
 
 |             Neovim             |
 | :----------------------------: |
@@ -68,7 +68,7 @@
 
 ### Requirements
 
-- NixOS 23.11 or Home-manager
+- NixOS 24.11 or Home-manager
 - Patience
 - Knowledge
 - Disk space
