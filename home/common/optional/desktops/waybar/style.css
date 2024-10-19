@@ -112,6 +112,15 @@ window.HDMI-A-1 #pulseaudio {
   margin: 5px 5px;
 }
 
+window#waybar.empty {
+  background-color: @base;
+}
+
+window#waybar.fullscreen,
+window#waybar.swallowing {
+  color: @red;
+}
+
 #network,
 #idle_inhibitor,
 #cpu,
