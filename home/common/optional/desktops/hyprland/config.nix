@@ -72,6 +72,18 @@ in {
         "col.inactive_border" = "$surface0";
         layout = "dwindle";
       };
+      group = {
+        "col.border_active" = "$mauve";
+        "col.border_inactive" = "$surface0";
+        groupbar = {
+          font_family = "Maple Mono";
+          font_size = 12;
+          gradients = true;
+          text_color = "$crust";
+          "col.active" = "$mauve";
+          "col.inactive" = "$overlay0";
+        };
+      };
       decoration = {
         rounding = 10;
         active_opacity = 1.0;
@@ -89,7 +101,11 @@ in {
         shadow_render_power = 3;
         "col.shadow" = "$base";
       };
-      binds = {movefocus_cycles_fullscreen = false;};
+      binds = {
+        movefocus_cycles_fullscreen = false;
+        workspace_center_on = 1;
+        focus_preferred_method = 1;
+      };
       animations = {
         enabled = true;
         bezier = [
@@ -156,16 +172,23 @@ in {
           "$subMod, M, exec, pkill waybar && waybar"
           "$mainMod, E, exec, nautilus"
           "$mainMod, R, exec, ulauncher"
-          "$tetMod, D, pseudo," # dwindle
-          "$tetMod, J, togglesplit," # dwindle
-          "$tetMod, S, exec, ~/.config/hypr/scripts/screenshot.sh region"
-          "$tetMod, P, exec, ~/.config/hypr/scripts/screenshot.sh activemonitor"
+          "$tetMod, S, togglesplit,"
+          "$tetMod, R, exec, ~/.config/hypr/scripts/screenshot.sh region"
+          "$tetMod, M, exec, ~/.config/hypr/scripts/screenshot.sh activemonitor"
           "$tetMod, W, exec, ~/.config/hypr/scripts/screenshot.sh activewindow"
           # Move focus with mainMod + arrow keys
           "$mainMod, h, movefocus, l"
           "$mainMod, l, movefocus, r"
           "$mainMod, k, movefocus, u"
           "$mainMod, j, movefocus, d"
+          # Groups
+          "$tetMod, G, togglegroup"
+          "$tetMod, h, moveintogroup, l"
+          "$tetMod, l, moveintogroup, r"
+          "$tetMod, k, moveintogroup, u"
+          "$tetMod, j, moveintogroup, d"
+          "$tetMod, n, changegroupactive, f"
+          "$tetMod, p, changegroupactive, b"
           # Move to next/previous workspace with subMod + h/l
           "$subMod, H, workspace, m-1"
           "$subMod, L, workspace, m+1"
