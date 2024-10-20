@@ -19,6 +19,7 @@
       home-manager
       git
 
+      nh
       just
       pre-commit
 

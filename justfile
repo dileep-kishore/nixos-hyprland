@@ -8,13 +8,15 @@ alias hs := home_switch
 alias u := update
 alias uc := update_commit
 
+# OLD: nixos-rebuild switch --flake .#{{host}}
 # Build nixos
 build_switch:
-    nixos-rebuild switch --flake .#{{host}}
+    nh os switch . -H {{host}}
 
+# OLD: home-manager switch --flake .#{{user}}@{{host}}
 # Build home-manager
 home_switch:
-    home-manager switch --flake .#{{user}}@{{host}}
+    nh home switch . -c {{user}}@{{host}}
 
 # Show neovim flake output
 show:
@@ -35,3 +37,7 @@ update_commit: update commit_lock
 # Check flake
 check:
     nix flake check
+
+# Clean
+clean:
+    nh clean all --keep-since 7d
