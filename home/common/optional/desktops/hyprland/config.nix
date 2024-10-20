@@ -104,7 +104,7 @@ in {
       binds = {
         movefocus_cycles_fullscreen = false;
         workspace_center_on = 1;
-        focus_preferred_method = 1;
+        focus_preferred_method = 0;
       };
       animations = {
         enabled = true;
