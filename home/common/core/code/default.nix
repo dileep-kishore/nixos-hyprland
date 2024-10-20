@@ -1,10 +1,8 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    python312
+    python3
     go
-    julia-bin
-    nodejs_20
-    quarto
+    nodejs_22
     rustc
     lua
   ];
