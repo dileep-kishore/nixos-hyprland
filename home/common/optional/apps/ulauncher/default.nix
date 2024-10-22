@@ -15,8 +15,9 @@
         ];
     }))
   ];
-  home.file.".config/ulauncher/user-themes" = {
-    recursive = true;
-    source = ./user-themes;
-  };
+  # FIXME: Read-only error fixed by manually copying files
+  # home.file.".config/ulauncher/user-themes" = {
+  #   recursive = true;
+  #   source = ./user-themes;
+  # };
 }
