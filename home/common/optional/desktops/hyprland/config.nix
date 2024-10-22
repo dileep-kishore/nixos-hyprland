@@ -42,7 +42,6 @@ in {
       ];
       monitor = monitorConfig;
       exec-once = [
-        "waybar"
         "hyprpaper"
         "hypridle"
         "hyprctl setcursor Bibata-Original-Ice 24"
@@ -131,7 +130,9 @@ in {
         force_split = 2;
         default_split_ratio = 1.2;
       };
-      master = {new_is_master = true;};
+      master = {
+        new_status = "slave";
+      };
       gestures = {workspace_swipe = false;};
       misc = {
         disable_hyprland_logo = true;
