@@ -46,6 +46,7 @@
     openvpn
     p7zip
     pciutils
+    procs
     tldr
     todoist
     unrar
