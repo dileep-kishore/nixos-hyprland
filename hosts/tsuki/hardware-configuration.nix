@@ -32,8 +32,6 @@
     {device = "/dev/disk/by-uuid/cda6801f-780c-499e-9ef9-1d8d09ea41c6";}
   ];
 
-  networking.useDHCP = lib.mkDefault true;
-
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

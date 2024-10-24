@@ -1,6 +1,11 @@
 {
   networking = {
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      dns = "none";
+    };
+    useDHCP = false;
+    dhcpcd.enable = false;
     nameservers = ["208.67.222.123" "208.67.220.123"];
     extraHosts = let
       hostsPath = "https://raw.githubusercontent.com/StevenBlack/hosts/1a8e75f1cb6cd3b26ff028df83121f3d7b67b04c/alternates/porn/hosts";
