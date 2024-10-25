@@ -5,6 +5,7 @@
   home.packages = with pkgs; [
     _1password
     _1password-gui
+    appimage-run
     brave
     eog
     gparted
