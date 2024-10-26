@@ -164,6 +164,8 @@ in {
         "workspace 3,class:^(.*code.*)$"
         "workspace 4,class:^(Morgen)$"
         "workspace 5,class:^(Slack)$"
+        "workspace 7,class:^(ClickUp)$"
+        "workspace 8,class:^(obsidian)$"
         "workspace 9,class:^(Zotero)$"
       ];
       # Set workspace rules
