@@ -5,8 +5,8 @@
 
   home.packages = with pkgs; [
     (catppuccin-kvantum.override {
-      accent = "Mauve";
-      variant = "Mocha";
+      accent = "mauve";
+      variant = "mocha";
     })
   ];
 
