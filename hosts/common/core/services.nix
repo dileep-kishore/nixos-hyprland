@@ -1,11 +1,19 @@
 {
-  services.openssh.enable = true;
-  services.printing.enable = true;
+  services = {
+    openssh.enable = true;
+    printing.enable = true;
 
-  services.blueman.enable = true;
-  services.gnome.gnome-keyring.enable = true;
+    devmon.enable = true;
+    gvfs.enable = true;
+    udisks2.enable = true;
 
-  services.dbus.enable = true;
+    blueman.enable = true;
+    gnome.gnome-keyring.enable = true;
 
-  services.flatpak.enable = true;
+    dbus.enable = true;
+
+    flatpak.enable = true;
+  };
+
+  programs.gnome-disks.enable = true;
 }
