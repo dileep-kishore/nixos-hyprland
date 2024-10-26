@@ -7,6 +7,7 @@
     _1password-gui
     appimage-run
     brave
+    clickup-latest
     eog
     gparted
     kdePackages.wacomtablet

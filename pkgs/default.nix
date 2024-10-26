@@ -3,4 +3,5 @@
   #################### Packages with external source ####################
 
   # example = pkgs.callPackage ./example { };
+  clickup-latest = pkgs.callPackage ./clickup-latest {};
 }
