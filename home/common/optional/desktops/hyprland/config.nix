@@ -30,6 +30,13 @@
     else if hostName == "nixos-xps"
     then []
     else throw "Unsupported hostname for workspace rules";
+
+  kbOptions =
+    if hostName == "tsuki"
+    then ""
+    else if hostName == "nixos-xps"
+    then "ctrl:nocaps"
+    else throw "Unsupported hostname for kb_options";
 in {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -57,7 +64,7 @@ in {
         kb_variant = "";
         kb_model = "";
         kb_rules = "";
-        kb_options = "ctrl:nocaps";
+        kb_options = kbOptions;
         follow_mouse = 1;
         touchpad = {
           natural_scroll = false;
