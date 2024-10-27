@@ -53,7 +53,6 @@ in {
         "hypridle"
         "hyprctl setcursor Bibata-Original-Ice 24"
         "1password"
-        "morgen"
       ];
       env = [
         "XCURSOR_SIZE,24"
