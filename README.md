@@ -75,7 +75,7 @@
 
 ### NixOS installation
 
-Use `sudo just bs` or:
+Use `just bs` or:
 
 ```sh
 sudo nixos-rebuild switch --flake '.#<host>'
