@@ -17,7 +17,6 @@
     ./git-cliff.nix
     ./jujutsu.nix
     ./lazygit.nix
-    ./mods
     ./ripgrep.nix
     ./scripts.nix
     ./oh-my-posh
@@ -48,6 +47,7 @@
     p7zip
     pciutils
     procs
+    shell-gpt
     tldr
     todoist
     unrar
