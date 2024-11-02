@@ -66,7 +66,7 @@ window.HDMI-A-1 #pulseaudio {
 
 #workspaces {
   font-weight: bold;
-  background: @base;
+  background: @surface0;
   color: @text;
   box-shadow: none;
   text-shadow: none;
@@ -86,17 +86,19 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #workspaces button.empty {
-  color: @overlay2;
+  color: @text;
 }
 
 #workspaces button.visible {
-  color: @mauve;
+  color: @crust;
+  padding: 0.2rem 2rem;
+  background: @pink;
   transition: all 0.3s ease-in-out;
   /* transition: all 0.4s cubic-bezier(0.55, 0.68, 0.48, 1.682); */
 }
 
 #workspaces button.active {
-  color: @mauve;
+  color: @crust;
   background: @mauve;
   transition: all 0.3s ease-in-out;
   padding: 0.2rem 2rem;
@@ -105,7 +107,7 @@ window.HDMI-A-1 #pulseaudio {
 
 #workspaces button:hover {
   padding: 0.2rem 2rem;
-  color: @overlay2;
+  color: @crust;
   background: @overlay2;
   animation: ws_hover 20s ease-in-out 1;
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
