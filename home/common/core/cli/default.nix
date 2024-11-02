@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ./aider
     ./atuin.nix
     ./bat
     ./btop
