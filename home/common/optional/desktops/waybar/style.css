@@ -92,7 +92,7 @@ window.HDMI-A-1 #pulseaudio {
 #workspaces button.visible {
   color: @crust;
   padding: 0.2rem 2rem;
-  background: @pink;
+  background: @sky;
   transition: all 0.3s ease-in-out;
   /* transition: all 0.4s cubic-bezier(0.55, 0.68, 0.48, 1.682); */
 }
