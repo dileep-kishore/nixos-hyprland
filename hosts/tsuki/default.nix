@@ -53,6 +53,7 @@
   services.xserver.videoDrivers = ["amdgpu"];
 
   hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
 
   console.useXkbConfig = true;
 
