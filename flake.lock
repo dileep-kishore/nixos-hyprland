@@ -821,11 +821,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1730549750,
-        "narHash": "sha256-sWkXIWQMpL4D3TsncHrDPAfJgVjsVN3oxeMjMgT7vEw=",
+        "lastModified": 1730550577,
+        "narHash": "sha256-bK9qkOLEbzqn19cpIzC8YbudbJd2c5hUyGlms7qKCIg=",
         "owner": "dileep-kishore",
         "repo": "neovim",
-        "rev": "c0b9286c7a3bd38d6aa2f15b1305f0e9b8655b43",
+        "rev": "dedae883ea05b0e5690a1fe33b0d84b9f08d62b4",
         "type": "github"
       },
       "original": {
