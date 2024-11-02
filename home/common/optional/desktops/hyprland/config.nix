@@ -50,7 +50,6 @@ in {
       monitor = monitorConfig;
       exec-once = [
         "hyprpaper"
-        "hypridle"
         "hyprctl setcursor Bibata-Original-Ice 24"
         "1password"
         "sleep 10; morgen"
