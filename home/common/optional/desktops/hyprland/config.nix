@@ -53,7 +53,7 @@ in {
         "hypridle"
         "hyprctl setcursor Bibata-Original-Ice 24"
         "1password"
-        "sleep 30; morgen"
+        "sleep 10; morgen"
         "clickup-latest"
       ];
       env = [
