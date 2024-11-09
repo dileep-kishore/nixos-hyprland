@@ -19,6 +19,7 @@
       permittedInsecurePackages = [
         "electron-27.3.11"
         "electron-28.3.3"
+        "electron-30.5.1"
       ];
     };
   };
