@@ -28,7 +28,6 @@
         "electron-24.8.6"
         "electron-22.3.27"
         "zotero-6.0.27"
-        "electron-30.5.1"
       ];
     };
   };
