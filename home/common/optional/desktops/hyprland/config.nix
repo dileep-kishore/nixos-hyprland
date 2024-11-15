@@ -103,10 +103,12 @@ in {
           passes = 2;
           popups = true;
         };
-        drop_shadow = true;
-        shadow_range = 4;
-        shadow_render_power = 3;
-        "col.shadow" = "$base";
+        shadow = {
+          enabled = true;
+          range = 4;
+          render_power = 3;
+          # color = "$base";
+        };
       };
       binds = {
         movefocus_cycles_fullscreen = false;
