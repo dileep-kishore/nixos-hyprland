@@ -40,6 +40,10 @@
 
     extraConfig = ''
       set -ag terminal-overrides ",xterm-256color:RGB"
+      # undercurl support
+      set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'
+      # underscore colours - needs tmux-3.0
+      set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'
 
       # reload config
       bind r source-file ~/.config/tmux/tmux.conf
