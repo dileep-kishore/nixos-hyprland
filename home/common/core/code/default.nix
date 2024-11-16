@@ -5,6 +5,7 @@
     nodejs_22
     rustc
     lua
+    julia-lts
   ];
 
   # conda
