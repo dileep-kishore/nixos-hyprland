@@ -8,6 +8,7 @@
     appimage-run
     brave
     clickup-latest
+    code-cursor
     eog
     gparted
     kdePackages.wacomtablet
