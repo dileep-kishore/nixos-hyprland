@@ -42,6 +42,7 @@ window.HDMI-A-1 #cpu,
 window.HDMI-A-1 #memory,
 window.HDMI-A-1 #backlight,
 window.HDMI-A-1 #battery,
+window.HDMI-A-1 #custom-toggl,
 window.HDMI-A-1 #pulseaudio {
   font-size: 0px;
   padding: 0;
@@ -136,6 +137,7 @@ window#waybar.swallowing {
 #memory,
 #backlight,
 #battery,
+#custom-toggl,
 #pulseaudio {
   background: @surface0;
   padding: 0.1rem 0.7rem;
@@ -185,6 +187,10 @@ window#waybar.swallowing {
 #backlight,
 #battery {
   color: @pink;
+}
+
+#custom-toggl {
+  color: @blue;
 }
 
 #pulseaudio {

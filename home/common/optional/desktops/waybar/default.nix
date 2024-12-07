@@ -1,5 +1,6 @@
 # https://github.com/Alexays/Waybar
 {pkgs, ...}: {
+  home.file.".config/waybar/toggl_status.py".source = ./toggl_status.py;
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -24,6 +25,7 @@
           "clock"
         ];
         modules-right = [
+          "custom/toggl"
           "pulseaudio"
           "network"
           "memory"
@@ -131,6 +133,12 @@
         tray = {
           icon-size = 18;
           spacing = 10;
+        };
+        "custom/toggl" = {
+          format = "{}";
+          exec = "$HOME/.config/waybar/toggl_status.py";
+          interval = 10;
+          on-click = "toggl stop";
         };
       };
     };

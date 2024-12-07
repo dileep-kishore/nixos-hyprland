@@ -28,5 +28,6 @@
     wlogout
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+    python312Packages.toggl-cli
   ];
 }
