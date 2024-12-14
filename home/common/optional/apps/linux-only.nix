@@ -7,6 +7,7 @@
     _1password-gui
     appimage-run
     brave
+    capacities-latest
     clickup-latest
     code-cursor
     eog
