@@ -5,4 +5,5 @@
   # example = pkgs.callPackage ./example { };
   clickup-latest = pkgs.callPackage ./clickup-latest {};
   capacities-latest = pkgs.callPackage ./capacities-latest {};
+  morgen-latest = pkgs.callPackage ./morgen-latest {};
 }

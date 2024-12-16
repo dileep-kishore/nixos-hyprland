@@ -19,7 +19,7 @@
     libwacom
     logseq
     lshw
-    morgen
+    morgen-latest
     nautilus
     obsidian
     pdfarranger
