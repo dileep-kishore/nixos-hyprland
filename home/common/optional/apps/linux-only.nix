@@ -12,6 +12,7 @@
     code-cursor
     eog
     gparted
+    heptabase
     kdePackages.wacomtablet
     libgcc
     libreoffice-fresh
