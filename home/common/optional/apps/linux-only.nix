@@ -7,7 +7,7 @@
     _1password-gui
     appimage-run
     brave
-    capacities-latest
+    # capacities-latest
     clickup-latest
     code-cursor
     eog
@@ -28,6 +28,7 @@
     seahorse
     signal-desktop
     spotify
+    tana
     udisks
     vscode-fhs
     zotero_7
