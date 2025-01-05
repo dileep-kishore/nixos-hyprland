@@ -4,7 +4,7 @@
   fetchurl,
 }: let
   pname = "clickup-latest";
-  version = "3.5.0";
+  version = "3.5.64";
 
   src = fetchurl {
     url = "https://desktop.clickup.com/linux";
