@@ -9,6 +9,7 @@
     ./common/optional/apps/linux-only.nix
     ./common/optional/apps/wezterm
     ./common/optional/apps/kitty
+    ./common/optional/apps/ghostty
     ./common/optional/apps/ulauncher
     ./common/optional/apps/slack.nix
     ./common/optional/apps/rofi
