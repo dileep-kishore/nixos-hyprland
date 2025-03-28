@@ -12,8 +12,8 @@
       ./common/optional/desktops/qt5.nix
       ./common/optional/desktops/xdg.nix
       ./common/optional/apps/wezterm/config.nix
-      ./common/optional/apps/kitty
-      ./common/optional/apps/ghostty
+      ./common/optional/apps/kitty/config.nix
+      ./common/optional/apps/ghostty/config.nix
       # NOTE: espanso disabled because it's not working on wayland
       # ./common/optional/misc/espanso.nix
     ]
