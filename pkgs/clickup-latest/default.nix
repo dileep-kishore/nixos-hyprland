@@ -8,7 +8,7 @@
 
   src = fetchurl {
     url = "https://desktop.clickup.com/linux";
-    hash = "sha256-eo1wz9tIDCDnO73KK/OYrV8zt3Y8oI3YK6ZXgMBGZ88=";
+    hash = "sha256-DnP2eqWy0DXfOSV2C9wlsXPDkiuC0E0Dz4fwKfLMupw=";
   };
 
   appimageContents = appimageTools.extractType2 {inherit pname version src;};
