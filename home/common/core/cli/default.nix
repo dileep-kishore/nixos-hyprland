@@ -28,7 +28,6 @@
   home.packages = with pkgs; [
     inputs.neovim.packages.${system}.default
     bc
-    brightnessctl
     coreutils-full
     entr
     fd
