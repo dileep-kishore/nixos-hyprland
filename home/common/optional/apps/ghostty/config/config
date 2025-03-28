@@ -1,1 +1,8 @@
-font-family = "Rec Mono SemiCasual"
+font-family = "Maple Mono"
+font-size = "13.0"
+theme = "catppuccin-mocha"
+font-thicken = true
+bold-is-bright = true
+window-decoration = false
+window-padding-x = 0,0
+window-padding-y = 0,0
