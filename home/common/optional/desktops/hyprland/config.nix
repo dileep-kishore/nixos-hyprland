@@ -83,7 +83,7 @@ in {
         "col.border_active" = "$mauve";
         "col.border_inactive" = "$surface0";
         groupbar = {
-          font_family = "Maple Mono";
+          font_family = "Maple Mono NF";
           font_size = 12;
           gradients = true;
           text_color = "$crust";

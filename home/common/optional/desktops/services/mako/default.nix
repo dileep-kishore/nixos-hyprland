@@ -5,7 +5,7 @@
     anchor = "top-right";
     borderRadius = 2;
     borderSize = 2;
-    font = "Maple Mono";
+    font = "Maple Mono NF";
     icons = true;
     extraConfig = builtins.readFile ./config;
   };

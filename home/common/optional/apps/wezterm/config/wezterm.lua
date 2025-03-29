@@ -4,20 +4,20 @@ local wezterm = require "wezterm"
 
 return {
     force_reverse_video_cursor = true,
-    font = wezterm.font("Maple Mono", { weight = "Light" }),
+    font = wezterm.font("Maple Mono NF", { weight = "Light" }),
     font_rules = {
         {
             italic = true,
-            font = wezterm.font("Maple Mono", { weight = "Light", italic = true }),
+            font = wezterm.font("Maple Mono NF", { weight = "Light", italic = true }),
         },
         {
             intensity = "Bold",
-            font = wezterm.font("Maple Mono", { weight = "Bold" }),
+            font = wezterm.font("Maple Mono NF", { weight = "Bold" }),
         },
         {
             italic = true,
             intensity = "Bold",
-            font = wezterm.font("Maple Mono", { weight = "Bold", italic = true }),
+            font = wezterm.font("Maple Mono NF", { weight = "Bold", italic = true }),
         },
     },
     color_scheme = "Catppuccin Mocha",

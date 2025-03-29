@@ -27,7 +27,7 @@
 @define-color crust #11111b;
 
 * {
-  font-family: "Maple Mono", "CaskaydiaCove Nerd Font";
+  font-family: "Maple Mono NF", "CaskaydiaCove Nerd Font";
   font-size: 15px;
   min-height: 0;
 }

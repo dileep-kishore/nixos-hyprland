@@ -27,7 +27,7 @@
           dots_center = true;
           fade_on_empty = false;
           hide_input = false;
-          font_family = "Maple Mono";
+          font_family = "Maple Mono NF";
           font_color = "rgb(205, 214, 244)";
           inner_color = "rgb(30, 30, 46)";
           outer_color = "rgb(203, 166, 247)";
