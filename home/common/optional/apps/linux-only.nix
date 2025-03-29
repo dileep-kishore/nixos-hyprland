@@ -19,7 +19,6 @@
     libreoffice-fresh
     libsForQt5.okular
     libwacom
-    logseq
     lshw
     morgen-latest
     nautilus

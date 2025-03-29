@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     nerd-fonts.symbols-only
     nerd-fonts.fira-code
+    nerd-fonts.victor-mono
     nerd-fonts.fantasque-sans-mono
     nerd-fonts.caskaydia-cove
     font-awesome
@@ -14,7 +15,7 @@
     ia-writer-duospace
     libre-baskerville
     monaspace
-    maple-mono
-    maple-mono-otf
+    maple-mono.NF
+    maple-mono.variable
   ];
 }
