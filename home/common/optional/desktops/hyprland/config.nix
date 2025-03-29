@@ -158,10 +158,10 @@ in {
         "noshadow,title:^(.*Ulauncher.*)$"
         "dimaround,title:^(.*ulauncher.*)$"
         "dimaround,title:^(.*Ulauncher.*)$"
-        # Floating kitty terminal window rules
-        "float,class:^(kitty-float)$"
-        "move 10% 59%,class:^(kitty-float)$"
-        "size 80% 40%,class:^(kitty-float)$"
+        # Floating ghostty terminal window rules
+        "float,class:^(ghostty-float)$"
+        "move 10% 59%,class:^(ghostty-float)$"
+        "size 80% 40%,class:^(ghostty-float)$"
         # Set new window workspaces
         "workspace 3,class:^(.*code.*)$"
         "workspace 4,class:^(Morgen)$"
@@ -178,8 +178,8 @@ in {
       "$tetMod" = "SUPER_CTRL";
       bind =
         [
-          "$mainMod, return, exec, kitty"
-          "$subMod, return, exec, hdrop kitty --class 'kitty-float'"
+          "$mainMod, return, exec, ghostty"
+          "$subMod, return, exec, hdrop ghostty --class='ghostty-float'"
           "$subMod, Q, killactive,"
           "$subMod, E, exit,"
           "$subMod, M, exec, pkill waybar && waybar"

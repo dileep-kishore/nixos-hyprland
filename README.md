@@ -36,7 +36,7 @@
 - OS: [NixOS](https://nixos.org)
 - Window manager: [Hyprland](https://hyprland.org)
 - Status bar: [Waybar](https://github.com/Alexays/Waybar)
-- Terminal: [Kitty](https://sw.kovidgoyal.net/kitty/)
+- Terminal: [Ghostty](https://ghostty.org)
 - Shell: `Zsh` with plugins managed through [antidote](https://github.com/mattmc3/antidote) with [oh-my-posh](https://ohmyposh.dev/) prompt
 - Current theme: [Catppuccin](https://catppuccin.com/)
 - Font: [Maple Mono](https://github.com/subframe7536/maple-font)
