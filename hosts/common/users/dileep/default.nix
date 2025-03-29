@@ -72,7 +72,7 @@ in {
 
   # vpn
   # TODO: Figure out how to make nordvpn connection more dynamic
-  services.openvpn.servers = {
-    homeVPN = {config = ''config /home/dileep/.nordvpn/us9565.nordvpn.com.udp.ovpn '';};
-  };
+  # services.openvpn.servers = {
+  #   homeVPN = {config = ''config /home/dileep/.nordvpn/us9565.nordvpn.com.udp.ovpn '';};
+  # };
 }
