@@ -5,5 +5,5 @@ font-thicken = true
 bold-is-bright = true
 # window-decoration = false
 gtk-titlebar = false
-window-padding-x = 0,0
+window-padding-x = 2,2
 window-padding-y = 0,0
