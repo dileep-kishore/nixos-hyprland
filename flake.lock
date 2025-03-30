@@ -669,11 +669,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1743302308,
-        "narHash": "sha256-RHAWLR8yRn2VTB9RstECeROfxTV7jj6qq441Oc6XiGM=",
+        "lastModified": 1743309984,
+        "narHash": "sha256-mGQCM8R1FgZsOT0CAIHOZm6IQYUa8nNk0g250hNUdiM=",
         "owner": "dileep-kishore",
         "repo": "neovim",
-        "rev": "7b690911524e6fd0b47815b5c313241efb466133",
+        "rev": "81fd6be37afe64148d64e0897f19bca8b972255d",
         "type": "github"
       },
       "original": {
@@ -955,11 +955,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1742700801,
-        "narHash": "sha256-ZGlpUDsuBdeZeTNgoMv+aw0ByXT2J3wkYw9kJwkAS4M=",
+        "lastModified": 1743305778,
+        "narHash": "sha256-Ux/UohNtnM5mn9SFjaHp6IZe2aAnUCzklMluNtV6zFo=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "67566fe68a8bed2a7b1175fdfb0697ed22ae8852",
+        "rev": "8e873886bbfc32163fe027b8676c75637b7da114",
         "type": "github"
       },
       "original": {
