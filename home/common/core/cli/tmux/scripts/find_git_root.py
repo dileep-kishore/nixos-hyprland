@@ -6,7 +6,7 @@ import sys
 
 def get_git_root():
     try:
-        # Get the absolute path of the Git repository root
+        # NOTE: Get the absolute path of the Git repository root
         git_root = (
             subprocess.check_output(
                 ["git", "rev-parse", "--show-toplevel"], stderr=subprocess.STDOUT

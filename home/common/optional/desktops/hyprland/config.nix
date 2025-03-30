@@ -158,7 +158,7 @@ in {
         "noshadow,title:^(.*Ulauncher.*)$"
         "dimaround,title:^(.*ulauncher.*)$"
         "dimaround,title:^(.*Ulauncher.*)$"
-        # Floating ghostty terminal window rules
+        # Floating kitty terminal window rules
         "float,class:^(kitty-float)$"
         "move 10% 59%,class:^(kitty-float)$"
         "size 80% 40%,class:^(kitty-float)$"
@@ -178,7 +178,7 @@ in {
       "$tetMod" = "SUPER_CTRL";
       bind =
         [
-          "$mainMod, return, exec, ghostty"
+          "$mainMod, return, exec, kitty"
           "$subMod, return, exec, hdrop kitty --class 'kitty-float'"
           "$subMod, Q, killactive,"
           "$subMod, E, exit,"
