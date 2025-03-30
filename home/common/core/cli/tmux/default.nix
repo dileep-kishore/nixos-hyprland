@@ -51,8 +51,8 @@
       # allow passthrough
       set-option -g allow-passthrough
 
-      # status bar on bottom
-      set -g status-position bottom
+      # status bar on top
+      set -g status-position top
 
       # Set border colors
       set -g pane-border-lines heavy
