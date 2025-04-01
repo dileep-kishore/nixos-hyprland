@@ -63,6 +63,8 @@
   in {
     inherit lib;
 
+    nix.nixPath = ["nixpkgs=${nixpkgs}"];
+
     nixosModules = import ./modules/nixos;
     homeManagerModules = import ./modules/home-manager;
 

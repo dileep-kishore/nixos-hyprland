@@ -41,6 +41,7 @@
     libnotify
     libxcrypt
     ncdu
+    nixd
     fastfetch
     nix-tree
     openvpn
