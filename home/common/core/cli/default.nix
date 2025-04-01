@@ -55,6 +55,7 @@
     unzip
     vim
     wget
+    yq
     zip
   ];
 }

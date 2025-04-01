@@ -140,13 +140,15 @@
       #+--- Bars LEFT ---+
       RESET="#[fg=$thm_text,bg=$thm_base,nobold,noitalics,nounderscore,nodim]"
       # Session name
-      session_name="#[fg=$thm_mauve,bg=$thm_base,italics] #S #[fg=$thm_mauve,bg=$thm_base,bold]  $LSEP";
+      session_name="#{?client_prefix,  ,#[dim]  }#[fg=$thm_mauve,bg=$thm_base,italics,nodim]#S #[fg=$thm_mauve,bg=$thm_base,bold]  $LSEP";
       dir_section=" #[fg=$thm_blue,bg=$thm_base]#(~/.config/tmux/scripts/find_git_root.py #{pane_current_path}) #[fg=$thm_blue,bg=$thm_base,bold]  $LSEP";
 
       set -g status-left "$session_name$RESET$dir_section$RESET"
 
       #+--- Windows ---+
       # Status
+      window_number_active="#[bg=$thm_mauve,fg=$thm_base] #(~/.config/tmux/scripts/custom_number.sh #I 'none')"
+      window_number_inactive="#[bg=$thm_overlay_2,fg=$thm_base] #(~/.config/tmux/scripts/custom_number.sh #I 'none')"
       custom_icon_window_last="󰖰 ";
       custom_icon_window_current="󰖯 ";
       custom_icon_window_zoom="󰁌 ";
@@ -155,10 +157,11 @@
       custom_icon_window_activity="󰖲 ";
       custom_icon_window_bell="󰂞 ";
       show_window_status="#{?window_activity_flag,$custom_icon_window_activity,}#{?window_bell_flag,$custom_icon_window_bell,}#{?window_silence_flag,$custom_icon_window_silent,}#{?window_active,$custom_icon_window_current,}#{?window_last_flag,$custom_icon_window_last,}#{?window_marked_flag,$custom_icon_window_mark,}#{?window_zoomed_flag,$custom_icon_window_zoom,}";
+      show_icon="#(~/.config/tmux/scripts/window_icon.sh #{pane_current_command} #{window_panes})"
       # Focus
-      set -g window-status-current-format "#[bg=$thm_base,fg=$thm_mauve]#I:#[fg=$thm_mauve,bg=$thm_base,italics] #W $show_window_status"
+      set -g window-status-current-format "#[bg=$thm_base,fg=$thm_mauve]$window_number_active#[fg=$thm_mauve,bg=$thm_base,italics] $show_icon #W $show_window_status"
       # Unfocused
-      set -g window-status-format "#[bg=$thm_base,fg=$thm_overlay_2]#I:#[fg=$thm_overlay_2,bg=$thm_base] #W $show_window_status"
+      set -g window-status-format "#[bg=$thm_base,fg=$thm_overlay_2]$window_number_inactive#[fg=$thm_overlay_2,bg=$thm_base] $show_icon #W $show_window_status"
       set -g window-status-separator " "
 
       #+--- Bars RIGHT ---+
