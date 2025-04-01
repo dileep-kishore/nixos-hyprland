@@ -79,8 +79,8 @@
 
       # tmux sessions (with sesh)
       bind-key "o" run-shell "sesh connect \"$(
-        sesh list -t --icons | fzf-tmux -p 80%,70% \
-          --no-sort --ansi --border-label ' sesh ' --prompt '🪟  ' \
+        sesh list -t --icons --hide-attached | fzf-tmux -p 50%,70% --layout=reverse \
+          --no-sort --ansi --border-label '  TMUX Session Manager (sesh) ' --prompt '🪟  ' \
           --header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' \
           --bind 'tab:down,btab:up' \
           --bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list --icons)' \
@@ -89,7 +89,7 @@
           --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list -z --icons)' \
           --bind 'ctrl-f:change-prompt(🔎  )+reload(fd -H -d 2 -t d -E .Trash . ~)' \
           --bind 'ctrl-d:execute(tmux kill-session -t {2..})+change-prompt(⚡  )+reload(sesh list --icons)' \
-          --preview-window 'right:55%' \
+          --preview-window 'up:70%' \
           --preview 'sesh preview {}'
       )\""
       bind e command-prompt -p "Rename active session to: " "run-shell 'tms rename %1'"
