@@ -51,6 +51,9 @@
       # allow passthrough
       set-option -g allow-passthrough
 
+      # set default shell
+      set-option -g default-shell $SHELL
+
       # status bar on top
       set -g status-position top
 
