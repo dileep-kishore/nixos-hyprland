@@ -1,2 +1,14 @@
-sonnet: true
+model: o3-mini
+reasoning-effort: high
+weak-model: gpt-4o-mini
+editor-model: claude-3-5-sonnet-latest
+editor: nvim
 dark-mode: true
+pretty: true
+git: true
+gitignore: true
+auto-lint: true
+auto-test: false
+fancy-input: true
+suggest-shell-commands: true
+detect-urls: true
