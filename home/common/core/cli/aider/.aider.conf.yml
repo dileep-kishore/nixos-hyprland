@@ -6,6 +6,7 @@ editor: nvim
 dark-mode: true
 pretty: true
 git: true
+auto-commits: false
 gitignore: true
 auto-lint: true
 auto-test: false
