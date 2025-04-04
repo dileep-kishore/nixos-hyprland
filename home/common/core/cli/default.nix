@@ -49,7 +49,7 @@
     pciutils
     procs
     shell-gpt
-    tldr
+    tealdeer
     todoist
     unrar
     unzip
