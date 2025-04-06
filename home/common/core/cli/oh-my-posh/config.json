@@ -93,7 +93,7 @@
             "always_enabled": false,
             "threshold": 5000
           },
-          "template": " <p:text><i>took</i></> 󰚭{{ .FormattedMs }}"
+          "template": " <p:text><i>took</i></> 󰔛 {{ .FormattedMs }}"
         },
         {
           "type": "nix-shell",
