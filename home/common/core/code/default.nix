@@ -4,6 +4,7 @@
     go
     nodejs_22
     rustc
+    rustup
     lua
     julia-lts
   ];
