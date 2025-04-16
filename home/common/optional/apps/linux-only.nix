@@ -30,7 +30,6 @@
     spotify
     tana
     udisks
-    vscode-fhs
     zotero_7
     firefox
   ];

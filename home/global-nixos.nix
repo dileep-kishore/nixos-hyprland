@@ -12,6 +12,7 @@
     ./common/optional/apps/ghostty
     ./common/optional/apps/ulauncher
     ./common/optional/apps/slack.nix
+    ./common/optional/apps/code.nix
     ./common/optional/apps/rofi
     ./common/optional/apps/wofi
     ./common/optional/desktops/waybar
