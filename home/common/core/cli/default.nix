@@ -49,6 +49,7 @@
     pciutils
     procs
     shell-gpt
+    serpl
     tealdeer
     todoist
     unrar
