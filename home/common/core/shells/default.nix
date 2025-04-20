@@ -11,6 +11,7 @@
     cls = "clear";
     # vim alias
     v = "nvim";
+    nv = "nvim";
     # grep
     grep = "grep --color=auto";
     # python
@@ -28,6 +29,8 @@
     # ps
     ps = "ps auxf";
     psgrep = "ps aux | grep -v grep | grep -i -e VSZ -e";
+    # lazygit
+    lg = "lazygit";
   };
   home.sessionPath = [
     "$HOME/.local/bin"
