@@ -1,8 +1,15 @@
-font-family = "Maple Mono NF"
+font-family = "Monaspace Neon Frozen"
+font-family-bold = "Monaspace Krypton Frozen"
+font-family-italic = "Monaspace Radon Frozen"
+font-family-bold-italic = "Monaspace Radon Frozen"
+
+font-style = "Medium"
+font-style-bold = "Bold"
+font-style-italic= "Medium"
+font-style-bold-italic = "Bold"
+
 font-size = "13.0"
 theme = "catppuccin-mocha"
-font-thicken = true
-bold-is-bright = true
 # window-decoration = false
 gtk-titlebar = false
 window-padding-x = 2,2
