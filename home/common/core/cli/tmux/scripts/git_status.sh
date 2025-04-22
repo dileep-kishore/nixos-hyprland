@@ -96,7 +96,8 @@ fi
 
 # Set the status indicator based on the sync mode
 SEP="󰇝"
-RSEP="▒"
+# RSEP="▒"
+RSEP="┊"
 # SEP="▒"
 case "$SYNC_MODE" in
 1)
