@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    copyq
+    # copyq
     (ulauncher.overrideAttrs (previous: {
       propagatedBuildInputs =
         previous.propagatedBuildInputs
