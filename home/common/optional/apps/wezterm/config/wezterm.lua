@@ -22,6 +22,7 @@ return {
     },
     color_scheme = "Catppuccin Mocha",
     font_size = 13.0,
+    line_height = 1.2,
     enable_tab_bar = false,
     front_end = "WebGpu",
     enable_wayland = false,
