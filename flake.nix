@@ -29,7 +29,7 @@
 
     # neovim
     neovim = {
-      url = "github:dileep-kishore/neovim";
+      url = "github:dileep-kishore/nyanvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
