@@ -21,6 +21,7 @@
     ./scripts.nix
     ./oh-my-posh
     ./tmux
+    ./zellij
     ./yazi
     ./zoxide.nix
   ];
