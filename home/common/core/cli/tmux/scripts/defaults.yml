@@ -7,7 +7,7 @@ config:
   icon-position: left # show t
 icons:
   apt: 
-  bash: 
+  bash: 
   caffeinate: 
   cargo: 
   beam.smp: 
@@ -20,7 +20,7 @@ icons:
   dpkg: 
   emacs: 
   fdisk: 
-  fish: 
+  fish: 
   git: 
   gitui: 
   gh: 
@@ -53,7 +53,7 @@ icons:
   rustc: 
   rustup: 
   ssh: 󰣀
-  tcsh: 
+  tcsh: 
   tig: 
   tmux: 
   top: 
@@ -62,7 +62,7 @@ icons:
   yay: 
   yazi: 
   yum: 
-  zsh: 
+  zsh: 
   gcc: 
   clang: 
   make: 
