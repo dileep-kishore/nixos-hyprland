@@ -15,7 +15,7 @@
       work = "$HOME/Documents/Work";
       personal = "$HOME/Documents/Personal";
     };
-    initExtra = ''
+    initContent = ''
       bindkey '^ ' autosuggest-accept
       export OPENAI_API_KEY="$(cat ~/.secrets/openai_api_key.txt)"
       export ANTHROPIC_API_KEY="$(cat ~/.secrets/anthropic_api_key.txt)"
