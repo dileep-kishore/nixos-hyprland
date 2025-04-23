@@ -5,25 +5,32 @@
 
   programs.zellij = {
     enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
+    enableBashIntegration = false;
+    enableZshIntegration = false;
+    # TODO: Set TERM=vte-256color
+    # This fixes ghostty underlines as well
   };
 
-  # home.file.".config/zellij/config.kdl" = {
-  #   source = ./config.kdl;
-  # };
+  home.file.".config/zellij/config.kdl" = {
+    source = ./config.kdl;
+  };
 
   # aliases
   home.shellAliases = {
-    zl = "zellij";
-    znew = "zellij new -s";
-    za = "zellij attach -s";
-    zdetach = "zellij detach";
-    zkill = "zellij kill-session -s";
+    z = "zellij";
+    znew = "zellij --session";
+    za = "zellij attach";
+    zkill = "zellij kill-session";
     zlist = "zellij list-sessions";
   };
 
-  # copy over scripts
+  # copy over layouts
+  home.file.".config/zellij/layouts" = {
+    recursive = true;
+    source = ./layouts;
+  };
+
+  # # copy over scripts
   # home.file.".config/zellij/scripts" = {
   #   recursive = true;
   #   source = ./scripts;
