@@ -3,10 +3,13 @@ default:
 
 host := `uname -n`
 user := `whoami`
+curr_dir := `pwd`
 alias bs := build_switch
 alias hs := home_switch
 alias u := update
 alias uc := update_commit
+alias cl := clean
+alias dlz := download_zellij_plugins
 
 # OLD: nixos-rebuild switch --flake .#{{host}}
 # Build nixos
@@ -41,3 +44,7 @@ check:
 # Clean
 clean:
     nh clean all --keep-since 7d
+
+# Zellij
+download_zellij_plugins:
+    bash {{curr_dir}}/home/common/core/cli/zellij/plugin-manager.sh
