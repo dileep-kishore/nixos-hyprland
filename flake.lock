@@ -473,11 +473,11 @@
         "pre-commit-hooks": "pre-commit-hooks_2"
       },
       "locked": {
-        "lastModified": 1745457760,
-        "narHash": "sha256-I3TwDm0q3BQ1+Be7Wk4kGI2tpL6LGfofXVDP+S3OIjc=",
+        "lastModified": 1745478456,
+        "narHash": "sha256-EbUTrN73B86BXWn2V0LqZj2gqGk8Ly/T9sf/647Z54k=",
         "owner": "dileep-kishore",
         "repo": "nyanvim",
-        "rev": "a0391e60f2adc977c452eda2b6e6b4dbcae48861",
+        "rev": "102e6d5346710dd206124e3d1f91c74fde63c842",
         "type": "github"
       },
       "original": {
