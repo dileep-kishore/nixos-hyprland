@@ -6,21 +6,22 @@ layout {
         children
     }
     tab name=" term" {
-      pane name="term"
+        pane name="term"
     }
-    tab name=" nvim" hide_floating_panes=false {
+    tab name=" nvim" hide_floating_panes=false {
         pane name="Code" command="nvim"
     }
     tab name=" git" {
-      pane split_direction="horizontal" {
-        pane name="lazygit" command="lazygit"
-        pane name="just" size="15%"
-      }
+        pane split_direction="horizontal" {
+            pane name="lazygit" command="lazygit"
+            pane name="just" size="15%"
+        }
     }
     tab name=" term" {
-      pane split_direction="vertical" {
-          pane name="pane1"
-          pane name="pane2" size="50%"
-      }
+        pane split_direction="vertical" {
+            pane name="pane1"
+            pane name="pane2" size="50%"
+        }
     }
 }
+
