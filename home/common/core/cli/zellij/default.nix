@@ -21,6 +21,9 @@
     znew = "zellij --session";
     za = "zellij attach";
     zkill = "zellij kill-session";
+    zkillall = "zellij kill-all-sessions";
+    zdel = "zellij delete-session";
+    zdelall = "zellij del-all-sessions";
     zlist = "zellij list-sessions";
   };
 
