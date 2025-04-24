@@ -28,6 +28,7 @@
 
   home.packages = with pkgs; [
     inputs.neovim.packages.${system}.default
+    aria2
     bc
     coreutils-full
     entr

@@ -4,8 +4,7 @@ PLUGIN_DIR="$HOME/.config/zellij/plugins"
 
 mkdir -p "$PLUGIN_DIR"
 
-wget https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm -O "$PLUGIN_DIR/zjstatus.wasm"
-wget https://github.com/dj95/zjstatus/releases/latest/download/zjframes.wasm -O "$PLUGIN_DIR/zjframes.wasm"
-wget https://github.com/karimould/zellij-forgot/releases/latest/download/zellij_forgot.wasm -O "$PLUGIN_DIR/zellij_forgot.wasm"
-
-# TODO: Autolock
+aria2c --allow-overwrite=true -d "$PLUGIN_DIR" -o zjstatus.wasm https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm
+aria2c --allow-overwrite=true -d "$PLUGIN_DIR" -o zjframes.wasm https://github.com/dj95/zjstatus/releases/latest/download/zjframes.wasm
+aria2c --allow-overwrite=true -d "$PLUGIN_DIR" -o zellij_forgot.wasm https://github.com/karimould/zellij-forgot/releases/latest/download/zellij_forgot.wasm
+aria2c --allow-overwrite=true -d "$PLUGIN_DIR" -o zellij-autolock.wasm https://github.com/fresh2dev/zellij-autolock/releases/latest/download/zellij-autolock.wasm

@@ -5,30 +5,33 @@ layout {
         }
         children
     }
-    tab name="Work" hide_floating_panes=false {
-    pane split_direction="vertical" {
-      pane name="Code" command="nvim"
-      pane name="Daily Notes" size="20%"
+    tab name=" nvim" hide_floating_panes=false {
+        pane name="Code" command="nvim"
+        floating_panes {
+          pane name="Working Pad" command="git" {
+            args "log" "--pretty=oneline" "-n 20" "--graph" "--abbrev-commit"
+            x "10%"
+            y "10%"
+            width 130
+          }
+        }
     }
-    floating_panes {
-      pane name="Working Pad" command="git" {
-        args "log" "--pretty=oneline" "-n 20" "--graph" "--abbrev-commit"
-        x "10%"
-        y "10%"
-        width 130
-      }
+  tab name=" git" {
+    pane split_direction="horizontal" {
+        pane name="lazygit" command="lazygit"
+        pane name="just" size="15%"
     }
   }
-  tab name="Dashboard" {
+  tab name=" term" {
     pane split_direction="vertical" {
-      pane split_direction="horizontal" {
-        pane name="Gratitudes"
-        pane name="ToDos"
-      }
-      pane split_direction="horizontal" {
-        pane name="Achievements"
-        pane name="Fleeting Notes"
-      }
+        pane name="pane1"
+        pane name="pane2" size="50%"
+    }
+  }
+  tab name=" term" {
+    pane split_direction="vertical" {
+        pane name="pane3"
+        pane name="pane4" size="50%"
     }
   }
 }

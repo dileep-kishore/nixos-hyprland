@@ -97,20 +97,21 @@ fi
 # Set the status indicator based on the sync mode
 SEP="󰇝"
 # RSEP="▒"
-RSEP="┊"
+# RSEP="┊"
+RSEP=" "
 # SEP="▒"
 case "$SYNC_MODE" in
 1)
-	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_peach},bold]$RSEP 󱓎"
+	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_peach},bold,italic]$RSEP 󱓎"
 	;;
 2)
-	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_teal},bold]$RSEP 󰛃"
+	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_teal},bold,italic]$RSEP 󰛃"
 	;;
 3)
-	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_red},bold]$RSEP 󰛀"
+	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_red},bold,italic]$RSEP 󰛀"
 	;;
 *)
-	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_green},bold]$RSEP "
+	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_green},bold,italic]$RSEP "
 	;;
 esac
 

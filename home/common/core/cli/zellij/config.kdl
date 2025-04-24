@@ -1,11 +1,19 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds {
     normal {
-        // uncomment this and adjust key if using copy_on_select=false
-        // bind "Alt c" { Copy; }
+        bind "Enter" {
+            // Passthru `Enter`.
+            WriteChars "\u{000D}";
+            // Invoke autolock to immediately assess proper lock state.
+            MessagePlugin "autolock" {};
+        }
     }
     locked {
-        bind "Ctrl g" { SwitchToMode "Normal"; }
+        // bind "Ctrl g" { SwitchToMode "Normal"; }
+        bind "Ctrl g" {
+            MessagePlugin "autolock" {payload "disable";};
+            SwitchToMode "Normal";
+        }
     }
     resize {
         bind "Ctrl n" { SwitchToMode "Normal"; }
@@ -142,6 +150,12 @@ keybinds {
             };
             SwitchToMode "Normal"
         }
+        bind "h" {
+          LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij_forgot.wasm" {
+            LOAD_ZELLIJ_BINDINGS "true"
+            floating true
+          }
+      }
     }
     tmux {
         bind "[" { SwitchToMode "Scroll"; }
@@ -167,7 +181,13 @@ keybinds {
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
     }
     shared_except "locked" {
-        bind "Ctrl g" { SwitchToMode "Locked"; }
+        bind "Ctrl g" {
+            MessagePlugin "autolock" {payload "disable";};
+            SwitchToMode "Locked";
+        }
+        bind "Ctrl a" {
+            MessagePlugin "autolock" {payload "enable";};
+        }
         bind "Ctrl q" { Quit; }
         bind "Alt f" { ToggleFloatingPanes; }
         bind "Alt n" { NewPane; }
@@ -181,13 +201,6 @@ keybinds {
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
-        // plugins
-        bind "Alt Shift F" {
-          LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij_forgot.wasm" {
-            LOAD_ZELLIJ_BINDINGS "true"
-            floating true
-          }
-      }
     }
     shared_except "normal" "locked" {
         bind "Enter" "Esc" { SwitchToMode "Normal"; }
@@ -232,6 +245,17 @@ plugins {
     configuration location="zellij:configuration"
     plugin-manager location="zellij:plugin-manager"
     about location="zellij:about"
+    autolock location="file:~/.config/zellij/plugins/zellij-autolock.wasm" {
+        is_enabled true
+        triggers "nvim|vim|git|fzf|zoxide|atuin|lazygit"
+        reaction_seconds "0.3"
+        print_to_log false
+    }
+    zjframes "file:~/.config/zellij/plugins/zjframes.wasm" {
+        hide_frame_for_single_pane       "false"
+        hide_frame_except_for_search     "true"
+        hide_frame_except_for_fullscreen "true"
+    }
     zjstatus location="file:~/.config/zellij/plugins/zjstatus.wasm" {
         color_rosewater "#f5e0dc"
         color_flamingo "#f2cdcd"
@@ -260,72 +284,74 @@ plugins {
         color_mantle "#181825"
         color_crust "#11111b"
 
-        format_left   "#[bg=$surface0,fg=$sapphire]#[bg=$sapphire,fg=$crust,bold] {session} #[bg=$surface0] {mode}#[bg=$surface0] {tabs}"
-        format_center "{notifications}"
-        format_right  "#[bg=$surface0,fg=$flamingo]#[fg=$crust,bg=$flamingo] #[bg=$surface1,fg=$flamingo,bold] {command_user}@{command_host}#[bg=$surface0,fg=$surface1]#[bg=$surface0,fg=$maroon]#[bg=$maroon,fg=$crust]󰃭 #[bg=$surface1,fg=$maroon,bold] {datetime}#[bg=$surface0,fg=$surface1]"
-        format_space  "#[bg=$surface0]"
+        format_left   " #[bg=$base]{mode} #[bg=$base,fg=$text]#[bg=$base,fg=$mauve,bold,italics]{session}  #[bg=$base,fg=$green,italic] {command_uptime} #[bg=$base,fg=$green] #[bg=$base]"
+        format_center "#[bg=$base] {tabs}{notifications} #[bg=$base]"
+        format_right  "{command_git}{command_wbgit}"
+        format_space  "#[bg=$base]"
         format_hide_on_overlength "true"
         format_precedence "lrc"
 
         border_enabled  "false"
         border_char     "─"
-        border_format   "#[bg=$surface0]{char}"
+        border_format   "#[bg=$base]{char}"
         border_position "top"
 
-        mode_normal        "#[bg=$green,fg=$crust,bold] NORMAL#[bg=$surface0,fg=$green]"
-        mode_tmux          "#[bg=$mauve,fg=$crust,bold] TMUX#[bg=$surface0,fg=$mauve]"
-        mode_locked        "#[bg=$red,fg=$crust,bold] LOCKED#[bg=$surface0,fg=$red]"
-        mode_pane          "#[bg=$teal,fg=$crust,bold] PANE#[bg=$surface0,fg=teal]"
-        mode_tab           "#[bg=$teal,fg=$crust,bold] TAB#[bg=$surface0,fg=$teal]"
-        mode_scroll        "#[bg=$flamingo,fg=$crust,bold] SCROLL#[bg=$surface0,fg=$flamingo]"
-        mode_enter_search  "#[bg=$flamingo,fg=$crust,bold] ENT-SEARCH#[bg=$surfaco,fg=$flamingo]"
-        mode_search        "#[bg=$flamingo,fg=$crust,bold] SEARCHARCH#[bg=$surfac0,fg=$flamingo]"
-        mode_resize        "#[bg=$yellow,fg=$crust,bold] RESIZE#[bg=$surfac0,fg=$yellow]"
-        mode_rename_tab    "#[bg=$yellow,fg=$crust,bold] RENAME-TAB#[bg=$surface0,fg=$yellow]"
-        mode_rename_pane   "#[bg=$yellow,fg=$crust,bold] RENAME-PANE#[bg=$surface0,fg=$yellow]"
-        mode_move          "#[bg=$yellow,fg=$crust,bold] MOVE#[bg=$surface0,fg=$yellow]"
-        mode_session       "#[bg=$pink,fg=$crust,bold] SESSION#[bg=$surface0,fg=$pink]"
-        mode_prompt        "#[bg=$pink,fg=$crust,bold] PROMPT#[bg=$surface0,fg=$pink]"
+        tab_normal              "#[bg=$overlay2,fg=$base,bold] {index} #[bg=$base,fg=$overlay2] {name}{floating_indicator}"
+        tab_normal_fullscreen   "#[bg=$overlay2,fg=$base,bold] {index} #[bg=$base,fg=$overlay2] {name}{fullscreen_indicator}"
+        tab_normal_sync         "#[bg=$overlay2,fg=$base,bold] {index} #[bg=$base,fg=$overlay2] {name}{sync_indicator}"
+        tab_active              "#[bg=$mauve,fg=$base,bold] {index} #[bg=$base,fg=$mauve,italic] {name}{floating_indicator}"
+        tab_active_fullscreen   "#[bg=$mauve,fg=$base,bold] {index} #[bg=$base,fg=$mauve,italic] {name}{fullscreen_indicator}"
+        tab_active_sync         "#[bg=$mauve,fg=$base,bold] {index} #[bg=$base,fg=$mauve,italic] {name}{sync_indicator}"
+        tab_separator           "#[bg=$base] "
 
-        tab_normal              "#[bg=$surface0,fg=$blue]#[bg=$blue,fg=$crust,bold]{index} #[bg=$surface1,fg=$blue,bold] {name}{floating_indicator}#[bg=$surface0,fg=$surface1]"
-        tab_normal_fullscreen   "#[bg=$surface0,fg=$blue]#[bg=$blue,fg=$crust,bold]{index} #[bg=$surface1,fg=$blue,bold] {name}{fullscreen_indicator}#[bg=$surface0,fg=$surface1]"
-        tab_normal_sync         "#[bg=$surface0,fg=$blue]#[bg=$blue,fg=$crust,bold]{index} #[bg=$surface1,fg=$blue,bold] {name}{sync_indicator}#[bg=$surface0,fg=$surface1]"
-        tab_active              "#[bg=$surface0,fg=$peach]#[bg=$peach,fg=$crust,bold]{index} #[bg=$surface1,fg=$peach,bold] {name}{floating_indicator}#[bg=$surface0,fg=$surface1]"
-        tab_active_fullscreen   "#[bg=$surface0,fg=$peach]#[bg=$peach,fg=$crust,bold]{index} #[bg=$surface1,fg=$peach,bold] {name}{fullscreen_indicator}#[bg=$surface0,fg=$surface1]"
-        tab_active_sync         "#[bg=$surface0,fg=$peach]#[bg=$peach,fg=$crust,bold]{index} #[bg=$surface1,fg=$peach,bold] {name}{sync_indicator}#[bg=$surface0,fg=$surface1]"
-        tab_separator           "#[bg=$surface0] "
+        mode_normal        "#[bg=$base,fg=$green]#[bg=$green,fg=$crust,bold]NORMAL#[fg=$base,bg=$green] "
+        mode_tmux          "#[bg=$base,fg=$mauve]#[bg=$mauve,fg=$crust,bold]TMUX#[fg=$base,bg=$mauve] "
+        mode_locked        "#[bg=$base,fg=$red]#[bg=$red,fg=$crust,bold]LOCKED#[fg=$base,bg=$red] "
+        mode_pane          "#[bg=$base,fg=$teal]#[bg=$teal,fg=$crust,bold]PANE#[fg=$base,bg=$teal] "
+        mode_tab           "#[bg=$base,fg=$teal]#[bg=$teal,fg=$crust,bold]TAB#[fg=$base,bg=$teal] "
+        mode_scroll        "#[bg=$base,fg=$flamingo]#[bg=$flamingo,fg=$crust,bold]SCROLL#[fg=$base,bg=$flamingo] "
+        mode_enter_search  "#[bg=$base,fg=$flamingo]#[bg=$flamingo,fg=$crust,bold]ENT-SEARCH#[fg=$base,bg=$flamingo] "
+        mode_search        "#[bg=$base,fg=$flamingo]#[bg=$flamingo,fg=$crust,bold]SEARCHARCH#[fg=$base,bg=$flamingo] "
+        mode_resize        "#[bg=$base,fg=$yellow]#[bg=$yellow,fg=$crust,bold]RESIZE#[fg=$base,bg=$yellow] "
+        mode_rename_tab    "#[bg=$base,fg=$yellow]#[bg=$yellow,fg=$crust,bold]RENAME-TAB#[fg=$base,bg=$yellow] "
+        mode_rename_pane   "#[bg=$base,fg=$yellow]#[bg=$yellow,fg=$crust,bold]RENAME-PANE#[fg=$base,bg=$yellow] "
+        mode_move          "#[bg=$base,fg=$yellow]#[bg=$yellow,fg=$crust,bold]MOVE#[fg=$base,bg=$yellow] "
+        mode_session       "#[bg=$base,fg=$pink]#[bg=$pink,fg=$crust,bold]SESSION#[fg=$base,bg=$pink] "
+        mode_prompt        "#[bg=$base,fg=$pink]#[bg=$pink,fg=$crust,bold]PROMPT#[fg=$base,bg=$pink] "
 
         tab_sync_indicator       "  "
         tab_fullscreen_indicator "  "
         tab_floating_indicator   " 󰹙 "
 
-        notification_format_unread "#[bg=surface0,fg=$yellow]#[bg=$yellow,fg=$crust] #[bg=$surface1,fg=$yellow] {message}#[bg=$surface0,fg=$yellow]"
+        notification_format_unread "#[fg=$yellow,bg=$base] #[bg=$base,fg=$yellow] {message}"
         notification_format_no_notifications ""
         notification_show_interval "10"
 
-        command_host_command    "uname -n"
-        command_host_format     "{stdout}"
-        command_host_interval   "0"
-        command_host_rendermode "static"
+        command_uptime_command    "bash -c '~/.config/tmux/scripts/uptime_fmt.sh'"
+        command_uptime_format     "{stdout}"
+        command_uptime_interval   "10"
+        command_uptime_rendermode "static"
 
-        command_user_command    "whoami"
-        command_user_format     "{stdout}"
-        command_user_interval   "10"
-        command_user_rendermode "static"
+        command_git_command    "bash -c '~/.config/tmux/scripts/git_status.sh'"
+        command_git_format     "{stdout}"
+        command_git_interval   "10"
+        command_git_rendermode "dynamic"
+
+        command_wbgit_command    "bash -c '~/.config/zellij/scripts/wb_git_status.sh'"
+        command_wbgit_format     "{stdout}"
+        command_wbgit_interval   "600"
+        command_wbgit_rendermode "dynamic"
 
         datetime          "{format}"
-        datetime_format   "%Y-%m-%d 󰅐 %H:%M"
+        datetime_format   "%a, %d %b"
         datetime_timezone "America/New_York"
     }
 }
 
 // Plugins to load in the background when a new session starts
 load_plugins {
-    "file:~/.config/zellij/plugins/zjframes.wasm" {
-        hide_frame_for_single_pane       "false"
-        hide_frame_except_for_search     "true"
-        hide_frame_except_for_fullscreen "true"
-    }
+    autolock
+    zjframes
 }
 
 on_force_close "quit"
@@ -339,7 +365,7 @@ pane_frames false
 //   - true (default)
 //   - false
 //
-auto_layout true
+auto_layout false
 
 session_serialization true
 
@@ -349,7 +375,7 @@ session_serialization true
 //   - true
 //   - false (default)
 //
-// serialize_pane_viewport true
+serialize_pane_viewport true
 
 // Scrollback lines to serialize along with the pane viewport when serializing sessions, 0
 // defaults to the scrollback size. If this number is higher than the scrollback size, it will

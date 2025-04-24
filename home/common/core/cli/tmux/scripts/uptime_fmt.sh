@@ -8,4 +8,4 @@ uptime_days=$(echo "$uptime_output" | jq '.uptime_days')
 uptime_hours=$(echo "$uptime_output" | jq '.uptime_hours')
 
 # Format the output as "XD YH"
-echo "${uptime_days}d ${uptime_hours}h"
+echo "${uptime_days}d:${uptime_hours}h"

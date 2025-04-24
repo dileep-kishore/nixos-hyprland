@@ -23,7 +23,7 @@
     zkill = "zellij kill-session";
     zkillall = "zellij kill-all-sessions";
     zdel = "zellij delete-session";
-    zdelall = "zellij del-all-sessions";
+    zdelall = "zellij delete-all-sessions";
     zlist = "zellij list-sessions";
   };
 
@@ -33,9 +33,9 @@
     source = ./layouts;
   };
 
-  # # copy over scripts
-  # home.file.".config/zellij/scripts" = {
-  #   recursive = true;
-  #   source = ./scripts;
-  # };
+  # copy over scripts
+  home.file.".config/zellij/scripts" = {
+    recursive = true;
+    source = ./scripts;
+  };
 }
