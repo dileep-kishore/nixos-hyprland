@@ -5,33 +5,24 @@ layout {
         }
         children
     }
+    tab name=" term" {
+      pane name="term"
+    }
     tab name=" nvim" hide_floating_panes=false {
         pane name="Code" command="nvim"
-        floating_panes {
-          pane name="Working Pad" command="git" {
-            args "log" "--pretty=oneline" "-n 20" "--graph" "--abbrev-commit"
-            x "10%"
-            y "10%"
-            width 130
-          }
-        }
     }
   tab name=" git" {
     pane split_direction="horizontal" {
         pane name="lazygit" command="lazygit"
-        pane name="just" size="15%"
+        pane name="just" size="15%" command="just" {
+            args "preview"
+        }
     }
   }
   tab name=" term" {
     pane split_direction="vertical" {
         pane name="pane1"
         pane name="pane2" size="50%"
-    }
-  }
-  tab name=" term" {
-    pane split_direction="vertical" {
-        pane name="pane3"
-        pane name="pane4" size="50%"
     }
   }
 }

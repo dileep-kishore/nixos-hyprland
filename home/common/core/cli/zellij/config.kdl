@@ -155,6 +155,7 @@ keybinds {
             LOAD_ZELLIJ_BINDINGS "true"
             floating true
           }
+          SwitchToMode "Normal"
       }
     }
     tmux {
@@ -304,11 +305,11 @@ plugins {
         tab_active_sync         "#[bg=$mauve,fg=$base,bold] {index} #[bg=$base,fg=$mauve,italic] {name}{sync_indicator}"
         tab_separator           "#[bg=$base] "
 
-        mode_normal        "#[bg=$base,fg=$green]#[bg=$green,fg=$crust,bold]NORMAL#[fg=$base,bg=$green] "
+        mode_normal        "#[bg=$base,fg=$blue]#[bg=$blue,fg=$crust,bold]NORMAL#[fg=$base,bg=$blue] "
         mode_tmux          "#[bg=$base,fg=$mauve]#[bg=$mauve,fg=$crust,bold]TMUX#[fg=$base,bg=$mauve] "
         mode_locked        "#[bg=$base,fg=$red]#[bg=$red,fg=$crust,bold]LOCKED#[fg=$base,bg=$red] "
         mode_pane          "#[bg=$base,fg=$teal]#[bg=$teal,fg=$crust,bold]PANE#[fg=$base,bg=$teal] "
-        mode_tab           "#[bg=$base,fg=$teal]#[bg=$teal,fg=$crust,bold]TAB#[fg=$base,bg=$teal] "
+        mode_tab           "#[bg=$base,fg=$green]#[bg=$green,fg=$crust,bold]TAB#[fg=$base,bg=$green] "
         mode_scroll        "#[bg=$base,fg=$flamingo]#[bg=$flamingo,fg=$crust,bold]SCROLL#[fg=$base,bg=$flamingo] "
         mode_enter_search  "#[bg=$base,fg=$flamingo]#[bg=$flamingo,fg=$crust,bold]ENT-SEARCH#[fg=$base,bg=$flamingo] "
         mode_search        "#[bg=$base,fg=$flamingo]#[bg=$flamingo,fg=$crust,bold]SEARCHARCH#[fg=$base,bg=$flamingo] "
@@ -404,16 +405,9 @@ serialize_pane_viewport true
 //     }
 // }
 
-// Choose the theme that is specified in the themes section.
-// Default: default
-//
 theme "catppuccin-mocha"
 
-// The name of the default layout to load on startup
-// Default: "default"
-// (Requires restart)
-//
-// default_layout "compact"
+default_layout "code"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
@@ -458,10 +452,7 @@ theme "catppuccin-mocha"
 //
 // copy_clipboard "primary"
 
-// Enable or disable automatic copy (and clear) of selection when releasing mouse
-// Default: true
-//
-// copy_on_select false
+copy_on_select true
 
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
