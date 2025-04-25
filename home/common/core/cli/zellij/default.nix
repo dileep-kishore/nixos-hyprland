@@ -7,8 +7,6 @@
     enable = true;
     enableBashIntegration = false;
     enableZshIntegration = false;
-    # TODO: Set TERM=vte-256color
-    # This fixes ghostty underlines as well
   };
 
   home.file.".config/zellij/config.kdl" = {
@@ -19,10 +17,11 @@
   home.shellAliases = {
     z = "zellij";
     znew = "zellij --session";
-    za = "zellij attach";
-    zkill = "zellij kill-session";
+    za = "zellij attach \"$(echo \"\${ZJ_SESSIONS}\" | fzf --ansi -i)\"";
+    zlayout = "zellij --layout \"$(fd . \"\${ZJ_LAYOUT_DIR}\" | sed 's|.*/||; s|\.[^.]*$||' | fzf --ansi -i || exit)\"";
+    zkill = "zellij kill-session \"$(echo \"\${ZJ_SESSIONS}\" | fzf --ansi -i)\"";
     zkillall = "zellij kill-all-sessions";
-    zdel = "zellij delete-session";
+    zdel = "zellij delete-session \"$(echo \"\${ZJ_SESSIONS}\" | fzf --ansi -i)\"";
     zdelall = "zellij delete-all-sessions";
     zlist = "zellij list-sessions";
   };

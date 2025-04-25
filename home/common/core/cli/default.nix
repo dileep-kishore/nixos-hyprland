@@ -52,6 +52,7 @@
     procs
     shell-gpt
     serpl
+    skim
     tealdeer
     todoist
     unrar
