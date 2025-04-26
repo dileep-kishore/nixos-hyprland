@@ -618,7 +618,7 @@ plugins {
         color_base "#1e1e2e"
         color_mantle "#181825"
         color_crust "#11111b"
-        format_left " #[bg=$base]{mode} #[bg=$base,fg=$text]#[bg=$base,fg=$mauve,bold,italics]{session}  #[bg=$base,fg=$green,italic] {command_uptime} #[bg=$base,fg=$green] #[bg=$base]"
+        format_left " #[bg=$base,fg=$mauve]#[fg=$crust,bg=$mauve,bold,italics] {session} #[bg=$base] {mode} #[bg=$base,fg=$green,italic]  {command_uptime} #[bg=$base]"
         format_center "#[bg=$base] {tabs}{notifications} #[bg=$base]"
         format_right "{command_git}{command_wbgit}"
         format_space "#[bg=$base]"
@@ -635,7 +635,6 @@ plugins {
         tab_active_fullscreen "#[bg=$mauve,fg=$base,bold] {index} #[bg=$base,fg=$mauve,italic] {name}{fullscreen_indicator}"
         tab_active_sync "#[bg=$mauve,fg=$base,bold] {index} #[bg=$base,fg=$mauve,italic] {name}{sync_indicator}"
         tab_separator "#[bg=$base] "
-        // TODO: Add C| symbol to mode left or change this to the catppuccin style for session_name + mode!
         mode_normal "#[fg=$base,bg=$blue] #[bg=$blue,fg=$crust,bold]NORMAL#[bg=$base,fg=$blue]"
         mode_tmux "#[fg=$base,bg=$mauve] #[bg=$mauve,fg=$crust,bold]TMUX#[bg=$base,fg=$mauve]"
         mode_locked "#[fg=$base,bg=$red] #[bg=$red,fg=$crust,bold]LOCKED#[bg=$base,fg=$red]"
