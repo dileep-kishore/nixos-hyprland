@@ -333,6 +333,14 @@ keybinds {
             }
             SwitchToMode "Normal"
         }
+        bind "s" {
+            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij-choose-tree.wasm" {
+                floating true
+                move_to_focused_tab true
+                show_plugins false
+            }
+            SwitchToMode "Locked"
+        }
         bind "c" {
             LaunchOrFocusPlugin "configuration" {
                 floating true
