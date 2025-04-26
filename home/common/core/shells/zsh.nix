@@ -62,7 +62,8 @@
         "jeffreytse/zsh-vi-mode"
         "djui/alias-tips"
         "wfxr/forgit"
-        "MichaelAquilina/zsh-autoswitch-virtualenv"
+        # NOTE: Disabling this for now, as it is not working with uv + devenv
+        # "MichaelAquilina/zsh-autoswitch-virtualenv"
       ];
     };
   };
