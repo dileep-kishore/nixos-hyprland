@@ -29,6 +29,8 @@
     # ps
     ps = "ps auxf";
     psgrep = "ps aux | grep -v grep | grep -i -e VSZ -e";
+    # git status
+    gst = "git status --short";
     # lazygit
     lg = "lazygit";
   };
