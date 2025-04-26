@@ -24,7 +24,6 @@
       fast-theme XDG:catppuccin-mocha -q
       # Atuin
       zvm_after_init_commands+=(eval "$(atuin init zsh)")
-      ZJ_SESSIONS=$(zellij list-sessions -s)
       ZJ_LAYOUT_DIR=$(zellij setup --check \
         | grep "LAYOUT DIR" - \
         | grep -o '".*"' - | tr -d '"')
