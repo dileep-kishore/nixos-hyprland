@@ -2,7 +2,13 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+    # NOTE: This will speed up startup by caching the completion
+    completionInit = ''
+      autoload -Uz compinit; compinit -C
+      (autoload -Uz compinit; compinit &)
+    '';
     autosuggestion.enable = true;
+    autosuggestion.highlight = "italic";
     syntaxHighlighting.enable = false;
     autocd = true;
     history.extended = true;
