@@ -61,11 +61,8 @@
         "ohmyzsh/ohmyzsh path:plugins/tmux"
         "jeffreytse/zsh-vi-mode"
         "djui/alias-tips"
-        "dim-an/cod"
         "wfxr/forgit"
         "MichaelAquilina/zsh-autoswitch-virtualenv"
-        "chisui/zsh-nix-shell"
-        "nix-community/nix-zsh-completions"
       ];
     };
   };
