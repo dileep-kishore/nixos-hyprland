@@ -594,7 +594,7 @@ plugins {
     about location="zellij:about"
     autolock location="file:~/.config/zellij/plugins/zellij-autolock.wasm" {
         is_enabled true
-        triggers "nvim|vim|git|fzf|zoxide|atuin|lazygit|skim|sk"
+        triggers "nvim|vim|git|fzf|zoxide|atuin|lazygit|skim|sk|yazi|y"
         reaction_seconds "0.3"
         print_to_log false
     }
