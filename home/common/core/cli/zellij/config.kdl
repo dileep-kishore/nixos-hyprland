@@ -438,6 +438,42 @@ keybinds {
             CloseTab
             SwitchToMode "Normal"
         }
+        bind "1" {
+            GoToTab 1
+            SwitchToMode "Normal"
+        }
+        bind "2" {
+            GoToTab 2
+            SwitchToMode "Normal"
+        }
+        bind "3" {
+            GoToTab 3
+            SwitchToMode "Normal"
+        }
+        bind "4" {
+            GoToTab 4
+            SwitchToMode "Normal"
+        }
+        bind "5" {
+            GoToTab 5
+            SwitchToMode "Normal"
+        }
+        bind "6" {
+            GoToTab 6
+            SwitchToMode "Normal"
+        }
+        bind "7" {
+            GoToTab 7
+            SwitchToMode "Normal"
+        }
+        bind "8" {
+            GoToTab 8
+            SwitchToMode "Normal"
+        }
+        bind "9" {
+            GoToTab 9
+            SwitchToMode "Normal"
+        }
     }
     shared_except "locked" {
         bind "Ctrl g" {
@@ -599,6 +635,7 @@ plugins {
         tab_active_fullscreen "#[bg=$mauve,fg=$base,bold] {index} #[bg=$base,fg=$mauve,italic] {name}{fullscreen_indicator}"
         tab_active_sync "#[bg=$mauve,fg=$base,bold] {index} #[bg=$base,fg=$mauve,italic] {name}{sync_indicator}"
         tab_separator "#[bg=$base] "
+        // TODO: Add C| symbol to mode left or change this to the catppuccin style for session_name + mode!
         mode_normal "#[fg=$base,bg=$blue] #[bg=$blue,fg=$crust,bold]NORMAL#[bg=$base,fg=$blue]"
         mode_tmux "#[fg=$base,bg=$mauve] #[bg=$mauve,fg=$crust,bold]TMUX#[bg=$base,fg=$mauve]"
         mode_locked "#[fg=$base,bg=$red] #[bg=$red,fg=$crust,bold]LOCKED#[bg=$base,fg=$red]"
