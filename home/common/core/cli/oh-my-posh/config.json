@@ -45,7 +45,7 @@
         {
           "type": "text",
           "style": "powerline",
-          "powerline_symbol": "",
+          "powerline_symbol": "",
           "foreground": "p:crust",
           "background": "p:mauve",
           "background_templates": ["{{ if ne .Code 0 }}p:red{{end}}"],
@@ -54,7 +54,7 @@
         {
           "type": "status",
           "style": "accordion",
-          "powerline_symbol": "",
+          "powerline_symbol": "",
           "foreground": "p:crust",
           "background": "p:blue",
           "background_templates": ["{{ if ne .Code 0 }}p:red{{end}}"],
@@ -63,7 +63,7 @@
         {
           "type": "text",
           "style": "accordion",
-          "powerline_symbol": "",
+          "powerline_symbol": "",
           "foreground": "p:crust",
           "background": "p:yellow",
           "background_templates": ["{{ if gt .SHLVL 2 }}p:yellow{{end}}"],
