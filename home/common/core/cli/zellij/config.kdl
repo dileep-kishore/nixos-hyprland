@@ -2,9 +2,7 @@
 keybinds {
     normal {
         bind "Enter" {
-            // Passthru `Enter`.
             WriteChars "\r"
-            // Invoke autolock to immediately assess proper lock state.
             MessagePlugin "autolock" {
                 payload "enable"
             }
@@ -20,7 +18,7 @@ keybinds {
         }
     }
     resize {
-        bind "Ctrl n" {
+        bind "Ctrl r" {
             SwitchToMode "Normal"
         }
         bind "h" "Left" {
@@ -102,7 +100,7 @@ keybinds {
             TogglePaneEmbedOrFloating
             SwitchToMode "Normal"
         }
-        bind "c" "r" {
+        bind "r" {
             SwitchToMode "RenamePane"
             PaneNameInput 0
         }
@@ -148,7 +146,7 @@ keybinds {
         bind "l" "Right" "Down" "j" {
             GoToNextTab
         }
-        bind "n" {
+        bind "c" "n" {
             NewTab
             SwitchToMode "Normal"
         }
@@ -681,67 +679,17 @@ ui {
         rounded_corners true
     }
 }
-on_force_close "quit"
+on_force_close "detach"
 simplified_ui false
 pane_frames true
 auto_layout true
 session_serialization true
-// Whether pane viewports are serialized along with the session, default is false
-// (Requires restart)
-// Options:
-//   - true
-//   - false (default)
-//
 serialize_pane_viewport false
 theme "catppuccin-mocha"
 default_layout "code"
 default_mode "normal"
 mouse_mode true
-// Configure the scroll back buffer size
-// This is the number of lines zellij stores for each pane in the scroll back
-// buffer. Excess number of lines are discarded in a FIFO fashion.
-// (Requires restart)
-// Valid values: positive integers
-// Default value: 10000
-//
-// scroll_buffer_size 10000
-// Provide a command to execute when copying text. The text will be piped to
-// the stdin of the program to perform the copy. This can be used with
-// terminal emulators which do not support the OSC 52 ANSI control sequence
-// that will be used by default if this option is not set.
-// Examples:
-//
-// copy_command "xclip -selection clipboard" // x11
-// copy_command "wl-copy"                    // wayland
-// copy_command "pbcopy"                     // osx
-// Choose the destination for copied text
-// Allows using the primary selection buffer (on x11/wayland) instead of the system clipboard.
-// Does not apply when using copy_command.
-// Options:
-//   - system (default)
-//   - primary
-//
-// copy_clipboard "primary"
 copy_on_select true
-// Path to the default editor to use to edit pane scrollbuffer
-// Default: $EDITOR or $VISUAL
-//
-// scrollback_editor "/usr/bin/vim"
-// When attaching to an existing session with other users,
-// should the session be mirrored (true)
-// or should each user have their own cursor (false)
-// (Requires restart)
-// Default: false
-//
-// mirror_session true
-// The folder in which Zellij will look for layouts
-// (Requires restart)
-//
-// layout_dir "/path/to/my/layout_dir"
-// The folder in which Zellij will look for themes
-// (Requires restart)
-//
-// theme_dir "/path/to/my/theme_dir"
 styled_underlines true
 disable_session_metadata false
 support_kitty_keyboard_protocol true
