@@ -16,20 +16,20 @@ layout {
     }
     nvim_tab name=" nvim"
     tab name=" git" {
-        pane split_direction="horizontal" {
-            pane name="just" size="15%" command="just" start_suspended=true {
-                args "preview"
-            }
-            pane name="lazygit" command="lazygit" start_suspended=true
-        }
+        pane name="lazygit" command="lazygit" start_suspended=true
     }
     tab name=" term" {
         pane split_direction="vertical" {
-            pane name="term 1"
+            pane split_direction="horizontal" {
+                pane name="just" size="30%" command="just" start_suspended=true {
+                    args "preview"
+                }
+                pane name="term 1"
+            }
             pane name="term 2" size="50%"
         }
     }
-    tab name=" misc" {
+    tab name=" misc" {
         pane split_direction="vertical" {
             pane name="misc 1"
             pane name="misc 2" size="50%"
