@@ -8,6 +8,7 @@
     ./atuin.nix
     ./bat
     ./btop
+    ./carapace.nix
     ./delta
     ./direnv.nix
     ./eza.nix

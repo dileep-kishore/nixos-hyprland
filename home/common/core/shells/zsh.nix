@@ -8,8 +8,6 @@
       (autoload -Uz compinit; compinit &)
     '';
     autosuggestion.enable = true;
-    autosuggestion.highlight = "italic";
-    syntaxHighlighting.enable = false;
     autocd = true;
     history.extended = true;
     # NOTE: You can use these as `cd ~dots` or `cd ~docs` etc.
@@ -28,6 +26,13 @@
       export DIRENV_LOG_FORMAT=""
       # export ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
       fast-theme XDG:catppuccin-mocha -q
+      # carapace
+      setopt menucomplete
+      export LS_COLORS=$(vivid generate catppuccin-mocha)
+      zstyle ':completion:*' menu select
+      export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+      zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+      zstyle ':completion:*' list-colors $LS_COLORS
       # Atuin
       zvm_after_init_commands+=(eval "$(atuin init zsh)")
       ZJ_LAYOUT_DIR=$(zellij setup --check \
