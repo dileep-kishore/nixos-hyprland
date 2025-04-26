@@ -9,7 +9,7 @@ layout {
         pane size=1 borderless=true {
             plugin location="zjstatus"
         }
-        pane borderless=true name="Code" command="nvim"
+        pane borderless=true name="Code" command="nvim" start_suspended=true
     }
     tab name=" main" {
         pane name="main"
@@ -18,7 +18,7 @@ layout {
     tab name=" git" {
         pane split_direction="horizontal" {
             pane name="just" size="15%"
-            pane name="lazygit" command="lazygit"
+            pane name="lazygit" command="lazygit" start_suspended=true
         }
     }
     tab name=" term" {
