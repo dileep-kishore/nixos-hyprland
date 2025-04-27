@@ -17,13 +17,17 @@
   home.shellAliases = {
     z = "zellij";
     znew = "zellij --session";
-    za = "zellij attach \"$(echo \"\$(zellij list-sessions -s)\" | fzf --ansi -i)\"";
     zlayout = "zellij --layout \"$(fd . \"\$(zellij list-sessions -s)\" | sed 's|.*/||; s|\.[^.]*$||' | fzf --ansi -i || exit)\"";
-    zkill = "zellij kill-session \"$(echo \"\$(zellij list-sessions -s)\" | fzf --ansi -i)\"";
-    zkillall = "zellij kill-all-sessions";
-    zdel = "zellij delete-session \"$(echo \"\$(zellij list-sessions -s)\" | fzf --ansi -i)\"";
-    zdelall = "zellij delete-all-sessions";
+    za = "zellij attach";
+    zai = "zellij attach \"$(echo \"\$(zellij list-sessions)\" | fzf --ansi -i | awk '{print $1}')\"";
+    zk = "zellij kill-session";
+    zki = "zellij kill-session \"$(echo \"\$(zellij list-sessions)\" | fzf --ansi -i | awk '{print $1}')\"";
+    zka = "zellij kill-all-sessions";
+    zd = "zellij delete-session";
+    zdi = "zellij delete-session \"$(echo \"\$(zellij list-sessions)\" | fzf --ansi -i | awk '{print $1}')\"";
+    zda = "zellij delete-all-sessions";
     zlist = "zellij list-sessions";
+    zls = "zellij list-sessions";
   };
 
   # copy over layouts
