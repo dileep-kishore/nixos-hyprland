@@ -1,0 +1,89 @@
+tick_rate = 50
+
+[ui]
+use_nerd_font_icons = true
+ui_scale = 80
+show_help_bar = false
+show_preview_panel = true
+input_bar_position = "top"
+theme = "catppuccin"
+
+[previewers.file]
+theme = "Catppuccin Mocha"
+
+[keybindings]
+quit = ["esc", "ctrl-c"]
+select_next_entry = ["down", "ctrl-n", "ctrl-j"]
+select_prev_entry = ["up", "ctrl-p", "ctrl-k"]
+select_next_page = "pagedown"
+select_prev_page = "pageup"
+scroll_preview_half_page_down = ["ctrl-d", "ctrl-f"]
+scroll_preview_half_page_up = ["ctrl-u", "ctrl-b"]
+# Add entry to selection and move to the next entry
+toggle_selection_down = "tab"
+# Add entry to selection and move to the previous entry
+toggle_selection_up = "backtab"
+# Confirm selection
+confirm_selection = "enter"
+# Copy the selected entry to the clipboard
+copy_entry_to_clipboard = "ctrl-y"
+# Toggle the remote control mode
+toggle_remote_control = "ctrl-r"
+# Toggle the send to channel mode
+toggle_send_to_channel = "ctrl-s"
+# Toggle the help bar
+toggle_help = "ctrl-g"
+# Toggle the preview panel
+toggle_preview = "ctrl-o"
+
+
+[shell_integration]
+fallback_channel = "files"
+
+[shell_integration.channel_triggers]
+"alias" = ["alias", "unalias"]
+"env" = ["export", "unset"]
+"dirs" = ["cd", "ls", "rmdir"]
+"files" = [
+  "cat",
+  "less",
+  "head",
+  "tail",
+  "vim",
+  "nano",
+  "bat",
+  "cp",
+  "mv",
+  "rm",
+  "touch",
+  "chmod",
+  "chown",
+  "ln",
+  "tar",
+  "zip",
+  "unzip",
+  "gzip",
+  "gunzip",
+  "xz",
+  "nvim",
+]
+"git-diff" = ["git add", "git restore"]
+"git-branch" = [
+  "git checkout",
+  "git branch",
+  "git merge",
+  "git rebase",
+  "git pull",
+  "git push",
+]
+"docker-images" = ["docker run"]
+"git-repos" = ["code", "hx", "git clone"]
+
+
+[shell_integration.keybindings]
+# controls which key binding should trigger tv
+# for shell autocomplete
+"smart_autocomplete" = "ctrl-t"
+# controls which keybinding should trigger tv
+# for command history
+# "command_history" = "ctrl-r"

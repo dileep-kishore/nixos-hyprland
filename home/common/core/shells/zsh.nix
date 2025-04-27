@@ -33,6 +33,8 @@
       export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
       zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
       zstyle ':completion:*' list-colors $LS_COLORS
+      # Television (tv)
+      eval "$(tv init zsh)"
       # Atuin
       zvm_after_init_commands+=(eval "$(atuin init zsh)")
       ZJ_LAYOUT_DIR=$(zellij setup --check \

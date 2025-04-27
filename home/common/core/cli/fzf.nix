@@ -2,8 +2,8 @@
 {
   programs.fzf = {
     enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
+    enableBashIntegration = false;
+    enableZshIntegration = false;
     defaultCommand = "fd";
     defaultOptions = [
       "--height 40%"
