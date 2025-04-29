@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./gpg.nix
+    ./spicetify.nix
   ];
   home.packages = with pkgs; [
     _1password-cli
@@ -27,7 +28,6 @@
     psmisc
     seahorse
     signal-desktop
-    spotify
     tana
     udisks
     zotero_7

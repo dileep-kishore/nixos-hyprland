@@ -42,6 +42,9 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+
+    # spicetify
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
   outputs = {
