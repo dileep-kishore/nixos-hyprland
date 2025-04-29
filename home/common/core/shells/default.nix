@@ -37,6 +37,7 @@
   home.sessionPath = [
     "$HOME/.local/bin"
     "/var/lib/flatpak/exports/bin"
+    "$HOME/.nix-profile/bin"
   ];
   home.sessionVariables = {
     EDITOR = "nvim";
