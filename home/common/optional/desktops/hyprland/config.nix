@@ -185,7 +185,7 @@ in {
           "$subMod, M, exec, pkill waybar && waybar"
           "$mainMod, E, exec, nautilus"
           "$mainMod, C, exec, clickup-latest"
-          "$mainMod, R, exec, ulauncher"
+          "$mainMod, R, exec, env -S 'walker'"
           "$tetMod, S, togglesplit,"
           "$tetMod, R, exec, ~/.config/hypr/scripts/screenshot.sh region"
           "$tetMod, M, exec, ~/.config/hypr/scripts/screenshot.sh activemonitor"

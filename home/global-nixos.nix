@@ -15,6 +15,7 @@
     ./common/optional/apps/code.nix
     ./common/optional/apps/rofi
     ./common/optional/apps/wofi
+    ./common/optional/apps/walker
     ./common/optional/desktops/waybar
     ./common/optional/desktops/services/mako
     ./common/optional/desktops/gtk.nix

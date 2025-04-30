@@ -8,12 +8,14 @@
       ./common/core
       ./common/optional/apps/linux-only.nix
       ./common/optional/apps/ulauncher
+      ./common/optional/apps/walker
       ./common/optional/desktops/gtk.nix
       ./common/optional/desktops/qt5.nix
       ./common/optional/desktops/xdg.nix
       ./common/optional/apps/wezterm/config.nix
       ./common/optional/apps/kitty/config.nix
       ./common/optional/apps/ghostty/config.nix
+      ./common/optional/apps/slack.nix
       # NOTE: espanso disabled because it's not working on wayland
       # ./common/optional/misc/espanso.nix
     ]
