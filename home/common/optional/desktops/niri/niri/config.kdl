@@ -95,16 +95,21 @@ output "eDP-1" {
     position x=0 y=0
 }
 output "DP-6" {
-    mode "3840x2160@59.996"
-    scale 1.5
+    // mode "3840x2160@59.996"
+    mode "2560x1440@59.951"
+    scale 1
     transform "normal"
     position x=1920 y=0
 }
 output "DP-7" {
-    mode "3840x2160@59.996"
-    scale 1.5
+    // mode "3840x2160@59.996"
+    mode "2560x1440@59.951"
+    scale 1
     transform "normal"
     position x=4480 y=0
+}
+environment {
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
@@ -231,6 +236,8 @@ layout {
 
     }
 }
+spawn-at-startup "swayidle" "-w"
+spawn-at-startup "xwayland-satellite"
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
@@ -316,7 +323,7 @@ binds {
         spawn "kitty"
     }
     Mod+D {
-        spawn "fuzzel"
+        spawn "~/.config/niri/scripts/walker.sh"
     }
     Super+Alt+L {
         spawn "swaylock"
@@ -338,7 +345,7 @@ binds {
     XF86AudioMicMute allow-when-locked=true {
         spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"
     }
-    Mod+Q {
+    Mod+Shift+Q {
         close-window
     }
     Mod+Left {
