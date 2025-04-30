@@ -110,6 +110,7 @@ output "DP-7" {
 }
 environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
+    DISPLAY ":0"
 }
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
