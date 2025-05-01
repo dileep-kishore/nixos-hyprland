@@ -14,17 +14,18 @@
     ./eza.nix
     ./fzf.nix
     ./gh.nix
-    ./git.nix
     ./git-cliff.nix
+    ./git.nix
     ./jujutsu.nix
     ./lazygit.nix
+    ./oh-my-posh
     ./ripgrep.nix
     ./scripts.nix
-    ./oh-my-posh
+    ./ssh.nix
     ./tmux
     ./tv
-    ./zellij
     ./yazi
+    ./zellij
     ./zoxide.nix
   ];
 
