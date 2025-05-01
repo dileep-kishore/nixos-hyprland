@@ -4,8 +4,9 @@
     ./spicetify.nix
   ];
   home.packages = with pkgs; [
-    _1password-cli
-    _1password-gui
+    proton-pass
+    protonvpn-gui
+    protonvpn-cli
     appimage-run
     brave
     brightnessctl

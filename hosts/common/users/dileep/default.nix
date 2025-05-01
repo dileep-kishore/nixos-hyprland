@@ -33,17 +33,6 @@ in {
     };
   };
 
-  # 1password
-  programs = {
-    _1password.enable = true;
-    _1password-gui = {
-      enable = true;
-      # Certain features, including CLI integration and system authentication support,
-      # require enabling PolKit integration on some desktop environments (e.g. Plasma).
-      polkitPolicyOwners = ["dileep"];
-    };
-  };
-
   # OpenAI API Key
   systemd.services.aisecret = {
     enable = true;
@@ -71,7 +60,7 @@ in {
   };
 
   # vpn
-  # TODO: Figure out how to make nordvpn connection more dynamic
+  # TODO: Change this to protonvpn
   # services.openvpn.servers = {
   #   homeVPN = {config = ''config /home/dileep/.nordvpn/us9565.nordvpn.com.udp.ovpn '';};
   # };

@@ -51,7 +51,7 @@ in {
       exec-once = [
         "hyprpaper"
         "hyprctl setcursor Bibata-Original-Ice 24"
-        "1password"
+        "proton-pass"
         "sleep 10; morgen"
         "clickup-latest"
       ];
