@@ -60,7 +60,6 @@ in {
   };
 
   # vpn
-  # TODO: Change this to protonvpn
   services.openvpn.servers = {
     homeVPN = {config = ''config /home/dileep/.protonvpn/us-ga-386.protonvpn.udp.ovpn'';};
   };
