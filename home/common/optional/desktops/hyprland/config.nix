@@ -53,7 +53,7 @@ in {
         "hyprctl setcursor Bibata-Original-Ice 24"
         "proton-pass"
         "sleep 10; morgen"
-        "clickup-latest"
+        "nm-applet"
       ];
       env = [
         "XCURSOR_SIZE,24"
