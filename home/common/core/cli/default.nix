@@ -21,7 +21,6 @@
     ./oh-my-posh
     ./ripgrep.nix
     ./scripts.nix
-    ./ssh.nix
     ./tmux
     ./tv
     ./yazi
