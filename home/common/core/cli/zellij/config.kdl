@@ -625,7 +625,7 @@ plugins {
         color_base "#1e1e2e"
         color_mantle "#181825"
         color_crust "#11111b"
-        format_left " #[bg=$base,fg=$mauve,bold,italics] {session} #[bg=$base] {mode} #[bg=$base,fg=$surface2,italics]  {command_gitroot} #[bg=$base] "
+        format_left " #[bg=$base,fg=$mauve,bold,italics] {session} #[bg=$base] {mode} #[bg=$base] "
         format_center "#[bg=$base] {tabs}{notifications} #[bg=$base]"
         format_right "{command_git}{command_wbgit}"
         format_space "#[bg=$base]"
