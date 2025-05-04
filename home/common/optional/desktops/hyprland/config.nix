@@ -178,7 +178,7 @@ in {
       "$tetMod" = "SUPER_CTRL";
       bind =
         [
-          "$mainMod, return, exec, kitty"
+          "$mainMod, return, exec, ghostty"
           "$subMod, return, exec, hdrop kitty --class 'kitty-float'"
           "$subMod, Q, killactive,"
           "$subMod, E, exit,"
