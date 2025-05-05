@@ -17,15 +17,15 @@
         reload_style_on_change = true;
         spacing = 4;
         modules-left = [
-          # "custom/spacer"
+          "custom/spacer"
           # "hyprland/workspaces"
-          "niri/workspaces"
           # "hyprland/window"
+          "clock"
           "niri/window"
           "wlr/taskbar"
         ];
         modules-center = [
-          "clock"
+          "niri/workspaces"
         ];
         modules-right = [
           "custom/toggl"
