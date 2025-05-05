@@ -1,7 +1,7 @@
 # https://github.com/emersion/mako
 {
   services.mako = {
-    enable = true;
+    enable = false;
     settings = {
       anchor = "top-right";
       borderRadius = "2";
