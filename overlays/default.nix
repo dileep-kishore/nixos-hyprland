@@ -22,4 +22,5 @@
       config.allowUnfree = true;
     };
   };
+  nixpkgs.overlays = [inputs.niri.overlays.niri];
 }

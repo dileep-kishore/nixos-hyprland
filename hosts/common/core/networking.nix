@@ -1,5 +1,4 @@
 {
-  programs.nm-applet.enable = true;
   networking = {
     networkmanager = {
       enable = true;

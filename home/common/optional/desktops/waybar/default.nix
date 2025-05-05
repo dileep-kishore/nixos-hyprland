@@ -17,9 +17,12 @@
         reload_style_on_change = true;
         spacing = 4;
         modules-left = [
-          "custom/spacer"
-          "hyprland/workspaces"
-          "hyprland/window"
+          # "custom/spacer"
+          # "hyprland/workspaces"
+          "niri/workspaces"
+          # "hyprland/window"
+          "niri/window"
+          "wlr/taskbar"
         ];
         modules-center = [
           "clock"
@@ -58,6 +61,27 @@
             urgent = " ";
           };
         };
+        "niri/workspaces" = {
+          all-outputs = false;
+          current-only = false;
+          format = "<span><b>{icon}</b></span>";
+          format-icons = {
+            "1" = "1";
+            "2" = "2";
+            "3" = "3";
+            "4" = "4";
+            "5" = "5";
+            "6" = "6";
+            "7" = "7";
+            "8" = "8";
+            "9" = "9";
+            urgent = " ";
+            "browser" = " ";
+            "code" = " ";
+            "terminal" = " ";
+            "chat" = " ";
+          };
+        };
         "wlr/taskbar" = {
           all-outputs = false;
           format = "{icon}";
@@ -67,6 +91,13 @@
           active-first = false;
         };
         "hyprland/window" = {
+          max-length = 50;
+          format = "<i>{title}</i>";
+          separate-outputs = true;
+          icon = true;
+          icon-size = 13;
+        };
+        "niri/window" = {
           max-length = 50;
           format = "<i>{title}</i>";
           separate-outputs = true;

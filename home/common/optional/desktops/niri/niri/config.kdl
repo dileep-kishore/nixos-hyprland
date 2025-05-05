@@ -237,8 +237,9 @@ layout {
 
     }
 }
-spawn-at-startup "swayidle" "-w"
-spawn-at-startup "xwayland-satellite"
+// spawn-at-startup "swayidle" "-w"
+// spawn-at-startup "xwayland-satellite"
+spawn-at-startup "morgen"
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
@@ -321,7 +322,7 @@ binds {
     }
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return {
-        spawn "kitty"
+        spawn "ghostty"
     }
     Mod+D {
         spawn "~/.config/niri/scripts/walker.sh"

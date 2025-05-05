@@ -43,6 +43,12 @@
       inputs.hyprland.follows = "hyprland";
     };
 
+    # niri wm
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # spicetify
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };

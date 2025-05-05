@@ -5,7 +5,9 @@
 }: {
   imports = [
     ./common/core
+    # TODO: Remove this after logging into niri
     ./common/optional/desktops/hyprland
+    ./common/optional/desktops/niri
     ./common/optional/apps/linux-only.nix
     ./common/optional/apps/wezterm
     ./common/optional/apps/kitty

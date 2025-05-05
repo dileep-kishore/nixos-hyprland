@@ -1,20 +1,25 @@
 {pkgs, ...}: {
   imports = [
-    ./config.nix
+    ./services.nix
+    ./swayidle.nix
+    ./swaylock.nix
+    ./xwayland-satellite.nix
   ];
+
+  home.packages = with pkgs; [
+    swaybg
+    swaynotificationcenter
+  ];
+
   home.file.".config/niri" = {
     recursive = true;
     source = ./niri;
   };
 
-  # TODO: Does niri go here?
-  # How do I get it to work wtih home-manager?
-  home.packages = with pkgs; [
-    niri
-    swaylock-effects
-    xwayland-satellite
-  ];
+  home.file.".config/swaync" = {
+    recursive = true;
+    source = ./swaync;
+  };
 
-  # NOTE: You can use nixpkgs version of niri on ubuntu by doing:
-  # https://github.com/YaLTeR/niri/discussions/1383
+  home.sessionVariables.NIXOS_OZONE_WL = "1";
 }
