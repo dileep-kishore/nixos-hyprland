@@ -15,8 +15,7 @@
       ../common/core
 
       # Optional configs
-      # TODO: Remove this after logging into niri
-      ../common/optional/hyprland.nix
+      # ../common/optional/hyprland.nix
       ../common/optional/niri.nix
       ../common/optional/wacom.nix
 
