@@ -16,10 +16,10 @@
     enable = true;
     defaultApplications = {
       "application/pdf" = ["okular.desktop"];
-      "text/html" = ["vivaldi.desktop"];
-      "application/xhtml+xml" = ["vivaldi.desktop"];
-      "x-scheme-handler/http" = ["vivaldi.desktop"];
-      "x-scheme-handler/https" = ["vivaldi.desktop"];
+      "text/html" = ["brave-browser.desktop"];
+      "application/xhtml+xml" = ["brave-browser.desktop"];
+      "x-scheme-handler/http" = ["brave-browser.desktop"];
+      "x-scheme-handler/https" = ["brave-browser.desktop"];
     };
   };
 }
