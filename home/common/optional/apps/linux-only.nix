@@ -9,7 +9,7 @@
     protonvpn-gui
     protonvpn-cli
     appimage-run
-    brave
+    vivaldi
     brightnessctl
     # capacities-latest
     clickup-latest
@@ -33,6 +33,5 @@
     tana
     udisks
     zotero_7
-    firefox
   ];
 }
