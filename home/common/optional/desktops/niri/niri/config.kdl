@@ -319,8 +319,11 @@ binds {
     Mod+Return {
         spawn "ghostty"
     }
-    Mod+D {
+    Mod+R {
         spawn "~/.config/niri/scripts/walker.sh"
+    }
+    Mod+D {
+        spawn "walker" "--modules" "windows"
     }
     Super+Alt+L {
         spawn "swaylock"
@@ -380,12 +383,12 @@ binds {
     Mod+Ctrl+H {
         move-column-left
     }
-    Mod+Ctrl+J {
-        move-window-down
-    }
-    Mod+Ctrl+K {
-        move-window-up
-    }
+    // Mod+Ctrl+J {
+    //     move-window-down
+    // }
+    // Mod+Ctrl+K {
+    //     move-window-up
+    // }
     Mod+Ctrl+L {
         move-column-right
     }
@@ -397,8 +400,12 @@ binds {
     Mod+K {
         focus-window-or-workspace-up
     }
-    // Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
-    // Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
+    Mod+Ctrl+J {
+        move-window-down-or-to-workspace-down
+    }
+    Mod+Ctrl+K {
+        move-window-up-or-to-workspace-up
+    }
     Mod+Home {
         focus-column-first
     }
@@ -639,13 +646,13 @@ binds {
     Mod+Period {
         expel-window-from-column
     }
-    Mod+R {
+    Mod+W {
         switch-preset-column-width
     }
-    Mod+Shift+R {
+    Mod+Shift+W {
         switch-preset-window-height
     }
-    Mod+Ctrl+R {
+    Mod+Ctrl+W {
         reset-window-height
     }
     Mod+F {
@@ -693,7 +700,7 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    Mod+W {
+    Mod+T {
         toggle-column-tabbed-display
     }
     // Actions to switch layouts.
