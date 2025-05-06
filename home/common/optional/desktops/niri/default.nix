@@ -15,6 +15,7 @@
     networkmanagerapplet
     pavucontrol
     pipewire
+    python312Packages.toggl-cli
   ];
 
   home.file.".config/niri" = {

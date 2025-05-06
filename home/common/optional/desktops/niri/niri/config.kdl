@@ -181,8 +181,8 @@ layout {
         width 4
         // active-color "#ffc87f"
         // inactive-color "#505050"
-        active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
-        inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        active-gradient from="#cba6f7" to="#f38ba8" angle=45 relative-to="workspace-view"
+        inactive-gradient from="#585b70" to="#1e1e2e" angle=45 relative-to="workspace-view"
     }
     // You can enable drop shadows for windows.
     shadow {
@@ -295,6 +295,10 @@ block-out-from "screen-capture"
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
+}
+window-rule {
+    match is-active=false
+    opacity 0.95
 }
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
