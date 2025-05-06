@@ -33,5 +33,6 @@
     };
   };
 
+  home-manager.backupFileExtension = "hm.bak";
   hardware.enableRedistributableFirmware = true;
 }
