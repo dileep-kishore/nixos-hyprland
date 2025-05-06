@@ -9,6 +9,12 @@
   home.packages = with pkgs; [
     swaybg
     swaynotificationcenter
+    wl-clipboard
+    wlogout
+    libinput
+    networkmanagerapplet
+    pavucontrol
+    pipewire
   ];
 
   home.file.".config/niri" = {
