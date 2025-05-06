@@ -85,7 +85,7 @@
         "wlr/taskbar" = {
           all-outputs = false;
           format = "{icon}";
-          icon-size = 13;
+          icon-size = 18;
           tooltip = true;
           tooltip-format = "{title}";
           active-first = false;

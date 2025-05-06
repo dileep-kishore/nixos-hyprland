@@ -114,12 +114,18 @@ window.HDMI-A-1 #pulseaudio {
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
-#taskbar,
 #window {
   background-color: @surface0;
   border-radius: 5px;
   padding: 0rem 1rem;
   margin: 5px 5px;
+}
+
+#taskbar {
+  background-color: @base;
+  border-radius: 0px;
+  padding: 0rem 0rem;
+  margin: 0px 0px;
 }
 
 window#waybar.empty {
