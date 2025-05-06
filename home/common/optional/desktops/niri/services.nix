@@ -16,7 +16,6 @@
   # Manager sets this target in WM modules, but it's not set up for Niri yet.
   systemd.user.targets.tray = {
     Unit = {
-      Description = "Target for apps that want to start minimized to the system tray";
       After = ["niri.service"];
     };
     Install = {

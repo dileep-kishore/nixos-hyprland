@@ -13,7 +13,7 @@
       borderColor = "#cba6f7";
       progressColor = "#313244";
     };
-    criterias = {
+    criteria = {
       "urgency=high" = {
         borderColor = "#fab387";
       };

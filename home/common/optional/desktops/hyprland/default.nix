@@ -23,7 +23,7 @@
     pipewire
     slurp
     swayidle
-    swaylock-effects
+    swaylock
     wl-clipboard
     wlogout
     xdg-desktop-portal-gtk

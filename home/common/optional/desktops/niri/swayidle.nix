@@ -1,5 +1,9 @@
 # Ref: https://github.com/hallettj/home.nix/blob/main/home-manager/features/niri/swayidle.nix
-{pkgs, ...}: let
+{
+  pkgs,
+  lib,
+  ...
+}: let
   niri-bin = "${pkgs.niri-unstable}/bin/niri";
 in {
   services.swayidle = let
@@ -50,5 +54,5 @@ in {
     systemdTarget = "niri.service";
   };
 
-  systemd.user.services.swayidle.Unit.After = "niri.service";
+  systemd.user.services.swayidle.Unit.After = lib.mkForce "niri.service";
 }
