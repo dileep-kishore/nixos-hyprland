@@ -240,6 +240,7 @@ layout {
 // spawn-at-startup "swayidle" "-w"
 // spawn-at-startup "xwayland-satellite"
 spawn-at-startup "morgen"
+spawn-at-startup "swaybg" "-i" "~/Pictures/wallpapers/black-hole.png"
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
