@@ -10,6 +10,7 @@
       ./common/optional/apps/linux-only.nix
       ./common/optional/apps/ulauncher
       ./common/optional/apps/walker
+      ./common/optional/desktops/waybar
       ./common/optional/desktops/gtk.nix
       ./common/optional/desktops/qt5.nix
       ./common/optional/desktops/xdg.nix
