@@ -10,6 +10,5 @@
     pandoc
     texliveFull
     sops
-    zoom-us
   ];
 }

@@ -34,5 +34,6 @@
     udisks
     zotero_7
     firefox
+    zoom-us
   ];
 }
