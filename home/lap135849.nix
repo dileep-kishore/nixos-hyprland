@@ -7,6 +7,7 @@
     [
       ./common/core
       ./common/optional/desktops/niri
+      ./common/optional/desktops/niri/swayidle-nosleep.nix
       ./common/optional/apps/linux-only.nix
       ./common/optional/apps/ulauncher
       ./common/optional/apps/walker

@@ -7,6 +7,7 @@
     ./common/core
     # ./common/optional/desktops/hyprland
     ./common/optional/desktops/niri
+    ./common/optional/desktops/niri/swayidle.nix
     ./common/optional/apps/linux-only.nix
     ./common/optional/apps/wezterm
     ./common/optional/apps/kitty

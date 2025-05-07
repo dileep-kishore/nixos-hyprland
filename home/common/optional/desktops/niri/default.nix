@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ./services.nix
-    ./swayidle.nix
     ./swaylock.nix
     ./xwayland-satellite.nix
   ];
