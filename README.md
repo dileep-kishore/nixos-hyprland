@@ -1,7 +1,7 @@
 <!-- markdownlint-disable -->
 <h1 align="center">
-    <a name="top" title="nixos-hyprland">
-        nixos-hyprland v2
+    <a name="top" title="nixos-config">
+        nixos-config v3
     </a>
 </h1>
 <div align="center">
@@ -24,7 +24,7 @@
 </div>
 
 <div align="center">
-    Dotfiles for my <a href="https://hyprland.org">Hyprland</a> setup on my <a href="https://nixos.org">NixOS</a> system.
+    Dotfiles for my <a href="https://github.com/YaLTeR/niri">Niri WM</a> setup on my <a href="https://nixos.org">NixOS</a> system.
     <br/>
     Includes my <a href="https://github.com/nix-community/home-manager" >Home Manager</a> configuration for linux and macos.
     <p><strong>Be sure to <a href="#" title="star">⭐️</a> or <a href="#" title="fork">🔱</a> this repo if you find it useful! 😃</strong></p>
@@ -34,7 +34,8 @@
 ## Setup
 
 - OS: [NixOS](https://nixos.org)
-- Window manager: [Hyprland](https://hyprland.org)
+- Main window manager: [Niri](https://github.com/YaLTeR/niri)
+- Secondary window manager: [Hyprland](https://hyprland.org)
 - Status bar: [Waybar](https://github.com/Alexays/Waybar)
 - Terminal: [Ghostty](https://ghostty.org) and [Kitty](https://sw.kovidgoyal.net/kitty/)
 - Shell: `Zsh` with plugins managed through [antidote](https://github.com/mattmc3/antidote) with [oh-my-posh](https://ohmyposh.dev/) prompt
