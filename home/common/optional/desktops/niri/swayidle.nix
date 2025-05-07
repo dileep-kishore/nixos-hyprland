@@ -1,18 +1,10 @@
 # Ref: https://github.com/hallettj/home.nix/blob/main/home-manager/features/niri/swayidle.nix
 {
-  hostName,
   pkgs,
   lib,
   ...
 }: let
   niri-bin = "${pkgs.niri-unstable}/bin/niri";
-  systemctl = "${pkgs.systemd}/bin/systemctl";
-  loginctl = "${pkgs.systemd}/bin/loginctl";
-  swaylock = "${pkgs.swaylock}/bin/swaylock";
-  sleep-command =
-    if hostName == "lap135849"
-    then ""
-    else "${systemctl} suspend";
 in {
   services.swayidle = let
     seconds = 1;
@@ -20,6 +12,10 @@ in {
     screen-blank-timeout = 15 * minutes;
     lock-after-blank-timeout = 15 * minutes;
     sleep-timeout = 60 * minutes;
+
+    loginctl = "${pkgs.systemd}/bin/loginctl";
+    systemctl = "${pkgs.systemd}/bin/systemctl";
+    swaylock = "${pkgs.swaylock}/bin/swaylock";
 
     lock-session = pkgs.writeShellScript "lock-session" ''
       ${swaylock} -f
@@ -42,7 +38,7 @@ in {
       }
       {
         timeout = sleep-timeout;
-        command = sleep-command;
+        command = "${systemctl} suspend";
       }
     ];
     events = [
