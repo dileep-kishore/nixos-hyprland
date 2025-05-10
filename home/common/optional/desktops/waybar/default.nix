@@ -78,6 +78,7 @@
           format-icons = {
             "active" = " 󰚍 ";
             "urgent" = "  ";
+            "focused" = " 󰚍 ";
             "default" = " 󰄱 ";
           };
         };
@@ -89,6 +90,7 @@
           tooltip = true;
           tooltip-format = "{title}";
           active-first = true;
+          on-click = "activate";
         };
         "hyprland/window" = {
           max-length = 50;
