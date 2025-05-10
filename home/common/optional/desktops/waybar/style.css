@@ -66,7 +66,7 @@ window.HDMI-A-1 #pulseaudio {
 
 #workspaces {
   font-weight: bold;
-  background: @surface0;
+  background: @base;
   color: @text;
   box-shadow: none;
   text-shadow: none;
@@ -105,7 +105,7 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #window {
-  background-color: @surface0;
+  background-color: @base;
   border-radius: 5px;
   padding: 0rem 0.7rem;
 }
@@ -133,7 +133,7 @@ window#waybar.swallowing {
 #battery,
 #custom-toggl,
 #pulseaudio {
-  background: @surface0;
+  background: @base;
   padding: 0rem 0.7rem;
   border-radius: 5px;
 }
@@ -156,7 +156,7 @@ window#waybar.swallowing {
 #clock {
   color: @blue;
   border-radius: 5px;
-  background: @surface0;
+  background: @base;
   padding: 0rem 0.7rem;
 }
 

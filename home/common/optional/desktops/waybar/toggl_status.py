@@ -18,6 +18,6 @@ try:
     duration = data["Duration"]
     display = f"<i>{short_title}</i> [{project_short}]: 󱎫 {duration}"
 except:
-    display = "<i>Start tracking!</i>"
+    display = "<i>󱫌 Start tracking!</i>"
 
 print(display)

@@ -124,8 +124,8 @@
           on-click = "pavucontrol";
         };
         network = {
-          format-wifi = "  ";
-          format-ethernet = "  ";
+          format-wifi = "{bandwidthDownBits}  ";
+          format-ethernet = "{bandwidthDownBits}  ";
           tooltip-format = "{essid} ({signalStrength}%)";
           format-linked = "{ifname} (No IP)  ";
           format-disconnected = "󰅛 ";
