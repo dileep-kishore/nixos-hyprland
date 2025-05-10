@@ -124,10 +124,10 @@
 
         # Module configuration: Right
         pulseaudio = {
-          format = "{volume}% {format_source}";
-          format-bluetooth = "{volume}%  {format_source}";
-          format-bluetooth-muted = "  {format_source}";
-          format-muted = " {format_source}";
+          format = "{volume}%{format_source}";
+          format-bluetooth = "{volume}% {format_source}";
+          format-bluetooth-muted = " {format_source}";
+          format-muted = "{format_source}";
           format-source = "";
           format-source-muted = "";
           format-icons = {
