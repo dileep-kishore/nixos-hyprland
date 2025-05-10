@@ -52,7 +52,7 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #waybar {
-  background: rgba(30, 30, 46, 0.9);
+  background: rgba(30, 30, 46, 0);
   color: @text;
   border-radius: 5px;
 }
@@ -83,7 +83,7 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #workspaces button.empty {
-  color: @text;
+  color: @overlay2;
 }
 
 #workspaces button.visible {
@@ -111,13 +111,17 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #taskbar {
-  background-color: @base;
-  border-radius: 0px;
+  /* background-color: @base; */
+  border-radius: 5px;
   padding: 0rem 0rem;
 }
 
 window#waybar.empty {
-  background-color: @base;
+  font-size: 0px;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
 }
 
 window#waybar.fullscreen,

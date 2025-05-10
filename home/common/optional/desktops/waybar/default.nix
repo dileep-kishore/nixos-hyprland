@@ -27,16 +27,16 @@
           "niri/workspaces"
         ];
         modules-right = [
-          "clock"
+          "tray"
           "custom/toggl"
           "pulseaudio"
           "network"
-          "memory"
-          "cpu"
+          # "memory"
+          # "cpu"
           "backlight"
           "battery"
           "battery#bat2"
-          "tray"
+          "clock"
         ];
 
         # Module configuration: Left
@@ -64,12 +64,14 @@
         };
         "niri/workspaces" = {
           all-outputs = false;
+          on-click = "activate";
           current-only = false;
+          disable-scroll = false;
           icon-theme = "Papirus-Dark";
           format = "<span><b>{icon}</b></span>";
           format-icons = {
             "active" = " 󰚍 ";
-            "urgent" = " 󰚍 ";
+            "urgent" = "  ";
             "default" = " 󰄱 ";
           };
         };
@@ -91,10 +93,18 @@
         };
         "niri/window" = {
           max-length = 50;
-          format = "<i>{title}</i>";
+          format = "{app_id}";
           separate-outputs = true;
           icon = true;
-          icon-size = 13;
+          icon-size = 18;
+          rewrite = {
+            "" = "<span foreground='#cba6f7'> </span> Niri";
+            " " = "<span foreground='#cba6f7'> </span> Niri";
+            "com.mitchellh.ghostty" = "Ghostty";
+            "brave-browser" = "Brave";
+            "org.wezfurlong.wezterm" = "Wezterm";
+            "org.gnome.Nautilus" = "Files";
+          };
         };
 
         # Module configuration: Center
