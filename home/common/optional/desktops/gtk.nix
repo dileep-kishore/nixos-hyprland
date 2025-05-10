@@ -10,8 +10,8 @@
       package = pkgs.bibata-cursors;
     };
     theme = {
-      name = "Orchis-Purple-Dark";
-      package = pkgs.orchis-theme;
+      name = "Orchis-Dark";
+      package = pkgs.orchis-theme.override {tweaks = ["solid" "macos"];};
     };
     gtk3.extraConfig = {
       Settings = ''
@@ -26,7 +26,7 @@
     };
   };
 
-  home.sessionVariables.GTK_THEME = "Orchis-Purple-Dark";
+  home.sessionVariables.GTK_THEME = "Orchis-Dark";
   home.pointerCursor.gtk.enable = true;
   home.pointerCursor.package = pkgs.bibata-cursors;
   home.pointerCursor.name = "Bibata-Original-Ice";
