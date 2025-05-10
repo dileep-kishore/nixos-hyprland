@@ -30,12 +30,19 @@
   font-family: "CartographCF Nerd Font", "CaskaydiaCove Nerd Font";
   font-size: 15px;
   min-height: 0;
+  border: none;
+  border-radius: 0;
 }
 
 window.HDMI-A-1 * {
   font-size: 12px;
 }
 
+window.HDMI-A-1 #custom-toggl-icon,
+window.HDMI-A-1 #custom-audio-icon,
+window.HDMI-A-1 #custom-network-icon,
+window.HDMI-A-1 #custom-backlight-icon,
+window.HDMI-A-1 #custom-battery-icon,
 window.HDMI-A-1 #network,
 window.HDMI-A-1 #idle_inhibitor,
 window.HDMI-A-1 #cpu,
@@ -58,7 +65,7 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #custom-spacer {
-  background: @blue;
+  background: @yellow;
   color: @crust;
   border-radius: 5px;
   padding: 0.1rem 0.7rem;
@@ -74,6 +81,7 @@ window.HDMI-A-1 #pulseaudio {
   border-radius: 5px;
   padding-left: 4px;
   padding-right: 4px;
+  border: 2px solid @mauve;
 }
 
 #workspaces button {
@@ -106,21 +114,20 @@ window.HDMI-A-1 #pulseaudio {
 
 #window {
   background-color: @base;
-  border-radius: 5px;
+  border-radius: 0px;
   padding: 0rem 0.7rem;
+  border: 2px solid @blue;
 }
 
 #taskbar {
-  /* background-color: @base; */
-  border-radius: 5px;
+  background-color: @base;
+  border-radius: 5px 0 0 5px;
   padding: 0rem 0rem;
+  margin-left: 5px;
+  border: 2px solid @blue;
 }
 
 window#waybar.empty {
-  font-size: 0px;
-  padding: 0;
-  border: 0;
-  margin: 0;
   background-color: transparent;
 }
 
@@ -136,36 +143,38 @@ window#waybar.swallowing {
 #backlight,
 #battery,
 #custom-toggl,
+#clock,
+#tray,
 #pulseaudio {
   background: @base;
-  padding: 0rem 0.7rem;
-  border-radius: 5px;
+  margin-right: 5px;
+  border-radius: 0 5px 5px 0;
+  padding: 0 15px;
 }
 
 #network {
-  color: @text;
-  margin-left: 0px;
-  margin-right: 0px;
-  border-radius: 5px;
+  color: @peach;
+  border: 2px solid @peach;
 }
 
 #cpu {
   color: @pink;
+  border: 2px solid @pink;
 }
 
 #memory {
   color: @yellow;
+  border: 2px solid @yellow;
 }
 
 #clock {
-  color: @blue;
-  border-radius: 5px;
-  background: @base;
-  padding: 0rem 0.7rem;
+  color: @pink;
+  border: 2px solid @pink;
 }
 
 #battery {
   color: @pink;
+  border: 2px solid @pink;
 }
 
 #battery.charging {
@@ -178,21 +187,65 @@ window#waybar.swallowing {
 
 #backlight {
   color: @yellow;
+  border: 2px solid @yellow;
 }
 
 #backlight,
 #battery {
   color: @pink;
+  border: 2px solid @pink;
 }
 
 #custom-toggl {
   color: @red;
+  border: 2px solid @red;
 }
 
 #pulseaudio {
   color: @green;
+  border: 2px solid @green;
 }
 
 #tray {
   padding: 0rem 0.7rem;
+  border: 2px solid @text;
+}
+
+#custom-toggl-icon,
+#custom-audio-icon,
+#custom-network-icon,
+#custom-backlight-icon,
+#custom-battery-icon,
+#custom-clock-icon,
+#custom-tray-icon {
+  color: @crust;
+  padding: 0px 10px;
+  border-radius: 5px 0 0 5px;
+}
+
+#custom-toggl-icon {
+  background: @red;
+}
+
+#custom-audio-icon {
+  background: @green;
+}
+
+#custom-network-icon {
+  background: @peach;
+}
+
+#custom-clock-icon {
+  background: @pink;
+}
+
+#custom-tray-icon {
+  background: @text;
+}
+
+#custom-window-icon {
+  color: @crust;
+  padding: 0px 10px;
+  border-radius: 0 5px 5px 0;
+  background: @blue;
 }

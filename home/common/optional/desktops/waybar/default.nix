@@ -15,28 +15,34 @@
         margin-top = 4;
         margin-bottom = 0;
         reload_style_on_change = true;
-        spacing = 4;
+        spacing = 0;
         modules-left = [
           "custom/spacer"
           # "hyprland/workspaces"
           # "hyprland/window"
-          "niri/window"
           "wlr/taskbar"
+          "niri/window"
+          "custom/window-icon"
         ];
         modules-center = [
           "niri/workspaces"
         ];
         modules-right = [
-          "tray"
+          "custom/toggl-icon"
           "custom/toggl"
+          "custom/audio-icon"
           "pulseaudio"
+          "custom/network-icon"
           "network"
           # "memory"
           # "cpu"
+          "custom/clock-icon"
+          "clock"
+          "custom/tray-icon"
+          "tray"
           "backlight"
           "battery"
           "battery#bat2"
-          "clock"
         ];
 
         # Module configuration: Left
@@ -109,18 +115,18 @@
 
         # Module configuration: Center
         clock = {
-          format = "<b> {:%a %b[%m] %d ▒  %I:%M %p}</b>";
+          format = "<b>{:%a %b[%m] %d ▒ %I:%M %p}</b>";
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           format-alt = "{:%H:%M %Y-%m-%d}";
         };
 
         # Module configuration: Right
         pulseaudio = {
-          format = "{volume}% {icon} {format_source}";
-          format-bluetooth = "{volume}% {icon} {format_source}";
-          format-bluetooth-muted = " {icon} {format_source}";
+          format = "{volume}% {format_source}";
+          format-bluetooth = "{volume}%  {format_source}";
+          format-bluetooth-muted = "  {format_source}";
           format-muted = " {format_source}";
-          format-source = "{volume}% ";
+          format-source = "";
           format-source-muted = "";
           format-icons = {
             headphone = "";
@@ -134,10 +140,10 @@
           on-click = "pavucontrol";
         };
         network = {
-          format-wifi = "{bandwidthDownBits}  ";
-          format-ethernet = "{bandwidthDownBits}  ";
+          format-wifi = "{bandwidthDownBits}";
+          format-ethernet = "{bandwidthDownBits}";
           tooltip-format = "{essid} ({signalStrength}%)";
-          format-linked = "{ifname} (No IP)  ";
+          format-linked = "{ifname} (No IP)";
           format-disconnected = "󰅛 ";
           format-alt = "{ifname}: {ipaddr}/{cidr}";
         };
@@ -173,6 +179,15 @@
           interval = 10;
           on-click = "toggl stop";
         };
+        # Custom icons
+        "custom/toggl-icon" = {format = "󱎫";};
+        "custom/audio-icon" = {format = "";};
+        "custom/network-icon" = {format = "󰖩";};
+        "custom/backlight-icon" = {format = "󰌵";};
+        "custom/battery-icon" = {format = "󰁹";};
+        "custom/clock-icon" = {format = "";};
+        "custom/tray-icon" = {format = "󱊖";};
+        "custom/window-icon" = {format = " ";};
       };
     };
   };
