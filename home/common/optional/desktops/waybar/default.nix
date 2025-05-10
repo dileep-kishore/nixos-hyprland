@@ -20,7 +20,6 @@
           "custom/spacer"
           # "hyprland/workspaces"
           # "hyprland/window"
-          "clock"
           "niri/window"
           "wlr/taskbar"
         ];
@@ -28,6 +27,7 @@
           "niri/workspaces"
         ];
         modules-right = [
+          "clock"
           "custom/toggl"
           "pulseaudio"
           "network"
@@ -41,7 +41,8 @@
 
         # Module configuration: Left
         "custom/spacer" = {
-          format = "   ";
+          format = "   ";
+          on-click = "walker";
         };
         "hyprland/workspaces" = {
           disable-scroll = false;
@@ -64,31 +65,22 @@
         "niri/workspaces" = {
           all-outputs = false;
           current-only = false;
+          icon-theme = "Papirus-Dark";
           format = "<span><b>{icon}</b></span>";
           format-icons = {
-            "1" = "1";
-            "2" = "2";
-            "3" = "3";
-            "4" = "4";
-            "5" = "5";
-            "6" = "6";
-            "7" = "7";
-            "8" = "8";
-            "9" = "9";
-            urgent = " ";
-            "browser" = " ";
-            "code" = " ";
-            "terminal" = " ";
-            "chat" = " ";
+            "active" = " 󰚍 ";
+            "urgent" = " 󰚍 ";
+            "default" = " 󰄱 ";
           };
         };
         "wlr/taskbar" = {
           all-outputs = false;
           format = "{icon}";
-          icon-size = 18;
+          icon-theme = "Papirus-Dark";
+          icon-size = 20;
           tooltip = true;
           tooltip-format = "{title}";
-          active-first = false;
+          active-first = true;
         };
         "hyprland/window" = {
           max-length = 50;
@@ -132,11 +124,11 @@
           on-click = "pavucontrol";
         };
         network = {
-          format-wifi = "{essid} ({signalStrength}%) ";
-          format-ethernet = "{ipaddr}/{cidr} ";
-          tooltip-format = "{ifname} via {gwaddr} ";
-          format-linked = "{ifname} (No IP) ";
-          format-disconnected = "Disconnected ⚠";
+          format-wifi = "  ";
+          format-ethernet = "  ";
+          tooltip-format = "{essid} ({signalStrength}%)";
+          format-linked = "{ifname} (No IP)  ";
+          format-disconnected = "󰅛 ";
           format-alt = "{ifname}: {ipaddr}/{cidr}";
         };
         cpu = {

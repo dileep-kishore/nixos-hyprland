@@ -27,7 +27,7 @@
 @define-color crust #11111b;
 
 * {
-  font-family: "Maple Mono NF", "CaskaydiaCove Nerd Font";
+  font-family: "CartographCF Nerd Font", "CaskaydiaCove Nerd Font";
   font-size: 15px;
   min-height: 0;
 }
@@ -41,7 +41,6 @@ window.HDMI-A-1 #idle_inhibitor,
 window.HDMI-A-1 #cpu,
 window.HDMI-A-1 #memory,
 window.HDMI-A-1 #backlight,
-window.HDMI-A-1 #clock,
 window.HDMI-A-1 #battery,
 window.HDMI-A-1 #custom-toggl,
 window.HDMI-A-1 #pulseaudio {
@@ -62,7 +61,6 @@ window.HDMI-A-1 #pulseaudio {
   background: @blue;
   color: @crust;
   border-radius: 5px;
-  margin: 2px 2px;
   padding: 0.1rem 0.7rem;
 }
 
@@ -72,18 +70,15 @@ window.HDMI-A-1 #pulseaudio {
   color: @text;
   box-shadow: none;
   text-shadow: none;
-  border-radius: 10px;
   transition: 0.2s ease;
+  border-radius: 5px;
   padding-left: 4px;
   padding-right: 4px;
-  padding-top: 1px;
-  margin: 5px 5px;
 }
 
 #workspaces button {
-  color: @overlay2;
+  color: @mauve;
   transition: all 0.3s ease-in-out;
-  padding: 0.2rem 10px;
   /* animation: ws_normal 20s ease-in-out 1; */
 }
 
@@ -92,25 +87,19 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #workspaces button.visible {
-  color: @crust;
-  padding: 0.2rem 2rem;
-  background: @sky;
+  color: @sky;
   transition: all 0.3s ease-in-out;
   /* transition: all 0.4s cubic-bezier(0.55, 0.68, 0.48, 1.682); */
 }
 
 #workspaces button.active {
-  color: @crust;
-  background: @mauve;
+  color: @mauve;
   transition: all 0.3s ease-in-out;
-  padding: 0.2rem 2rem;
   /* transition: all 0.4s cubic-bezier(0.55, 0.68, 0.48, 1.682); */
 }
 
 #workspaces button:hover {
-  padding: 0.2rem 2rem;
-  color: @crust;
-  background: @overlay2;
+  color: @overlay2;
   animation: ws_hover 20s ease-in-out 1;
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
@@ -118,15 +107,13 @@ window.HDMI-A-1 #pulseaudio {
 #window {
   background-color: @surface0;
   border-radius: 5px;
-  padding: 0rem 1rem;
-  margin: 5px 5px;
+  padding: 0rem 0.7rem;
 }
 
 #taskbar {
   background-color: @base;
   border-radius: 0px;
   padding: 0rem 0rem;
-  margin: 0px 0px;
 }
 
 window#waybar.empty {
@@ -147,9 +134,8 @@ window#waybar.swallowing {
 #custom-toggl,
 #pulseaudio {
   background: @surface0;
-  padding: 0.1rem 0.7rem;
+  padding: 0rem 0.7rem;
   border-radius: 5px;
-  margin: 5px 5px;
 }
 
 #network {
@@ -168,11 +154,10 @@ window#waybar.swallowing {
 }
 
 #clock {
-  color: @mauve;
+  color: @blue;
   border-radius: 5px;
   background: @surface0;
-  margin: 5px 5px;
-  padding: 0.1rem 0.7rem;
+  padding: 0rem 0.7rem;
 }
 
 #battery {
@@ -197,7 +182,7 @@ window#waybar.swallowing {
 }
 
 #custom-toggl {
-  color: @blue;
+  color: @red;
 }
 
 #pulseaudio {
@@ -205,5 +190,5 @@ window#waybar.swallowing {
 }
 
 #tray {
-  padding: 0.1rem 0.7rem;
+  padding: 0rem 0.7rem;
 }
