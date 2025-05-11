@@ -102,10 +102,6 @@ layout {
         color "#00000070"
     }
     struts {
- // left 64
-        // right 64
-        // top 64
-        // bottom 64
 
     }
 }
@@ -117,12 +113,16 @@ prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot_%Y-%m-%d_%H-%M-%S.png"
 // Animation settings.
 animations {
- // Uncomment to turn off all animations.
-    // off
-
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     // slowdown 3.0
-
+    window-open {
+        duration-ms 100
+        curve "ease-out-expo"
+    }
+    window-close {
+        duration-ms 100
+        curve "ease-out-quad"
+    }
 }
 // Work around WezTerm's initial configure bug by setting an empty default-column-width.
 window-rule {
@@ -137,6 +137,10 @@ window-rule {
 }
 window-rule {
     match app-id="Slack"
+    open-on-output "Ancor Communications Inc VC279 G8LMRS004210"
+}
+window-rule {
+    match app-id="Zotero"
     open-on-output "Ancor Communications Inc VC279 G8LMRS004210"
 }
 // Open the Firefox picture-in-picture player as floating by default.
