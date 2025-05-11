@@ -9,6 +9,7 @@
     swaybg
     swaynotificationcenter
     wl-clipboard
+    cliphist
     wlogout
     libinput
     networkmanagerapplet
