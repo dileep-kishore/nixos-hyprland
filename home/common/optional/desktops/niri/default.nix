@@ -16,6 +16,7 @@
     networkmanagerapplet
     pavucontrol
     pipewire
+    hyprpicker
     python312Packages.toggl-cli
   ];
 
