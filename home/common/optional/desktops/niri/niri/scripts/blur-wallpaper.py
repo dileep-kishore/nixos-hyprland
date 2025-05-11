@@ -21,15 +21,12 @@ def get_current_wallpaper(monitor):
 
 
 def set_wallpaper(monitor, wallpaper):
-    print(wallpaper)
     subprocess.run(
         [
             "swww",
             "img",
             "--transition-type",
-            "fade",
-            "--transition-duration",
-            "0.5",
+            "grow",
             "-o",
             monitor,
             wallpaper,
@@ -46,18 +43,17 @@ def change_wallpaper_on_event():
         active_workspace_is_empty = active_workspace["active_window_id"] is None
         active_workspace_monitor = active_workspace["output"]
         current_wallpaper = get_current_wallpaper(active_workspace_monitor)
-        current_wallpaper_is_blurred = "blurred" in current_wallpaper
+        unblurred_wallpaper = current_wallpaper.replace("-blurred", "")
+        blurred_wallpaper = unblurred_wallpaper.removesuffix(".png") + "-blurred.png"
         if active_workspace_is_empty:
-            if not current_wallpaper_is_blurred:
-                continue
-            wallpaper = current_wallpaper
+            wallpaper = unblurred_wallpaper
         else:
-            if current_wallpaper_is_blurred:
-                continue
-            wallpaper = current_wallpaper.removesuffix(".png") + "-blurred.png"
+            wallpaper = blurred_wallpaper
             if not os.path.exists(wallpaper):
-                wallpaper = current_wallpaper
-        set_wallpaper(active_workspace_monitor, wallpaper)
+                wallpaper = unblurred_wallpaper
+        if current_wallpaper != wallpaper:
+            print(f"Setting wallpaper to {wallpaper}")
+            set_wallpaper(active_workspace_monitor, wallpaper)
 
 
 def main():
