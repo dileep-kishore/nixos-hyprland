@@ -22,6 +22,10 @@
           "wlr/taskbar"
           "niri/window"
           "custom/window-icon"
+          "mpris"
+          "custom/mpris-icon"
+          "idle_inhibitor"
+          "custom/idle-icon"
         ];
         modules-center = [
           "niri/workspaces"
@@ -207,6 +211,45 @@
           interval = 10;
           on-click = "toggl stop";
         };
+        "idle_inhibitor" = {
+          format = "<i>{icon}</i>";
+          start-activated = false;
+          format-icons = {
+            activated = "on";
+            deactivated = "off";
+          };
+          tooltip-format-activated = "Swayidle inactive";
+          tooltip-format-deactivated = "Swayidle active";
+        };
+        mpris = {
+          interval = 2;
+          format = "{player_icon} <i>{dynamic}</i> {status_icon}";
+          format-paused = "{player_icon} <i>{dynamic}</i> {status_icon}";
+          tooltip = true;
+          tooltip-format = "{dynamic}";
+          on-click = "playerctl play-pause";
+          on-click-middle = "playerctl previous";
+          on-click-right = "playerctl next";
+          scroll-step = 5.0;
+          smooth-scrolling-threshold = 1;
+          dynamic-len = 30;
+          player-icons = {
+            chromium = " ";
+            brave-browser = " ";
+            default = " ";
+            firefox = " ";
+            kdeconnect = " ";
+            mopidy = " ";
+            mpv = "󰐹 ";
+            spotify = " ";
+            vlc = "󰕼 ";
+          };
+          status-icons = {
+            playing = "  ";
+            paused = "  ";
+            stopped = "  ";
+          };
+        };
         # Custom icons
         "custom/toggl-icon" = {format = "󱎫";};
         "custom/audio-icon" = {format = "";};
@@ -214,13 +257,17 @@
         "custom/backlight-icon" = {format = "󰌵";};
         "custom/battery-icon" = {format = "󰁹";};
         "custom/clock-icon" = {format = "";};
+        "custom/mpris-icon" = {format = " ";};
+        "custom/idle-icon" = {format = " ";};
         "custom/tray-icon" = {
           format = "󱊖";
           on-click = "swaync-client -t";
+          tooltip = "Notification center";
         };
         "custom/window-icon" = {
           format = " ";
           on-click = "walker --modules windows";
+          tooltip = "Window list";
         };
       };
     };

@@ -43,7 +43,10 @@ window.HDMI-A-1 #custom-audio-icon,
 window.HDMI-A-1 #custom-network-icon,
 window.HDMI-A-1 #custom-backlight-icon,
 window.HDMI-A-1 #custom-battery-icon,
+window.HDMI-A-1 #custom-mpris-icon,
+window.HDMI-A-1 #custom-idle-icon,
 window.HDMI-A-1 #network,
+window.HDMI-A-1 #mpris,
 window.HDMI-A-1 #idle_inhibitor,
 window.HDMI-A-1 #cpu,
 window.HDMI-A-1 #memory,
@@ -146,7 +149,6 @@ window#waybar.swallowing {
 }
 
 #network,
-#idle_inhibitor,
 #cpu,
 #memory,
 #backlight,
@@ -252,9 +254,37 @@ window#waybar.swallowing {
   background: @text;
 }
 
+#idle_inhibitor,
+#mpris {
+  background-color: @base;
+  border-radius: 5px 0 0 5px;
+  padding: 0rem 0.7rem;
+  margin-left: 5px;
+}
+
+#idle_inhibitor {
+  color: @yellow;
+  border: 2px solid @yellow;
+}
+#mpris {
+  color: @green;
+  border: 2px solid @green;
+}
+
+#custom-idle-icon,
+#custom-mpris-icon,
 #custom-window-icon {
   color: @crust;
   padding: 0px 10px;
   border-radius: 0 5px 5px 0;
+}
+
+#custom-idle-icon {
+  background: @yellow;
+}
+#custom-mpris-icon {
+  background: @green;
+}
+#custom-window-icon {
   background: @blue;
 }
