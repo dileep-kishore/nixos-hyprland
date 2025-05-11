@@ -79,7 +79,7 @@
             "active" = " 󰚍 ";
             "urgent" = "  ";
             "focused" = " 󰚍 ";
-            "default" = " 󰄱 ";
+            "default" = "  ";
           };
         };
         "wlr/taskbar" = {
