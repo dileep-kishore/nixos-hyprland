@@ -82,7 +82,6 @@
           format = "<span><b>{icon}</b></span>";
           format-icons = {
             "active" = " 󰚍 ";
-            "urgent" = "  ";
             "focused" = " 󰚍 ";
             "default" = "  ";
           };
