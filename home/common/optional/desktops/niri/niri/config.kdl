@@ -1,97 +1,62 @@
-// This config is in the KDL format: https://kdl.dev
-// "/-" comments out the following node.
-// Check the wiki for a full description of the configuration:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Overview
-// Input device configuration.
-// Find the full list of options on the wiki:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Input
+// Reference: https://github.com/YaLTeR/niri/wiki/Configuration
 input {
     keyboard {
         xkb {
- // You can set rules, model, layout, variant and options.
-            // For more information, see xkeyboard-config(7).
-
-            // For example:
-            // layout "us,ru"
-            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
-
+            // NOTE: No need to ctrl:nocaps since I am using home row mods
+            layout "us"
         }
     }
-    // Next sections include libinput settings.
-    // Omitting settings disables them, or leaves them at their default values.
     touchpad {
-        // off
         tap
-        // dwt
-        // dwtp
-        // drag false
-        // drag-lock
         natural-scroll
- // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "two-finger"
-        // disabled-on-external-mouse
     }
     mouse {
- // off
-        // natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "no-scroll"
 
     }
     trackpoint {
- // off
-        // natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
-        // scroll-method "on-button-down"
-        // scroll-button 273
-        // middle-emulation
 
     }
-    // Uncomment this to make the mouse warp to the center of newly focused windows.
     warp-mouse-to-focus
-    // Focus windows and outputs automatically when moving the mouse into them.
-    // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
     focus-follows-mouse max-scroll-amount="0%"
+    // workspace-auto-back-and-forth
+    mod-key "Super"
 }
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
-// NOTE: Run `niri msg outputs` to see the list of outputs and their names.
 // tsuki
-output "HDMI-A-1" {
+output "Ancor Communications Inc VC279 G8LMRS004210" {
     mode "1920x1080@60.000"
     scale 1
     transform "90"
     position x=0 y=0
 }
-output "DP-1" {
+output "GIGA-BYTE TECHNOLOGY CO., LTD. G34WQC A 23022B003487" {
     mode "3440x1440@144.000"
     scale 1
     transform "normal"
     position x=1080 y=0
 }
-output "DP-2" {
+output "GIGA-BYTE TECHNOLOGY CO., LTD. G34WQC A 23022B003495" {
     mode "3440x1440@144.000"
     scale 1
     transform "normal"
     position x=1080 y=1440
+    focus-at-startup
 }
 // work laptop
-output "eDP-1" {
+output "InfoVision Optoelectronics (Kunshan) Co.,Ltd China 0x3E94 0x00000004" {
     mode "1920x1080@59.989"
     scale 1
     transform "normal"
     position x=0 y=0
 }
-output "DP-6" {
+output "Dell Inc. DELL P2715Q 0WTY26AL33UL" {
     // mode "3840x2160@59.996"
     mode "2560x1440@59.951"
     scale 1
     transform "normal"
     position x=1920 y=0
+    focus-at-startup
 }
-output "DP-7" {
+output "Dell Inc. DELL P2715Q 0WTY26AL35PL" {
     // mode "3840x2160@59.996"
     mode "2560x1440@59.951"
     scale 1
@@ -103,122 +68,39 @@ environment {
     DISPLAY ":0"
 }
 // Settings that influence how windows are positioned and sized.
-// Find more information on the wiki:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
-    // Set gaps around windows in logical pixels.
     gaps 5
-    // When to center a column when changing focus, options are:
-    // - "never", default behavior, focusing an off-screen column will keep at the left
-    //   or right edge of the screen.
-    // - "always", the focused column will always be centered.
-    // - "on-overflow", focusing a column will center it if it doesn't fit
-    //   together with the previously focused column.
-    center-focused-column "never"
-    // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
+    center-focused-column "on-overflow"
     preset-column-widths {
-        // Proportion sets the width as a fraction of the output width, taking gaps into account.
-        // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
-        // The default preset widths are 1/3, 1/2 and 2/3 of the output.
-        proportion 0.66667
         proportion 0.5
-        proportion 0.33333
         proportion 1.0
- // Fixed sets the width in logical pixels exactly.
-        // fixed 1920
     }
-    // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
-    // preset-window-heights { }
-    // You can change the default width of the new windows.
+    preset-window-heights {
+        proportion 0.5
+        proportion 1.0
+    }
     default-column-width {
-        proportion 1.0
+
     }
-    // If you leave the brackets empty, the windows themselves will decide their initial width.
-    // default-column-width {}
-    // By default focus ring and border are rendered as a solid background rectangle
-    // behind windows. That is, they will show up through semitransparent windows.
-    // This is because windows using client-side decorations can have an arbitrary shape.
-    //
-    // If you don't like that, you should uncomment `prefer-no-csd` below.
-    // Niri will draw focus ring and border *around* windows that agree to omit their
-    // client-side decorations.
-    //
-    // Alternatively, you can override it with a window rule called
-    // `draw-border-with-background`.
-    // You can change how the focus ring looks.
     focus-ring {
-        // Uncomment this line to disable the focus ring.
         off
-        // How many logical pixels the ring extends out from the windows.
         width 4
-        // Colors can be set in a variety of ways:
-        // - CSS named colors: "red"
-        // - RGB hex: "#rgb", "#rgba", "#rrggbb", "#rrggbbaa"
-        // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
-        // Color of the ring on the active monitor.
-        // active-color "#7fc8ff"
-        // Color of the ring on inactive monitors.
-        // inactive-color "#505050"
-        // You can also use gradients. They take precedence over solid colors.
-        // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
-        // The angle is the same as in linear-gradient, and is optional,
-        // defaulting to 180 (top-to-bottom gradient).
-        // You can use any CSS linear-gradient tool on the web to set these up.
-        // Changing the color space is also supported, check the wiki for more info.
-        //
         active-gradient from="#80c8ff" to="#bbddff" angle=45
-        // You can also color the gradient relative to the entire view
-        // of the workspace, rather than relative to just the window itself.
-        // To do that, set relative-to="workspace-view".
-        //
         inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
-    // You can also add a border. It's similar to the focus ring, but always visible.
     border {
-        // The settings are the same as for the focus ring.
-        // If you enable the border, you probably want to disable the focus ring.
-        // off
         width 4
-        // active-color "#ffc87f"
-        // inactive-color "#505050"
-        active-gradient from="#cba6f7" to="#f38ba8" angle=45 relative-to="workspace-view"
-        inactive-gradient from="#585b70" to="#1e1e2e" angle=45 relative-to="workspace-view"
+        active-gradient from="#cba6f7" to="#89b4fa"
+        inactive-gradient from="#585b70" to="#585b70"
     }
-    // You can enable drop shadows for windows.
     shadow {
-        // Uncomment the next line to enable shadows.
         on
-        // By default, the shadow draws only around its window, and not behind it.
-        // Uncomment this setting to make the shadow draw behind its window.
-        //
-        // Note that niri has no way of knowing about the CSD window corner
-        // radius. It has to assume that windows have square corners, leading to
-        // shadow artifacts inside the CSD rounded corners. This setting fixes
-        // those artifacts.
-        //
-        // However, instead you may want to set prefer-no-csd and/or
-        // geometry-corner-radius. Then, niri will know the corner radius and
-        // draw the shadow correctly, without having to draw it behind the
-        // window. These will also remove client-side shadows if the window
-        // draws any.
-        //
-        // draw-behind-window true
-        // You can change how shadows look. The values below are in logical
-        // pixels and match the CSS box-shadow properties.
-        // Softness controls the shadow blur radius.
+        draw-behind-window true
         softness 30
-        // Spread expands the shadow.
         spread 5
-        // Offset moves the shadow relative to the window.
         offset x=0 y=5
-        // You can also change the shadow color and opacity.
-        color "#0007"
+        color "#00000070"
     }
-    // Struts shrink the area occupied by windows, similarly to layer-shell panels.
-    // You can think of them as a kind of outer gaps. They are set in logical pixels.
-    // Left and right struts will cause the next window to the side to always be visible.
-    // Top and bottom struts will simply add outer gaps in addition to the area occupied by
-    // layer-shell panels and regular gaps.
     struts {
  // left 64
         // right 64
@@ -227,30 +109,13 @@ layout {
 
     }
 }
-// spawn-at-startup "swayidle" "-w"
-// spawn-at-startup "xwayland-satellite"
 spawn-at-startup "morgen"
-spawn-at-startup "swaybg" "-i" "~/Pictures/wallpapers/black-hole.png"
-// Add lines like this to spawn processes at startup.
-// Note that running niri as a session supports xdg-desktop-autostart,
-// which may be more convenient to use.
-// See the binds section below for more spawn examples.
-// spawn-at-startup "alacritty" "-e" "fish"
-// Uncomment this line to ask the clients to omit their client-side decorations if possible.
-// If the client will specifically ask for CSD, the request will be honored.
-// Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
-// This option will also fix border/focus ring drawing behind some semitransparent windows.
-// After enabling or disabling this, you need to restart the apps for this to take effect.
+spawn-at-startup "bash" "-c" "swaybg -i ~/Pictures/wallpapers/bluewave.png"
+spawn-at-startup "wl-paste --watch cliphist store"
+spawn-at-startup "wl-clip-persist --clipboard regular"
 prefer-no-csd
-// You can change the path where screenshots are saved.
-// A ~ at the front will be expanded to the home directory.
-// The path is formatted with strftime(3) to give you the screenshot date and time.
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-// You can also set this to null to disable saving screenshots to disk.
-// screenshot-path null
+screenshot-path "~/Pictures/Screenshots/Screenshot_%Y-%m-%d_%H-%M-%S.png"
 // Animation settings.
-// The wiki explains how to configure individual animations:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
 animations {
  // Uncomment to turn off all animations.
     // off
@@ -259,19 +124,20 @@ animations {
     // slowdown 3.0
 
 }
-// Window rules let you adjust behavior for individual windows.
-// Find more information on the wiki:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
+// Work around WezTerm's initial configure bug by setting an empty default-column-width.
 window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
     match app-id="^org\\.wezfurlong\\.wezterm$"
     default-column-width {
 
     }
+}
+window-rule {
+    match app-id="Morgen"
+    open-on-output "Ancor Communications Inc VC279 G8LMRS004210"
+}
+window-rule {
+    match app-id="Slack"
+    open-on-output "Ancor Communications Inc VC279 G8LMRS004210"
 }
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
@@ -323,7 +189,7 @@ binds {
         spawn "~/.config/niri/scripts/walker.sh"
     }
     Mod+D {
-        spawn "walker" "--modules" "windows"
+        spawn "~/.nix-profile/bin/walker" "--modules" "windows"
     }
     Super+Alt+L {
         spawn "swaylock"
@@ -421,12 +287,6 @@ binds {
     Mod+P {
         focus-monitor-left
     }
-    Mod+Shift+Down {
-        focus-monitor-down
-    }
-    Mod+Shift+Up {
-        focus-monitor-up
-    }
     Mod+N {
         focus-monitor-right
     }
@@ -499,10 +359,10 @@ binds {
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
     // ...
-    Mod+Shift+Page_Down {
+    Mod+Shift+Down {
         move-workspace-down
     }
-    Mod+Shift+Page_Up {
+    Mod+Shift+Up {
         move-workspace-up
     }
     Mod+Shift+U {
@@ -652,9 +512,6 @@ binds {
     Mod+Shift+W {
         switch-preset-window-height
     }
-    Mod+Ctrl+W {
-        reset-window-height
-    }
     Mod+F {
         maximize-column
     }
@@ -710,13 +567,13 @@ binds {
     // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
-    Print {
+    Mod+Ctrl+R {
         screenshot
     }
-    Ctrl+Print {
+    Mod+Ctrl+M {
         screenshot-screen
     }
-    Alt+Print {
+    Mod+Ctrl+W {
         screenshot-window
     }
     // Applications such as remote-desktop clients and software KVM switches may
