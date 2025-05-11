@@ -13,7 +13,7 @@ in {
     enabledExtensions = with spicePkgs.extensions; [
       keyboardShortcut
     ];
-    theme = spicePkgs.themes.catppuccin;
-    colorScheme = "mocha";
+    theme = spicePkgs.themes.text;
+    colorScheme = "CatppuccinMocha";
   };
 }
