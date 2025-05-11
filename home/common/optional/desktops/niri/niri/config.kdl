@@ -146,6 +146,18 @@ window-rule {
     match app-id="Zotero"
     open-on-output "Ancor Communications Inc VC279 G8LMRS004210"
 }
+window-rule {
+    match app-id="scratchpad"
+    open-floating true
+    default-floating-position x=0 y=50 relative-to="bottom"
+    opacity 0.9
+    default-column-width {
+        proportion 0.7
+    }
+    default-window-height {
+        proportion 0.5
+    }
+}
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
     // This app-id regular expression will work for both:
@@ -191,6 +203,9 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return {
         spawn "ghostty"
+    }
+    Mod+Shift+Return {
+        spawn "kitty" "--class" "scratchpad"
     }
     Mod+R {
         spawn "~/.config/niri/scripts/walker.sh"
