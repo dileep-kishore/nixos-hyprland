@@ -4,7 +4,7 @@ locale = ""
 close_when_open = false
 theme = "catppuccin"
 monitor = ""
-hotreload_theme = false
+hotreload_theme = true
 as_window = false
 timeout = 0
 disable_click_to_close = false
@@ -249,3 +249,12 @@ icon = "accessories-dictionary"
 placeholder = "Translation"
 switcher_only = true
 provider = "googlefree"
+
+[[plugins]]
+name = "clipboard"
+placeholder = "clipboard"
+theme = "catppuccin"
+switcher_only = false
+refresh = true
+src = "bash -c ~/.config/walker/scripts/clipboard.sh"
+parser = "kv"
