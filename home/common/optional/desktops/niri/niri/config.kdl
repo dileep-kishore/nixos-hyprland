@@ -134,18 +134,15 @@ window-rule {
 
     }
 }
+// Side monitor apps
 window-rule {
     match app-id="Morgen"
-    open-on-output "Ancor Communications Inc VC279 G8LMRS004210"
-}
-window-rule {
     match app-id="Slack"
-    open-on-output "Ancor Communications Inc VC279 G8LMRS004210"
-}
-window-rule {
     match app-id="Zotero"
+    match app-id="spotify"
     open-on-output "Ancor Communications Inc VC279 G8LMRS004210"
 }
+// floating terminal
 window-rule {
     match app-id="scratchpad"
     open-floating true
@@ -158,29 +155,26 @@ window-rule {
         proportion 0.5
     }
 }
-// Open the Firefox picture-in-picture player as floating by default.
+// floating
 window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id="firefox$" title="^Picture-in-Picture$"
+    match app-id="brave-browser$" title="^Picture-in-Picture$"
+    match app-id="org.kde.polkit-kde-authentication-agent-1"
     open-floating true
 }
-// Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-match app-id=r#"^org\.gnome\.World\.Secrets$"#
-block-out-from "screen-capture"
-// Use this instead if you want them visible on third-party screenshot tools.
-// block-out-from "screencast"
+// block screen capture for some apps
+window-rule {
+    match app-id="^org\\.keepassxc\\.KeePassXC$"
+    match app-id="^org\\.gnome\\.World\\.Secrets$"
+    match app-id="Proton Pass"
+    block-out-from "screen-capture"
 }
 // Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
 }
+// tweak opacity for inactive windows
 window-rule {
     match is-active=false
     opacity 0.95
