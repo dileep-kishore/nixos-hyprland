@@ -23,6 +23,9 @@
     };
   };
 
+  # Wallpaper
+  services.swww.enable = true;
+
   # Use Gnome Keyring as SSH agent
   services.gnome-keyring = {
     enable = true;

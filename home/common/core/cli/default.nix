@@ -35,9 +35,11 @@
     coreutils-full
     entr
     fd
+    ffmpeg
     git-extras
     gnumake
     htop
+    imagemagick
     jc
     jq
     just

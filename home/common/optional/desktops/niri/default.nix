@@ -6,7 +6,7 @@
   ];
 
   home.packages = with pkgs; [
-    swaybg
+    swww
     swaynotificationcenter
     wl-clipboard
     cliphist

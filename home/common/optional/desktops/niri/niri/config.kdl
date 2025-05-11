@@ -106,7 +106,7 @@ layout {
     }
 }
 spawn-at-startup "morgen"
-spawn-at-startup "bash" "-c" "swaybg -i ~/Pictures/wallpapers/bluewave.png"
+spawn-at-startup "bash" "-c" "swww img ~/Pictures/wallpapers/bluewave.png --transition-type center"
 spawn-at-startup "wl-paste --watch cliphist store"
 spawn-at-startup "wl-clip-persist --clipboard regular"
 prefer-no-csd
