@@ -51,7 +51,7 @@
         };
         "image" = {
           path = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-          on-click = "walker";
+          on-click = "niri msg action toggle-overview";
           size = 22;
           tooltip = false;
         };
@@ -214,8 +214,14 @@
         "custom/backlight-icon" = {format = "󰌵";};
         "custom/battery-icon" = {format = "󰁹";};
         "custom/clock-icon" = {format = "";};
-        "custom/tray-icon" = {format = "󱊖";};
-        "custom/window-icon" = {format = " ";};
+        "custom/tray-icon" = {
+          format = "󱊖";
+          on-click = "swaync-client -t";
+        };
+        "custom/window-icon" = {
+          format = " ";
+          on-click = "walker --modules windows";
+        };
       };
     };
   };
