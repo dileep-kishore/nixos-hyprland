@@ -103,15 +103,37 @@
           max-length = 50;
           format = "{app_id}";
           separate-outputs = true;
-          icon = true;
-          icon-size = 18;
+          # icon = true;
+          # icon-size = 18;
           rewrite = {
-            "" = "<span foreground='#cba6f7'> </span> Niri";
-            " " = "<span foreground='#cba6f7'> </span> Niri";
-            "com.mitchellh.ghostty" = "Ghostty";
-            "brave-browser" = "Brave";
-            "org.wezfurlong.wezterm" = "Wezterm";
-            "org.gnome.Nautilus" = "Files";
+            "" = "<span foreground='#89b4fa'> Niri</span>";
+            " " = "<span foreground='#89b4fa'> Niri</span>";
+            # terminals
+            "com.mitchellh.ghostty" = "<span foreground='#89b4fa'>󰊠 Ghostty</span>";
+            "org.wezfurlong.wezterm" = "<span foreground='#89b4fa'> Wezterm</span>";
+            "kitty" = "<span foreground='#89b4fa'>󰄛 Kitty</span>";
+            # code
+            "code" = "<span foreground='#89b4fa'>󰨞 Code</span>";
+            "Cursor" = "<span foreground='#89b4fa'>󰨞 Cursor</span>";
+            # browsers
+            "brave-browser" = "<span foreground='#89b4fa'> Brave</span>";
+            "firefox" = "<span foreground='#89b4fa'> Firefox</span>";
+            "zen" = "<span foreground='#89b4fa'> Zen</span>";
+            # gnome/gtk
+            "org.gnome.Nautilus" = "<span foreground='#89b4fa'>󰪶 Files</span>";
+            # misc
+            "spotify" = "<span foreground='#89b4fa'> Spotify</span>";
+            "Slack" = "<span foreground='#89b4fa'> Slack</span>";
+            "signal" = "<span foreground='#89b4fa'>󰭹 Signal</span>";
+            # Productivity
+            "Morgen" = "<span foreground='#89b4fa'> Morgen</span>";
+            "org.kde.okular" = "<span foreground='#89b4fa'> Okular</span>";
+            "tana" = "<span foreground='#89b4fa'>󰠮 Tana</span>";
+            "obsidian" = "<span foreground='#89b4fa'>󰠮 Obsdian</span>";
+            "Zotero" = "<span foreground='#89b4fa'>󰬡 Zotero</span>";
+            "org.pulseaudio.pavucontrol" = "<span foreground='#89b4fa'> Pavucontrol</span>";
+            # Everything else
+            "(.*)" = "<span foreground='#89b4fa'>$1</span>";
           };
         };
 
