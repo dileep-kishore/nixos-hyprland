@@ -245,9 +245,9 @@
             vlc = "󰕼 ";
           };
           status-icons = {
-            playing = "  ";
-            paused = "  ";
-            stopped = "  ";
+            playing = "┃";
+            paused = "┃";
+            stopped = "┃";
           };
         };
         # Custom icons
