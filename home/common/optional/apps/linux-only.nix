@@ -32,7 +32,7 @@
     signal-desktop
     tana
     udisks
-    zotero_7
+    zotero
     firefox
     zoom-us
   ];
