@@ -17,9 +17,8 @@
         reload_style_on_change = true;
         spacing = 0;
         modules-left = [
-          "custom/spacer"
-          # "hyprland/workspaces"
-          # "hyprland/window"
+          # "custom/spacer"
+          "image"
           "wlr/taskbar"
           "niri/window"
           "custom/window-icon"
@@ -49,6 +48,12 @@
         "custom/spacer" = {
           format = "   ";
           on-click = "walker";
+        };
+        "image" = {
+          path = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+          on-click = "walker";
+          size = 22;
+          tooltip = false;
         };
         "hyprland/workspaces" = {
           disable-scroll = false;

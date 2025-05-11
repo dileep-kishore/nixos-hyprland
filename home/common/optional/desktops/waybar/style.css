@@ -71,6 +71,13 @@ window.HDMI-A-1 #pulseaudio {
   padding: 0.1rem 0.7rem;
 }
 
+#image {
+  background: @base;
+  border-radius: 0px 18px 0px 18px;
+  padding: 0.1rem 0.7rem;
+  border: 2px solid @crust;
+}
+
 #workspaces {
   font-weight: bold;
   background: @base;
@@ -78,7 +85,7 @@ window.HDMI-A-1 #pulseaudio {
   box-shadow: none;
   text-shadow: none;
   transition: 0.2s ease;
-  border-radius: 5px;
+  border-radius: 0px 18px 0px 18px;
   padding-left: 4px;
   padding-right: 4px;
   border: 2px solid @crust;
