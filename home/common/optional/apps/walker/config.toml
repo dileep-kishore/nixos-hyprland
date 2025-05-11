@@ -251,10 +251,8 @@ switcher_only = true
 provider = "googlefree"
 
 [[plugins]]
-name = "clipboard"
-placeholder = "clipboard"
-theme = "catppuccin"
-switcher_only = false
-refresh = true
-src = "bash -c ~/.config/walker/scripts/clipboard.sh"
-parser = "kv"
+name = "cliphist"
+keep_sort = true
+prefix = "c:"
+src = "cliphist list"
+cmd = "cliphist decode |  wl-copy"

@@ -10,6 +10,7 @@
     swaynotificationcenter
     wl-clipboard
     cliphist
+    wl-clip-persist
     wlogout
     libinput
     networkmanagerapplet
