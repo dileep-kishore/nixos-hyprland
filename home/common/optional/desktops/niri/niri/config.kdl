@@ -28,18 +28,18 @@ output "Ancor Communications Inc VC279 G8LMRS004210" {
     transform "90"
     position x=0 y=0
 }
-output "GIGA-BYTE TECHNOLOGY CO., LTD. G34WQC A 23022B003487" {
-    mode "3440x1440@144.000"
-    scale 1
-    transform "normal"
-    position x=1080 y=0
-}
 output "GIGA-BYTE TECHNOLOGY CO., LTD. G34WQC A 23022B003495" {
     mode "3440x1440@144.000"
     scale 1
     transform "normal"
     position x=1080 y=1440
     focus-at-startup
+}
+output "GIGA-BYTE TECHNOLOGY CO., LTD. G34WQC A 23022B003487" {
+    mode "3440x1440@144.000"
+    scale 1
+    transform "normal"
+    position x=1080 y=0
 }
 // work laptop
 output "InfoVision Optoelectronics (Kunshan) Co.,Ltd China 0x3E94 0x00000004" {
@@ -180,21 +180,9 @@ window-rule {
     opacity 0.95
 }
 binds {
-    // Keys consist of modifiers separated by + signs, followed by an XKB key name
-    // in the end. To find an XKB name for a particular key, you may use a program
-    // like wev.
-    //
-    // "Mod" is a special modifier equal to Super when running on a TTY, and to Alt
-    // when running as a winit window.
-    //
-    // Most actions that you can bind here can also be invoked programmatically with
-    // `niri msg action do-something`.
-    // Mod-Shift-/, which is usually the same as Mod-?,
-    // shows a list of important hotkeys.
     Mod+Shift+Slash {
         show-hotkey-overlay
     }
-    // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return {
         spawn "ghostty"
     }
@@ -210,11 +198,6 @@ binds {
     Super+Alt+L {
         spawn "swaylock"
     }
-    // You can also use a shell. Do this if you need pipes, multiple commands, etc.
-    // Note: the entire command goes as a single argument in the end.
-    // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
-    // Example volume keys mappings for PipeWire & WirePlumber.
-    // The allow-when-locked=true property makes them work even when the session is locked.
     XF86AudioRaiseVolume allow-when-locked=true {
         spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"
     }
@@ -245,8 +228,6 @@ binds {
     Mod+H {
         focus-column-left
     }
-    // Mod+J     { focus-window-down; }
-    // Mod+K     { focus-window-up; }
     Mod+L {
         focus-column-right
     }
@@ -265,17 +246,9 @@ binds {
     Mod+Ctrl+H {
         move-column-left
     }
-    // Mod+Ctrl+J {
-    //     move-window-down
-    // }
-    // Mod+Ctrl+K {
-    //     move-window-up
-    // }
     Mod+Ctrl+L {
         move-column-right
     }
-    // Alternative commands that move across workspaces when reaching
-    // the first or last window in a column.
     Mod+J {
         focus-window-or-workspace-down
     }
@@ -301,10 +274,10 @@ binds {
         move-column-to-last
     }
     Mod+P {
-        focus-monitor-left
+        focus-monitor-previous
     }
     Mod+N {
-        focus-monitor-right
+        focus-monitor-next
     }
     Mod+Shift+H {
         focus-monitor-left
@@ -342,12 +315,6 @@ binds {
     Mod+Shift+Ctrl+L {
         move-column-to-monitor-right
     }
-    // Alternatively, there are commands to move just a single window:
-    // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
-    // ...
-    // And you can also move a whole workspace to another monitor:
-    // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
-    // ...
     Mod+Page_Down {
         focus-workspace-down
     }
@@ -372,9 +339,6 @@ binds {
     Mod+Ctrl+I {
         move-column-to-workspace-up
     }
-    // Alternatively, there are commands to move just a single window:
-    // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
-    // ...
     Mod+Shift+Down {
         move-workspace-down
     }
@@ -387,12 +351,6 @@ binds {
     Mod+Shift+I {
         move-workspace-up
     }
-    // You can bind mouse wheel scroll ticks using the following syntax.
-    // These binds will change direction based on the natural-scroll setting.
-    //
-    // To avoid scrolling through workspaces really fast, you can use
-    // the cooldown-ms property. The bind will be rate-limited to this value.
-    // You can set a cooldown on any bind, but it's most useful for the wheel.
     Mod+WheelScrollDown cooldown-ms=150 {
         focus-workspace-down
     }
@@ -417,8 +375,6 @@ binds {
     Mod+Ctrl+WheelScrollLeft {
         move-column-left
     }
-    // Usually scrolling up and down with Shift in applications results in
-    // horizontal scrolling; these binds replicate that.
     Mod+Shift+WheelScrollDown {
         focus-column-right
     }
@@ -431,22 +387,6 @@ binds {
     Mod+Ctrl+Shift+WheelScrollUp {
         move-column-left
     }
-    // Similarly, you can bind touchpad scroll "ticks".
-    // Touchpad scrolling is continuous, so for these binds it is split into
-    // discrete intervals.
-    // These binds are also affected by touchpad's natural-scroll, so these
-    // example binds are "inverted", since we have natural-scroll enabled for
-    // touchpads by default.
-    // Mod+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
-    // Mod+TouchpadScrollUp   { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
-    // You can refer to workspaces by index. However, keep in mind that
-    // niri is a dynamic workspace system, so these commands are kind of
-    // "best effort". Trying to refer to a workspace index bigger than
-    // the current workspace count will instead refer to the bottommost
-    // (empty) workspace.
-    //
-    // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
-    // will all refer to the 3rd workspace.
     Mod+1 {
         focus-workspace 1
     }
@@ -474,51 +414,42 @@ binds {
     Mod+9 {
         focus-workspace 9
     }
-    Mod+Ctrl+1 {
+    Mod+Shift+1 {
         move-column-to-workspace 1
     }
-    Mod+Ctrl+2 {
+    Mod+Shift+2 {
         move-column-to-workspace 2
     }
-    Mod+Ctrl+3 {
+    Mod+Shift+3 {
         move-column-to-workspace 3
     }
-    Mod+Ctrl+4 {
+    Mod+Shift+4 {
         move-column-to-workspace 4
     }
-    Mod+Ctrl+5 {
+    Mod+Shift+5 {
         move-column-to-workspace 5
     }
-    Mod+Ctrl+6 {
+    Mod+Shift+6 {
         move-column-to-workspace 6
     }
-    Mod+Ctrl+7 {
+    Mod+Shift+7 {
         move-column-to-workspace 7
     }
-    Mod+Ctrl+8 {
+    Mod+Shift+8 {
         move-column-to-workspace 8
     }
-    Mod+Ctrl+9 {
+    Mod+Shift+9 {
         move-column-to-workspace 9
     }
-    // Alternatively, there are commands to move just a single window:
-    // Mod+Ctrl+1 { move-window-to-workspace 1; }
-    // Switches focus between the current and the previous workspace.
-    // Mod+Tab { focus-workspace-previous; }
-    // The following binds move the focused window in and out of a column.
-    // If the window is alone, they will consume it into the nearby column to the side.
-    // If the window is already in a column, they will expel it out.
     Mod+BracketLeft {
         consume-or-expel-window-left
     }
     Mod+BracketRight {
         consume-or-expel-window-right
     }
-    // Consume one window from the right to the bottom of the focused column.
     Mod+Comma {
         consume-window-into-column
     }
-    // Expel the bottom window from the focused column to the right.
     Mod+Period {
         expel-window-from-column
     }
@@ -528,61 +459,40 @@ binds {
     Mod+Shift+W {
         switch-preset-window-height
     }
+    // Expand the focused column to space not taken up by other fully visible columns.
     Mod+F {
-        maximize-column
+        expand-column-to-available-width
     }
     Mod+Shift+F {
-        fullscreen-window
+        maximize-column
     }
-    // Expand the focused column to space not taken up by other fully visible columns.
-    // Makes the column "fill the rest of the space".
     Mod+Ctrl+F {
-        expand-column-to-available-width
+        fullscreen-window
     }
     Mod+C {
         center-column
     }
-    // Finer width adjustments.
-    // This command can also:
-    // * set width in pixels: "1000"
-    // * adjust width in pixels: "-5" or "+5"
-    // * set width as a percentage of screen width: "25%"
-    // * adjust width as a percentage of screen width: "-10%" or "+10%"
-    // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
-    // set-column-width "100" will make the column occupy 200 physical screen pixels.
-    Mod+Minus {
+    Mod+Plus {
         set-column-width "-10%"
     }
     Mod+Equal {
         set-column-width "+10%"
     }
-    // Finer height adjustments when in column with other windows.
-    Mod+Shift+Minus {
+    Mod+Shift+Plus {
         set-window-height "-10%"
     }
     Mod+Shift+Equal {
         set-window-height "+10%"
     }
-    // Move the focused window between the floating and the tiling layout.
     Mod+V {
         toggle-window-floating
     }
     Mod+Shift+V {
         switch-focus-between-floating-and-tiling
     }
-    // Toggle tabbed column display mode.
-    // Windows in this column will appear as vertical tabs,
-    // rather than stacked on top of each other.
     Mod+T {
         toggle-column-tabbed-display
     }
-    // Actions to switch layouts.
-    // Note: if you uncomment these, make sure you do NOT have
-    // a matching layout switch hotkey configured in xkb options above.
-    // Having both at once on the same hotkey will break the switching,
-    // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
-    // Mod+Space       { switch-layout "next"; }
-    // Mod+Shift+Space { switch-layout "prev"; }
     Mod+Ctrl+R {
         screenshot
     }
@@ -603,15 +513,12 @@ binds {
     Mod+Escape allow-inhibiting=false {
         toggle-keyboard-shortcuts-inhibit
     }
-    // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E {
         quit
     }
     Ctrl+Alt+Delete {
         quit
     }
-    // Powers off the monitors. To turn them back on, do any input like
-    // moving the mouse or pressing any other key.
     Mod+Shift+P {
         power-off-monitors
     }
