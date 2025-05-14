@@ -43,7 +43,7 @@
           "clock"
           "custom/tray-icon"
           "tray"
-          "backlight"
+          # "backlight"
           "battery"
           "battery#bat2"
         ];
