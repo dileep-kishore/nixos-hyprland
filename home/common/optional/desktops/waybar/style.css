@@ -38,6 +38,19 @@ window.HDMI-A-1 * {
   font-size: 12px;
 }
 
+window.eDP-1 * {
+  font-size: 12px;
+}
+
+window.eDP-1 #custom-toggl-icon,
+window.eDP-1 #custom-toggl {
+  font-size: 0px;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
 window.HDMI-A-1 #custom-toggl-icon,
 window.HDMI-A-1 #custom-audio-icon,
 window.HDMI-A-1 #custom-network-icon,
@@ -151,8 +164,6 @@ window#waybar.swallowing {
 #network,
 #cpu,
 #memory,
-#backlight,
-#battery,
 #custom-toggl,
 #clock,
 #tray,
@@ -160,6 +171,14 @@ window#waybar.swallowing {
   background: @base;
   margin-right: 5px;
   border-radius: 0 5px 5px 0;
+  padding: 0 15px;
+}
+
+#backlight,
+#battery {
+  background: @base;
+  margin-right: 5px;
+  border-radius: 5px;
   padding: 0 15px;
 }
 
