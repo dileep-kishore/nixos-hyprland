@@ -6,6 +6,9 @@
 }: let
   niri-bin = "${pkgs.niri-unstable}/bin/niri";
 in {
+  home.packages = with pkgs; [
+    swaylock
+  ];
   services.swayidle = let
     seconds = 1;
     minutes = 60 * seconds;

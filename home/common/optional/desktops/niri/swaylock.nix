@@ -3,6 +3,7 @@ let
 in {
   programs.swaylock = {
     enable = true;
+    package = null;
     settings = with colors; {
       color = mantle;
       font-size = 48;
