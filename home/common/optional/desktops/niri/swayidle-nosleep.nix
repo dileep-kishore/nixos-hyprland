@@ -13,7 +13,7 @@ in {
     lock-after-blank-timeout = 15 * minutes;
 
     loginctl = "${pkgs.systemd}/bin/loginctl";
-    swaylock = "${pkgs.swaylock}/bin/swaylock";
+    swaylock = "usr/bin/swaylock";
 
     lock-session = pkgs.writeShellScript "lock-session" ''
       ${swaylock} -f
