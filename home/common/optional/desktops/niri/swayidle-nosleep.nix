@@ -10,7 +10,7 @@ in {
     seconds = 1;
     minutes = 60 * seconds;
     screen-blank-timeout = 15 * minutes;
-    lock-after-blank-timeout = 15 * minutes;
+    lock-after-blank-timeout = 5 * minutes;
 
     loginctl = "${pkgs.systemd}/bin/loginctl";
     swaylock = "usr/bin/swaylock";
