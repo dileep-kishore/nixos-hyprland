@@ -1,6 +1,8 @@
 # https://github.com/Alexays/Waybar
 {pkgs, ...}: {
   home.file.".config/waybar/toggl_status.py".source = ./toggl_status.py;
+  home.file.".config/waybar/vpn_status.py".source = ./vpn_status.py;
+  home.file.".config/waybar/vpn_toggle.py".source = ./vpn_toggle.py;
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -24,6 +26,8 @@
           "custom/window-icon"
           "mpris"
           "custom/mpris-icon"
+          "custom/vpn"
+          "custom/vpn-icon"
           "idle_inhibitor"
           "custom/idle-icon"
         ];
@@ -205,6 +209,12 @@
           icon-size = 18;
           spacing = 10;
         };
+        "custom/vpn" = {
+          format = "{}";
+          exec = "$HOME/.config/waybar/vpn_status.py";
+          interval = 10;
+          on-click = "$HOME/.config/waybar/vpn_toggle.py";
+        };
         "custom/toggl" = {
           format = "{}";
           exec = "$HOME/.config/waybar/toggl_status.py";
@@ -259,6 +269,7 @@
         "custom/clock-icon" = {format = "";};
         "custom/mpris-icon" = {format = " ";};
         "custom/idle-icon" = {format = " ";};
+        "custom/vpn-icon" = {format = " ";};
         "custom/tray-icon" = {
           format = "󱊖";
           on-click = "swaync-client -t";

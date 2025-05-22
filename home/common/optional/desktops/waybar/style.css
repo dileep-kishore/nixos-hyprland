@@ -58,6 +58,7 @@ window.HDMI-A-1 #custom-backlight-icon,
 window.HDMI-A-1 #custom-battery-icon,
 window.HDMI-A-1 #custom-mpris-icon,
 window.HDMI-A-1 #custom-idle-icon,
+window.HDMI-A-1 #custom-vpn-icon,
 window.HDMI-A-1 #network,
 window.HDMI-A-1 #mpris,
 window.HDMI-A-1 #idle_inhibitor,
@@ -66,6 +67,7 @@ window.HDMI-A-1 #memory,
 window.HDMI-A-1 #backlight,
 window.HDMI-A-1 #battery,
 window.HDMI-A-1 #custom-toggl,
+window.HDMI-A-1 #custom-vpn,
 window.HDMI-A-1 #pulseaudio {
   font-size: 0px;
   padding: 0;
@@ -273,6 +275,7 @@ window#waybar.swallowing {
   background: @text;
 }
 
+#custom-vpn,
 #idle_inhibitor,
 #mpris {
   background-color: @base;
@@ -281,6 +284,10 @@ window#waybar.swallowing {
   margin-left: 5px;
 }
 
+#custom-vpn {
+  color: @peach;
+  border: 2px solid @peach;
+}
 #idle_inhibitor {
   color: @yellow;
   border: 2px solid @yellow;
@@ -290,6 +297,7 @@ window#waybar.swallowing {
   border: 2px solid @green;
 }
 
+#custom-vpn-icon,
 #custom-idle-icon,
 #custom-mpris-icon,
 #custom-window-icon {
@@ -298,6 +306,9 @@ window#waybar.swallowing {
   border-radius: 0 5px 5px 0;
 }
 
+#custom-vpn-icon {
+  background: @peach;
+}
 #custom-idle-icon {
   background: @yellow;
 }
