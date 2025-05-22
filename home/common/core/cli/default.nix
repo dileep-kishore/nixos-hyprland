@@ -46,7 +46,7 @@
     lazydocker
     libnotify
     libxcrypt
-    ncdu
+    dua
     nixd
     fastfetch
     nix-tree

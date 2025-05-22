@@ -22,8 +22,9 @@
     myip = "curl http://ipecho.net/plain; echo";
     # df
     df = "df -ahiT --total";
-    # ncdu
-    du = "ncdu --color dark -rr -x --exclude .git --exclude node_modules";
+    # dua
+    ncdu = "dua";
+    du = "dua i";
     # memory
     free = "free -mt";
     # ps
