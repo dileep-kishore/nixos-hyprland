@@ -1,8 +1,8 @@
 [manager]
-cwd = { fg = "#94e2d5" }
+cwd = { fg = "#89b4fa", italic = true, bold = true }
 
-hovered         = { fg = "#1e1e2e", bg = "#cba6f7" }
-preview_hovered = { fg = "#1e1e2e", bg = "#cdd6f4" }
+hovered         = { fg = "#11111b", bg = "#cba6f7" }
+preview_hovered = { fg = "#11111b", bg = "#cdd6f4" }
 
 find_keyword  = { fg = "#f9e2af", italic = true }
 find_position = { fg = "#f5c2e7", bg = "reset", italic = true }
@@ -12,7 +12,7 @@ marker_cut      = { fg = "#f38ba8", bg = "#f38ba8" }
 marker_marked   = { fg = "#94e2d5", bg = "#94e2d5" }
 marker_selected = { fg = "#cba6f7", bg = "#cba6f7" }
 
-tab_active   = { fg = "#1e1e2e", bg = "#cdd6f4" }
+tab_active   = { fg = "#11111b", bg = "#cdd6f4" }
 tab_inactive = { fg = "#cdd6f4", bg = "#45475a" }
 tab_width    = 1
 

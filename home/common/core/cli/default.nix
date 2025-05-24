@@ -25,6 +25,7 @@
     ./tv
     ./yazi
     ./zellij
+    ./glow
     ./zoxide.nix
   ];
 
@@ -47,13 +48,16 @@
     libnotify
     libxcrypt
     dua
+    miller
     nixd
     fastfetch
     nix-tree
     openvpn
+    ouch
     p7zip
     pciutils
     procs
+    rich-cli
     shell-gpt
     serpl
     skim
