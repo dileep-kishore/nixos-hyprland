@@ -14,7 +14,7 @@
         mod = "dock";
         margin-left = 9;
         margin-right = 9;
-        margin-top = 4;
+        margin-top = 0;
         margin-bottom = 0;
         reload_style_on_change = true;
         spacing = 0;
@@ -98,7 +98,7 @@
           all-outputs = false;
           format = "{icon}";
           icon-theme = "Papirus-Dark";
-          icon-size = 20;
+          icon-size = 16;
           tooltip = true;
           tooltip-format = "{title}";
           active-first = true;
