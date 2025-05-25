@@ -107,8 +107,6 @@ window.HDMI-A-1 #pulseaudio {
   border-radius: 0px 0px 18px 18px;
   padding-left: 4px;
   padding-right: 4px;
-  margin-top: 5px;
-  margin-bottom: 5px;
   border: 2px solid @mauve;
 }
 
@@ -146,8 +144,6 @@ window.HDMI-A-1 #pulseaudio {
   background-color: @base;
   border-radius: 0px;
   padding: 0rem 0.7rem;
-  margin-top: 5px;
-  margin-bottom: 5px;
   border: 2px solid @blue;
 }
 
@@ -156,8 +152,6 @@ window.HDMI-A-1 #pulseaudio {
   border-radius: 5px 0 0 5px;
   padding: 0rem 0rem;
   margin-left: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
   border: 2px solid @blue;
 }
 
@@ -179,8 +173,6 @@ window#waybar.swallowing {
 #pulseaudio {
   background: @base;
   margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
   border-radius: 0 5px 5px 0;
   padding: 0 15px;
 }
@@ -189,8 +181,6 @@ window#waybar.swallowing {
 #battery {
   background: @base;
   margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
   border-radius: 5px;
   padding: 0 15px;
 }
@@ -264,8 +254,6 @@ window#waybar.swallowing {
   color: @crust;
   padding: 0px 10px;
   border-radius: 5px 0 0 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 #custom-toggl-icon {
@@ -294,8 +282,6 @@ window#waybar.swallowing {
   background-color: @base;
   border-radius: 5px 0 0 5px;
   padding: 0rem 0.7rem;
-  margin-top: 5px;
-  margin-bottom: 5px;
   margin-left: 5px;
 }
 
@@ -318,8 +304,6 @@ window#waybar.swallowing {
 #custom-window-icon {
   color: @crust;
   padding: 0px 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
   border-radius: 0 5px 5px 0;
 }
 

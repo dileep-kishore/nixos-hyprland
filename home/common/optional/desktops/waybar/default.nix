@@ -14,7 +14,7 @@
         mod = "dock";
         margin-left = 9;
         margin-right = 9;
-        margin-top = 0;
+        margin-top = 2;
         margin-bottom = 0;
         reload_style_on_change = true;
         spacing = 0;
