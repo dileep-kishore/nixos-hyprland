@@ -77,9 +77,9 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #waybar {
-  background: rgba(30, 30, 46, 0);
+  background: rgba(17, 17, 17, 0.3);
   color: @text;
-  border-radius: 5px;
+  border-radius: 0px 5px 18px 18px;
 }
 
 #custom-spacer {
@@ -107,6 +107,7 @@ window.HDMI-A-1 #pulseaudio {
   padding-left: 4px;
   padding-right: 4px;
   border: 2px solid @crust;
+  border-image: linear-gradient(to right, @mauve 0%, @mauve 70%, @blue 100%) 1;
 }
 
 #workspaces button {
