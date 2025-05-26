@@ -23,6 +23,7 @@
       bindkey '^ ' autosuggest-accept
       export OPENAI_API_KEY="$(cat ~/.secrets/openai_api_key.txt)"
       export ANTHROPIC_API_KEY="$(cat ~/.secrets/anthropic_api_key.txt)"
+      export GEMINI_API_KEY="$(cat ~/.secrets/gemini_api_key.txt)"
       export DIRENV_LOG_FORMAT=""
       # export ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
       fast-theme XDG:catppuccin-mocha -q
