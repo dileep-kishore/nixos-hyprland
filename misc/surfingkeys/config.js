@@ -2,8 +2,8 @@ api.imap("jk", "<Esc>");
 
 api.cmap("<Ctrl-n>", "<Tab>");
 api.cmap("<Ctrl-p>", "<Shift-Tab>");
-api.map("J", "E");
-api.map("K", "R");
+api.map("J", "R");
+api.map("K", "E");
 api.map("H", "S");
 api.map("L", "D");
 api.map("F", "C");
