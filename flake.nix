@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    # TODO: Apply fixes to nixos-xps
     hardware.url = "github:nixos/nixos-hardware";
     nix-colors.url = "github:misterio77/nix-colors";
 
@@ -51,6 +50,12 @@
 
     # spicetify
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
+    # zen-browser
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

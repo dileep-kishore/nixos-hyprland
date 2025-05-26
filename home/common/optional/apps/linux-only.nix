@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./ssh.nix
     ./gpg.nix
@@ -34,6 +38,7 @@
     udisks
     zotero
     firefox
+    inputs.zen-browser.packages.${pkgs.system}.default
     zoom-us
   ];
 }
