@@ -27,7 +27,7 @@
 @define-color crust #11111b;
 
 * {
-  font-family: "CartographCF Nerd Font", "CaskaydiaCove Nerd Font";
+  font-family: "Monaspace Neon Frozen", "CaskaydiaCove Nerd Font";
   font-size: 15px;
   min-height: 0;
   border: none;
@@ -77,7 +77,7 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #waybar {
-  background: rgba(17, 17, 17, 0.3);
+  background: rgba(17, 17, 17, 0.5);
   color: @text;
   border-radius: 0px 5px 5px 18px;
 }
@@ -85,28 +85,26 @@ window.HDMI-A-1 #pulseaudio {
 #custom-spacer {
   background: @yellow;
   color: @crust;
-  border-radius: 5px;
   padding: 0rem 0.7rem;
+  border-radius: 0px 18px 0px 18px;
+  margin-right: 5px;
 }
 
 #image {
   background: @base;
   border-radius: 0px 18px 0px 18px;
+  margin-right: 5px;
   padding: 0rem 0.7rem;
   border: 2px solid @crust;
 }
 
 #workspaces {
   font-weight: bold;
-  background: @base;
   color: @text;
   box-shadow: none;
   text-shadow: none;
   transition: 0.2s ease;
-  /* border-radius: 0px 18px 0px 18px; */
-  border-radius: 0px 0px 18px 18px;
-  padding-left: 4px;
-  padding-right: 4px;
+  border-radius: 0px 18px 0px 18px;
   border: 2px solid @mauve;
 }
 
@@ -141,22 +139,16 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #window {
-  background-color: @base;
-  border-radius: 0px;
+  font-family: "Monaspace Radon Frozen", "CaskaydiaCove Nerd Font";
+  border-radius: 0;
   padding: 0rem 0.7rem;
   border: 2px solid @blue;
 }
 
 #taskbar {
-  background-color: @base;
   border-radius: 5px 0 0 5px;
   padding: 0rem 0rem;
-  margin-left: 5px;
   border: 2px solid @blue;
-}
-
-window#waybar.empty {
-  background-color: transparent;
 }
 
 window#waybar.fullscreen,
@@ -167,47 +159,39 @@ window#waybar.swallowing {
 #network,
 #cpu,
 #memory,
-#custom-toggl,
-#clock,
 #tray,
 #pulseaudio {
-  background: @base;
-  margin-right: 5px;
-  border-radius: 0 5px 5px 0;
-  padding: 0 15px;
+  padding: 0 5px;
+  border-top: 2px solid @text;
+  border-bottom: 2px solid @text;
 }
 
 #backlight,
 #battery {
-  background: @base;
-  margin-right: 5px;
-  border-radius: 5px;
-  padding: 0 15px;
+  padding: 0 5px;
 }
 
 #network {
-  color: @peach;
-  border: 2px solid @peach;
+  color: @yellow;
 }
 
 #cpu {
   color: @pink;
-  border: 2px solid @pink;
 }
 
 #memory {
   color: @yellow;
-  border: 2px solid @yellow;
 }
 
 #clock {
   color: @pink;
+  border-radius: 0 5px 5px 0;
   border: 2px solid @pink;
+  padding: 0rem 0.7rem;
 }
 
 #battery {
   color: @pink;
-  border: 2px solid @pink;
 }
 
 #battery.charging {
@@ -220,28 +204,31 @@ window#waybar.swallowing {
 
 #backlight {
   color: @yellow;
-  border: 2px solid @yellow;
 }
 
 #backlight,
 #battery {
   color: @pink;
-  border: 2px solid @pink;
 }
 
 #custom-toggl {
+  font-family: "Monaspace Radon Frozen", "CaskaydiaCove Nerd Font";
   color: @red;
+  border-radius: 0 5px 5px 0;
   border: 2px solid @red;
+  padding: 0rem 0.7rem;
 }
 
 #pulseaudio {
-  color: @green;
-  border: 2px solid @green;
+  color: @yellow;
 }
 
 #tray {
   padding: 0rem 0.7rem;
-  border: 2px solid @text;
+  border-radius: 0 5px 5px 0;
+  border-top: 2px solid @text;
+  border-bottom: 2px solid @text;
+  border-right: 2px solid @text;
 }
 
 #custom-toggl-icon,
@@ -252,6 +239,7 @@ window#waybar.swallowing {
 #custom-clock-icon,
 #custom-tray-icon {
   color: @crust;
+  margin-left: 5px;
   padding: 0px 10px;
   border-radius: 5px 0 0 5px;
 }
@@ -273,28 +261,28 @@ window#waybar.swallowing {
 }
 
 #custom-tray-icon {
+  margin-left: 5px;
   background: @text;
 }
 
 #custom-vpn,
-#idle_inhibitor,
-#mpris {
-  background-color: @base;
-  border-radius: 5px 0 0 5px;
-  padding: 0rem 0.7rem;
-  margin-left: 5px;
+#idle_inhibitor {
+  padding: 0 5px;
+  border-top: 2px solid @text;
+  border-bottom: 2px solid @text;
 }
 
 #custom-vpn {
-  color: @peach;
-  border: 2px solid @peach;
+  color: @yellow;
 }
 #idle_inhibitor {
   color: @yellow;
-  border: 2px solid @yellow;
 }
 #mpris {
+  font-family: "Monaspace Radon Frozen", "CaskaydiaCove Nerd Font";
   color: @green;
+  padding: 0rem 0.7rem;
+  border-radius: 5px 0 0 5px;
   border: 2px solid @green;
 }
 
@@ -305,6 +293,7 @@ window#waybar.swallowing {
   color: @crust;
   padding: 0px 10px;
   border-radius: 0 5px 5px 0;
+  margin-right: 5px;
 }
 
 #custom-vpn-icon {

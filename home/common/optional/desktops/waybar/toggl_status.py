@@ -16,8 +16,8 @@ try:
     project = data["Project"].split("(")[0].strip()
     project_short = "/".join([p[0] for p in project.split(" / ")])
     duration = data["Duration"]
-    display = f"<i>{short_title}</i> [{project_short}]: {duration}"
+    display = f"{short_title} [{project_short}]: {duration}"
 except:
-    display = "<i>Start tracking!</i>"
+    display = "Start tracking!"
 
 print(display)

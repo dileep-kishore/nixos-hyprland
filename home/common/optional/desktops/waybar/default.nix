@@ -12,10 +12,10 @@
         layer = "top";
         position = "top";
         mod = "dock";
-        margin-left = 9;
-        margin-right = 9;
-        margin-top = 2;
-        margin-bottom = 0;
+        margin-left = 15;
+        margin-right = 15;
+        margin-top = 4;
+        margin-bottom = 4;
         reload_style_on_change = true;
         spacing = 0;
         modules-left = [
@@ -26,10 +26,6 @@
           "custom/window-icon"
           "mpris"
           "custom/mpris-icon"
-          "custom/vpn"
-          "custom/vpn-icon"
-          "idle_inhibitor"
-          "custom/idle-icon"
         ];
         modules-center = [
           "niri/workspaces"
@@ -37,25 +33,25 @@
         modules-right = [
           "custom/toggl-icon"
           "custom/toggl"
-          "custom/audio-icon"
-          "pulseaudio"
-          "custom/network-icon"
-          "network"
           # "memory"
           # "cpu"
           "custom/clock-icon"
           "clock"
           "custom/tray-icon"
-          "tray"
-          # "backlight"
+          "backlight"
           "battery"
           "battery#bat2"
+          "network"
+          "custom/vpn"
+          "idle_inhibitor"
+          "pulseaudio"
+          "tray"
         ];
 
         # Module configuration: Left
         "custom/spacer" = {
           format = "   ";
-          on-click = "walker";
+          on-click = "niri msg action toggle-overview";
         };
         "image" = {
           path = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
@@ -115,6 +111,7 @@
           max-length = 50;
           format = "{app_id}";
           separate-outputs = true;
+          on-click = "walker --modules windows";
           # icon = true;
           # icon-size = 18;
           rewrite = {
@@ -158,26 +155,28 @@
 
         # Module configuration: Right
         pulseaudio = {
-          format = "{volume}%{format_source}";
-          format-bluetooth = "{volume}% {format_source}";
-          format-bluetooth-muted = " {format_source}";
-          format-muted = "{format_source}";
-          format-source = "";
-          format-source-muted = "";
+          format = "{icon}";
+          format-bluetooth = "󰂰";
+          format-muted = "";
+          tooltip-format = "{name} {volume}%";
           format-icons = {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo" = "";
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted" = "";
             headphone = "";
             hands-free = "";
             headset = "";
             phone = "";
+            phone-muted = "";
             portable = "";
             car = "";
-            default = ["" "" ""];
+            default = ["" ""];
           };
+          scroll-step = 1;
           on-click = "pavucontrol";
         };
         network = {
-          format-wifi = "{bandwidthDownBits}";
-          format-ethernet = "{bandwidthDownBits}";
+          format-wifi = " ";
+          format-ethernet = " ";
           tooltip-format = "{essid} ({signalStrength}%)";
           format-linked = "{ifname} (No IP)";
           format-disconnected = "󰅛 ";
@@ -225,16 +224,16 @@
           format = "<i>{icon}</i>";
           start-activated = false;
           format-icons = {
-            activated = "on";
-            deactivated = "off";
+            activated = " ";
+            deactivated = " ";
           };
           tooltip-format-activated = "Swayidle inactive";
           tooltip-format-deactivated = "Swayidle active";
         };
         mpris = {
           interval = 2;
-          format = "{player_icon} <i>{dynamic}</i> {status_icon}";
-          format-paused = "{player_icon} <i>{dynamic}</i> {status_icon}";
+          format = "{player_icon}{dynamic}{status_icon}";
+          format-paused = "{player_icon}{dynamic}{status_icon}";
           tooltip = true;
           tooltip-format = "{dynamic}";
           on-click = "playerctl play-pause";
@@ -255,9 +254,9 @@
             vlc = "󰕼 ";
           };
           status-icons = {
-            playing = "┃";
-            paused = "┃";
-            stopped = "┃";
+            playing = "";
+            paused = "";
+            stopped = "";
           };
         };
         # Custom icons

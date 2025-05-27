@@ -20,7 +20,7 @@ def get_vpn_status():
 
 vpn_status = get_vpn_status()
 if vpn_status == "active":
-    display = "<i>on</i>"
+    display = "<i> </i>"
 else:
-    display = "<i>off</i>"
+    display = "<i> </i>"
 print(display)
