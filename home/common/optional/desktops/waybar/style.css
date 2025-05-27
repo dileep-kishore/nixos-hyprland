@@ -202,13 +202,11 @@ window#waybar.swallowing {
   color: @mauve;
 }
 
-#backlight {
-  color: @yellow;
-}
-
 #backlight,
 #battery {
-  color: @pink;
+  color: @yellow;
+  border-top: 2px solid @text;
+  border-bottom: 2px solid @text;
 }
 
 #custom-toggl {

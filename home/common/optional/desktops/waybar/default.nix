@@ -188,7 +188,7 @@
         };
         memory = {format = "{}%  ";};
         backlight = {
-          format = "{percent}% {icon}";
+          format = "{icon}";
           format-icons = ["" "" "" "" "" "" "" "" ""];
         };
         battery = {
@@ -197,11 +197,13 @@
             warning = 30;
             critical = 15;
           };
-          format = "{capacity}% {icon}";
-          format-charging = "{capacity}% ";
-          format-plugged = "{capacity}% ";
-          format-alt = "{time} {icon}";
+          format = "{icon}";
+          format-charging = "";
+          format-plugged = "";
+          format-alt = "{capacity}% {icon}";
           format-icons = ["" "" "" "" ""];
+          tooltip-format = "{capacity}% {time}";
+          tooltip = true;
         };
         "battery#bat2" = {bat = "BAT2";};
         tray = {
