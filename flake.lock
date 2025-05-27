@@ -472,11 +472,11 @@
         "pre-commit-hooks": "pre-commit-hooks_2"
       },
       "locked": {
-        "lastModified": 1748190862,
-        "narHash": "sha256-ewxUwHInBwZYI8g4kn4gGAh2nNslA5JId6YeXAgh2ao=",
+        "lastModified": 1748322915,
+        "narHash": "sha256-erVUjXhSao3jAyqVgCanxf0vcORjESJduRz6ia0dxIU=",
         "owner": "dileep-kishore",
         "repo": "nyanvim",
-        "rev": "00757306e7344b0f6519fd16230df18f253fb76e",
+        "rev": "ae09c22aa5bf8c5a734de27b97cc75d5842886fb",
         "type": "github"
       },
       "original": {
@@ -584,11 +584,11 @@
     },
     "nixCats": {
       "locked": {
-        "lastModified": 1747402538,
-        "narHash": "sha256-hqOngVDs86+L2tYseKLqhhJsgXWluwwmPFJByvMc1d4=",
+        "lastModified": 1748230488,
+        "narHash": "sha256-CktYY2rcFPJ3Tbz5H/nDnkhaO18nrLGdWa1mH7V9X5Q=",
         "owner": "BirdeeHub",
         "repo": "nixCats-nvim",
-        "rev": "14e95095b612f2c438e00a0f60287d867e8abd69",
+        "rev": "2a2f15a6c085524ac121f5da9a73ee2155c53d70",
         "type": "github"
       },
       "original": {
@@ -727,11 +727,11 @@
     "plugins-lze": {
       "flake": false,
       "locked": {
-        "lastModified": 1748140721,
-        "narHash": "sha256-EUVhgCnES/UtfN4ld9UK+Im4FEQBO+8hQaCWDGSiof8=",
+        "lastModified": 1748205840,
+        "narHash": "sha256-wpA6CFPTdpPJVie2JfB3giIIsdJxvUrxd26vHOGjCN0=",
         "owner": "BirdeeHub",
         "repo": "lze",
-        "rev": "eb9ba3f1dda14383e48f2b29eaeefef0760fe4d2",
+        "rev": "3a05305a638e7e451bfafe955102b8d5536c11cb",
         "type": "github"
       },
       "original": {
