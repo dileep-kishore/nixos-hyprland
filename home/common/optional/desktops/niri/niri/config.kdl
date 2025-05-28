@@ -198,6 +198,9 @@ binds {
     Mod+D {
         spawn "~/.nix-profile/bin/walker" "--modules" "windows"
     }
+    Mod+C {
+        spawn "bash" "-c" "~/.nix-profile/bin/hyprpicker | ~/.nix-profile/bin/wl-copy"
+    }
     Super+Alt+L {
         spawn "swaylock"
     }
