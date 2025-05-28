@@ -54,7 +54,7 @@
           on-click = "niri msg action toggle-overview";
         };
         "image" = {
-          path = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+          path = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake-white.svg";
           on-click = "niri msg action toggle-overview";
           size = 22;
           tooltip = false;
