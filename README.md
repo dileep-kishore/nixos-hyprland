@@ -11,13 +11,13 @@
         <br/>
         <sub>
             <a href="https://nixos.org/manual/nix/stable/language/index.html" target="_blank">
-            <img alt="Built With Nix" src="https://img.shields.io/static/v1?logoColor=d8dee9&label=Built%20With&labelColor=5e81ac&message=Nix&color=d8dee9&style=for-the-badge">
+            <img alt="Built With Nix" src="./assets/built-with-nix.svg">
             </a>
             <a href="https://nixos.wiki/wiki/Flakes" target="_blank">
-            <img alt="Nix Flakes Ready" src="https://img.shields.io/static/v1?logo=nixos&logoColor=d8dee9&label=Nix%20Flakes&labelColor=5e81ac&message=Ready&color=d8dee9&style=for-the-badge">
+            <img alt="Nix Flakes Ready" src="./assets/nix-flakes-ready.svg">
             </a>
             <a href="https://github.com/nix-community/home-manager" target="_blank">
-            <img alt="Uses" src="https://img.shields.io/static/v1?logo=nixos&logoColor=d8dee9&label=Uses&labelColor=5e81ac&message=Home Manager&color=d8dee9&style=for-the-badge">
+            <img alt="Uses" src="./assets/uses-home-manager.svg">
             </a>
         </sub>
     </div>
