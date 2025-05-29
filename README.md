@@ -39,9 +39,10 @@
 - Status bar: [Waybar](https://github.com/Alexays/Waybar)
 - Terminal: [Ghostty](https://ghostty.org) and [Kitty](https://sw.kovidgoyal.net/kitty/)
 - Shell: `Zsh` with plugins managed through [antidote](https://github.com/mattmc3/antidote) with [oh-my-posh](https://ohmyposh.dev/) prompt
+- Application launcher: [Walker](https://github.com/abenz1267/walker)
 - Current theme: [Catppuccin](https://catppuccin.com/)
-- Font: [Maple Mono](https://github.com/subframe7536/maple-font)
-- Editor: [Neovim](https://neovim.io). Configuration can be found [here](https://github.com/dileep-kishore/neovim)
+- Font: [Monaspace](https://github.com/githubnext/monaspace)
+- Editor: [Neovim](https://neovim.io). Configuration can be found [here](https://github.com/dileep-kishore/nyanvim)
 
 ## Gallery
 
@@ -49,9 +50,9 @@
 | :------------------------------: |
 | ![desktop](./assets/desktop.png) |
 
-|              Terminal + Tmux              |
-| :---------------------------------------: |
-| ![terminals_tmux](./assets/terminals.png) |
+|          Terminals + Zellij          |
+| :----------------------------------: |
+| ![terminals](./assets/terminals.png) |
 
 |             Neovim             |
 | :----------------------------: |
@@ -69,7 +70,7 @@
 
 ### Requirements
 
-- NixOS 24.11 or Home-manager
+- NixOS 25.11 or Home-manager
 - Patience
 - Knowledge
 - Disk space
@@ -95,14 +96,6 @@ home-manager switch --flake '.#<user>@<host>'
 - [Zotero](https://www.zotero.org/)
   - Install the [zotero-dracula](https://github.com/dracula/zotero) if you see a white statusbar
   - Install the [zotero-better-bibtex](https://github.com/retorquere/zotero-better-bibtex) plugin
-- [Ulauncher](https://github.com/Ulauncher/Ulauncher) extensions
-  - Emoji
-  - ChatGPT
-  - Todoist
-  - Clipboard
-  - Calculate Anything
-  - Better file browser
-  - GitHub
 
 ## Acknowledgements
 
