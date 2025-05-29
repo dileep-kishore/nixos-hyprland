@@ -147,11 +147,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1748489961,
-        "narHash": "sha256-uGnudxMoQi2c8rpPoHXuQSm80NBqlOiNF4xdT3hhzLM=",
+        "lastModified": 1748529677,
+        "narHash": "sha256-MJEX3Skt5EAIs/aGHD8/aXXZPcceMMHheyIGSjvxZN0=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "95c988cf08e9a5a8fe7cc275d5e3f24e9e87bd51",
+        "rev": "da282034f4d30e787b8a10722431e8b650a907ef",
         "type": "github"
       },
       "original": {
@@ -266,11 +266,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1748436997,
-        "narHash": "sha256-kkTtt1Yqhks0i7w6aOhzry80TDq2mAE/p9VXlh0ytIk=",
+        "lastModified": 1748526041,
+        "narHash": "sha256-QyUACXhQJ2+K0YxwEuAfpyCXqbdCCHj1jNAWJy+vUxw=",
         "owner": "hyprwm",
         "repo": "hyprland-plugins",
-        "rev": "367f4fc6e9a903314c1f1eb227af35dccbe0b64c",
+        "rev": "2eee96fe52fa0923c0aae647eb7901b5b51df3db",
         "type": "github"
       },
       "original": {
@@ -472,11 +472,11 @@
         "pre-commit-hooks": "pre-commit-hooks_2"
       },
       "locked": {
-        "lastModified": 1748492242,
-        "narHash": "sha256-yWc4VBuMg9nZgSZ2yop8hqWjs/iDPUuTsX4Oo/MMLRM=",
+        "lastModified": 1748557106,
+        "narHash": "sha256-9htRerTRnMy7YBfdyZKlGnAc2rJIJXA7O7RQvOc4O+I=",
         "owner": "dileep-kishore",
         "repo": "nyanvim",
-        "rev": "4035ae3bdab8ebfa7cd512c0c6959eb25970fb8f",
+        "rev": "6450609340221df4fc10491a034afe887bc19690",
         "type": "github"
       },
       "original": {
