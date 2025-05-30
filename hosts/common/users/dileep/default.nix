@@ -34,6 +34,9 @@ in {
     secrets.GEMINI_API_KEY = {
       owner = config.users.users.dileep.name;
     };
+    secrets.TAVILY_API_KEY = {
+      owner = config.users.users.dileep.name;
+    };
   };
 
   # OpenAI API Key
@@ -47,6 +50,7 @@ in {
       echo $(cat ${config.sops.secrets.OPENAI_API_KEY.path}) > /home/dileep/.secrets/openai_api_key.txt
       echo $(cat ${config.sops.secrets.ANTHROPIC_API_KEY.path}) > /home/dileep/.secrets/anthropic_api_key.txt
       echo $(cat ${config.sops.secrets.GEMINI_API_KEY.path}) > /home/dileep/.secrets/gemini_api_key.txt
+      echo $(cat ${config.sops.secrets.TAVILY_API_KEY.path}) > /home/dileep/.secrets/tavily_api_key.txt
     '';
     serviceConfig = {
       User = "dileep";
