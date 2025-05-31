@@ -6,7 +6,7 @@
     enableBashIntegration = true;
     enableZshIntegration = true;
     settings = {
-      manager = {
+      mgr = {
         show_hidden = false;
         sort_by = "alphabetical";
         sort_sensitive = false;
@@ -60,7 +60,7 @@
       jump-to-char = jump-to-char;
     };
     keymap = {
-      manager.prepend_keymap = [
+      mgr.prepend_keymap = [
         {
           on = "s";
           run = "plugin jump-to-char";
