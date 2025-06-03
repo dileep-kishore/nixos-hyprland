@@ -203,7 +203,7 @@ binds {
         spawn "bash" "-c" "~/.nix-profile/bin/hyprpicker | ~/.nix-profile/bin/wl-copy"
     }
     Super+Alt+L {
-        spawn "swaylock"
+        spawn "bash" "-c" "swaylock && sleep 10 && niri msg action power-off-monitors"
     }
     XF86AudioRaiseVolume allow-when-locked=true {
         spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"
