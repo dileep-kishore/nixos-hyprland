@@ -15,8 +15,6 @@
     appimage-run
     brave
     brightnessctl
-    # capacities-latest
-    clickup-latest
     code-cursor
     eog
     gparted
@@ -27,7 +25,7 @@
     libsForQt5.okular
     libwacom
     lshw
-    morgen-latest
+    morgen
     nautilus
     obsidian
     pdfarranger
