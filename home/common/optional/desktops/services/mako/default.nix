@@ -12,10 +12,10 @@
       textColor = "#cdd6f4";
       borderColor = "#cba6f7";
       progressColor = "#313244";
-    };
-    criteria = {
-      "urgency=high" = {
-        borderColor = "#fab387";
+      criteria = {
+        "urgency=high" = {
+          borderColor = "#fab387";
+        };
       };
     };
   };
