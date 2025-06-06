@@ -219,7 +219,7 @@
         "custom/toggl" = {
           format = "{}";
           exec = "$HOME/.config/waybar/toggl_status.py";
-          interval = 300;
+          interval = 180;
           on-click = "toggl stop";
         };
         "idle_inhibitor" = {
