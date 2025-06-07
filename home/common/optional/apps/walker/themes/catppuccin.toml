@@ -35,10 +35,10 @@ top = 200
 name = "aiScroll"
 h_align = "fill"
 v_align = "fill"
-max_height = 300
-min_width = 400
-height = 300
-width = 400
+max_height = 400
+min_width = 500
+height = 400
+width = 500
 
 [ui.window.box.ai_scroll.margins]
 top = 8
@@ -46,7 +46,7 @@ top = 8
 [ui.window.box.ai_scroll.list]
 name = "aiList"
 orientation = "vertical"
-width = 400
+width = 500
 spacing = 10
 
 [ui.window.box.ai_scroll.list.item]
@@ -59,10 +59,10 @@ wrap = true
 
 [ui.window.box.scroll.list]
 marker_color = "#f38ba8"
-max_height = 300
-max_width = 400
-min_width = 400
-width = 400
+max_height = 600
+max_width = 500
+min_width = 500
+width = 500
 
 [ui.window.box.scroll.list.item.activation_label]
 h_align = "fill"
