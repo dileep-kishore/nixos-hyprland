@@ -16,7 +16,7 @@ def get_niri_msg_output(msg):
 
 def get_current_wallpaper(monitor):
     with open(os.path.join(wallpapers_cache_path, monitor)) as f:
-        wallpaper = str(f.read().strip())
+        wallpaper = str(f.readlines()[-1].strip())
         return wallpaper
 
 
