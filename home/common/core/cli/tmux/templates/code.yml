@@ -1,0 +1,16 @@
+windows:
+  - main:
+      layout: main-vertical
+      panes: [null]
+  - nvim:
+      layout: main-horizontal
+      panes: [nvim]
+  - git:
+      layout: main-horizontal
+      panes: [lazygit]
+  - term:
+      layout: main-vertical
+      panes: [null, null, null]
+  - misc:
+      layout: main-vertical
+      panes: [null, null]

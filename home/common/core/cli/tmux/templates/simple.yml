@@ -1,0 +1,7 @@
+windows:
+  - main:
+      layout: main-vertical
+      panes: [null]
+  - secondary:
+      layout: main-vertical
+      panes: [null]

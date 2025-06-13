@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     sesh
+    tmuxinator
   ];
   programs.tmux = {
     enable = true;
@@ -28,16 +29,21 @@
 
   # aliases
   home.shellAliases = {
-    tnew = "tmux new -s";
-    ta = "tmux attach -t";
+    ta = "sesh connect";
     tdetach = "tmux detach";
     tkill = "tmux kill-session -t";
-    tlist = "tmux ls";
+    tlist = "sesh list -tT --icons";
   };
 
   # copy over scripts
   home.file.".config/tmux/scripts" = {
     recursive = true;
     source = ./scripts;
+  };
+
+  # copy over templates
+  home.file.".config/tmux/templates" = {
+    recursive = true;
+    source = ./templates;
   };
 }

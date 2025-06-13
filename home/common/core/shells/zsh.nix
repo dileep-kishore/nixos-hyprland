@@ -42,6 +42,10 @@
       ZJ_LAYOUT_DIR=$(zellij setup --check \
         | grep "LAYOUT DIR" - \
         | grep -o '".*"' - | tr -d '"')
+      tnew() {
+        bash ~/.config/tmux/scripts/templater.sh "$@"
+        tmuxinator start "$1"
+      }
     '';
     # profileExtra = { };
     # shellAliases = { };
