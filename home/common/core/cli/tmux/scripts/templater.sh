@@ -20,6 +20,11 @@ if [ ! -f "$TEMPLATE_FILE" ]; then
     exit 1
 fi
 
+# IF ~/.tmuxinator/ does not exist, create it
+if [ ! -d "$HOME/.tmuxinator" ]; then
+    mkdir -p "$HOME/.tmuxinator"
+fi
+
 # If config file already exists, echo a message and exit
 if [ -f "$CONFIG_FILE" ]; then
     echo "Configuration file $CONFIG_FILE already exists."
