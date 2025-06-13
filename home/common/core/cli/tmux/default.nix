@@ -21,21 +21,6 @@
       sessionist
       open
       tmux-thumbs
-      {
-        plugin = resurrect;
-        extraConfig = ''
-          set -g @resurrect-strategy-vim 'session'
-          set -g @resurrect-strategy-nvim 'session'
-          set -g @resurrect-capture-pane-contents 'on'
-        '';
-      }
-      {
-        plugin = continuum;
-        extraConfig = ''
-          set -g @continuum-restore 'on'
-          set -g @continuum-save-interval '60' # minutes
-        '';
-      }
     ];
 
     extraConfig = builtins.readFile ./tmux.conf;
