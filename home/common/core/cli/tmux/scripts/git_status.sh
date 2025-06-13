@@ -69,7 +69,7 @@ if [[ $DELETIONS_COUNT -gt 0 ]]; then
 fi
 
 if [[ $UNTRACKED_COUNT -gt 0 ]]; then
-	STATUS_UNTRACKED="${RESET}#[fg=${thm_surface2},bg=${thm_base},bold] ${UNTRACKED_COUNT} "
+	STATUS_UNTRACKED="${RESET}#[fg=${thm_surface_2},bg=${thm_base},bold] ${UNTRACKED_COUNT} "
 fi
 
 # Determine repository sync status
@@ -102,16 +102,16 @@ RSEP=" "
 # SEP="▒"
 case "$SYNC_MODE" in
 1)
-	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_peach},bold,italic]$RSEP 󱓎"
+	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_peach},bold,italics]$RSEP 󱓎"
 	;;
 2)
-	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_teal},bold,italic]$RSEP 󰛃"
+	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_teal},bold,italics]$RSEP 󰛃"
 	;;
 3)
-	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_red},bold,italic]$RSEP 󰛀"
+	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_red},bold,italics]$RSEP 󰛀"
 	;;
 *)
-	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_green},bold,italic]$RSEP "
+	REMOTE_STATUS="$RESET#[bg=${thm_base},fg=${thm_green},bold,italics]$RSEP "
 	;;
 esac
 
