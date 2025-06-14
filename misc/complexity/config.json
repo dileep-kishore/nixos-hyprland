@@ -1,29 +1,20 @@
 {
   "settings": {
     "settings": {
+      "devMode": false,
+      "energySavingMode": false,
+      "extensionIconAction": "perplexity",
+      "isPostUpdateReleaseNotesPopupDismissed": false,
       "plugins": {
         "blockAnalyticEvents": {
           "enabled": false
         },
-        "thread:canvas": {
-          "enabled": false
-        },
         "commandMenu": {
-          "hotkey": ["Control", "k"],
-          "enabled": true
-        },
-        "thread:customThreadContainerWidth": {
-          "enabled": false,
-          "value": 740
-        },
-        "thread:dragAndDropFileToUploadInThread": {
-          "enabled": true
-        },
-        "thread:exportThread": {
-          "enabled": true
-        },
-        "queryBox:spacesThreadsForceWritingMode": {
-          "enabled": false
+          "enabled": true,
+          "hotkey": [
+            "Control",
+            "k"
+          ]
         },
         "hide-get-mobile-app-cta-btn": {
           "enabled": false
@@ -35,51 +26,54 @@
         "imageGenModelSelector": {
           "enabled": true
         },
-        "queryBox:languageModelSelector": {
-          "enabled": true,
-          "respectDefaultSpaceModel": false,
-          "changeTimezone": false
-        },
         "onCloudflareTimeoutAutoReload": {
-          "enabled": false,
-          "behavior": "reload"
-        },
-        "queryBox:slashCommandMenu:promptHistory": {
-          "enabled": true,
-          "trigger": {
-            "onSubmit": true,
-            "onNavigation": true
-          }
-        },
-        "queryBox:submitOnCtrlEnter": {
+          "behavior": "reload",
           "enabled": false
         },
-        "queryBox:rawTextPaste": {
+        "queryBox:languageModelSelector": {
+          "changeTimezone": false,
           "enabled": true,
-          "alwaysActive": false
+          "respectDefaultSpaceModel": false
         },
-        "sidebar:toggleableRecentThreads": {
+        "queryBox:rawTextPaste": {
+          "alwaysActive": false,
           "enabled": false
         },
         "queryBox:slashCommandMenu": {
           "enabled": true,
           "showTriggerButton": false
         },
+        "queryBox:slashCommandMenu:promptHistory": {
+          "enabled": true,
+          "trigger": {
+            "onNavigation": true,
+            "onSubmit": true
+          }
+        },
+        "queryBox:spacesThreadsForceWritingMode": {
+          "enabled": false
+        },
+        "queryBox:submitOnCtrlEnter": {
+          "enabled": false
+        },
+        "sidebar:toggleableRecentThreads": {
+          "enabled": false
+        },
         "spaceNavigator": {
-          "enabled": true
+          "enabled": false
         },
         "thread:betterCodeBlocks": {
           "enabled": false,
-          "stickyHeader": true,
+          "maxHeight": {
+            "collapseByDefault": false,
+            "enabled": true,
+            "showToggleButton": true,
+            "value": 500
+          },
           "showLineNumbers": false,
+          "stickyHeader": true,
           "unwrap": {
             "enabled": true,
-            "showToggleButton": true
-          },
-          "maxHeight": {
-            "enabled": true,
-            "collapseByDefault": false,
-            "value": 500,
             "showToggleButton": true
           }
         },
@@ -88,15 +82,24 @@
         },
         "thread:betterMessageToolbars": {
           "enabled": true,
-          "sticky": true,
-          "hideUnnecessaryButtons": true
+          "hideUnnecessaryButtons": true,
+          "sticky": true
         },
         "thread:betterRewriteDropdowns": {
           "enabled": true
         },
-        "thread:showMessageLength": {
-          "enabled": true,
-          "showTokens": false
+        "thread:canvas": {
+          "enabled": false
+        },
+        "thread:customThreadContainerWidth": {
+          "enabled": false,
+          "value": 740
+        },
+        "thread:dragAndDropFileToUploadInThread": {
+          "enabled": true
+        },
+        "thread:exportThread": {
+          "enabled": true
         },
         "thread:messageTts": {
           "enabled": true,
@@ -105,23 +108,27 @@
         "thread:rawHeadings": {
           "enabled": true
         },
+        "thread:showMessageLength": {
+          "enabled": true,
+          "showTokens": false
+        },
         "thread:toc": {
           "enabled": true
         },
         "zenMode": {
-          "enabled": true,
-          "persistent": false,
-          "lastState": false,
           "alwaysHideRelatedQuestions": false,
-          "hotkey": ["Control", "Alt", "z"]
+          "enabled": true,
+          "hotkey": [
+            "Control",
+            "Alt",
+            "z"
+          ],
+          "lastState": false,
+          "persistent": false
         }
       },
-      "theme": "complexity-shy-moment",
-      "energySavingMode": false,
-      "extensionIconAction": "perplexity",
-      "devMode": false,
       "showPostUpdateReleaseNotesPopup": false,
-      "isPostUpdateReleaseNotesPopupDismissed": false
+      "theme": "complexity-shy-moment"
     },
     "settings$": {
       "v": 2
@@ -130,13 +137,7 @@
   "db": {
     "themes": [],
     "betterCodeBlocksFineGrainedOptions": [],
-    "promptHistory": [
-      {
-        "prompt": "Compare GPT 4.1 and Claude 4 and Gemini 2.5 pro",
-        "id": "1748241081514-3X4EZr3w41wtq_mr2ohSY",
-        "createdAt": 1748241081514
-      }
-    ],
+    "promptHistory": [],
     "pinnedSpaces": []
   }
 }
