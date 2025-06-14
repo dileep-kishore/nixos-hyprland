@@ -104,7 +104,7 @@ window.HDMI-A-1 #pulseaudio {
   box-shadow: none;
   text-shadow: none;
   transition: 0.2s ease;
-  border-radius: 0px 18px 0px 18px;
+  border-radius: 30px;
   border: 2px solid @mauve;
 }
 
