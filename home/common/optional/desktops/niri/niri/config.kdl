@@ -176,10 +176,6 @@ window-rule {
 }
 // tweak opacity for inactive windows
 window-rule {
-    match is-active=true
-    opacity 0.98
-}
-window-rule {
     match is-active=false
     opacity 0.95
 }
