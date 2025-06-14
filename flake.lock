@@ -1039,8 +1039,7 @@
         "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs_4",
         "sops-nix": "sops-nix",
-        "spicetify-nix": "spicetify-nix",
-        "zen-browser": "zen-browser"
+        "spicetify-nix": "spicetify-nix"
       }
     },
     "sops-nix": {
@@ -1183,26 +1182,6 @@
       "original": {
         "owner": "Supreeeme",
         "repo": "xwayland-satellite",
-        "type": "github"
-      }
-    },
-    "zen-browser": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1748971473,
-        "narHash": "sha256-0Xh6sZI86Ops6u7wyDQlVvV+MvRRXIDb1r3sMnLNk9M=",
-        "owner": "youwen5",
-        "repo": "zen-browser-flake",
-        "rev": "5cc269976ca876674d8ccc7f40debb61e05583ab",
-        "type": "github"
-      },
-      "original": {
-        "owner": "youwen5",
-        "repo": "zen-browser-flake",
         "type": "github"
       }
     }

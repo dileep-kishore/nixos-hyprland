@@ -37,7 +37,6 @@
     vivaldi
     zotero
     firefox
-    inputs.zen-browser.packages.${pkgs.system}.default
     zoom-us
   ];
 }
