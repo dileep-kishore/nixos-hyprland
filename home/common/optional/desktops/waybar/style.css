@@ -98,22 +98,44 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #workspaces {
-  font-weight: bold;
-  color: @text;
-  box-shadow: none;
-  text-shadow: none;
-  transition: 0.2s ease;
-  border-radius: 30px;
   border: 2px solid @mauve;
+  border-radius: 5px 5px 5px 5px;
+  font-weight: bold;
+  font-style: normal;
+  opacity: 1;
+  color: @text;
 }
 
 #workspaces button {
+  border-radius: 3px 3px 3px 3px;
+  padding: 0px 6px;
+  margin: 3px 2px;
   color: @blue;
   transition: all 0.3s ease-in-out;
+  opacity: 0.8;
+}
+
+#workspaces button.active {
+  color: @crust;
+  background: @blue;
+  padding: 0px 6px;
+  margin: 3px 2px;
+  border-radius: 3px 3px 3px 3px;
+  min-width: 30px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#workspaces button:hover {
+  color: @crust;
+  background: @mauve;
+  border-radius: 3px 3px 3px 3px;
+  opacity: 0.7;
 }
 
 #workspaces button.empty {
   color: @overlay2;
+  opacity: 0.4;
 }
 
 #workspaces button.visible {
@@ -121,20 +143,18 @@ window.HDMI-A-1 #pulseaudio {
   transition: all 0.3s ease-in-out;
 }
 
-#workspaces button.active {
-  color: @blue;
-  transition: all 0.3s ease-in-out;
-}
-
 #workspaces button.focused {
-  color: @mauve;
+  color: @crust;
+  background: @mauve;
   transition: all 0.3s ease-in-out;
 }
 
-#workspaces button:hover {
-  color: @overlay2;
-  animation: ws_hover 20s ease-in-out 1;
-  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
 }
 
 #window {
