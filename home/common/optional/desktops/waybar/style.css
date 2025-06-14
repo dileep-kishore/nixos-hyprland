@@ -91,11 +91,10 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #image {
-  background: @base;
   border-radius: 0px 18px 0px 18px;
   margin-right: 5px;
   padding: 0rem 0.7rem;
-  border: 2px solid @crust;
+  border: 2px solid @text;
 }
 
 #workspaces {
