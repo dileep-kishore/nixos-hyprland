@@ -33,11 +33,11 @@
         modules-right = [
           "custom/toggl-icon"
           "custom/toggl"
-          # "memory"
-          # "cpu"
           "custom/clock-icon"
           "clock"
           "custom/tray-icon"
+          "memory"
+          "cpu"
           "backlight"
           "battery"
           "battery#bat2"
@@ -182,11 +182,39 @@
           format-disconnected = "󰅛 ";
           format-alt = "{ifname}: {ipaddr}/{cidr}";
         };
-        cpu = {
-          format = "{usage}%  ";
-          tooltip = false;
+        memory = {
+          interval = 1;
+          rotate = 270;
+          format = "{icon}";
+          format-icons = [
+            "<span color='#b4befe'>󰝦</span>"
+            "<span color='#b4befe'>󰪞</span>"
+            "<span color='#a6e3a1'>󰪟</span>"
+            "<span color='#a6e3a1'>󰪠</span>"
+            "<span color='#f9e2af'>󰪡</span>"
+            "<span color='#fab387'>󰪢</span>"
+            "<span color='#eba0ac'>󰪣</span>"
+            "<span color='#f38ba8'>󰪤</span>"
+            "<span color='#f38ba8'>󰪥</span>"
+          ];
+          max-length = 10;
         };
-        memory = {format = "{}%  ";};
+        cpu = {
+          interval = 1;
+          format = "{icon}";
+          rotate = 270;
+          format-icons = [
+            "<span color='#b4befe'>󰝦</span>"
+            "<span color='#b4befe'>󰪞</span>"
+            "<span color='#a6e3a1'>󰪟</span>"
+            "<span color='#a6e3a1'>󰪠</span>"
+            "<span color='#f9e2af'>󰪡</span>"
+            "<span color='#fab387'>󰪢</span>"
+            "<span color='#eba0ac'>󰪣</span>"
+            "<span color='#f38ba8'>󰪤</span>"
+            "<span color='#f38ba8'>󰪥</span>"
+          ];
+        };
         backlight = {
           format = "{icon}";
           format-icons = ["" "" "" "" "" "" "" "" ""];
@@ -201,7 +229,8 @@
           format-charging = "";
           format-plugged = "";
           format-alt = "{capacity}% {icon}";
-          format-icons = ["" "" "" "" ""];
+          # format-icons = ["" "" "" "" "" "" "" ""];
+          format-icons = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
           tooltip-format = "{capacity}% {time}";
           tooltip = true;
         };

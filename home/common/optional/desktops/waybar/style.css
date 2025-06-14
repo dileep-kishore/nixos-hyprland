@@ -179,7 +179,7 @@ window#waybar.swallowing {
 }
 
 #memory {
-  color: @yellow;
+  color: @pink;
 }
 
 #clock {
