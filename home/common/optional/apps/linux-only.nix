@@ -34,6 +34,7 @@
     signal-desktop
     tana
     udisks
+    vivaldi
     zotero
     firefox
     inputs.zen-browser.packages.${pkgs.system}.default
