@@ -66,6 +66,11 @@ output "Dell Inc. DELL P2715Q 0WTY26AL35PL" {
 environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     DISPLAY ":0"
+    XDG_CURRENT_DESKTOP "niri"
+    XDG_SESSION_TYPE "wayland"
+    QT_QPA_PLATFORM "wayland"
+    MOZ_ENABLE_WAYLAND "1"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
 }
 // Settings that influence how windows are positioned and sized.
 layout {
