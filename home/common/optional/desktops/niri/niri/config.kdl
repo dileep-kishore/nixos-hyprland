@@ -197,7 +197,7 @@ binds {
         show-hotkey-overlay
     }
     Mod+Return {
-        spawn "kitty"
+        spawn "ghostty"
     }
     Mod+Shift+Return {
         spawn "kitty" "--class" "scratchpad"

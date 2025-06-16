@@ -4,7 +4,7 @@
     package = pkgs.rofi-wayland;
     font = "Maple Mono NF";
     location = "center";
-    terminal = "kitty";
+    terminal = "ghostty";
     plugins = [
       pkgs.rofi-calc
     ];
