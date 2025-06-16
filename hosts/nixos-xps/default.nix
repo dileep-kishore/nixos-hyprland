@@ -55,8 +55,8 @@
     xkb.options = "ctrl:nocaps";
     xkb.layout = "us";
     xkb.variant = "";
-    displayManager.gdm.enable = true;
   };
+  services.displayManager.gdm.enable = true;
 
   hardware.nvidia = {
     modesetting.enable = true;

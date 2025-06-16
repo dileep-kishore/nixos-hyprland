@@ -63,8 +63,8 @@
     xkb.options = "ctrl:nocaps";
     xkb.layout = "us";
     xkb.variant = "";
-    displayManager.gdm.enable = true;
   };
+  services.displayManager.gdm.enable = true;
 
   system.stateVersion = "23.11";
 }
