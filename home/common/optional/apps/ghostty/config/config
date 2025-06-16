@@ -9,6 +9,11 @@ font-style-bold-italic = "Bold"
 adjust-cell-height = 20%
 font-size = "13.0"
 
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+font-feature = -ss05
+
 theme = "catppuccin-mocha"
 bold-is-bright = true
 cursor-style = block
