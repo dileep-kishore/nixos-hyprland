@@ -14,8 +14,6 @@ bold-is-bright = true
 cursor-style = block
 shell-integration-features = no-cursor
 # custom-shader = shaders/bloom.gsl
-background-opacity = 0.97
-background-blur-radius = 20
 
 gtk-titlebar = false
 window-padding-x = 0
