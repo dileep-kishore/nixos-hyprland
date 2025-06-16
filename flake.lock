@@ -520,11 +520,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1750081586,
-        "narHash": "sha256-pcf78IL3lje/2HKOGdSCNXX2cQUw3XVwTB6zZyN4luQ=",
+        "lastModified": 1750090531,
+        "narHash": "sha256-14Aq9bFBJZGrA7gj4dckU4qETL158oUJMvn67FGAAGs=",
         "owner": "ravitemer",
         "repo": "mcphub.nvim",
-        "rev": "32fad30fa4d1ca0806e87224b000bc01dcbce788",
+        "rev": "a51c678a313a8798de6ff0fc9f8b0f06a1aa86e1",
         "type": "github"
       },
       "original": {
@@ -556,11 +556,11 @@
         "pre-commit-hooks": "pre-commit-hooks_2"
       },
       "locked": {
-        "lastModified": 1750083961,
-        "narHash": "sha256-hiK5SzxuVQS+9SQxmckKeAYNk6ZT0cuxdZQ5rsD+TKM=",
+        "lastModified": 1750111959,
+        "narHash": "sha256-YdZoKc+5d1uzYlVZnsLD7zRFflL4dHirbXA4uiutLZk=",
         "owner": "dileep-kishore",
         "repo": "nyanvim",
-        "rev": "e8771ca3cd89378e62ef491089374bac2d214d88",
+        "rev": "7e241d283d399e0ebcc5668e1ad945cf34f8887d",
         "type": "github"
       },
       "original": {
@@ -811,11 +811,11 @@
     "plugins-early-retirement-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1747690845,
-        "narHash": "sha256-0qZhfxRhY8kR33X9/a9lNt1Slce8oSHeC8bJ7bSbYpQ=",
+        "lastModified": 1750108178,
+        "narHash": "sha256-3I7Xup+v9Yq9/nJQ1F5CDW99oFQcxbinv7VQcKeA16Y=",
         "owner": "chrisgrieser",
         "repo": "nvim-early-retirement",
-        "rev": "6db15a859cf73d4027e919f5a49cc795ee96831a",
+        "rev": "d9ffd8f70ed6d466cecd3e7e2dd1425b0010932f",
         "type": "github"
       },
       "original": {
