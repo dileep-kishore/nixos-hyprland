@@ -111,6 +111,7 @@ layout {
     }
 }
 spawn-at-startup "morgen"
+spawn-at-startup "syncthingtray"
 spawn-at-startup "bash" "-c" "swww img ~/Pictures/wallpapers/bluewave.png --transition-type center"
 // NOTE: This is disabled because it causes issues where the last copied text is not pasted
 // spawn-at-startup "bash" "-c" "sleep 10 && ~/.nix-profile/bin/wl-clip-persist --clipboard regular"
