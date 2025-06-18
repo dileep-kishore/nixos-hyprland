@@ -7,6 +7,7 @@
     ./ssh.nix
     ./gpg.nix
     ./spicetify.nix
+    ./syncthing.nix
   ];
   home.packages = with pkgs; [
     proton-pass

@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   imports = [
-    ./syncthing.nix
     ./zathura
   ];
 
