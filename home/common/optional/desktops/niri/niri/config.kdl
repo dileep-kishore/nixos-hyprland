@@ -539,5 +539,21 @@ binds {
     Mod+Shift+P {
         power-off-monitors
     }
+    // Application switch keybinds
+    Super+Alt+T {
+        spawn "~/.config/niri/scripts/window-switcher.sh" "com.mitchellh.ghostty"
+    }
+    Super+Alt+O {
+        spawn "~/.config/niri/scripts/window-switcher.sh" "obsidian"
+    }
+    Super+Alt+B {
+        spawn "~/.config/niri/scripts/window-switcher.sh" "Vivaldi-stable"
+    }
+    Super+Alt+S {
+        spawn "~/.config/niri/scripts/window-switcher.sh" "Slack"
+    }
+    Super+Alt+M {
+        spawn "~/.config/niri/scripts/window-switcher.sh" "Morgen"
+    }
 }
 
