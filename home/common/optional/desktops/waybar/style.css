@@ -77,7 +77,8 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #waybar {
-  background: rgba(17, 17, 17, 0.5);
+  /* background: rgba(17, 17, 17, 0.5); */
+  background: transparent;
   color: @text;
   border-radius: 0px 5px 5px 18px;
 }
@@ -91,6 +92,7 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #image {
+  background: @crust;
   border-radius: 0px 18px 0px 18px;
   margin-right: 5px;
   padding: 0rem 0.7rem;
@@ -98,6 +100,7 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #workspaces {
+  background: @crust;
   border: 2px solid @mauve;
   border-radius: 5px 5px 5px 5px;
   font-weight: bold;
@@ -158,6 +161,7 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #window {
+  background: @crust;
   font-family: "Monaspace Radon Frozen", "CaskaydiaCove Nerd Font";
   border-radius: 0;
   padding: 0rem 0.7rem;
@@ -165,6 +169,7 @@ window.HDMI-A-1 #pulseaudio {
 }
 
 #taskbar {
+  background: @crust;
   border-radius: 5px 0 0 5px;
   padding: 0rem 0rem;
   border: 2px solid @blue;
@@ -180,6 +185,7 @@ window#waybar.swallowing {
 #memory,
 #tray,
 #pulseaudio {
+  background: @crust;
   padding: 0 5px;
   border-top: 2px solid @text;
   border-bottom: 2px solid @text;
@@ -187,6 +193,7 @@ window#waybar.swallowing {
 
 #backlight,
 #battery {
+  background: @crust;
   padding: 0 5px;
 }
 
@@ -203,6 +210,7 @@ window#waybar.swallowing {
 }
 
 #clock {
+  background: @crust;
   color: @pink;
   border-radius: 0 5px 5px 0;
   border: 2px solid @pink;
@@ -223,12 +231,14 @@ window#waybar.swallowing {
 
 #backlight,
 #battery {
+  background: @crust;
   color: @yellow;
   border-top: 2px solid @text;
   border-bottom: 2px solid @text;
 }
 
 #custom-toggl {
+  background: @crust;
   font-family: "Monaspace Radon Frozen", "CaskaydiaCove Nerd Font";
   color: @red;
   border-radius: 0 5px 5px 0;
@@ -241,6 +251,7 @@ window#waybar.swallowing {
 }
 
 #tray {
+  background: @crust;
   padding: 0rem 0.7rem;
   border-radius: 0 5px 5px 0;
   border-top: 2px solid @text;
@@ -255,6 +266,7 @@ window#waybar.swallowing {
 #custom-battery-icon,
 #custom-clock-icon,
 #custom-tray-icon {
+  background: @crust;
   color: @crust;
   margin-left: 5px;
   padding: 0px 10px;
@@ -284,6 +296,7 @@ window#waybar.swallowing {
 
 #custom-vpn,
 #idle_inhibitor {
+  background: @crust;
   padding: 0 5px;
   border-top: 2px solid @text;
   border-bottom: 2px solid @text;
@@ -296,6 +309,7 @@ window#waybar.swallowing {
   color: @yellow;
 }
 #mpris {
+  background: @crust;
   font-family: "Monaspace Radon Frozen", "CaskaydiaCove Nerd Font";
   color: @green;
   padding: 0rem 0.7rem;
