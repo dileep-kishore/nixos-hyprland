@@ -22,6 +22,7 @@
       sessionist
       open
       tmux-thumbs
+      extrakto
     ];
 
     extraConfig = builtins.readFile ./tmux.conf;
