@@ -548,6 +548,7 @@
         "plugins-lzextras": "plugins-lzextras",
         "plugins-maximize-nvim": "plugins-maximize-nvim",
         "plugins-neopyter": "plugins-neopyter",
+        "plugins-obsidian-nvim": "plugins-obsidian-nvim",
         "plugins-possession-nvim": "plugins-possession-nvim",
         "plugins-reactive-nvim": "plugins-reactive-nvim",
         "plugins-symbol-usage-nvim": "plugins-symbol-usage-nvim",
@@ -556,11 +557,11 @@
         "pre-commit-hooks": "pre-commit-hooks_2"
       },
       "locked": {
-        "lastModified": 1750284752,
-        "narHash": "sha256-AidMVixB6x1/x32VjODMmSO9ZnmjC1GGj8gFSPP97Is=",
+        "lastModified": 1750548429,
+        "narHash": "sha256-zvz/Mcc7D+Q2WNENUguhk7D3MlpWLPDnDKtsnUA4MdE=",
         "owner": "dileep-kishore",
         "repo": "nyanvim",
-        "rev": "2c650c61c0138b9e4f9250b9cb64e1c5cec9255c",
+        "rev": "b323fe9d326cc527c340dddfbeff029c79f984c4",
         "type": "github"
       },
       "original": {
@@ -668,11 +669,11 @@
     },
     "nixCats": {
       "locked": {
-        "lastModified": 1749615682,
-        "narHash": "sha256-3T2Yl+xSnx7snXZkMaQNHCvlj0CB+lyAj+Q/+eeh+Ns=",
+        "lastModified": 1750385661,
+        "narHash": "sha256-JpIEf5IrOzMTjowkxB6kgh4AK3Dp9i/T9G4w2ZiKMgQ=",
         "owner": "BirdeeHub",
         "repo": "nixCats-nvim",
-        "rev": "c0148957e961100bff3fd213b8a4bc5f669f3028",
+        "rev": "04379fef2fbd4c9d8f4c9a6203cef135ab0b1acd",
         "type": "github"
       },
       "original": {
@@ -843,11 +844,11 @@
     "plugins-lze": {
       "flake": false,
       "locked": {
-        "lastModified": 1750047326,
-        "narHash": "sha256-KIWl/kgxXE7Fw3F8bGS8KEOW6QBaa1TVcinU47HqXbw=",
+        "lastModified": 1750376512,
+        "narHash": "sha256-wGeXkDX/lmT7X6ksOr+y0y5kK0b0mX/baS0xubFRrf4=",
         "owner": "BirdeeHub",
         "repo": "lze",
-        "rev": "3423e4904a851b47103e174380a4af060821fbe1",
+        "rev": "612775ce13ff5180637f8d04e134d531e1802c10",
         "type": "github"
       },
       "original": {
@@ -901,6 +902,22 @@
       "original": {
         "owner": "SUSTech-data",
         "repo": "neopyter",
+        "type": "github"
+      }
+    },
+    "plugins-obsidian-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1750522505,
+        "narHash": "sha256-dftgbT/8ilg7ZFrMG8fqRLjF7K3qH1tGtE5QBE8+APM=",
+        "owner": "obsidian-nvim",
+        "repo": "obsidian.nvim",
+        "rev": "82743e61e67c8bae26788e3b2b3a2e06deecd46b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "obsidian-nvim",
+        "repo": "obsidian.nvim",
         "type": "github"
       }
     },
