@@ -10,6 +10,8 @@
     ./syncthing.nix
   ];
   home.packages = with pkgs; [
+    inputs.neovim.packages.${system}.default
+    nodejs_24
     proton-pass
     protonvpn-gui
     protonvpn-cli

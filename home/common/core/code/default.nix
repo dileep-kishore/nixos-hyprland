@@ -2,7 +2,6 @@
   home.packages = with pkgs; [
     python3
     go
-    nodejs_24
     rustc
     rustup
     lua
