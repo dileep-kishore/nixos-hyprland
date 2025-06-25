@@ -26,3 +26,5 @@ window-padding-y = 0
 window-padding-balance = true
 
 copy-on-select = true
+
+keybind = ctrl+enter=unbind
