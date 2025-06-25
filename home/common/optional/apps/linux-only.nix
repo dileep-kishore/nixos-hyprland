@@ -11,15 +11,13 @@
   ];
   home.packages = with pkgs; [
     inputs.neovim.packages.${system}.default
-    nodejs_24
-    proton-pass
-    protonvpn-gui
-    protonvpn-cli
     appimage-run
     brave
     brightnessctl
     code-cursor
     eog
+    firefox
+    gnome-frog
     gparted
     kdePackages.wacomtablet
     libgcc
@@ -27,18 +25,22 @@
     libsForQt5.okular
     libwacom
     lshw
+    mission-center
     morgen
     nautilus
+    nodejs_24
     obsidian
     pdfarranger
+    proton-pass
+    protonvpn-cli
+    protonvpn-gui
     psmisc
     seahorse
     signal-desktop
     tana
     udisks
     vivaldi
-    zotero
-    firefox
     zoom-us
+    zotero
   ];
 }
