@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [
-    ./aider
     ./atuin.nix
     ./bat
     ./btop
@@ -19,6 +18,7 @@
     ./jujutsu.nix
     ./lazygit.nix
     ./oh-my-posh
+    ./opencode
     ./ripgrep.nix
     ./scripts.nix
     ./tmux
