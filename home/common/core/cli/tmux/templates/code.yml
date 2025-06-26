@@ -1,3 +1,4 @@
+---
 windows:
   - main:
       layout: main-vertical
@@ -8,9 +9,9 @@ windows:
   - git:
       layout: main-horizontal
       panes: [lazygit]
+  - ai:
+      layout: main-horizontal
+      panes: [opencode]
   - term:
       layout: main-vertical
       panes: [null, null, null]
-  - misc:
-      layout: main-vertical
-      panes: [null, null]

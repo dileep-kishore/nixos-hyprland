@@ -6,6 +6,7 @@ config:
   multi-pane-icon: ""
   icon-position: left # show t
 icons:
+  opencode: 󰚩
   apt: 
   bash: 
   caffeinate: 
