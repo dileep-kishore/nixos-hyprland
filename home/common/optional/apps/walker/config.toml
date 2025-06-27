@@ -223,12 +223,16 @@ name = "websearch"
 placeholder = "Websearch"
 
 [[builtins.websearch.entries]]
-name = "Google"
-url = "https://www.google.com/search?q=%TERM%"
+name = "Perplexity"
+url = "https://www.perplexity.ai/search?q=%s"
 
 [[builtins.websearch.entries]]
 name = "DuckDuckGo"
 url = "https://duckduckgo.com/?q=%TERM%"
+
+[[builtins.websearch.entries]]
+name = "Google"
+url = "https://www.google.com/search?q=%TERM%"
 switcher_only = true
 
 [[builtins.websearch.entries]]
