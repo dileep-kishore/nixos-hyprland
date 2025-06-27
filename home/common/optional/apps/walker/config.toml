@@ -76,14 +76,22 @@ hide_without_query = true
 [builtins.bookmarks]
 weight = 5
 placeholder = "Bookmarks"
+prefix = "b:"
 name = "bookmarks"
 icon = "bookmark"
 switcher_only = true
 
 [[builtins.bookmarks.entries]]
-label = "Walker"
-url = "https://github.com/abenz1267/walker"
-keywords = ["walker", "github"]
+label = "Perplexity"
+url = "https://perplexity.ai"
+
+[[builtins.bookmarks.entries]]
+label = "Gemini"
+url = "https://gemini.google.com"
+
+[[builtins.bookmarks.entries]]
+label = "Github Home"
+url = "https://github.com/dileep-kishore"
 
 [builtins.xdph_picker]
 hidden = true
