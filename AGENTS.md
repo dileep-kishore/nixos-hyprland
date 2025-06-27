@@ -1,4 +1,4 @@
-# NixOS Hyprland Configuration Context
+# NixOS Hyprland Configuration - Agent Guidelines
 
 ## Build/Test Commands
 - `just bs` or `nh os switch . -H <host>` - Build and switch NixOS configuration
