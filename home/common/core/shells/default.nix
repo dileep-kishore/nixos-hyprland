@@ -37,6 +37,7 @@
   };
   home.sessionPath = [
     "$HOME/.local/bin"
+    "$HOME/npm-global/bin"
     "/var/lib/flatpak/exports/bin"
     "$HOME/.nix-profile/bin"
   ];
