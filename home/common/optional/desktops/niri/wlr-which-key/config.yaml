@@ -1,0 +1,70 @@
+---
+# Theming
+font: JetBrainsMono Nerd Font 12
+background: "#1e1e2edd"
+color: "#cdd6f4"
+border: "#cba6f7"
+separator: " ➜ "
+border_width: 4
+corner_r: 10
+padding: 15 # Defaults to corner_r
+# rows_per_column: 5  # No limit by default
+column_padding: 25 # Defaults to padding
+
+# Anchor and margin
+anchor: top # One of center, left, right, top, bottom, bottom-left, top-left, etc.
+# Only relevant when anchor is not center
+margin_right: 0
+margin_bottom: 0
+margin_left: 0
+margin_top: 30
+
+# Permits key bindings that conflict with compositor key bindings.
+# Default is `false`.
+inhibit_compositor_keyboard_shortcuts: false
+menu:
+  - key: a
+    desc: Applications
+    submenu:
+      - key: b
+        desc: Browser
+        cmd: vivaldi
+      - key: t
+        desc: Terminal
+        cmd: ghostty
+      - key: s
+        desc: Slack
+        cmd: Slack
+      - key: c
+        desc: Calendar
+        cmd: morgen
+  - key: w
+    desc: Web apps
+    submenu:
+      - key: h
+        desc: GitHub Home
+        cmd: vivaldi -app="https://github.com/dileep-kishore"
+      - key: p
+        desc: Perplexity
+        cmd: vivaldi -app="https://www.perplexity.ai"
+      - key: g
+        desc: Gemini
+        cmd: vivaldi -app="https://gemini.google.com"
+  - key: s
+    desc: Switch apps
+    submenu:
+      - key: t
+        desc: Terminal
+        cmd: ~/.config/niri/scripts/window-switcher.sh com.mitchellh.ghostty
+      - key: n
+        desc: Notes
+        cmd: ~/.config/niri/scripts/window-switcher.sh obsidian
+      - key: b
+        desc: Browser
+        cmd: ~/.config/niri/scripts/window-switcher.sh Vivaldi-stable
+      - key: s
+        desc: Slack
+        cmd: ~/.config/niri/scripts/window-switcher.sh Slack
+      - key: c
+        desc: Calendar
+        cmd: ~/.config/niri/scripts/window-switcher.sh Morgen

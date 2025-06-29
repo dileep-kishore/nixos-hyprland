@@ -10,6 +10,7 @@
     swaybg
     swaynotificationcenter
     wl-clipboard
+    wlr-which-key
     cliphist
     wl-clip-persist
     wlogout
@@ -30,6 +31,11 @@
   home.file.".config/swaync" = {
     recursive = true;
     source = ./swaync;
+  };
+
+  home.file.".config/wlr-which-key" = {
+    recursive = true;
+    source = ./wlr-which-key;
   };
 
   home.sessionVariables.NIXOS_OZONE_WL = "1";
