@@ -196,6 +196,9 @@ window-rule {
     opacity 0.95
 }
 binds {
+    Mod+Slash {
+        toggle-overview
+    }
     Mod+Shift+Slash {
         show-hotkey-overlay
     }
