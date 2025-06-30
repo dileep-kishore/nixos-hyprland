@@ -16,7 +16,6 @@
     brightnessctl
     code-cursor
     eog
-    firefox
     gnome-frog
     gparted
     kdePackages.wacomtablet
