@@ -28,7 +28,7 @@
     mission-center
     morgen
     nautilus
-    nodejs_24
+    nodejs_22
     obsidian
     pdfarranger
     proton-pass
