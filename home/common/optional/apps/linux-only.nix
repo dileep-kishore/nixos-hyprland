@@ -36,7 +36,6 @@
     psmisc
     seahorse
     signal-desktop
-    tana
     udisks
     vivaldi
     zoom-us
