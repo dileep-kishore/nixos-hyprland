@@ -17,16 +17,16 @@
     defaultApplications = {
       "application/pdf" = ["okular.desktop"];
       "x-scheme-handler/tana" = ["tana.desktop"];
-      "x-scheme-handler/http" = ["vivaldi-stable.desktop"];
-      "x-scheme-handler/https" = ["vivaldi-stable.desktop"];
-      "x-scheme-handler/chrome" = ["vivaldi-stable.desktop"];
-      "text/html" = ["vivaldi-stable.desktop"];
-      "application/x-extension-htm" = ["vivaldi-stable.desktop"];
-      "application/x-extension-html" = ["vivaldi-stable.desktop"];
-      "application/x-extension-shtml" = ["vivaldi-stable.desktop"];
-      "application/xhtml+xml" = ["vivaldi-stable.desktop"];
-      "application/x-extension-xhtml" = ["vivaldi-stable.desktop"];
-      "application/x-extension-xht" = ["vivaldi-stable.desktop"];
+      "x-scheme-handler/http" = ["brave.desktop"];
+      "x-scheme-handler/https" = ["brave.desktop"];
+      "x-scheme-handler/chrome" = ["brave.desktop"];
+      "text/html" = ["brave.desktop"];
+      "application/x-extension-htm" = ["brave.desktop"];
+      "application/x-extension-html" = ["brave.desktop"];
+      "application/x-extension-shtml" = ["brave.desktop"];
+      "application/xhtml+xml" = ["brave.desktop"];
+      "application/x-extension-xhtml" = ["brave.desktop"];
+      "application/x-extension-xht" = ["brave.desktop"];
     };
   };
 }

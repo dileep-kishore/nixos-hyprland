@@ -28,7 +28,7 @@ menu:
     submenu:
       - key: b
         desc: Browser
-        cmd: vivaldi
+        cmd: brave
       - key: t
         desc: Terminal
         cmd: ghostty
@@ -43,13 +43,13 @@ menu:
     submenu:
       - key: h
         desc: GitHub Home
-        cmd: vivaldi -app="https://github.com/dileep-kishore"
+        cmd: brave -app="https://github.com/dileep-kishore"
       - key: p
         desc: Perplexity
-        cmd: vivaldi -app="https://www.perplexity.ai"
+        cmd: brave -app="https://www.perplexity.ai"
       - key: g
         desc: Gemini
-        cmd: vivaldi -app="https://gemini.google.com"
+        cmd: brave -app="https://gemini.google.com"
   - key: s
     desc: Switch apps
     submenu:
@@ -61,7 +61,7 @@ menu:
         cmd: ~/.config/niri/scripts/window-switcher.sh obsidian
       - key: b
         desc: Browser
-        cmd: ~/.config/niri/scripts/window-switcher.sh Vivaldi-stable
+        cmd: ~/.config/niri/scripts/window-switcher.sh brave-stable
       - key: s
         desc: Slack
         cmd: ~/.config/niri/scripts/window-switcher.sh Slack

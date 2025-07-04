@@ -11,7 +11,7 @@ LIST = [
 
 def create_string(item: str) -> str:
     label = f"label={item.removeprefix('https://')}"
-    exec = f'exec=vivaldi --app=\\"{item}\\"'
+    exec = f'exec=brave --app=\\"{item}\\"'
     cmd = f"{label};{exec};matching=1;"
     return cmd
 
