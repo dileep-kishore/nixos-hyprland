@@ -7,7 +7,7 @@
 }:
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "opencode-latest";
-  version = "0.1.162";
+  version = "0.2.5";
 
   src =
     finalAttrs.passthru.sources.${stdenvNoCC.hostPlatform.system}
@@ -35,11 +35,11 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     sources = {
       "x86_64-darwin" = fetchurl {
         url = "https://github.com/sst/opencode/releases/download/v${finalAttrs.version}/opencode-darwin-x64.zip";
-        hash = "sha256:98e7fb11b0d8f440ce60d2067e21e023a4b4a036a03771facc631ba38bce286b";
+        hash = "sha256:fd73f6a3240e9f134ff77a24090487a73be81c75106e1c83258f01d4ed26be75";
       };
       "x86_64-linux" = fetchurl {
         url = "https://github.com/sst/opencode/releases/download/v${finalAttrs.version}/opencode-linux-x64.zip";
-        hash = "sha256:15668eea7b5ed52edd45d9775bc18db3ab0b43344b636822fe7cd04c5ef0ad05";
+        hash = "sha256:8d19303eefcc03d82a8bec0204c06007b43d2ee3b4800f9a7cef857ab534b44f";
       };
     };
     updateScript = nix-update-script {};
