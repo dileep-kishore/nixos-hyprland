@@ -40,5 +40,6 @@
     vivaldi
     zoom-us
     zotero
+    opencode-latest
   ];
 }
