@@ -185,7 +185,7 @@
           format-wifi = " ";
           format-ethernet = " ";
           tooltip-format = "{essid} ({signalStrength}%)";
-          format-linked = "{ifname} (No IP)";
+          format-linked = "󰛵 ";
           format-disconnected = "󰅛 ";
           format-alt = "{ifname}: {ipaddr}/{cidr}";
         };
