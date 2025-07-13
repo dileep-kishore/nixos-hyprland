@@ -473,11 +473,11 @@
         "pre-commit-hooks": "pre-commit-hooks_2"
       },
       "locked": {
-        "lastModified": 1751946181,
-        "narHash": "sha256-leBfEPHvN3i3U6JKXgistW3XarigZHloHGuoKEqtd90=",
+        "lastModified": 1752423163,
+        "narHash": "sha256-MDeeJLIViah7dK/fNpcxoo51CDVUkC6fjoNVjvpKo1I=",
         "owner": "dileep-kishore",
         "repo": "nyanvim",
-        "rev": "eda959920d36f0fb3f70dade35ced70ecca416e5",
+        "rev": "0a1c7848ffea2257a58c438d515cb9c1c3496d54",
         "type": "github"
       },
       "original": {
@@ -728,11 +728,11 @@
     "plugins-lze": {
       "flake": false,
       "locked": {
-        "lastModified": 1751874075,
-        "narHash": "sha256-gLoyJek+cLnX2rJj5tKSMJZN0AIFugcujWQe1W2HqW8=",
+        "lastModified": 1751996757,
+        "narHash": "sha256-U4p0mXtwJ7QIVFdx22FsZ0lo1k/4oSD/JeA6eBa7KwM=",
         "owner": "BirdeeHub",
         "repo": "lze",
-        "rev": "b4a88b517e7f924b1ab20c8fabbe0742dc4e2304",
+        "rev": "5a017dc5250faf45e336dd391848acd9b932ca44",
         "type": "github"
       },
       "original": {
@@ -744,11 +744,11 @@
     "plugins-lzextras": {
       "flake": false,
       "locked": {
-        "lastModified": 1751874065,
-        "narHash": "sha256-N6w/oPiC9WJV9nKjuchyWRfvDkK7Bp8ExCPdiJ9W7Vw=",
+        "lastModified": 1751996747,
+        "narHash": "sha256-+4HTALGH8/wggSRHlQQ6eeC/E6hea25Wfq3zSrbMLjE=",
         "owner": "BirdeeHub",
         "repo": "lzextras",
-        "rev": "c38ad7d74b1f7b98ae1e3a03424c0ec5e02a529e",
+        "rev": "8581b50806f75690e0387d3fd2b1ad68f3d11920",
         "type": "github"
       },
       "original": {
@@ -776,11 +776,11 @@
     "plugins-neopyter": {
       "flake": false,
       "locked": {
-        "lastModified": 1751542457,
-        "narHash": "sha256-ZkMSLEcX9iSt4t7qCWK5llLiRGKnNX2NaPqdZl2mlDo=",
+        "lastModified": 1751975980,
+        "narHash": "sha256-KGR5DEJjhWUB0CQyYzWpuFdhwg8WS/OKCoXFj4MDv/8=",
         "owner": "SUSTech-data",
         "repo": "neopyter",
-        "rev": "a4d5cab834b85642df3d22ae6aa004b87050fd75",
+        "rev": "438d329d5533edde86f83688c6176b53620eb09d",
         "type": "github"
       },
       "original": {
@@ -792,11 +792,11 @@
     "plugins-obsidian-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1751635708,
-        "narHash": "sha256-tQqKm7gGt3j6fwAjv0OdK2/PyZfk0RrLiSPzxRp1oYQ=",
+        "lastModified": 1752422131,
+        "narHash": "sha256-DaLkGpGMTmW7ol0bVj9ps269RX3Ctlq5qRrMOv+RslE=",
         "owner": "obsidian-nvim",
         "repo": "obsidian.nvim",
-        "rev": "d22a3b59a176f631cdccd44664f8de615d5753d3",
+        "rev": "21cb4d00ffe1f011fffdb6bdb9e4acb690d81e73",
         "type": "github"
       },
       "original": {
