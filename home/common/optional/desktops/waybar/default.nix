@@ -31,8 +31,8 @@
           "niri/workspaces"
         ];
         modules-right = [
-          "custom/toggl-icon"
-          "custom/toggl"
+          # "custom/toggl-icon"
+          # "custom/toggl"
           "custom/clock-icon"
           "clock"
           "custom/tray-icon"
