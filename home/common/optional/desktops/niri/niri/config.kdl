@@ -207,7 +207,7 @@ binds {
         spawn "wlr-which-key"
     }
     Mod+Return {
-        spawn "kitty"
+        spawn "ghostty"
     }
     Mod+Shift+Return {
         spawn "kitty" "--class" "scratchpad"
